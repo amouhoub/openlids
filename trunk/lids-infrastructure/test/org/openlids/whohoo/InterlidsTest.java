@@ -12,6 +12,9 @@ import org.openlids.interfacing.ServiceAnnotator;
 import org.openlids.parser.ServiceParser;
 import org.openlids.parser.ServiceParserJena;
 
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+
 public class InterlidsTest extends TestCase {
 	public void testInterlids() throws Exception {
 		FileInputStream fin = new FileInputStream("files/ssp-foaf.nt");
