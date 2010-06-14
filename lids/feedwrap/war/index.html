@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Feed Wrapper</title>
+  </head>
+
+  <body>
+    <h1>Feed Wrapper</h1>
+
+	<p>
+		<a href=".">Feedwrapper</a> returns <a href="http://en.wikipedia.org/wiki/SIOC">SIOC</a> data for newsfeeds in RSS 1.0/2.0 and Atom feeds.
+		Feedwrapper is based on the <a href="https://rome.dev.java.net/">ROME RSS API</a>.
+	</p>
+	
+	<p>
+		<a href="/lids.rdf">LIDS description</a>
+	</p>
+	
+	<form action="feedwrap">
+		Feed URI: <input type="text" name="uri" value="http://feeds.feedburner.com/TechCrunch"/>
+		<input type="submit" value="Submit"/>
+	</form>
+  </body>
+</html>
