@@ -27,4 +27,16 @@ WHERE {
    ?point geo:lat ?lat . ?point geo:long ?lng .
 }</lids:description>
   </rdf:Description>
+  
+    <rdf:Description rdf:about="#location">
+    <lids:description>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+CONSTRUCT {
+   ?point owl:sameAs ?location .
+}
+FROM &lt;http://geowrap.openlids.org/loc&gt;
+WHERE {
+   ?point geo:lat ?lat . ?point geo:long ?lng .
+}</lids:description>
+  </rdf:Description>
 </rdf:RDF>
