@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:lids="http://openlids.org/vocab#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="">
+    <rdfs:label>OpenLIDS Trademark Service Description</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#company">
+    <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX : &lt;http://ontologycentral.com/2010/05/tess/vocab#&gt;
+
+CONSTRUCT { ?id :trademark ?trademark } 
+FROM &lt;http://tess.openlids.org/company&gt; 
+WHERE { ?id foaf:name ?name; a foaf:Organization }
+</lids:description>
+  </rdf:Description>
+</rdf:RDF>
