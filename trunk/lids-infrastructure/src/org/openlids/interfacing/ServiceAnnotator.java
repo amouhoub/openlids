@@ -105,7 +105,9 @@ public class ServiceAnnotator {
 	public static void main(String args[]) {
 		
 		if(args.length < 2) {
-			System.out.println("Usage: inputfile servicedesc1 servicedesc2 ...");
+			System.out.println("Usage: java -jar interlinker.jar inputfile servicedesc1 servicedesc2 ...");
+			System.out.println("  inputfile:   source data set in ntriples format");
+			System.out.println("  servicedesc: one or more LIDS descriptions, basically SPARQL files, that are used to interlink the input data with the described LIDS");
 			System.exit(-1);
 		}
 		try {
