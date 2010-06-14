@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+
+<rdf:RDF
+   xmlns="http://openlids.org/vocab#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:doap="http://usefulinc.com/ns/doap#"
+   xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  
+  <rdf:Description rdf:about="">
+    <rdfs:label xml:lang="en">LIDS Vocabulary</rdfs:label>
+    <rdfs:comment>Vocabulary for Linked Data Services (LIDS), see http://openlids.org</rdfs:comment>
+    <dc:creator rdf:resource="http://speiserweb.de/sebastian/foaf.rdf#me" />
+    <dc:creator rdf:resource="http://harth.org/andreas/foaf.rdf#ah" />
+  </rdf:Description>
+
+  <rdfs:Class rdf:about="http://openlids.org/vocab#LIDS">
+    <rdfs:label xml:lang="en">LInked Data Service (LIDS)</rdfs:label>
+    <rdfs:comment xml:lang="en">A data providing service adhering to the Linked Data Service (LIDS) methodology.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Class>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#description">
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:comment xml:lang="en">A description of a LIDS using a SPARQL CONSTRUCT query</rdfs:comment>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDS" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+</rdf:RDF>
