@@ -17,6 +17,8 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 
 public class InterlidsTest extends TestCase {
 	public void testInterlids() throws Exception {
+		long time = System.currentTimeMillis();
+		
 		FileInputStream fin = new FileInputStream("files/ssp-foaf.nt");
 
 		FileInputStream sin = new FileInputStream("files/lids.rq");
@@ -32,6 +34,10 @@ public class InterlidsTest extends TestCase {
 		m = sas.annotate(m);
 
 		m.write(System.out,"N-TRIPLE");
+		
+		long time1 = System.currentTimeMillis();
+
+		System.err.println("time elapsed " + (time1-time) + " ms");
 	}
 
 	public static String streamToString(InputStream is) throws IOException {
