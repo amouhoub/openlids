@@ -18,7 +18,6 @@ import org.openlids.model.Variable;
 import org.openlids.parser.ServiceParser;
 import org.openlids.parser.ServiceParserJena;
 
-
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -54,10 +53,11 @@ public class ServiceAnnotator {
 		
 		queryStr = queryStr.substring(0, queryStr.length() - 1) + " } ";
 		
+		Model nm = ModelFactory.createDefaultModel();
 				
 		Query q = QueryFactory.create(queryStr);
 		QueryExecution exec = QueryExecutionFactory.create(q,m);
-		List<Statement> l = new LinkedList<Statement>();
+		//List<Statement> l = new LinkedList<Statement>();
 		try {
 			ResultSet rs = exec.execSelect();
 			while(rs.hasNext()) {
@@ -79,15 +79,14 @@ public class ServiceAnnotator {
 						m.createProperty("http://www.w3.org/2002/07/owl#sameAs"),
 						same);
 				
-				l.add(stmt);
-				
+				nm.add(stmt);
 			}
 		} catch(UnsupportedEncodingException ue) {
 			System.err.println("" + ue.toString());
 		} finally { exec.close(); }
-		m.add(l);
+		//m.add(l);
 
-		return m;
+		return nm;
 	}
 	
 	public Model annotate(InputStream input, String base, String lang) {
