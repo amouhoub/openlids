@@ -56,10 +56,11 @@ public class OutputFeed {
 		ch.writeEndElement();
 		
 		ch.writeStartElement("sioc:Forum");
-
-		if (feed.getUri() != null) {
-			ch.writeAttribute("rdf:about", feed.getUri());
-		}
+		ch.writeAttribute("rdf:ID", "forum");
+		
+		//if (feed.getUri() != null) {
+		//	ch.writeAttribute("rdf:about", feed.getUri());
+		//}
 
 		if (feed.getTitle() != null) {
 			ch.writeStartElement("dcterms:title");
