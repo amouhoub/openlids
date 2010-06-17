@@ -16,6 +16,8 @@ public class WindowJoinTest extends TestCase {
 	public static int MAX_CAPACITY = 10000;
 	
 	public void testJoin() throws Exception {
+		long time = System.currentTimeMillis();
+
 		Map<Node, Literal> lats = new HashMap<Node, Literal>();
 		Map<Node, Literal> longs = new HashMap<Node, Literal>();
 		
@@ -47,5 +49,9 @@ public class WindowJoinTest extends TestCase {
 				}
 			}
 		}
+		
+		long time1 = System.currentTimeMillis();
+
+		System.err.println("time elapsed " + (time1-time) + " ms");
 	}
 }
