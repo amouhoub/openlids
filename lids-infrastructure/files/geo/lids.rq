@@ -1,0 +1,9 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX geo: <http://ontologycentral.com/2010/05/cb/vocab#>
+CONSTRUCT {
+   ?point foaf:based_near ?feature .
+}
+FROM <http://geowrap.openlids.org/findNearbyPlaceName>
+WHERE {
+   ?point geo:latitude ?lat . ?point geo:longitude ?lng .
+}

@@ -1,0 +1,9 @@
+<http://cbasewrap.ontologycentral.com/company/yahoo#id> <http://ontologycentral.com/2010/05/cb/vocab#office> <http://cbasewrap.ontologycentral.com/company/yahoo#us
+a-sunnyvale-null> .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#state_code> "CA" .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#zip_code> "94089" .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#address1> "701 First Avenue" .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#longitude> "-122.025" .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#latitude> "37.419" .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#country_code> "USA" .
+<http://cbasewrap.ontologycentral.com/company/yahoo#usa-sunnyvale-null> <http://ontologycentral.com/2010/05/cb/vocab#city> "Sunnyvale" .
