@@ -1,0 +1,10 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+
+CONSTRUCT {
+   ?id owl:sameAs ?foo .
+}
+FROM <http://twitterwrap.ontologycentral.com/statuses/user_timeline>
+WHERE {
+   ?id <http://ontologycentral.com/2010/05/cb/vocab#twitter_username> ?screen_name .
+}
