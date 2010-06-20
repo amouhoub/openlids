@@ -1,6 +1,7 @@
 package org.openlids.whohoo;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,21 +20,35 @@ public class InterlidsTest extends TestCase {
 	public void testInterlids() throws Exception {
 		long time = System.currentTimeMillis();
 		
-		FileInputStream fin = new FileInputStream("files/ssp-foaf.nt");
-
-		FileInputStream sin = new FileInputStream("files/lids.rq");
-		String q = InterlidsTest.streamToString(sin);
-
-		ServiceParser sp = new ServiceParserJena();
-
-		ServiceAnnotator sas = new ServiceAnnotator(sp.parseServiceDescription(q));
+		File dir = new File("files/");
 		
-		Model m = ModelFactory.createDefaultModel();
-		m.read(fin, "http://example.org/", "N3");
+		for (String subd : dir.list()) {
+			File subdir = new File(subd);
+			System.out.println(subdir.getPath());
+			File data = new File("files/" + subdir.getPath() + "/data.nt");
+			File lids = new File("files/" + subdir.getPath() + "/lids.rq");
+			if (data.exists()) {
+				FileInputStream fin = new FileInputStream(data);
+				FileInputStream sin = new FileInputStream(lids);
+				
+				String q = InterlidsTest.streamToString(sin);
 
-		m = sas.annotate(m);
+				ServiceParser sp = new ServiceParserJena();
 
-		m.write(System.out,"N-TRIPLE");
+				ServiceAnnotator sas = new ServiceAnnotator(sp.parseServiceDescription(q));
+
+				try {
+					Model m = ModelFactory.createDefaultModel();
+					m.read(fin, "http://example.org/", "N3");
+
+					m = sas.annotate(m);
+
+					m.write(System.out,"N-TRIPLE");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		
 		long time1 = System.currentTimeMillis();
 
