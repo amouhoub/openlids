@@ -1,8 +1,6 @@
 <http://cbasewrap.ontologycentral.com/company/sharedreviews#can-toronto-hq> <http://ontologycentral.com/2010/05/cb/vocab#longitude> "-79.387" .
 <http://cbasewrap.ontologycentral.com/company/sharedreviews#can-toronto-hq> <http://ontologycentral.com/2010/05/cb/vocab#latitude> "43.67" .
-<http://cbasewrap.ontologycentral.com/company/publicis-groupe#fra-paris-> <http://ontologycentral.com/2010/05/cb/vocab#longitude> "2.308" .
-<http://cbasewrap.ontologycentral.com/company/publicis-groupe#fra-paris-> <http://ontologycentral.com/2010/05/cb/vocab#latitude> "48.87" .
-<http://cbasewrap.ontologycentral.com/company/prezi#hun-budapest-budapest-office> <http://ontologycentral.com/2010/05/cb/vocab#longitude> "19.059
-" .
-<http://cbasewrap.ontologycentral.com/company/prezi#hun-budapest-budapest-office> <http://ontologycentral.com/2010/05/cb/vocab#latitude> "47.49" 
-.
+<http://cbasewrap.ontologycentral.com/company/publicis-groupe#fra-paris> <http://ontologycentral.com/2010/05/cb/vocab#longitude> "2.308" .
+<http://cbasewrap.ontologycentral.com/company/publicis-groupe#fra-paris> <http://ontologycentral.com/2010/05/cb/vocab#latitude> "48.87" .
+<http://cbasewrap.ontologycentral.com/company/prezi#hun-budapest-budapest-office> <http://ontologycentral.com/2010/05/cb/vocab#longitude> "19.059" .
+<http://cbasewrap.ontologycentral.com/company/prezi#hun-budapest-budapest-office> <http://ontologycentral.com/2010/05/cb/vocab#latitude> "47.49" .
