@@ -3,10 +3,10 @@ PREFIX cb: <http://ontologycentral.com/2010/05/cb/vocab#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 CONSTRUCT {
-   ?s owl:sameAs ?id .
+   ?id owl:sameAs ?id .
 }
 FROM <http://patwrap.ontologycentral.com/company>
 WHERE {
-   ?s a cb:Company .
-   ?s cb:name ?name .
+   ?id a cb:Company .
+   ?id cb:name ?name .
 }
