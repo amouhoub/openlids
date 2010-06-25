@@ -18,14 +18,14 @@ import com.hp.hpl.jena.sparql.engine.main.StageBuilder;
 
 public class StreamArqTest extends TestCase {
 	public void testQuery() throws Exception {
-		FileInputStream sin = new FileInputStream("files/lids.rq");
+		FileInputStream sin = new FileInputStream("files/geo/lids.rq");
 		String queryString = InterlidsTest.streamToString(sin);
 
 		long time = System.currentTimeMillis();
 
 		Query query = QueryFactory.create(queryString) ;
 		
-		NxParser nxp = new NxParser(new FileInputStream("files/ssp-foaf.nt"));
+		NxParser nxp = new NxParser(new FileInputStream("files/geo/data.nt"));
 
 		StageGeneratorStream sgen = new StageGeneratorStream(nxp);
 
@@ -34,8 +34,8 @@ public class StreamArqTest extends TestCase {
 		QueryExecution engine = QueryExecutionFactory.create(query, ModelFactory.createDefaultModel()) ;
 
 		try {
-			Model m = engine.execConstruct();
-			
+			Model m = ModelFactory.createDefaultModel();
+			m = engine.execConstruct();
 			
 			System.out.println(m);
 
