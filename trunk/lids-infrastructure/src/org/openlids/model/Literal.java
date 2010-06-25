@@ -11,7 +11,16 @@ package org.openlids.model;
  */
 public class Literal extends Value {
 
-    @Override
+	
+	public Literal() {
+		super();
+	}
+    public Literal(String string) {
+    	super();
+    	setName(string);
+	}
+
+	@Override
     public String toString() {
         return "\"" + getName() + "\"";
     }

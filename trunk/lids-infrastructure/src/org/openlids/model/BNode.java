@@ -11,7 +11,15 @@ package org.openlids.model;
  */
 public class BNode extends Value {
 
-    @Override
+	public BNode() {
+		super();
+	}
+    public BNode(String string) {
+    	super();
+    	setName(string);
+	}
+
+	@Override
     public String toString() {
         return "_:" + getName();
     }

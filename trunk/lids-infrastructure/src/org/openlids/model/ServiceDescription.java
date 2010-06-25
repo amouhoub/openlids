@@ -1,4 +1,6 @@
 package org.openlids.model;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -140,5 +142,27 @@ public class ServiceDescription {
 		return input;
 	}
 
+	public String makeURI(Map<Variable,Value> bindings) {
+		if(!bindings.keySet().containsAll(getRequiredVars())) {
+			return null;
+			// not enough vars bound
+		}
+		String uri = getEndpoint().getName();
+		try {
+		if(getRequiredVars().size() == 1) {
+			uri += "/" + URLEncoder.encode(bindings.get(getRequiredVars().iterator().next()).getName(),"UTF-8");
+		} else {
+			uri += "?";
+			for(Variable v : getRequiredVars()) {
+				uri += URLEncoder.encode(v.getName(),"UTF-8") + "=" + URLEncoder.encode(bindings.get(v).getName(),"UTF-8") + "&";
+			}
+			uri = uri.substring(0,uri.length()-1);
+		}
+		} catch(UnsupportedEncodingException e) {
+			
+		}
+		uri += "#" + getExposedVar().getName();
+		return uri;
+	}
 	
 }
