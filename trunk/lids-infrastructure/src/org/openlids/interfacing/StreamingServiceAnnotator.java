@@ -43,8 +43,10 @@ public class StreamingServiceAnnotator implements Callback {
 	Map<String,Set<ServiceDescription>> fireDescs = new HashMap<String,Set<ServiceDescription>>();
 	Map<String,Map<Value,Set<Value>>> bindings = new HashMap<String,Map<Value,Set<Value>>>();
 	
-	Map<ServiceDescription,Map<Variable,Value>> sameAsEs = new HashMap<ServiceDescription,Map<Variable,Value>>();
+//	Map<ServiceDescription,Map<Variable,Value>> sameAsEs = new HashMap<ServiceDescription,Map<Variable,Value>>();
+	Set<Map<Variable,Value>> sameAsEs = new HashSet<Map<Variable,Value>>();
 	private Map<ServiceDescription, List<BGP>> queryBGP = new HashMap<ServiceDescription,List<BGP>>();
+	Map<Value,String> source = new HashMap<Value,String>();
 	private long nrStmts = 0;
 	
 	public StreamingServiceAnnotator() {
@@ -93,7 +95,7 @@ public class StreamingServiceAnnotator implements Callback {
 			}
 		}
 		queryBGP.put(desc,queryBGPs);
-		sameAsEs.put(desc, new HashMap<Variable,Value>());
+		// sameAsEs.put(desc, new HashMap<Variable,Value>());
 	}
 	
 	
@@ -115,14 +117,15 @@ public class StreamingServiceAnnotator implements Callback {
 	public void processStatement(Node[] nx) {
 		nrStmts ++;
 		if(nrStmts % 10000 == 0) {
-			System.err.println("Processed " + nrStmts + " Statements.\n");
-			System.err.println("Cleaning out the caches.");
+			//System.err.println("Processed " + nrStmts + " Statements.\n");
+			//System.err.println("Cleaning out the caches.");
 			
 			Map<String,Map<Value,Set<Value>>> newBindings = new HashMap<String,Map<Value,Set<Value>>>();
 			for(String pred : bindings.keySet()) {
 				newBindings.put(pred, new HashMap<Value,Set<Value>>());
 			}
 			bindings = newBindings;
+			source = new HashMap<Value,String>();
 			System.gc();
 		}
 		if(nx[1] instanceof org.semanticweb.yars.nx.Resource) {
@@ -130,6 +133,9 @@ public class StreamingServiceAnnotator implements Callback {
 			Map<Value,Set<Value>> binding = bindings.get(pred);
 			if(binding != null) {
 				Value subj = node2Value(nx[0]);
+				if(subj != null) {
+					source.put(subj, nx[3].toN3());
+				}
 				Set<Value> vals = binding.get(subj);
 				if(vals == null) {
 					vals = new HashSet<Value>();
@@ -179,11 +185,12 @@ public class StreamingServiceAnnotator implements Callback {
 				b.put(headVars[i],res[i]);
 			}
 			// check if already available
-			if(sameAsEs.containsKey(b)) {
+			if(sameAsEs.contains(b)) {
 				continue;
 			}
+			sameAsEs.add(b);
 			// no ... so generate link
-			System.out.println(res[0] + " <http://www.w3.org/2002/07/owl#sameAs> <" + desc.makeURI(b) + ">");
+			System.out.println(res[0] + " <http://www.w3.org/2002/07/owl#sameAs> <" + desc.makeURI(b) + "> " + source.get(res[0]) + " ." );
 		}
 		
 	}
@@ -322,6 +329,7 @@ public class StreamingServiceAnnotator implements Callback {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 			
