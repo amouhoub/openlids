@@ -27,16 +27,16 @@ public class FindNearbyServlet extends HttpServlet {
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-//		if (req.getServerName().contains("appspot.com")) {
-//			try {
-//				URI re = new URI("http://geowrap.openlids.org/" + req.getRequestURI() + "?" + req.getQueryString());
-//				re = re.normalize();
-//				resp.sendRedirect(re.toString());
-//			} catch (URISyntaxException e) {
-//				resp.sendError(500, e.getMessage());
-//			}
-//			return;
-//		}
+		if (req.getServerName().contains("appspot.com")) {
+			try {
+				URI re = new URI("http://geowrap.openlids.org/" + req.getRequestURI() + "?" + req.getQueryString());
+				re = re.normalize();
+				resp.sendRedirect(re.toString());
+			} catch (URISyntaxException e) {
+				resp.sendError(500, e.getMessage());
+			}
+			return;
+		}
 		
 		resp.setContentType("application/rdf+xml");
 		
@@ -60,9 +60,9 @@ public class FindNearbyServlet extends HttpServlet {
 		try {
 			URL geo = new URL("http://ws.geonames.org/findNearby?lat=" + lat + "&lng=" + lng);
 			
-//   			if (cache.containsKey(geo)) {
-//   				sr = new StringReader((String)cache.get(geo));
-//   			}
+   			if (cache.containsKey(geo)) {
+   				sr = new StringReader((String)cache.get(geo));
+   			}
    			
    			if (sr == null) {
    				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
