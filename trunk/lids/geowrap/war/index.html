@@ -16,19 +16,38 @@
     <h1>GeoNames LIDS</h1>
 	
 	<p>
-		Welcome to the <a href="http://openlids.org/">Linked Data Service</a> (LIDS) for GeoNames.
-		Currently we support the <a href="http://www.geonames.org/export/web-services.html#findNearby">findNearby</a> and <a href="http://www.geonames.org/export/web-services.html#findNearbyPlaceName">findNearbyPlaceName</a> services.
+		Welcome to the geo-location <a href="http://openlids.org/">Linked Data Service</a> (LIDS).
+		The service wraps selected GeoNames and Google services for use with <a href="http://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.
 	</p>
 	
 	<p>
-		Input: lat and lng.
+		Currently we support the following services:
+	</p>
+	
+	<dl>
+		<dt><a href="http://www.geonames.org/export/web-services.html#findNearby">findNearby</a></dt>
+		<dd>
+				Input: lat and lng.
 		Output: RDF with the nearest place.
-		(<a href="/lids.rdf">LIDS description</a>).
-	</p>
+				E.g. <a href="/findNearby?lat=49.009&lng=8.412#point">/findNearby?lat=49.009&lng=8.412#point</a>.
+		</dd>		 
+		<dt><a href="http://www.geonames.org/export/web-services.html#findNearbyPlaceName">findNearbyPlaceName</a></dt>
+		<dd>
+				Input: lat and lng.
+		Output: RDF with the nearest place.
+				E.g. <a href="/findNearbyPlaceName?lat=49.009&lng=8.412#point">/findNearbyPlaceName?lat=49.009&lng=8.412#point</a>.
+		
+		</dd>
+		<dt><a href="http://code.google.com/apis/maps/documentation/geocoding/">geocode</a></dt>
+		<dd>
+			Input: street address.
+			Output: RDF with lat/lng.
+					E.g. <a href="/geocode?address=Englerstr.11,Karlsruhe,Germany">/geocode?address=Englerstr.11,Karlsruhe,Germany#point</a>.
+		</dd>
+	</dl>	
 	
 	<p>
-		E.g. <a href="/findNearby?lat=49.009&lng=8.412#point">/findNearby?lat=49.009&lng=8.412#point</a>.
-		E.g. <a href="/findNearbyPlaceName?lat=49.009&lng=8.412#point">/findNearbyPlaceName?lat=49.009&lng=8.412#point</a>.
+		<a href="/lids.rdf">LIDS description</a>
 	</p>
   </body>
 </html>
