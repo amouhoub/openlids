@@ -19,7 +19,7 @@ public class Listener implements ServletContextListener {
 	    Cache cache = null;
 
 	    try {
-	        CacheFactory cacheFactory = CacheManager.getInstance().getCacheFactory();
+	    	CacheFactory cacheFactory = CacheManager.getInstance().getCacheFactory(); 
 	        cache = cacheFactory.createCache(Collections.emptyMap());
 			ctx.setAttribute(CACHE, cache);
 	    } catch (CacheException e) {
