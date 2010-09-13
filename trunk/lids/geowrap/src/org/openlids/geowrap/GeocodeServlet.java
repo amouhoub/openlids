@@ -11,22 +11,16 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.StringTokenizer;
 
 import javax.cache.Cache;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
 
 @SuppressWarnings("serial")
 public class GeocodeServlet extends HttpServlet {
@@ -64,22 +58,25 @@ public class GeocodeServlet extends HttpServlet {
 			resp.sendError(400, "please supply address parameter");
 			return;
 		}
-
+		
 		ServletContext ctx = getServletContext();
 		Cache cache = (Cache)ctx.getAttribute(Listener.CACHE);
-		StringReader sr = null;
 		
 		String lat = null;
 		String lng = null;
 
+		String str = null;
+		
 		try {
-			URL geo = new URL("http://maps.google.com/maps/api/geocode/xml?address=" + address + "&sensor=false");
+			URL geo = new URL("http://maps.google.com/maps/api/geocode/xml?address=" + URLEncoder.encode(address, "utf-8") + "&sensor=false");
+
+			if (cache != null) {
+				if (cache.containsKey(geo)) {
+					str = (String)cache.get(geo);
+				}
+			}
 			
-   			if (cache.containsKey(geo)) {
-   				sr = new StringReader((String)cache.get(geo));
-   			}
-   			
-   			if (sr == null) {
+   			if (str == null) {
    				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
    				InputStream is = conn.getInputStream();
 
@@ -103,27 +100,56 @@ public class GeocodeServlet extends HttpServlet {
    				}
    				in.close();
 
-   				String str = sb.toString();
-   				sr = new StringReader(str);
+   				str = sb.toString();
 
-   				cache.put(geo, str);
+   				if (cache != null) {
+   					cache.put(geo, str);
+   				}
    			}
    			
-			Source xsltSource = new StreamSource(new StringReader(XSLT));
-			TransformerFactory factory = TransformerFactory.newInstance();
+   			BufferedReader br2 = new BufferedReader(new StringReader(str));
 
-   			String text = new String();
-			Source xmlSource = new StreamSource(sr);
-			Result target = new StreamResult(text);
-			Transformer trans = factory.newTransformer(xsltSource);
-			trans.transform(xmlSource, target);		
+   			boolean geom = false;
+   			
+   			String line = null;
+   			while ((line = br2.readLine()) != null) {
+   				if (geom == true) {
+   					if (line.trim().startsWith("<lat>")) {
+   						lat = line.trim().substring(5);
+   						lat = lat.substring(0, lat.length()-6);
+   					}
+   					if (line.trim().startsWith("<lng>")) {
+   						lng = line.trim().substring(5);
+   						lng = lng.substring(0, lng.length()-6);
+   					}
+   				}
 
-			StringTokenizer st = new StringTokenizer(text, ",");
-
-			lat = st.nextToken();
-			lng = st.nextToken();
+   				if (line.trim().startsWith("<geometry>")) {
+   					geom = true;
+   				}
+   				
+   				if (lat != null && lng != null) {
+   					break;
+   				}
+   			}
+   			
+   			
+//			StreamSource xsltSource = new StreamSource(new StringReader(XSLT));
+//			TransformerFactory factory = TransformerFactory.newInstance("org.apache.xalan.processor.TransformerFactoryImpl", this.getClass().getClassLoader());
+//			//"com.icl.saxon.TransformerFactoryImpl", this.getClass().getClassLoader());			
+//			//net.sf.saxon.TransformerFactoryImpl", this.getClass().getClassLoader());
+//			
+//			ByteArrayOutputStream bout = new ByteArrayOutputStream();
+////   			StringWriter text = new StringWriter();
+//			StreamSource xmlSource = new StreamSource(sr);
+//			StreamResult target = new StreamResult(bout);
+//			Transformer trans = factory.newTransformer(xsltSource);
+//			trans.transform(xmlSource, target);		
+//
+//			StringTokenizer st = new StringTokenizer(bout.toString(), ",");
 		} catch (Exception e) {
 			e.printStackTrace();
+			//throw new ServletException(e);
 			resp.sendError(500, e.getMessage());
 		}
 
@@ -138,11 +164,13 @@ public class GeocodeServlet extends HttpServlet {
 			out.println("    xmlns:geo='http://www.w3.org/2003/01/geo/wgs84_pos#'>\n");
 			
 			out.println("<rdf:Description rdf:ID='point'>");
-			out.println("   <geo:lat>" + lat + "</geo:lat>");
-			out.println("   <geo:lng>" + lng + "</geo:lng>");
+			out.println("   <geo:lat>" + lat.trim() + "</geo:lat>");
+			out.println("   <geo:lng>" + lng.trim() + "</geo:lng>");
 			out.println("</rdf:Description>");
 
 			out.println("</rdf:RDF>");
+		} else {
+			resp.sendError(500, str);
 		}
 
 		out.close();
