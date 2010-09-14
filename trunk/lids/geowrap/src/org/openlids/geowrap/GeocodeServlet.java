@@ -161,11 +161,16 @@ public class GeocodeServlet extends HttpServlet {
 
 			out.println("<?xml version='1.0'?>");
 			out.println("<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'");
+			out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'\n");
 			out.println("    xmlns:geo='http://www.w3.org/2003/01/geo/wgs84_pos#'>\n");
 			
 			out.println("<rdf:Description rdf:ID='point'>");
-			out.println("   <geo:lat>" + lat.trim() + "</geo:lat>");
-			out.println("   <geo:lng>" + lng.trim() + "</geo:lng>");
+			out.println("   <geo:location>");
+			out.println("     <rdf:Description>");
+			out.println("        <geo:lat>" + lat.trim() + "</geo:lat>");
+			out.println("        <geo:lng>" + lng.trim() + "</geo:lng>");
+			out.println("     </rdf:Description>");
+			out.println("   </geo:location>");
 			out.println("</rdf:Description>");
 
 			out.println("</rdf:RDF>");
