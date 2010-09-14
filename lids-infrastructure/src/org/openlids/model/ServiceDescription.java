@@ -33,6 +33,10 @@ public class ServiceDescription {
     	output.add(bgp);
     }
     
+    public Set<BGP> getOutputBGP() {
+    	return output;
+    }
+    
     private void analyze() {
     	if(analyzed) return;
     
