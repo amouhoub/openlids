@@ -10,7 +10,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>findNearbyWikipedia</servlet-name>
-		<servlet-class>org.openlids.geowrap.FindNearbyWikiServlet</servlet-class>
+		<servlet-class>org.openlids.geowrap.FindNearbyWikipediaServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>findNearbyPlaceName</servlet-name>

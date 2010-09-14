@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-public class FindNearbyWikiServlet extends HttpServlet {
+public class FindNearbyWikipediaServlet extends HttpServlet {
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -62,9 +62,11 @@ public class FindNearbyWikiServlet extends HttpServlet {
 		try {
 			URL geo = new URL("http://ws.geonames.org/findNearbyWikipedia?lat=" + lat + "&lng=" + lng);
 			
-   			if (cache.containsKey(geo)) {
-   				sr = new StringReader((String)cache.get(geo));
-   			}
+			if (cache != null) {
+				if (cache.containsKey(geo)) {
+					sr = new StringReader((String)cache.get(geo));
+				}
+			}
    			
    			if (sr == null) {
    				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
@@ -93,7 +95,9 @@ public class FindNearbyWikiServlet extends HttpServlet {
    				String str = sb.toString();
    				sr = new StringReader(str);
 
-   				cache.put(geo, str);
+   				if (cache != null) {
+   					cache.put(geo, str);
+   				}
    			}
    			
    			BufferedReader br2 = new BufferedReader(sr);

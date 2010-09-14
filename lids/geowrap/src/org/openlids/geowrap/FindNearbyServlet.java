@@ -60,10 +60,12 @@ public class FindNearbyServlet extends HttpServlet {
 		try {
 			URL geo = new URL("http://ws.geonames.org/findNearby?lat=" + lat + "&lng=" + lng);
 			
-   			if (cache.containsKey(geo)) {
-   				sr = new StringReader((String)cache.get(geo));
-   			}
-   			
+			if (cache != null) {
+				if (cache.containsKey(geo)) {
+					sr = new StringReader((String)cache.get(geo));
+				}
+			}
+
    			if (sr == null) {
    				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
    				InputStream is = conn.getInputStream();
@@ -91,7 +93,9 @@ public class FindNearbyServlet extends HttpServlet {
    				String str = sb.toString();
    				sr = new StringReader(str);
 
-   				cache.put(geo, str);
+   				if (cache != null) {
+   					cache.put(geo, str);
+   				}
    			}
    			
    			BufferedReader br2 = new BufferedReader(sr);
