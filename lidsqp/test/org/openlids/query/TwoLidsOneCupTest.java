@@ -15,7 +15,7 @@ public class TwoLidsOneCupTest extends TestCase {
 	Resource ADR = new Resource("http://example.org/ADR");
 	
 	String GEOCODE = "CONSTRUCT { ?point " + GEO.LAT.toN3() + " ?lat ; " + GEO.LONG.toN3() + " ?lng }\nFROM <http://km.aifb.kit.edu/services/geowrap/geocode>\nWHERE { ?point " + ADR.toN3() + " ?address . }";
-	String FINDWIKI = "CONSTRUCT { ?point " + FOAF.BASED_NEAR.toN3() + " ?feature }\nFROM <http://km.aifb.kit.edu/services/geowrap/findNearbyWikipedia>\nWHERE { ?point " + GEO.LAT.toN3() + " ?lat ; " + GEO.LONG.toN3().replace("long", "lng") + " ?lng . }";
+	String FINDWIKI = "CONSTRUCT { ?point " + FOAF.BASED_NEAR.toN3() + " ?feature }\nFROM <http://km.aifb.kit.edu/services/geowrap/findNearbyWikipedia>\nWHERE { ?point " + GEO.LAT.toN3() + " ?lat ; " + GEO.LONG.toN3() + " ?lng . }";
 	
 	String query = "SELECT ?p ?feat WHERE { ?p <" + GEO.NS + "location> ?loc . ?loc <http://xmlns.com/foaf/0.1/based_near> ?feat }";
 	
