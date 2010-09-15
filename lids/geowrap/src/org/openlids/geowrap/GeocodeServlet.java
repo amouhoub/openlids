@@ -168,7 +168,7 @@ public class GeocodeServlet extends HttpServlet {
 			out.println("   <geo:location>");
 			out.println("     <rdf:Description>");
 			out.println("        <geo:lat>" + lat.trim() + "</geo:lat>");
-			out.println("        <geo:lng>" + lng.trim() + "</geo:lng>");
+			out.println("        <geo:long>" + lng.trim() + "</geo:long>");
 			out.println("     </rdf:Description>");
 			out.println("   </geo:location>");
 			out.println("</rdf:Description>");
