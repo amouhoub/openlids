@@ -29,14 +29,14 @@ public class BenchmarkTest extends TestCase {
 	void generate(String s, int i) {
 		if (i < N) {
 			if (i > 0) {	
-				System.out.println("CONSTRUCT { ?s <http://example.org/pred-" + "(" + s + ")" +i + "> ?val }");
-				System.out.println("FROM <http://geowrap.openlids.org/count/c" + "(" + s + ")" +i + ">");
+				System.out.println("CONSTRUCT { ?s <http://example.org/pred-" + "a" + s + "a" +i + "> ?val }");
+				System.out.println("FROM <http://geowrap.openlids.org/count/c" + "a" + s + "a" +i + ">");
 				System.out.println("WHERE {");
 				System.out.println("  ?s <http://example.org/pred-" + s + "> ?val1 .");
 				System.out.println("  ?s <http://example.org/pred-" + i + "> ?val2 .");
 				System.out.println("}");
 				//System.out.println(s);
-				s = "(" + s + ")" +i;
+				s = "a" + s + "a" +i;
 
 			} else {
 				s = s+i;
