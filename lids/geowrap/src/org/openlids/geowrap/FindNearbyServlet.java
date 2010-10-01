@@ -37,13 +37,13 @@ public class FindNearbyServlet extends HttpServlet {
 			}
 			return;
 		}
-		
+
 		resp.setContentType("application/rdf+xml");
-		
+
 		OutputStream os = resp.getOutputStream();
 		PrintWriter out = new PrintWriter(os);
 		//OutputStreamWriter osw = new OutputStreamWriter(os , "UTF-8");
-		
+
 		String lat = req.getParameter("lat");
 		String lng = req.getParameter("lng");
 
@@ -51,7 +51,7 @@ public class FindNearbyServlet extends HttpServlet {
 			resp.sendError(400, "please supply lat and lng parameters");
 			return;
 		}
-	
+
 		ServletContext ctx = getServletContext();
 		Cache cache = (Cache)ctx.getAttribute(Listener.CACHE);
 		StringReader sr = null;
@@ -59,76 +59,77 @@ public class FindNearbyServlet extends HttpServlet {
 		URI geonames = null;
 		try {
 			URL geo = new URL("http://ws.geonames.org/findNearby?lat=" + lat + "&lng=" + lng);
-			
+
 			if (cache != null) {
 				if (cache.containsKey(geo)) {
 					sr = new StringReader((String)cache.get(geo));
 				}
 			}
 
-   			if (sr == null) {
-   				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
-   				InputStream is = conn.getInputStream();
+			if (sr == null) {
+				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
+				InputStream is = conn.getInputStream();
 
-   				if (conn.getResponseCode() != 200) {
-   					resp.sendError(500, "geonames returned " + conn.getResponseCode() + " " + streamToString(conn.getErrorStream()));
-   					return;
-   				}
+				if (conn.getResponseCode() != 200) {
+					resp.sendError(500, "geonames returned " + conn.getResponseCode() + " " + streamToString(conn.getErrorStream()));
+					return;
+				}
 
-   				String encoding = conn.getContentEncoding();
-   				if (encoding == null) {
-   					encoding = "ISO_8859-1";
-   				}
+				String encoding = conn.getContentEncoding();
+				if (encoding == null) {
+					encoding = "ISO_8859-1";
+				}
 
-   				BufferedReader in = new BufferedReader(new InputStreamReader(is, encoding));
-   				String l;
-   				StringBuilder sb = new StringBuilder();
+				BufferedReader in = new BufferedReader(new InputStreamReader(is, encoding));
+				String l;
+				StringBuilder sb = new StringBuilder();
 
-   				while ((l = in.readLine()) != null) {
-   					sb.append(l);
-   					sb.append('\n');
-   				}
-   				in.close();
+				while ((l = in.readLine()) != null) {
+					sb.append(l);
+					sb.append('\n');
+				}
+				in.close();
 
-   				String str = sb.toString();
-   				sr = new StringReader(str);
+				String str = sb.toString();
+				sr = new StringReader(str);
 
-   				if (cache != null) {
-   					cache.put(geo, str);
-   				}
-   			}
-   			
-   			BufferedReader br2 = new BufferedReader(sr);
+				if (cache != null) {
+					cache.put(geo, str);
+				}
+			}
 
-   			String line2 = null;
-   			while ((line2 = br2.readLine()) != null) {
-   				if (line2.startsWith("<geonameId>")) {
-   					int end = line2.indexOf("</geonameId>");
+			BufferedReader br2 = new BufferedReader(sr);
 
-   					geonames = new URI("http://sws.geonames.org/" + line2.substring(11, end) + "/");
-   				}
-   			}
+			String line2 = null;
+			while ((line2 = br2.readLine()) != null) {
+				if (line2.startsWith("<geonameId>")) {
+					int end = line2.indexOf("</geonameId>");
+
+					geonames = new URI("http://sws.geonames.org/" + line2.substring(11, end) + "/");
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			resp.sendError(500, e.getMessage());
 		}
 
+		resp.setHeader("Cache-Control", "public");
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, 1);
+		resp.setHeader("Expires", RFC822.format(cal.getTime()));
+
+		out.println("<?xml version='1.0'?>");
+		out.println("<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'");
+		out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'>\n");
+
+		out.println("<rdf:Description rdf:ID='point'>");
 		if (geonames != null) {
-			resp.setHeader("Cache-Control", "public");
-			Calendar cal = Calendar.getInstance();
-			cal.add(Calendar.DATE, 1);
-			resp.setHeader("Expires", RFC822.format(cal.getTime()));
-
-			out.println("<?xml version='1.0'?>");
-			out.println("<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'");
-			out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'>\n");
-			
-			out.println("<rdf:Description rdf:ID='point'>");
 			out.println("   <foaf:based_near rdf:resource='" + geonames + "'/>");
-			out.println("</rdf:Description>");
-
-			out.println("</rdf:RDF>");
 		}
+		out.println("</rdf:Description>");
+
+		out.println("</rdf:RDF>");
+
 
 		out.close();
 	}
@@ -148,7 +149,7 @@ public class FindNearbyServlet extends HttpServlet {
 				is.close();
 			}
 		}
-		
+
 		return sb.toString();
 	}
 }

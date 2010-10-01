@@ -55,8 +55,14 @@ public class GeocodeServlet extends HttpServlet {
 		String address = req.getParameter("address");
 
 		if (address == null) {
-			resp.sendError(400, "please supply address parameter");
-			return;
+			String street = req.getParameter("street");
+			String town = req.getParameter("town");
+			String country = req.getParameter("country");
+			if(street == null || town == null || country == null) {
+				resp.sendError(400, "please supply address parameter or street,town,country parameters");
+				return;
+			}
+			address = street + "," + town + "," + country;
 		}
 		
 		ServletContext ctx = getServletContext();
@@ -161,16 +167,18 @@ public class GeocodeServlet extends HttpServlet {
 
 			out.println("<?xml version='1.0'?>");
 			out.println("<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'");
-			//out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'\n");
+			out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'\n");
 			out.println("    xmlns:geo='http://www.w3.org/2003/01/geo/wgs84_pos#'>\n");
 			
-			out.println("<rdf:Description rdf:ID='point'>");
-			out.println("   <geo:location>");
+			out.println("<rdf:Description rdf:ID='entity'>");
+			out.println("  <foaf:based_near>");
+//			out.println("   <geo:location>");
 			out.println("     <rdf:Description>");
 			out.println("        <geo:lat>" + lat.trim() + "</geo:lat>");
 			out.println("        <geo:long>" + lng.trim() + "</geo:long>");
 			out.println("     </rdf:Description>");
-			out.println("   </geo:location>");
+//			out.println("   </geo:location>");
+			out.println("   </foaf:based_near>");
 			out.println("</rdf:Description>");
 
 			out.println("</rdf:RDF>");
