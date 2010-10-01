@@ -1,6 +1,7 @@
 package org.openlids.query;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -17,16 +18,15 @@ import org.semanticweb.yars.nx.Variable;
 import org.semanticweb.yars.nx.parser.ParseException;
 
 public class LIDSStrategyBruteForce extends LIDSStrategy {
-	
+
 	public static LIDSStrategyFactory getFactory() {
 		return new LIDSStrategyFactory() {
 
 			@Override
-			public LIDSStrategy createLIDSStrategy(QueryObj q,
-					QueryExecutor qe, Set<ServiceDescription> services) {
+			public LIDSStrategy createLIDSStrategy(QueryObj q, QueryExecutor qe, Set<ServiceDescription> services) {
 				return new LIDSStrategyBruteForce(q, qe, services);
 			}
-			
+
 		};
 	}
 
@@ -47,7 +47,7 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 
 		boolean newLIDSlinks = true;
 
-		while(newLIDSlinks) {
+		while(newLIDSlinks) {			
 			newLIDSlinks = false;
 
 			for(ServiceDescription service : services) {
@@ -55,6 +55,7 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 				QueryObj lidsQ = DataModelConvUtil.convert(service);
 
 				Collection<Node[]> results = qe.execQuery(lidsQ.headVars, lidsQ.bgps);
+				incLidsMatches();
 
 				int nrHeadVar = 0;
 				for(nrHeadVar=0;nrHeadVar < lidsQ.headVars.length; nrHeadVar++) {
@@ -62,10 +63,10 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 						break;
 				}
 
-				for(Node[] r : results) {
-					Resource newR = new Resource(service.makeURI(DataModelConvUtil.convert(lidsQ.headVars, r)));
+				for(final Node[] r : results) {
+					final Resource newR = new Resource(service.makeURI(DataModelConvUtil.convert(lidsQ.headVars, r)));
 
-					Node[] newSameAs = new Node[] { r[nrHeadVar], DataSet.sameAsRes, newR };
+					Node[] newSameAs = new Node[] { r[nrHeadVar], newR };
 					if(!newLIDS.contains(newSameAs)) {
 						newLIDSlinks = true;
 						newLIDS.add(newSameAs);
@@ -76,31 +77,28 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						Iterable<Node[]> triples = null;
 						try {
-							triples = dataSet.crawlURIs(uris);
-						} catch (ParseException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						if(triples != null) {
-							for(Node[] nx : triples) { 
-								Node[] n3 = new Node[] { nx[0], nx[1], nx[2] };
-								if(n3[0].equals(newR)) {
-									n3[0] = r[0];
+							dataSet.crawlURIs(uris, new TripleHandler() {
+								@Override
+								public Node[] handle(Node[] nx) {
+									Node[] n3 = new Node[] { nx[0], nx[1], nx[2] };
+									if(n3[0].toString().contains("dbpedia")) {
+										n3[0] = n3[0];
+									}
+									if(n3[0].equals(newR)) {
+										n3[0] = r[0];
+									}
+									return n3;
 								}
-								if(!n3[1].toString().contains("http://www.w3.org/2006/http#") && !n3[1].toString().contains("http://code.google.com/p/ldspider/ns#headerInfo")) {
-									dataSet._data.add(n3);
-								}
-							}
+							});
+						} catch(Exception e) {
+
 						}
 					}
 				}
 			}
 		}
+
 
 		return newLIDS;
 	}
