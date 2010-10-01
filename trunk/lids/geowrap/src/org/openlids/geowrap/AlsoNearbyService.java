@@ -13,8 +13,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Locale;
 import java.util.zip.GZIPInputStream;
 
@@ -25,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-public class FindNearbyWikipediaServlet extends HttpServlet {
+public class AlsoNearbyService extends HttpServlet {
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -39,13 +37,13 @@ public class FindNearbyWikipediaServlet extends HttpServlet {
 			}
 			return;
 		}
-		
+
 		resp.setContentType("application/rdf+xml");
-		
+
 		OutputStream os = resp.getOutputStream();
 		PrintWriter out = new PrintWriter(os);
 		//OutputStreamWriter osw = new OutputStreamWriter(os , "UTF-8");
-		
+
 		String lat = req.getParameter("lat");
 		String lng = req.getParameter("lng");
 
@@ -53,89 +51,86 @@ public class FindNearbyWikipediaServlet extends HttpServlet {
 			resp.sendError(400, "please supply lat and lng parameters");
 			return;
 		}
-	
+
 		ServletContext ctx = getServletContext();
 		Cache cache = (Cache)ctx.getAttribute(Listener.CACHE);
 		StringReader sr = null;
 
-		List<URI> geonames = new LinkedList<URI>();
+		URI geonames = null;
 		try {
-			URL geo = new URL("http://ws.geonames.org/findNearbyWikipedia?lat=" + lat + "&lng=" + lng);
-			
+			URL geo = new URL("http://ws.geonames.org/findNearby?lat=" + lat + "&lng=" + lng);
+
 			if (cache != null) {
 				if (cache.containsKey(geo)) {
 					sr = new StringReader((String)cache.get(geo));
 				}
 			}
-   			
-   			if (sr == null) {
-   				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
-   				InputStream is = conn.getInputStream();
 
-   				if (conn.getResponseCode() != 200) {
-   					resp.sendError(500, "geonames returned " + conn.getResponseCode() + " " + streamToString(conn.getErrorStream()));
-   					return;
-   				}
+			if (sr == null) {
+				HttpURLConnection conn = (HttpURLConnection)geo.openConnection();
+				InputStream is = conn.getInputStream();
 
-   				String encoding = conn.getContentEncoding();
-   				if (encoding == null) {
-   					encoding = "ISO_8859-1";
-   				}
+				if (conn.getResponseCode() != 200) {
+					resp.sendError(500, "geonames returned " + conn.getResponseCode() + " " + streamToString(conn.getErrorStream()));
+					return;
+				}
 
-   				BufferedReader in = new BufferedReader(new InputStreamReader(is, encoding));
-   				String l;
-   				StringBuilder sb = new StringBuilder();
+				String encoding = conn.getContentEncoding();
+				if (encoding == null) {
+					encoding = "ISO_8859-1";
+				}
 
-   				while ((l = in.readLine()) != null) {
-   					sb.append(l);
-   					sb.append('\n');
-   				}
-   				in.close();
+				BufferedReader in = new BufferedReader(new InputStreamReader(is, encoding));
+				String l;
+				StringBuilder sb = new StringBuilder();
 
-   				String str = sb.toString();
-   				sr = new StringReader(str);
+				while ((l = in.readLine()) != null) {
+					sb.append(l);
+					sb.append('\n');
+				}
+				in.close();
 
-   				if (cache != null) {
-   					cache.put(geo, str);
-   				}
-   			}
-   			
-   			BufferedReader br2 = new BufferedReader(sr);
+				String str = sb.toString();
+				sr = new StringReader(str);
 
-   			String line2 = null;
-   			while ((line2 = br2.readLine()) != null) {
-   				if (line2.startsWith("<wikipediaUrl>")) {
-   					int end = line2.indexOf("</wikipediaUrl>");
-   					String wpuri = line2.substring(14, end);
-   					if(wpuri.startsWith("http://en.wikipedia.org/wiki/")) {
-   						geonames.add(new URI("http://dbpedia.org/resource/" + wpuri.substring(29)));
-   					}
-   					// geonames.add(new URI("http://sws.geonames.org/" +  + "/"));
-   				}
-   			}
+				if (cache != null) {
+					cache.put(geo, str);
+				}
+			}
+
+			BufferedReader br2 = new BufferedReader(sr);
+
+			String line2 = null;
+			while ((line2 = br2.readLine()) != null) {
+				if (line2.startsWith("<geonameId>")) {
+					int end = line2.indexOf("</geonameId>");
+
+					geonames = new URI("http://sws.geonames.org/" + line2.substring(11, end) + "/");
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			resp.sendError(500, e.getMessage());
 		}
 
+
+		resp.setHeader("Cache-Control", "public");
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, 1);
+		resp.setHeader("Expires", RFC822.format(cal.getTime()));
+
+		out.println("<?xml version='1.0'?>");
+		out.println("<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'");
+		out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'>\n");
+
+		out.println("<rdf:Description rdf:ID='spatial_entity'>");
 		if (geonames != null) {
-			resp.setHeader("Cache-Control", "public");
-			Calendar cal = Calendar.getInstance();
-			cal.add(Calendar.DATE, 1);
-			resp.setHeader("Expires", RFC822.format(cal.getTime()));
+			out.println("   <foaf:based_near rdf:resource='" + geonames + "'/>");
+		}
+		out.println("</rdf:Description>");
 
-			out.println("<?xml version='1.0'?>");
-			out.println("<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'");
-			out.println("    xmlns:foaf='http://xmlns.com/foaf/0.1/'>\n");
-			
-			out.println("<rdf:Description rdf:ID='point'>");
-			for(URI geoname : geonames) {
-				out.println("   <foaf:based_near rdf:resource='" + geoname + "'/>");
-			}
-			out.println("</rdf:Description>");
+		out.println("</rdf:RDF>");
 
-			out.println("</rdf:RDF>");
-		} 
 
 		out.close();
 	}
@@ -155,7 +150,7 @@ public class FindNearbyWikipediaServlet extends HttpServlet {
 				is.close();
 			}
 		}
-		
+
 		return sb.toString();
 	}
 }
