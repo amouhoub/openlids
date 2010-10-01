@@ -1,0 +1,3380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:og="http://ogp.me/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="http://openlids.org/universities.rdf#list">
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>140105122708</og:id>
+        <foaf:name>The University of North Carolina at Chapel Hill</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22360227546</og:id>
+        <foaf:name>The University of Alabama</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>66392842929</og:id>
+        <foaf:name>Colorado Technical University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>40139773841</og:id>
+        <foaf:name>University of Kansas Athletics, Home of the Jayhawks! </foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>369463984811</og:id>
+        <foaf:name>Northeastern University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>113174253097</og:id>
+        <foaf:name>University of Notre Dame</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>26573965003</og:id>
+        <foaf:name>Bowling Green State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>72585506654</og:id>
+        <foaf:name>Ohio University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23489317340</og:id>
+        <foaf:name>Pace University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>334143415449</og:id>
+        <foaf:name>Insight into the life of a student of the Islaamic University of Madeenah</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5882213990</og:id>
+        <foaf:name>University of London International Programmes</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25630472807</og:id>
+        <foaf:name>University of North Alabama</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5826202566</og:id>
+        <foaf:name>Xavier University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5606464563</og:id>
+        <foaf:name>Mississippi State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23680344606</og:id>
+        <foaf:name>Arizona State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21554895290</og:id>
+        <foaf:name>Liberty University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>18379179328</og:id>
+        <foaf:name>Biola University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>228401243342</og:id>
+        <foaf:name>Northwestern University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16576552355</og:id>
+        <foaf:name>University of North Dakota Fighting Sioux</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19249249844</og:id>
+        <foaf:name>Kent State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19448909409</og:id>
+        <foaf:name>Vanderbilt University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>31004970445</og:id>
+        <foaf:name>PolyU - The Hong Kong POLYTECHNIC UNIVERSITY / 香港理工大学</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19278722584</og:id>
+        <foaf:name>Florida International University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>17767109610</og:id>
+        <foaf:name>University of Miami</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25545934041</og:id>
+        <foaf:name>Georgia Southern University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>163464558272</og:id>
+        <foaf:name>University of Memphis</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7191390807</og:id>
+        <foaf:name>University of Arkansas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>75492501350</og:id>
+        <foaf:name>Western Kentucky University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>140998521533</og:id>
+        <foaf:name>Brown University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>63589644737</og:id>
+        <foaf:name>Boston University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6096033309</og:id>
+        <foaf:name>The University of Arizona</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>66189885427</og:id>
+        <foaf:name>Montclair State University Official Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>11471637565</og:id>
+        <foaf:name>APIIT &amp; UCTI - Malaysia's Award-Winning University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>60011053571</og:id>
+        <foaf:name>University of Rhode Island</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6010469068</og:id>
+        <foaf:name>University of Northern Iowa</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44548242208</og:id>
+        <foaf:name>University of Alabama Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>40498512553</og:id>
+        <foaf:name>Binus University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>27327574931</og:id>
+        <foaf:name>Clemson University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>160651686046</og:id>
+        <foaf:name>Our Lady Of Fatima University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>325868702683</og:id>
+        <foaf:name>University of Missouri - Kansas City</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>28898123935</og:id>
+        <foaf:name>University of Rhode Island Rams</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44930080504</og:id>
+        <foaf:name>Texas Tech University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>193488666400</og:id>
+        <foaf:name>McMaster University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7513286285</og:id>
+        <foaf:name>Full Sail University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>59024478936</og:id>
+        <foaf:name>Monash University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10049970637</og:id>
+        <foaf:name>The University of Oklahoma</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>100526673914</og:id>
+        <foaf:name>Purdue University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6121258365</og:id>
+        <foaf:name>University of Salford</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10515469841</og:id>
+        <foaf:name>University of Oregon</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>134972803193847</og:id>
+        <foaf:name>University of Southern California</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>283544874786</og:id>
+        <foaf:name>VIT University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>213197752833</og:id>
+        <foaf:name>UAAP (Adamson University Soaring Falcons)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>114652216730</og:id>
+        <foaf:name>University of Gujrat</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25099076618</og:id>
+        <foaf:name>Sam Houston State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5979139863</og:id>
+        <foaf:name>University of Cambridge</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>13178216234</og:id>
+        <foaf:name>Middle Tennessee State University (MTSU)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>45710364705</og:id>
+        <foaf:name>University of Oregon Ducks</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>239914185330</og:id>
+        <foaf:name>University of Illinois Assembly Hall</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>98508878775</og:id>
+        <foaf:name>University of Pennsylvania</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>184026786159</og:id>
+        <foaf:name>The University of Texas at El Paso</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>228097472888</og:id>
+        <foaf:name>Islamic Online University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8825331245</og:id>
+        <foaf:name>Georgetown University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12244926481</og:id>
+        <foaf:name>Marshall University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>168221023425</og:id>
+        <foaf:name>University of Cambridge International Examinations</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>57322902081</og:id>
+        <foaf:name>Nottingham Trent University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>199343000566</og:id>
+        <foaf:name>Texas State University-San Marcos</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5870052102</og:id>
+        <foaf:name>Tennessee Tech University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6684699242</og:id>
+        <foaf:name>California State University, Northridge</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>215120346084</og:id>
+        <foaf:name>Loyola Marymount University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16972274487</og:id>
+        <foaf:name>University of Maryland</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>20697868961</og:id>
+        <foaf:name>Boston University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>29758740802</og:id>
+        <foaf:name>DePaul University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>120661217270</og:id>
+        <foaf:name>University of Houston-Downtown</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>93415311269</og:id>
+        <foaf:name>University of Minnesota</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5588828700</og:id>
+        <foaf:name>University of North Texas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19312397001</og:id>
+        <foaf:name>Jackson State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22630598157</og:id>
+        <foaf:name>Miami University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>106242107519</og:id>
+        <foaf:name>University of Houston Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>32604451786</og:id>
+        <foaf:name>Stephen F. Austin State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>101779535421</og:id>
+        <foaf:name>Thammasat University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>27868690786</og:id>
+        <foaf:name>Tennessee State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>155151195064</og:id>
+        <foaf:name>TCU – Texas Christian University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>228939315037</og:id>
+        <foaf:name>University of San Carlos - CEBU CITY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>170697913157</og:id>
+        <foaf:name>Ain Shams University جامعة عين شمس</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>39744176222</og:id>
+        <foaf:name>Gadjah Mada University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>186654778994</og:id>
+        <foaf:name>University of the Philippines Los Baños</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>212032765476</og:id>
+        <foaf:name>Southampton Solent University - Official</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>34425751898</og:id>
+        <foaf:name>Southern Illinois University Carbondale</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>18168618921</og:id>
+        <foaf:name>Kent State University Golden Flashes</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16686610106</og:id>
+        <foaf:name>University of Oxford</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>26324309867</og:id>
+        <foaf:name>Utah State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>154644243621</og:id>
+        <foaf:name>Stony Brook University Official Class of 2014!</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23502910767</og:id>
+        <foaf:name>James Madison University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>92692649728</og:id>
+        <foaf:name>San Diego State University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7293092326</og:id>
+        <foaf:name>University of Nebraska-Lincoln</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21749746264</og:id>
+        <foaf:name>The University of New Mexico - UNM</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8089979660</og:id>
+        <foaf:name>The University Of Hong Kong (HKU)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>359598069074</og:id>
+        <foaf:name>Polytechnic University of the Philippines (Official Fan Profile)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7576735635</og:id>
+        <foaf:name>The University of Utah</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>140099965687</og:id>
+        <foaf:name>Careers at University of Mississippi Health Care</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>35078114590</og:id>
+        <foaf:name>University of Central Florida</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22579154221</og:id>
+        <foaf:name>The University of Louisiana</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>215542592689</og:id>
+        <foaf:name>NUEVA ECIJA UNIVERSITY of SCIENCE and TECHNOLOGY - ( C.L.P.C. )....ALUMNI</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>116056983505</og:id>
+        <foaf:name>Iligan Institute of Technology of the Mindanao State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>157645494149</og:id>
+        <foaf:name>Troy University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6240296732</og:id>
+        <foaf:name>Concordia University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22922516119</og:id>
+        <foaf:name>Virginia Commonwealth University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>132880665271</og:id>
+        <foaf:name>Bangkok University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>75011561973</og:id>
+        <foaf:name>Northern Illinois University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>111191840866</og:id>
+        <foaf:name>University of Maryland Eastern Shore (UMES)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>194064667246</og:id>
+        <foaf:name>Bar University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21105780752</og:id>
+        <foaf:name>University of Michigan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>55528788113</og:id>
+        <foaf:name>University of Wisconsin-Madison</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>205191620342</og:id>
+        <foaf:name>Texas A&amp;M University-Corpus Christi</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6397178715</og:id>
+        <foaf:name>Missouri State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>114875933757</og:id>
+        <foaf:name>Big Red - Western Kentucky University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>54557874359</og:id>
+        <foaf:name>Acadia University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>324010288553</og:id>
+        <foaf:name>Can this pile of trash get more fans than Texas A&amp;M University?</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>111462955561335</og:id>
+        <foaf:name>I Bet IIUM Can Get 100,000 Fans Before Any Other University In Malaysia</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>53302285647</og:id>
+        <foaf:name>Florida State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>107377672635814</og:id>
+        <foaf:name>I wonder what Cambridge University Netball Team abbreviate their name to?</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>143724205952</og:id>
+        <foaf:name>Ohio University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>106675082705901</og:id>
+        <foaf:name>SAVE STONY BROOK UNIVERSITY-SOUTHAMPTON CAMPUS</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21657666681</og:id>
+        <foaf:name>University of Georgia</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>108933132710</og:id>
+        <foaf:name>University of San Jose - Recoletos Supreme Student Council</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>35622951402</og:id>
+        <foaf:name>John F. Kennedy School of Government at Harvard University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>116337554939</og:id>
+        <foaf:name>Kaplan University School of Business and Management</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>31122996335</og:id>
+        <foaf:name>Obafemi Awolowo University (OAU)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6621113015</og:id>
+        <foaf:name>RDI - UK University Distance Learning Courses</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>117324664949076</og:id>
+        <foaf:name>Kasama ako sa BIG 4 University sa Pilipinas (UP, ADMU, DLSU, UST)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>325688909602</og:id>
+        <foaf:name>I bet  Notre Dame can get 1.000,000 fans before University of Michigan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44158497872</og:id>
+        <foaf:name>Kansas State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>316159961487</og:id>
+        <foaf:name>Our Lady of Fatima University (Quezon City)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22228956341</og:id>
+        <foaf:name>National Chengchi University 國立政治大學</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>288750823143</og:id>
+        <foaf:name>I bet Michigan State can get 1,000,000 fans before University of Michigan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>210992148624</og:id>
+        <foaf:name>Kwame Nkrumah University of Science and Technology (KNUST)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>177432767810</og:id>
+        <foaf:name>University of Phoenix Southern California Campus</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>26529665394</og:id>
+        <foaf:name>Appalachian State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>152359041454424</og:id>
+        <foaf:name>The University Of Me</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>192121578401</og:id>
+        <foaf:name>University of Wollongong</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>135690266447047</og:id>
+        <foaf:name>Far Eastern University - Official Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>50333542419</og:id>
+        <foaf:name>Northwest Missouri State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>109932465717007</og:id>
+        <foaf:name>I'm going to University! LOL jk David Camerons PM.</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>27199845707</og:id>
+        <foaf:name>North Carolina Agricultural &amp; Technical State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10022826163</og:id>
+        <foaf:name>Western Michigan University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>463347220471</og:id>
+        <foaf:name>I bet The University of Michigan can get 1,000,000 fans before MSU</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23314423514</og:id>
+        <foaf:name>University of Santo Tomas Singers</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>38503490704</og:id>
+        <foaf:name>City University of Hong Kong 香港城市大學</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>125864500784541</og:id>
+        <foaf:name>Beautiful Faces of Lyceum of the Philippines University - Cavite Campus</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>87257252420</og:id>
+        <foaf:name>Stellenbosch University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>120255645152</og:id>
+        <foaf:name>Ateneo de Manila University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>172743883850</og:id>
+        <foaf:name>Adamson University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>56036619922</og:id>
+        <foaf:name>LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY ,OGBOMOSO</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>52993642993</og:id>
+        <foaf:name>De La Salle University-Manila</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>38992348286</og:id>
+        <foaf:name>Oregon State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>116623453534</og:id>
+        <foaf:name>The University of Alabama Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>263610128544</og:id>
+        <foaf:name>University: It's like being on the dole but your parents are proud of you.</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>113435111210</og:id>
+        <foaf:name>Bemidji State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>54759129103</og:id>
+        <foaf:name>Chulalongkorn University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>93602576932</og:id>
+        <foaf:name>University of Cincinnati</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>27899331165</og:id>
+        <foaf:name>Northwest Missouri State University Alumni</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>95771566295</og:id>
+        <foaf:name>Campbellsville University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10111634660</og:id>
+        <foaf:name>University of California, Berkeley</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>17696629163</og:id>
+        <foaf:name>East Carolina University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>68928662834</og:id>
+        <foaf:name>Cleveland State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>88914146646</og:id>
+        <foaf:name>South Dakota State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>122072147824445</og:id>
+        <foaf:name>university</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25493258171</og:id>
+        <foaf:name>Texas A&amp;M University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>114545838567867</og:id>
+        <foaf:name>university</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8959695308</og:id>
+        <foaf:name>RMIT University </foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>116608567698</og:id>
+        <foaf:name>&lt; Yarmouk University &gt;</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>106033039436537</og:id>
+        <foaf:name>university</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>98198817698</og:id>
+        <foaf:name>FON University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>319070488107</og:id>
+        <foaf:name>I'm a University student.. and I DON'T HAVE A SLEEP PATTERN !!!</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>110521652310094</og:id>
+        <foaf:name>university</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>314503439534</og:id>
+        <foaf:name>Beach House Canteen - University of the Philippines</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>87967073210</og:id>
+        <foaf:name>Temple Street Children's University Hospital</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>54804304780</og:id>
+        <foaf:name>University of Cambridge Alumni Relations Office (CARO)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44496359631</og:id>
+        <foaf:name>University of Florida</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>42161496278</og:id>
+        <foaf:name>Far Eastern University, Philippines</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5983837179</og:id>
+        <foaf:name>North Carolina State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>24467978227</og:id>
+        <foaf:name>Indiana University of Pennsylvania</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5981304995</og:id>
+        <foaf:name>Ferris State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>140815965112</og:id>
+        <foaf:name>Grand Valley State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>120712640244</og:id>
+        <foaf:name>Northern Arizona University Alumni Relations</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>109819614612</og:id>
+        <foaf:name>University of Perpetual Help - The Perpetualite Community</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8329750274</og:id>
+        <foaf:name>Tufts University Beelzebubs</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>20650727233</og:id>
+        <foaf:name>Old Dominion University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>13179137450</og:id>
+        <foaf:name>Kasetsart University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>144915652195106</og:id>
+        <foaf:name>University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8465525966</og:id>
+        <foaf:name>Kocaeli Üniversitesi - Kocaeli University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>47653812295</og:id>
+        <foaf:name>University of Santo Tomas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>140008733585</og:id>
+        <foaf:name>University of Delaware</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>60702615328</og:id>
+        <foaf:name>University of Phoenix Houston Campus</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>261392497950</og:id>
+        <foaf:name>College of Mass Communications, Texas Tech University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>124249383207</og:id>
+        <foaf:name>Ross University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5973249561</og:id>
+        <foaf:name>Middlesex University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>56900048284</og:id>
+        <foaf:name>University of Mississippi ~ Ole Miss</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>85442574618</og:id>
+        <foaf:name>Southern University Marching Band</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>113582568665637</og:id>
+        <foaf:name>World University Rankings</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>39013362306</og:id>
+        <foaf:name>Oklahoma State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>35423931911</og:id>
+        <foaf:name>The University of Southern Mississippi</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>51828245106</og:id>
+        <foaf:name>Charleston Southern University Buccaneers</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>363583078223</og:id>
+        <foaf:name>國立東華大學 (National Dong Hwa University, Taiwan)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>72530316616</og:id>
+        <foaf:name>Ateneo de Davao University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>212275426004</og:id>
+        <foaf:name>Griffith University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>54415572996</og:id>
+        <foaf:name>American University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>118303983596</og:id>
+        <foaf:name>Villanova University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>136298855614</og:id>
+        <foaf:name>Colorado State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>82850948181</og:id>
+        <foaf:name>University of Pittsburgh</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>32511457370</og:id>
+        <foaf:name>The Ohio State University Marching Band</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25377640864</og:id>
+        <foaf:name>Kaplan University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21037428933</og:id>
+        <foaf:name>Southern University and A &amp; M College</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>72083467621</og:id>
+        <foaf:name>Florida Atlantic University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>326000096297</og:id>
+        <foaf:name>University of St. Thomas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>52259580381</og:id>
+        <foaf:name>University of Lincoln (UK) official page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>181768607245</og:id>
+        <foaf:name>Taylor's University College</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>39854666274</og:id>
+        <foaf:name>The University of Alabama Million Dollar Band</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>231325240348</og:id>
+        <foaf:name>Centro Escolar University (Official)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>73145249266</og:id>
+        <foaf:name>BINUS UNIVERSITY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>119057514789086</og:id>
+        <foaf:name>University of St. La Salle Student Government</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>13447867922</og:id>
+        <foaf:name>Eastern Kentucky University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>245640871929</og:id>
+        <foaf:name>The University of Texas at Austin - Official Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>105930651606</og:id>
+        <foaf:name>Harvard University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>122962988089</og:id>
+        <foaf:name>Bulacan State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>42241847631</og:id>
+        <foaf:name>NED University OF Engineering and Tech. Karachi</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>205114450522</og:id>
+        <foaf:name>International University of Nursing, St. Kitts</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>51580694235</og:id>
+        <foaf:name>Polytechnic University of the Philippines</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>51163005271</og:id>
+        <foaf:name>Multimedia University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>152998213956</og:id>
+        <foaf:name>University Place Fire Department</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>18773072443</og:id>
+        <foaf:name>Illinois State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>90162078964</og:id>
+        <foaf:name>New Era University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>262257370546</og:id>
+        <foaf:name>North Carolina A&amp;T State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23734897109</og:id>
+        <foaf:name>University of Colorado - Boulder</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8891783019</og:id>
+        <foaf:name>Michigan State University - SPARTANS</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16767311371</og:id>
+        <foaf:name>John Paul the Great Catholic University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>47048249824</og:id>
+        <foaf:name>The Ohio State University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7610978269</og:id>
+        <foaf:name>University of California, Santa Barbara</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>83642652314</og:id>
+        <foaf:name>Yale University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>125523620873</og:id>
+        <foaf:name>Grambling State University Mighty Tiger Football Team</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>269975322570</og:id>
+        <foaf:name>The Hebrew University of Jerusalem</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>42738943098</og:id>
+        <foaf:name>Georgia State University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>75411446253</og:id>
+        <foaf:name>Everest University Online Student Services</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>222789945445</og:id>
+        <foaf:name>The University of Montana: Get Your Griz On</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>124387727563</og:id>
+        <foaf:name>University of the East</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>88371564069</og:id>
+        <foaf:name>Weber State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12153257698</og:id>
+        <foaf:name>Trent University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>39562664303</og:id>
+        <foaf:name>Ateneo de La Salle University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>255293648180</og:id>
+        <foaf:name>Ateneo De Manila University Women's Volleyball Team</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21474421532</og:id>
+        <foaf:name>Al-Azhar University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>36082185007</og:id>
+        <foaf:name>Cardiff University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>39176456386</og:id>
+        <foaf:name>Xavier University  (Ateneo de Cagayan)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>20983233326</og:id>
+        <foaf:name>Management and Science University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>198718382403</og:id>
+        <foaf:name>University of Illinois Class of 2014</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>358926465136</og:id>
+        <foaf:name>University of Colorado at Boulder Class of 2014</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>204393929480</og:id>
+        <foaf:name>Chiang Mai University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>42149076048</og:id>
+        <foaf:name>University of Phoenix</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>28585572514</og:id>
+        <foaf:name>North Carolina State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>244502560524</og:id>
+        <foaf:name>University of Sumatera Utara</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>123043044555</og:id>
+        <foaf:name>Karachi University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>56470812987</og:id>
+        <foaf:name>Mindanao State University - Iligan Institute of Technology</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>199011981619</og:id>
+        <foaf:name>Lebanese University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>51791915551</og:id>
+        <foaf:name>Binghamton University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>150568613933</og:id>
+        <foaf:name>The Pride of Bethune-Cookman University Marching Wildcats</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>9383154131</og:id>
+        <foaf:name>UNIVERSITY OF DHAKA</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>48875494471</og:id>
+        <foaf:name>Chiang Mai University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>24716582647</og:id>
+        <foaf:name>Texas A&amp;M University - College of Agriculture and Life Sciences</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8570160131</og:id>
+        <foaf:name>Cornell University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>62302728411</og:id>
+        <foaf:name>Lyceum of the Philippines University-Batangas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>105977259439046</og:id>
+        <foaf:name>University of Batangas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>117895014889446</og:id>
+        <foaf:name>Georgia Southern University Alumni and Friends</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>29317265905</og:id>
+        <foaf:name>UNIVERSITY OF KARACHI</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>33457168607</og:id>
+        <foaf:name>University of Birmingham</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>114887855927</og:id>
+        <foaf:name>Norfolk State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>46326589818</og:id>
+        <foaf:name>GUNADARMA UNIVERSITY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>165733116269</og:id>
+        <foaf:name>NATIONAL UNIVERSITY-Baguio and NATIONAL UNIVERSITY-MANILA</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7871061108</og:id>
+        <foaf:name>Université Libanaise (U.L.)  Lebanese University (L.U.)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>71768358247</og:id>
+        <foaf:name>Illinois State University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>18058830773</og:id>
+        <foaf:name>Princeton University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21402281898</og:id>
+        <foaf:name>University of Chicago</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10044607519</og:id>
+        <foaf:name>Bangladesh University of Engineering and Technology (BUET)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>167834009473</og:id>
+        <foaf:name>Cairo University  جامعة القاهرة</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5664198631</og:id>
+        <foaf:name>University of Central Lancashire (UCLan)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>51259300177</og:id>
+        <foaf:name>Manga University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6449932074</og:id>
+        <foaf:name>Royal Holloway, University of London</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>43810818350</og:id>
+        <foaf:name>Chulalongkorn University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>28019788978</og:id>
+        <foaf:name>Southeastern Louisiana University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>31036254280</og:id>
+        <foaf:name>The University Of Jordan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6282710853</og:id>
+        <foaf:name>The University of Portsmouth Students' Union, Portsmouth, UK</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>181379925254</og:id>
+        <foaf:name>University of Malaya</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>62550624720</og:id>
+        <foaf:name>Nova Southeastern University (Official)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>111545079763</og:id>
+        <foaf:name>University of San Carlos- Cebu</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21715018961</og:id>
+        <foaf:name>American Public University System (APUS)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>11505429287</og:id>
+        <foaf:name>Lamar University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>212204807923</og:id>
+        <foaf:name>ΚΑΙ ΕΓΩ ΦΟΙΤΩ/ΕΧΩ ΦΟΙΤΗΣΕΙ  ΣΤΟ UOC(UNIVERSITY OF CRETE)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>15103332388</og:id>
+        <foaf:name>AIUB-American International University-Bangladesh</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>148163059879</og:id>
+        <foaf:name>Bass School of Music - Oklahoma City University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>112792558743025</og:id>
+        <foaf:name>Bring Ellen DeGeneres to Washington State University for moms weekend 2011!</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>9275555010</og:id>
+        <foaf:name>The University of North Dakota</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>33544041566</og:id>
+        <foaf:name>University of Southern Denmark</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>114937615195506</og:id>
+        <foaf:name>Amity University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>9199309733</og:id>
+        <foaf:name>University at Albany - SUNY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>37834941863</og:id>
+        <foaf:name>Olabisi Onabanjo University, Ago - Iwoye, Ogun State.</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8058757294</og:id>
+        <foaf:name>Baylor University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>285409021684</og:id>
+        <foaf:name>►][ :: Zarqa Private University ♀ ♥ ♂ :: ][◄©</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>85796570808</og:id>
+        <foaf:name>Sunway University College</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>53202464011</og:id>
+        <foaf:name>Mahidol University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>101666246559</og:id>
+        <foaf:name>Illinois State University Class of 2014</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10896256989</og:id>
+        <foaf:name>Macquarie University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>217441484343</og:id>
+        <foaf:name>University Of Jordan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>30635010777</og:id>
+        <foaf:name>The University of Dayton</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44728562961</og:id>
+        <foaf:name>The University of Kansas</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>104055509630011</og:id>
+        <foaf:name>OUR LADY OF FATIMA UNIVERSITY COLLEGE OF NURSING</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>350380877151</og:id>
+        <foaf:name>New Era University Fan Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>17091779559</og:id>
+        <foaf:name>Northern Arizona University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19479053136</og:id>
+        <foaf:name>Aston University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7148517394</og:id>
+        <foaf:name>The University of Tampa</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>104235546277045</og:id>
+        <foaf:name>¶¶¶¶ Jordan University of Science &amp; Tech ¶¶¶¶</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>13320438043</og:id>
+        <foaf:name>october 6th university جامعة 6 اكتوبر</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>207816133465</og:id>
+        <foaf:name>Coastal Carolina University Office of Admissions</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>100201310026553</og:id>
+        <foaf:name>San Diego State University - The Official Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>175663661416</og:id>
+        <foaf:name>North Georgia College &amp; State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>61441666906</og:id>
+        <foaf:name>Vanderbilt University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>90488441129</og:id>
+        <foaf:name>University of Houston Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6580607033</og:id>
+        <foaf:name>University of Surrey Students' Union</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>194658654276</og:id>
+        <foaf:name>جامعة النجاح الوطنية - An_Najah National University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10274793956</og:id>
+        <foaf:name>Western Illinois University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>47170240688</og:id>
+        <foaf:name>Western Carolina University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>93669199458</og:id>
+        <foaf:name>University of Jordan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19891038408</og:id>
+        <foaf:name>Azusa Pacific University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>200102664457</og:id>
+        <foaf:name>Wake Forest University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>72722541480</og:id>
+        <foaf:name>The University of Virginia's College at Wise (official)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>14528425041</og:id>
+        <foaf:name>University of Louisville Cardinals</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>163536409904</og:id>
+        <foaf:name>University of Illinois at Urbana-Champaign</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>79355523842</og:id>
+        <foaf:name>University of the People</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>97940337907</og:id>
+        <foaf:name>Oxford Brookes University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19929638582</og:id>
+        <foaf:name>Santa Clara University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>168900553949</og:id>
+        <foaf:name>University of Texas at Arlington - UTA</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19040908977</og:id>
+        <foaf:name>Fordham University Alumni</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>60770868739</og:id>
+        <foaf:name>Indiana University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>54874064102</og:id>
+        <foaf:name>Ateneo de Naga University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>360035658730</og:id>
+        <foaf:name>Class of 2014 at The University of Arizona</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>351326637596</og:id>
+        <foaf:name>University of Makati</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>40363047364</og:id>
+        <foaf:name>Edinboro University of Pennsylvania</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>88103281460</og:id>
+        <foaf:name>St. George's University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>26738651698</og:id>
+        <foaf:name>University of Nebraska Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>48845454596</og:id>
+        <foaf:name>Burapha University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>13713711012</og:id>
+        <foaf:name>Tulane University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>113834361965784</og:id>
+        <foaf:name>PSU (Prince of Songkla University) มหาวิทยาลัยสงขลานครินทร์ (ม.อ.)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>79435985640</og:id>
+        <foaf:name>Capella University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>292141212388</og:id>
+        <foaf:name>University of Toronto for Future Students</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>141179730208</og:id>
+        <foaf:name>Johnson &amp; Wales University North Miami</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16479682578</og:id>
+        <foaf:name>Oakland University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>9041692886</og:id>
+        <foaf:name>Ain Shams University-Faculty Of Engineering</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>36087210411</og:id>
+        <foaf:name>Universitas Kristen Satya Wacana - Satya Wacana Christian University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>119693232348</og:id>
+        <foaf:name>Park University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6192688417</og:id>
+        <foaf:name>Stanford University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>30450493231</og:id>
+        <foaf:name>Stony Brook University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>102886598791</og:id>
+        <foaf:name>King Abdulaziz University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>66546088125</og:id>
+        <foaf:name>St. John's University Official Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>49740794689</og:id>
+        <foaf:name>The University of Texas-Pan American (UTPA)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>71731005912</og:id>
+        <foaf:name>The George Washington University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21224102568</og:id>
+        <foaf:name>UNIVERSITY OF IBADAN ALUMNUS,FRESH AND OLD STUDENT </foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>33035876673</og:id>
+        <foaf:name>Kean University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>42543126981</og:id>
+        <foaf:name>Emory University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>239565495015</og:id>
+        <foaf:name>Mindanao University of Science and Technology</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6065332529</og:id>
+        <foaf:name>University of Kent</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>54210104594</og:id>
+        <foaf:name>Indiana University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>18714562223</og:id>
+        <foaf:name>Clark Atlanta University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>90610030905</og:id>
+        <foaf:name>Football University FBU</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25035867040</og:id>
+        <foaf:name>Eastern Washington University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>84642731208</og:id>
+        <foaf:name>Cebu Doctors' University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>102657818085</og:id>
+        <foaf:name>University of California, Riverside</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>41279335994</og:id>
+        <foaf:name>University of California, Irvine</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>379972795555</og:id>
+        <foaf:name>De La Salle University Women's Volleyball Team</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>131657576845785</og:id>
+        <foaf:name>anti_(●̪•)►isra UnIvErSiTy◄ (●̪•)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>116337558380173</og:id>
+        <foaf:name>ADAMSON UNIVERSITY - Recognized Student Organizations (RSOs)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>267039676412</og:id>
+        <foaf:name>Franciscan University of Steubenville (OFFICIAL)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>89769773068</og:id>
+        <foaf:name>University of Tennessee, Knoxville</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8358777597</og:id>
+        <foaf:name>Faculty of Engineering, Alexandria University, Egypt</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>289270519551</og:id>
+        <foaf:name>Batangas State University [Official Page]</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>174255634414</og:id>
+        <foaf:name>OUR LADY OF FATIMA UNIVERSITY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6137001818</og:id>
+        <foaf:name>University of Essex</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8990210995</og:id>
+        <foaf:name>University of Idaho</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>142599072769</og:id>
+        <foaf:name>AIESEC in North South University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>235873015134</og:id>
+        <foaf:name>King Mongkut's University of Technology North Bangkok</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>11832237580</og:id>
+        <foaf:name>Misr International University (MIU)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>224162065400</og:id>
+        <foaf:name>University of Wisconsin-Eau Claire</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>89895241439</og:id>
+        <foaf:name>Medical University of South Carolina Children's Hospital</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>90558947243</og:id>
+        <foaf:name>DeVry University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>314348504503</og:id>
+        <foaf:name>Who Wants an End of Year Party for Edinburgh University??</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>45408742662</og:id>
+        <foaf:name>San Jose State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7616007794</og:id>
+        <foaf:name>The University of Western Ontario</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>41486668846</og:id>
+        <foaf:name>University of Iowa</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23778284396</og:id>
+        <foaf:name>College of Saint Benedict and Saint John's University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16027104893</og:id>
+        <foaf:name>Southeastern University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10110012638</og:id>
+        <foaf:name>Appalachian State University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>57265320063</og:id>
+        <foaf:name>University of Santo Tomas Singers - UST Singers Manila</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>66828492735</og:id>
+        <foaf:name>Wright State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5870469604</og:id>
+        <foaf:name>University of Strathclyde</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5755052206</og:id>
+        <foaf:name>University of Sydney</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>47427598263</og:id>
+        <foaf:name>Singularity University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>106540496049284</og:id>
+        <foaf:name>Tricoci University of Beauty Culture</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19921173994</og:id>
+        <foaf:name>The University of Central Oklahoma</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>62249106585</og:id>
+        <foaf:name>Bloomsburg University of Pennsylvania</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>249438054325</og:id>
+        <foaf:name>Not Going to Western Michigan University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>53225933241</og:id>
+        <foaf:name>Morehead State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>82887543350</og:id>
+        <foaf:name>University of San Jose- Recoletos</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>314999305719</og:id>
+        <foaf:name>New Era University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>101052973758</og:id>
+        <foaf:name>University of Medicine and Health Sciences, St. Kitts</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>268321403058</og:id>
+        <foaf:name>The University of Tennessee at Chattanooga</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>28580386540</og:id>
+        <foaf:name>West Virginia University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>66962184341</og:id>
+        <foaf:name>Elon University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>57381926809</og:id>
+        <foaf:name>De La Salle University-College of Saint Benilde</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16427449334</og:id>
+        <foaf:name>The University of Arizona Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>194927716589</og:id>
+        <foaf:name>Lovely Professional University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>62018350835</og:id>
+        <foaf:name>Al-Zaytoonah University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>43964448590</og:id>
+        <foaf:name>Murray State University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>161070387987</og:id>
+        <foaf:name>Hampton University- Official</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>17373130431</og:id>
+        <foaf:name>University of Exeter</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25794202967</og:id>
+        <foaf:name>Wayne State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>75248384464</og:id>
+        <foaf:name>Florida A&amp;M University School Of Business &amp; Industry</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7701216166</og:id>
+        <foaf:name>Carnegie Mellon University in Qatar</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>84491738929</og:id>
+        <foaf:name>Superior University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12860591250</og:id>
+        <foaf:name>Villanova University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6510408962</og:id>
+        <foaf:name>Coventry University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>10161384615</og:id>
+        <foaf:name>birzeit university</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12922531419</og:id>
+        <foaf:name>York University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>378384645631</og:id>
+        <foaf:name>I Hate Indiana University. Period.</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>291408175156</og:id>
+        <foaf:name>柴犬大學 SHIBA UNIVERSITY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>73373226352</og:id>
+        <foaf:name>University of Phoenix Puerto Rico Campus</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>41596326768</og:id>
+        <foaf:name>Colorado State University - CSU Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>369572506563</og:id>
+        <foaf:name>University of Santo Tomas @ 400</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>107484458589</og:id>
+        <foaf:name>The University of North Carolina at Greensboro - UNCG</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>82830663085</og:id>
+        <foaf:name>Jacksonville State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12814691906</og:id>
+        <foaf:name>Sofia University "St. Kliment Ohridski"</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>180556325553</og:id>
+        <foaf:name>Foreign Trade University of Vietnam</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21496920854</og:id>
+        <foaf:name>University of Missouri-Columbia</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>181571924890</og:id>
+        <foaf:name>Central Philippine University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>334312721656</og:id>
+        <foaf:name>HOLY ANGEL UNIVERSITY</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>115123318240</og:id>
+        <foaf:name>University of Surrey</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>38078347904</og:id>
+        <foaf:name>University of South Australia</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>80281367692</og:id>
+        <foaf:name>Texas Southern University "Ocean of Soul" Marching Band</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>411783420316</og:id>
+        <foaf:name>Notre Dame of Dadiangas University (NDDU)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6711658857</og:id>
+        <foaf:name>The Ohio State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44946602140</og:id>
+        <foaf:name>Gonzaga University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>75559051071</og:id>
+        <foaf:name>California State University, Fullerton</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>135561569787</og:id>
+        <foaf:name>Western Illinois University Class of 2014</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>171297801877</og:id>
+        <foaf:name>Arellano University Chiefs</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>146692336964</og:id>
+        <foaf:name>Art &amp; architectural Azad University دانشگاه هنر و معماری آزاد تهران مرکز</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>57493882773</og:id>
+        <foaf:name>Nicholls State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>154036784428</og:id>
+        <foaf:name>Mehran University of Engineering and Technology, Jamshoro</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>281244981054</og:id>
+        <foaf:name>Dell University - New York</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22349744740</og:id>
+        <foaf:name>University of Wisconsin-Stout (UW-Stout): Official Site</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>37142549358</og:id>
+        <foaf:name>Rhodes University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>136964362991684</og:id>
+        <foaf:name>University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>115697061781642</og:id>
+        <foaf:name>university</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>32068467940</og:id>
+        <foaf:name>Aligarh Muslim University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23465078274</og:id>
+        <foaf:name>North Dakota State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>244689176669</og:id>
+        <foaf:name>University of Nebraska Alumni</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16547046124</og:id>
+        <foaf:name>The University Co-op</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>223239240219</og:id>
+        <foaf:name>Brahma Kumaris World Spiritual University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44288000571</og:id>
+        <foaf:name>Cleveland State University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>45675940303</og:id>
+        <foaf:name>Queensland University of Technology (QUT)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>19721267498</og:id>
+        <foaf:name>Saint Joseph's University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>66767240819</og:id>
+        <foaf:name>University of Michigan-Flint</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8677601794</og:id>
+        <foaf:name>University of Leicester Students' Union</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>61270553970</og:id>
+        <foaf:name>Fordham University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23595081104</og:id>
+        <foaf:name>Eastern Illinois University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>37452486407</og:id>
+        <foaf:name>Islamic University of Indonesia</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>319511831755</og:id>
+        <foaf:name>You Know You Go to San Jose State University When:</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>48401063943</og:id>
+        <foaf:name>Summer@Brown Pre-College Programs at Brown University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>61977872480</og:id>
+        <foaf:name>Amirkabir University of Technology (Tehran polytechnic)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>93768131177</og:id>
+        <foaf:name>Washington University in St. Louis</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>28331765549</og:id>
+        <foaf:name>Rice University Official Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6432383094</og:id>
+        <foaf:name>University of Nottingham Students' Union</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>39882915052</og:id>
+        <foaf:name>Tarleton State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>57380442032</og:id>
+        <foaf:name>University of Redlands</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7133766387</og:id>
+        <foaf:name>Carnegie Mellon University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>26841122182</og:id>
+        <foaf:name>The University of Texas Health Science Center at Houston</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>187057650061</og:id>
+        <foaf:name>FPT University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>146473679529</og:id>
+        <foaf:name>Aga Khan University Examination Board (AKU-EB)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>115598681793111</og:id>
+        <foaf:name>BDU - Baku State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>9928061717</og:id>
+        <foaf:name>Helwan University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>46270911129</og:id>
+        <foaf:name>Shippensburg University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7564453082</og:id>
+        <foaf:name>Yarmouk University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>11381946844</og:id>
+        <foaf:name>Lee University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>15210930764</og:id>
+        <foaf:name>MSA University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>172669536576</og:id>
+        <foaf:name>The University of North Carolina at Pembroke</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>82256216314</og:id>
+        <foaf:name>Louisiana Tech University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>9594588036</og:id>
+        <foaf:name>Tufts University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>69823073083</og:id>
+        <foaf:name>Assumption University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16463495457</og:id>
+        <foaf:name>University of Phoenix Military</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>249928178862</og:id>
+        <foaf:name>Not Going to Central Michigan University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>118244498197338</og:id>
+        <foaf:name>Morgan State University Class Of 2014</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25012764449</og:id>
+        <foaf:name>University of Benin</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>128154313154</og:id>
+        <foaf:name>Mindanao State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>37989407392</og:id>
+        <foaf:name>Kuala Lumpur Metropolitan University College (KLMU)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>94704339554</og:id>
+        <foaf:name>PANJAB UNIVERSITY,CHANDIGARH</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>79191705507</og:id>
+        <foaf:name>University of Lagos</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>7084005675</og:id>
+        <foaf:name>The Open University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>325614121235</og:id>
+        <foaf:name>Bob Jones University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>131722732856</og:id>
+        <foaf:name>Jose Rizal University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>92328793322</og:id>
+        <foaf:name>UP Diliman University Library</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12842221825</og:id>
+        <foaf:name>La Trobe University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16583511164</og:id>
+        <foaf:name>Olivet Nazarene University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>334340994247</og:id>
+        <foaf:name>I bet University Cougars can get more fans then Timber Creek Wolves!!</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>247275552419</og:id>
+        <foaf:name>You Know You've Been a Student at Loughborough University Too Long when...</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>75387987874</og:id>
+        <foaf:name>Miami University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>106350778733</og:id>
+        <foaf:name>De La Salle University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>25062563980</og:id>
+        <foaf:name>University of Denver</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>117235778291794</og:id>
+        <foaf:name>University - Working hard 12 hours a day, 7 days a week, 2 weeks a year.</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44472102306</og:id>
+        <foaf:name>Alexandria University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5519059730</og:id>
+        <foaf:name>Kingston University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>105471615879</og:id>
+        <foaf:name>Columbia University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>50461955643</og:id>
+        <foaf:name>UNSW (The University of New South Wales)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>41091071801</og:id>
+        <foaf:name>Official University of South Carolina Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12741031499</og:id>
+        <foaf:name>Texas Exes -- The University of Texas Ex-Students' Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>61388081925</og:id>
+        <foaf:name>Baylor University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>61630257716</og:id>
+        <foaf:name>University of Cincinnati Bearcats</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>206404490256</og:id>
+        <foaf:name>Unisa- The University of South Africa</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8686764758</og:id>
+        <foaf:name>University of California, Santa Cruz</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>109034899129574</og:id>
+        <foaf:name>Primary School A+, High School B+, University "How many marks do I need to pass?"</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>144262250806</og:id>
+        <foaf:name>Ball State University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>147064647371</og:id>
+        <foaf:name>Official University of Dayton Men's Basketball Page</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>126479333452</og:id>
+        <foaf:name>Technological University of the Philippines</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>112168902132660</og:id>
+        <foaf:name>University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>102471088936</og:id>
+        <foaf:name>Columbia University in the City of New York</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21461065905</og:id>
+        <foaf:name>Appalachian State University Football</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>11500923193</og:id>
+        <foaf:name>Auburn University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>18995940959</og:id>
+        <foaf:name>The University of Utah Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>55854484124</og:id>
+        <foaf:name>SCAD - The University for Creative Careers</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>22987708970</og:id>
+        <foaf:name>Vengeance University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>72262086252</og:id>
+        <foaf:name>Silpakorn University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>15932409357</og:id>
+        <foaf:name>Syracuse University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>198954429474</og:id>
+        <foaf:name>I Laugh EVERY DAY At School/College/University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5747468258</og:id>
+        <foaf:name>University of Wolverhampton</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>16502236883</og:id>
+        <foaf:name>Florida A&amp;M University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>21479670294</og:id>
+        <foaf:name>AUC   The American University in Cairo</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>141308735861</og:id>
+        <foaf:name>University of the Philippines</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>8829726273</og:id>
+        <foaf:name>University of Washington</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>77366797761</og:id>
+        <foaf:name>Pamantasan ng Lungsod ng Maynila (University of the City of Manila)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23985062429</og:id>
+        <foaf:name>University of Scranton</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>31646661115</og:id>
+        <foaf:name>Abilene Christian University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>64982236830</og:id>
+        <foaf:name>Alumni Association of the University of Michigan</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>23650201912</og:id>
+        <foaf:name>Oklahoma State University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>17037387724</og:id>
+        <foaf:name>Texas Tech University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>119304324472</og:id>
+        <foaf:name>Hong Kong University of Science and Technology (HKUST)</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>177504466223</og:id>
+        <foaf:name>Pepperdine University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>5625209996</og:id>
+        <foaf:name>George Mason University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>38238012184</og:id>
+        <foaf:name>Howard University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>235601731818</og:id>
+        <foaf:name>University of Kentucky</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>93633873713</og:id>
+        <foaf:name>Saint Louis University Centennial</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>103256838688</og:id>
+        <foaf:name>New York University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>61006888262</og:id>
+        <foaf:name>Seattle University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>6297883171</og:id>
+        <foaf:name>Marquette University</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>12527153330</og:id>
+        <foaf:name>University of Virginia</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>154544935456</og:id>
+        <foaf:name>Washington State University Athletics</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>44378932156</og:id>
+        <foaf:name>Bowling Green State University Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>199045530083</og:id>
+        <foaf:name>University of South Florida</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>24383250951</og:id>
+        <foaf:name>Florida State University Athletics Department</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+    <foaf:topic>
+      <rdf:Description>
+        <og:id>15319895668</og:id>
+        <foaf:name>University of Phoenix Alumni Association</foaf:name>
+      </rdf:Description>
+    </foaf:topic>
+  </rdf:Description>
+</rdf:RDF>

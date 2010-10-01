@@ -21,6 +21,7 @@ import org.openlids.parser.ServiceParser;
 import org.openlids.parser.ServiceParserJena;
 import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.NodeComparator;
+import org.semanticweb.yars.nx.Nodes;
 import org.semanticweb.yars.nx.Resource;
 import org.semanticweb.yars.nx.Variable;
 import org.semanticweb.yars.nx.parser.ParseException;
@@ -91,6 +92,10 @@ public class QueryExecutor {
 			ret.addAll(execQuery(headVars,bgps));
 		}
 		
+		if(lidsStrategy != null) {
+			System.out.println("nr of lids Matchings: " + lidsStrategy.getLidsMatches());
+		}
+		
 		return ret;
 	}
 	
@@ -141,7 +146,12 @@ public class QueryExecutor {
 				}
 			}
 			
-			Iterable<Node[]> results = dataSet.match(bgp);
+			Iterable<Node[]> results;
+			try {
+				results = dataSet.match(bgp);
+			} catch (Exception e) {
+				results = new LinkedList<Node[]>();
+			}
 			
 			for(Node[] res : results) {
 				Map<Variable,Node> newBindings = new HashMap<Variable,Node>();

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,8 +23,8 @@ import org.semanticweb.yars.nx.parser.ParseException;
 
 public class LIDSStrategyRelevant extends LIDSStrategy {
 	
-	Set<ServiceDescription> reqServices = new HashSet<ServiceDescription>();
-	
+	List<ServiceDescription> reqServices;
+		
 	public static LIDSStrategyFactory getFactory() {
 		return new LIDSStrategyFactory() {
 
@@ -42,7 +43,7 @@ public class LIDSStrategyRelevant extends LIDSStrategy {
 
 	@Override
 	void analyzeQuery() {
-		
+		reqServices = new LinkedList<ServiceDescription>();
 		Set<ServiceDescription> avServices = new HashSet<ServiceDescription>();
 		avServices.addAll(services);
 		Set<Node[]> reqPatterns = new TreeSet<Node[]>(NodeComparator.NC);
@@ -55,7 +56,9 @@ public class LIDSStrategyRelevant extends LIDSStrategy {
 			chkdPatterns.addAll(reqPatterns);
 			reqPatterns = new TreeSet<Node[]>(NodeComparator.NC);
 			for(Node[] t : curPatterns) {
-				for(ServiceDescription l : avServices) {
+				Set<ServiceDescription> curAvailServices = new HashSet<ServiceDescription>();
+				curAvailServices.addAll(avServices);
+				for(ServiceDescription l : curAvailServices) {
 					boolean found = false;
 					for(org.openlids.model.BGP bgp : l.getOutputBGP()) {
 						if(match(t,bgp)) {
@@ -85,7 +88,7 @@ public class LIDSStrategyRelevant extends LIDSStrategy {
 				}
 			}
 		}
-		
+		Collections.reverse(reqServices);
 	}
 
 	private boolean match(Node[] t, BGP bgp) {
@@ -120,7 +123,7 @@ public class LIDSStrategyRelevant extends LIDSStrategy {
 
 		boolean newLIDSlinks = true;
 
-		while(newLIDSlinks) {
+		//while(newLIDSlinks) {
 			newLIDSlinks = false;
 
 			for(ServiceDescription service : reqServices) {
@@ -128,11 +131,12 @@ public class LIDSStrategyRelevant extends LIDSStrategy {
 				QueryObj lidsQ = DataModelConvUtil.convert(service);
 
 				Collection<Node[]> results = qe.execQuery(lidsQ.headVars, lidsQ.bgps);
+				incLidsMatches();
 
-				for(Node[] r : results) {
-					Resource newR = new Resource(service.makeURI(DataModelConvUtil.convert(lidsQ.headVars, r)));
+				for(final Node[] r : results) {
+					final Resource newR = new Resource(service.makeURI(DataModelConvUtil.convert(lidsQ.headVars, r)));
 
-					Node[] newSameAs = new Node[] { r[0], DataSet.sameAsRes, newR };
+					Node[] newSameAs = new Node[] { r[0], newR };
 					if(!newLIDS.contains(newSameAs)) {
 						newLIDSlinks = true;
 						newLIDS.add(newSameAs);
@@ -143,28 +147,24 @@ public class LIDSStrategyRelevant extends LIDSStrategy {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						Iterable<Node[]> triples = null;
 						try {
-							triples = dataSet.crawlURIs(uris);
-						} catch (ParseException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						if(triples != null) {
-							for(Node[] nx : triples) { 
-								Node[] n3 = new Node[] { nx[0], nx[1], nx[2] };
-								if(n3[0].equals(newR)) {
-									n3[0] = r[0];
+							dataSet.crawlURIs(uris, new TripleHandler() {
+								@Override
+								public Node[] handle(Node[] nx) {
+									Node[] n3 = new Node[] { nx[0], nx[1], nx[2] };
+									if(n3[0].equals(newR)) {
+										n3[0] = r[0];
+									}
+									return n3;
 								}
-							}
+							});
+						} catch(Exception e) {
+
 						}
 					}
 				}
 			}
-		}
+		//}
 
 		return newLIDS;
 	}

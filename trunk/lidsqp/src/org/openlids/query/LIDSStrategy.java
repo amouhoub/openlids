@@ -20,6 +20,16 @@ public abstract class LIDSStrategy {
 	QueryObj q;
 	QueryExecutor qe;
 	Set<ServiceDescription> services;
+	
+	int lidsMatches = 0;
+	
+	public int getLidsMatches() {
+		return lidsMatches;
+	}
+	
+	void incLidsMatches() {
+		lidsMatches++;
+	}
 
 	public LIDSStrategy(QueryObj q, QueryExecutor qe, Set<ServiceDescription> services) {
 		this.services = services;

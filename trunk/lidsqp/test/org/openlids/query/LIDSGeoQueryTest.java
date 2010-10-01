@@ -10,9 +10,29 @@ import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.NodeComparator;
 import org.semanticweb.yars.nx.Nodes;
 
-public class LIDSQueryTest extends TestCase {
+public class LIDSGeoQueryTest extends TestCase {
 	
 	static String people[] = {
+		"http://www.polleres.net/foaf.rdf#me",
+		"http://bblfish.net/people/henry/card#me",
+		"http://danbri.org/foaf#danbri",
+		"http://danny.ayers.name/index.rdf#me",
+		"http://harth.org/andreas/foaf#ah",
+		"http://richard.cyganiak.de/foaf.rdf#cygri",
+		"http://speiserweb.de/sebastian/foaf.rdf#me",
+		"http://simia.net/foaf.rdf#denny",
+		"http://sw.deri.org/~aidanh/foaf/foaf.rdf#Aidan_Hogan",
+		"http://sw.deri.org/~sheila/foaf.rdf#me",
+		"http://tomheath.com/id/me",
+		"http://www.b-kaempgen.de/foaf.rdf#me",
+		"http://www.ivan-herman.net/foaf#me",
+		"http://www.lassila.org/ora.rdf#me",
+		"http://www.siegfried-handschuh.net/metadata/foaf.rdf#me",
+		"http://www.umbrich.net/foaf.rdf#me",
+		"http://www.w3.org/People/Berners-Lee/card#i",
+		"http://www.w3.org/People/Sandro/data#Sandro_Hawke"
+
+		
 /*		"http://aleasoft.hopto.org/~alvaro/weblog/foaf.rdf#me",
 		"http://apassant.net/alex",
 		"http://apassant.net/foaf.rdf#alex",
@@ -325,85 +345,85 @@ public class LIDSQueryTest extends TestCase {
 //		"http://my.opera.com/zarkoh/xml/foaf#me",
 //		"http://my.opera.com/zcorpan/xml/foaf#me",
 //		"http://my.opera.com/zoso/xml/foaf#me",
-		"http://myopenlink.net/dataspace/person/kidehen#this",
-		"http://myopenlink.net/dataspace/person/kidehen%23this",
-		"http://nets.ii.uam.es/~rlara/foaf.rdf#me",
-		"http://norman.walsh.name/knows/who#norman-walsh",
-		"http://ns.inria.fr/fabien.gandon/",
-		"http://nunolopes.org/foaf.rdf#me",
-		"http://ontoworld.org/wiki/Special:URIResolver/Andreas_Harth",
-		"http://ontoworld.org/wiki/Special:URIResolver/Juanzi_Li",
-		"http://ontoworld.org/wiki/Special:URIResolver/Vanessa_Lopez",
-		"http://ontoworld.org/wiki/Special:URIResolver/Yuangui_Lei",
-		"http://ontoworld.org/wiki/Special:URIResolver/Zhisheng_Huang",
-		"http://page.mi.fu-berlin.de/mochol/foaf.rdf#me",
-		"http://page.mi.fu-berlin.de/~nixon/foaf.rdf#nixon",
-		"http://people.apache.org/~oshani/foaf.rdf#me",
-		"http://people.csail.mit.edu/crowell/foaf.rdf#crowell",
-		"http://people.csail.mit.edu/crowell/semanticwebiswesome.rdf#semanticwebisawesome",
-		"http://people.csail.mit.edu/lkagal/foaf#me",
-		"http://people.csail.mit.edu/psz/foaf.rdf#me",
-		"http://people.csail.mit.edu/ryanlee/about#ryanlee",
-		"http://people.w3.org/simon/foaf#i",
-		"http://petra.euitio.uniovi.es/~i1637566/foaf.rdf#me",
-		"http://plugin.org.uk/swh.xrdf#me",
-		"http://polleres.net/foaf.rdf#me",
-		"http://presbrey.mit.edu/foaf#presbrey",
-		"http://purl.oclc.org/NET/gearon/people/PaulGearon/foaf.rdf#me",
-		"http://purl.org/captsolo/semweb/foaf-captsolo.rdf#Uldis_Bojars",
-		"http://purl.org/net/clange",
-		"http://qdos.com/people/tom.xrdf#me",
-		"http://renaud.delbru.fr/rdf/foaf#me",
-		"http://richard.cyganiak.de/foaf.rdf#cygri",
-		"http://richard.cyganiak.de/foaf.rdf",
-		"http://rit.mellon.org/Members/ihf/foaf.rdf#me",
-		"http://sebastian.dietzold.de/terms/me",
-		"http://sebastian.tramp.name",
-		"http://semanticweb.org/id/Antoine_Zimmermann",
-		"http://semanticweb.org/id/Jerome_Euzenat",
-		"http://semanticweb.org/id/Siegfried_Handschuh",
-		"http://semanticweb.org/id/Stefan_Decker",
-		"http://semedia.deit.univpm.it/people/christian/foaf.rdf#me",
-		"http://simia.net/foaf.rdf#denny",
-		"http://speiserweb.de/sebastian/foaf.rdf#me",
-		"http://stefanbischof.at/foaf.rdf#me",
-		"http://sw-app.org/mic.xhtml#i",
-		"http://sw.deri.org/~aidanh/foaf/foaf.rdf#Aidan_Hogan",
-		"http://sw.deri.org/~bnsapkota/foaf.rdf#me",
-		"http://sw.deri.org/~haller/foaf.rdf#ah",
-		"http://sw.deri.org/~knud/",
-		"http://sw.deri.org/~knud",
-		"http://sw.deri.org/~scorlosquet/foaf.rdf#me",
-		"http://sw.deri.org/~scorlosquet/foaf.rdf#rene",
-		"http://sw.deri.org/~sheila/foaf.rdf#me",
-		"http://swiss.csail.mit.edu/users/cph/foaf.rdf#cph",
-		"http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me",
-		"http://teole.jfouffa.org/People/Teole/card.rdf#me",
-		"http://thefigtrees.net/lee/ldf-card#LDF",
-		"http://tobyinkster.co.uk/#i",
-		"http://tobyinster.co.uk/i",
-		"http://tomheath.com/id/me",
-		"http://tommorris.org/foaf#me",
-		"http://torrez.us/who#elias",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=Anerme_wisecrack#Anerme_wisecrack",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=RunWithScissors#RunWithScissors",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=aaronsw#aaronsw",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=bparsia#bparsia",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=djweitzner#djweitzner",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=erim#erim",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=evren#evren",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=finin#finin",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=golbeck#golbeck",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=jenmarie#jenmarie",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=jtyler#jtyler",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=kendall#kendall",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=ronwalf#ronwalf",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=sbp#sbp",
-		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=vard#vard",
-		"http://tuukka.iki.fi/tuukka#person",
-		"http://users.ecs.soton.ac.uk/mc/mcfoaf.rdf#me",
-		"http://userver.ftw.at/~zhdanova/foaf.rdf#me",
-		"http://wiki.sembase.at/index.php/_Martin_Hepp",
+//		"http://myopenlink.net/dataspace/person/kidehen#this",
+//		"http://myopenlink.net/dataspace/person/kidehen%23this",
+//		"http://nets.ii.uam.es/~rlara/foaf.rdf#me",
+//		"http://norman.walsh.name/knows/who#norman-walsh",
+//		"http://ns.inria.fr/fabien.gandon/",
+//		"http://nunolopes.org/foaf.rdf#me",
+//		"http://ontoworld.org/wiki/Special:URIResolver/Andreas_Harth",
+//		"http://ontoworld.org/wiki/Special:URIResolver/Juanzi_Li",
+//		"http://ontoworld.org/wiki/Special:URIResolver/Vanessa_Lopez",
+//		"http://ontoworld.org/wiki/Special:URIResolver/Yuangui_Lei",
+//		"http://ontoworld.org/wiki/Special:URIResolver/Zhisheng_Huang",
+//		"http://page.mi.fu-berlin.de/mochol/foaf.rdf#me",
+//		"http://page.mi.fu-berlin.de/~nixon/foaf.rdf#nixon",
+//		"http://people.apache.org/~oshani/foaf.rdf#me",
+//		"http://people.csail.mit.edu/crowell/foaf.rdf#crowell",
+//		"http://people.csail.mit.edu/crowell/semanticwebiswesome.rdf#semanticwebisawesome",
+//		"http://people.csail.mit.edu/lkagal/foaf#me",
+//		"http://people.csail.mit.edu/psz/foaf.rdf#me",
+//		"http://people.csail.mit.edu/ryanlee/about#ryanlee",
+//		"http://people.w3.org/simon/foaf#i",
+//		"http://petra.euitio.uniovi.es/~i1637566/foaf.rdf#me",
+//		"http://plugin.org.uk/swh.xrdf#me",
+//		"http://polleres.net/foaf.rdf#me",
+//		"http://presbrey.mit.edu/foaf#presbrey",
+//		"http://purl.oclc.org/NET/gearon/people/PaulGearon/foaf.rdf#me",
+//		"http://purl.org/captsolo/semweb/foaf-captsolo.rdf#Uldis_Bojars",
+//		"http://purl.org/net/clange",
+//		"http://qdos.com/people/tom.xrdf#me",
+//		"http://renaud.delbru.fr/rdf/foaf#me",
+//		"http://richard.cyganiak.de/foaf.rdf#cygri",
+//		"http://richard.cyganiak.de/foaf.rdf",
+//		"http://rit.mellon.org/Members/ihf/foaf.rdf#me",
+//		"http://sebastian.dietzold.de/terms/me",
+//		"http://sebastian.tramp.name",
+//		"http://semanticweb.org/id/Antoine_Zimmermann",
+//		"http://semanticweb.org/id/Jerome_Euzenat",
+//		"http://semanticweb.org/id/Siegfried_Handschuh",
+//		"http://semanticweb.org/id/Stefan_Decker",
+//		"http://semedia.deit.univpm.it/people/christian/foaf.rdf#me",
+//		"http://simia.net/foaf.rdf#denny",
+//		"http://speiserweb.de/sebastian/foaf.rdf#me",
+//		"http://stefanbischof.at/foaf.rdf#me",
+//		"http://sw-app.org/mic.xhtml#i",
+//		"http://sw.deri.org/~aidanh/foaf/foaf.rdf#Aidan_Hogan",
+//		"http://sw.deri.org/~bnsapkota/foaf.rdf#me",
+//		"http://sw.deri.org/~haller/foaf.rdf#ah",
+//		"http://sw.deri.org/~knud/",
+//		"http://sw.deri.org/~knud",
+//		"http://sw.deri.org/~scorlosquet/foaf.rdf#me",
+//		"http://sw.deri.org/~scorlosquet/foaf.rdf#rene",
+//		"http://sw.deri.org/~sheila/foaf.rdf#me",
+//		"http://swiss.csail.mit.edu/users/cph/foaf.rdf#cph",
+//		"http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me",
+//		"http://teole.jfouffa.org/People/Teole/card.rdf#me",
+//		"http://thefigtrees.net/lee/ldf-card#LDF",
+//		"http://tobyinkster.co.uk/#i",
+//		"http://tobyinster.co.uk/i",
+//		"http://tomheath.com/id/me",
+//		"http://tommorris.org/foaf#me",
+//		"http://torrez.us/who#elias",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=Anerme_wisecrack#Anerme_wisecrack",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=RunWithScissors#RunWithScissors",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=aaronsw#aaronsw",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=bparsia#bparsia",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=djweitzner#djweitzner",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=erim#erim",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=evren#evren",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=finin#finin",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=golbeck#golbeck",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=jenmarie#jenmarie",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=jtyler#jtyler",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=kendall#kendall",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=ronwalf#ronwalf",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=sbp#sbp",
+//		"http://trust.mindswap.org/cgi-bin/FilmTrust/foaf.cgi?user=vard#vard",
+//		"http://tuukka.iki.fi/tuukka#person",
+//		"http://users.ecs.soton.ac.uk/mc/mcfoaf.rdf#me",
+//		"http://userver.ftw.at/~zhdanova/foaf.rdf#me",
+//		"http://wiki.sembase.at/index.php/_Martin_Hepp",
 		/* "http://www-cdr.stanford.edu/~petrie/foaf.rdf#me",
 		"http://www-di.inf.puc-rio.br/schwabe//foaf-schwabe.rdf#dschwabe",
 		"http://www-di.inf.puc-rio.br/schwabe/foaf-schwabe.rdf#me",
@@ -714,39 +734,27 @@ public class LIDSQueryTest extends TestCase {
 	};
 
 	static String prefixes = "PREFIX foaf: <http://xmlns.com/foaf/0.1/> " +
-	"PREFIX dc: <http://purl.org/dc/elements/1.1/> " + 
-	"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> " +
-	"PREFIX owl: <http://www.w3.org/2002/07/owl#> ";
+							 "PREFIX dc: <http://purl.org/dc/elements/1.1/> " + 
+							 "PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> " +
+							 "PREFIX owl: <http://www.w3.org/2002/07/owl#> "+
+							 "PREFIX v: <http://www.w3.org/2006/vcard/ns#> ";
+	
+	//static String baseServer = "http://km.aifb.kit.edu/services/geowrap/";
+	static String baseServer = "http://localhost:8888/";
+	
+	static String findNearbyLIDS = prefixes + "CONSTRUCT { ?point foaf:based_near ?p } " +
+											  "FROM <" + baseServer + "findNearby> " +
+											  "WHERE { ?point geo:lat ?lat . ?point geo:long ?lng }";
+	
+	static String alsoNearbyLIDS = prefixes + "CONSTRUCT { ?spatial_entity foaf:based_near ?p } " +
+											  "FROM <" + baseServer + "alsoNearby> " +
+											  "WHERE { ?spatial_entity foaf:based_near ?point . ?point geo:lat ?lat . ?point geo:long ?lng }";
+	
+	static String geocodeLIDS = prefixes + "CONSTRUCT { ?entity foaf:based_near ?p . ?p geo:lat ?lat . ?p geo:long ?lng } " +
+	  									   "FROM <" + baseServer + "geocode> " +
+	  									   "WHERE { ?entity v:adr ?adr . ?adr v:street-address ?street . ?adr v:locality ?town . ?adr v:country-name ?country }";
 
-	public void testHarthPoint() {
-		String queryStr = prefixes + "SELECT ?p ?name WHERE { " +
-		"<http://harth.org/andreas/point#point> foaf:based_near ?p . " + 
-		"?p <http://www.geonames.org/ontology#name> ?name }";
-		QueryExecutor qe = new QueryExecutor(LIDSStrategyBruteForce.getFactory());
-		qe.addLIDS(prefixes + "CONSTRUCT { ?point foaf:based_near ?p } " + 
-				"FROM <http://km.aifb.kit.edu/services/geowrap/findNearby> " +
-		"WHERE { ?point geo:lat ?lat . ?point geo:lng ?lng }");
-		Collection<Node[]> results = qe.execQueryWithLIDS(queryStr);
-		if(results.size() != 1 || !results.iterator().next()[1].toString().contains("Karlsruhe Institute of Technology")) {
-			String msg = "Wrong result for HarthPoint:\n";
-			for(Node[] res : results) {
-				for(Node n : res) {
-					msg += n.toN3() + " ";
-				}
-				msg += "\n";
-			}
-			this.fail(msg);
-			System.out.println(msg);
-		}
-	}
-
-	// public void testFriendPoints() {
 	public static void main(String args[]) {
-		//if(1+3==5-1)
-		//	return;
-//		String people[] = { "<http://www.w3.org/People/Berners-Lee/card#i>",
-//				"<http://speiserweb.de/sebastian/foaf.rdf#me>",
-//		};//		"<http://harth.org/andreas/foaf#ah>" };
 		int nKnows[] = new int[people.length];
 		int nResults[][] = new int[2][people.length];
 		long time[][] = new long[2][people.length];
@@ -772,16 +780,15 @@ public class LIDSQueryTest extends TestCase {
 			for(int i=0;i<2 && nKnows[j] > 0;i++) {
 				String queryStr = prefixes + "SELECT ?p ?location WHERE { <" +
 				person + "> foaf:knows ?p . ?p foaf:based_near ?point . " +
-				" ?point foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }";
+				" ?point <http://www.geonames.org/ontology#name> ?location }";
 				QueryExecutor qe = null;
 				if(i == 0) {
 					qe = new QueryExecutor(LIDSStrategyBruteForce.getFactory());
 				} else {
 					qe = new QueryExecutor(null);
 				}
-				qe.addLIDS(prefixes + "CONSTRUCT { ?point foaf:based_near ?p } " + 	
-						"FROM <http://km.aifb.kit.edu/services/geowrap/findNearby> " +
-				"WHERE { ?point geo:lat ?lat . ?point geo:long ?lng }");
+				qe.addLIDS(alsoNearbyLIDS);
+				qe.addLIDS(geocodeLIDS);
 				time[i][j] = System.currentTimeMillis();
 				Collection<Node[]> results = qe.execQueryWithLIDS(queryStr);
 				time[i][j] = System.currentTimeMillis() - time[i][j];
