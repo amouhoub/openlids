@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:lids="http://openlids.org/vocab#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="">
+    <rdfs:label>OpenLIDS Twitter Service Description</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#service">
+    <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+
+CONSTRUCT {
+   ?id owl:sameAs ?tweet .
+}
+FROM &lt;http://twitterwrap.ontologycentral.com/statuses/user_timeline&gt;
+WHERE {
+   ?id a foaf:Agent .
+   ?id foaf:account ?acc .
+   ?acc a sioc:UserAccount .
+   ?acc foaf:accountName ?screen_name .
+   ?acc foaf:accountServiceHomepage &lt;http://twitter.com/&gt; 
+}</lids:description>
+  </rdf:Description>
+</rdf:RDF>
