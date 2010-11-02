@@ -113,9 +113,9 @@ public class AnnotatorServlet extends HttpServlet {
             for (Node[] r : dataSet.getTriples()) {
                 if (r[0].equals(baser)) {
                     if(r[2] instanceof Resource) {
-                        w.println("<li> " + URIShortener.shortenURIStr(r[1].toString(), bstr) + " <a href=\"" + r[2].toString() + "\">"+ URIShortener.shortenURIStr(r[2].toString(), bstr) + "</a><ul>");
+                        w.println("<li> " + URIShortener.shorten(r[1], bstr) + " <a href=\"" + r[2].toString() + "\">"+ URIShortener.shorten(r[2], bstr) + "</a><ul>");
                     } else {
-                        w.println("<li> " + URIShortener.shortenURIStr(r[1].toString(), bstr) + " " + URIShortener.shortenURIStr(r[2].toString(), bstr) + "<ul>");
+                        w.println("<li> " + URIShortener.shorten(r[1], bstr) + " " + URIShortener.shorten(r[2], bstr) + "<ul>");
                     }
 
                     for (Node[] same : sames) {
@@ -126,9 +126,9 @@ public class AnnotatorServlet extends HttpServlet {
                     for (Node[] r2: dataSet.getTriples()) {
                         if(r2[0].equals(r[2])) {
                             if(r2[2] instanceof Resource) {
-                                w.println("<li> " + URIShortener.shortenURIStr(r2[1].toString(), bstr) + " <a href=\"" + r2[2].toString() +"\">" + URIShortener.shortenURIStr(r2[2].toString(), bstr) +"</a>");
+                                w.println("<li> " + URIShortener.shorten(r2[1], bstr) + " <a href=\"" + r2[2].toString() +"\">" + URIShortener.shorten(r2[2], bstr) +"</a>");
                             } else {
-                                w.println("<li> " + URIShortener.shortenURIStr(r2[1].toString(), bstr) + " " + URIShortener.shortenURIStr(r2[2].toString(), bstr));
+                                w.println("<li> " + URIShortener.shorten(r2[1], bstr) + " " + URIShortener.shorten(r2[2], bstr));
                             }
 
                             for(Node[] same : sames) {

@@ -7,6 +7,7 @@ package org.openlids.demo;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.semanticweb.yars.nx.BNode;
 import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.Resource;
 
@@ -32,15 +33,25 @@ public class URIShortener {
 
 
     public static String shortenURIBGP(Node[] bgp) {
-        String ret="";
+         String ret="";
         for (Node v : bgp) {
-            if (v instanceof Resource) {
-                ret += shortenURIStr(v.toString()) + " ";
-            } else {
-                ret += v.toString() + " ";
-            }
+            ret += shorten(v) + " ";
         }
         return ret;
+    }
+
+    public static String shorten(Node node) {
+        return shorten(node,null);
+    }
+
+    public static String shorten(Node node, String baseURL) {
+        if (node instanceof Resource) {
+            return shortenURIStr(node.toString(), baseURL);
+        } else if (node instanceof BNode) {
+            return "...";
+        } else {
+            return node.toN3();
+        }
     }
 
     public static String shortenURIStr(String uri) {
