@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.openlids.model.ServiceDescription;
 import org.openlids.parser.ServiceParser;
@@ -30,7 +32,7 @@ import org.semanticweb.yars.nx.parser.ParseException;
 
 public class QueryExecutor {
 	
-	DataSet dataSet = new DataSet();
+	public DataSet dataSet = new DataSet();
 
 	
 	Set<ServiceDescription> services = new HashSet<ServiceDescription>();
@@ -41,9 +43,13 @@ public class QueryExecutor {
 		ServiceParser sp = new ServiceParserJena();
 		ServiceDescription sd = sp.parseServiceDescription(lidsDesc);
 		if(sd != null) {
-			services.add(sd);
+                    services.add(sd);
 		}
 	}
+
+        public void addLIDS(ServiceDescription sd) {
+            services.add(sd);
+        }
 	
 	public QueryExecutor() {
 		this(null);
@@ -167,5 +173,17 @@ public class QueryExecutor {
 		}
 		return ret;
 	}
+
+    public void crawlURI(URI to_annot) {
+        try {
+            List<URI> uris = new LinkedList<URI>();
+            uris.add(to_annot);
+            dataSet.crawlURIs(uris);
+        } catch (ParseException ex) {
+            Logger.getLogger(QueryExecutor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(QueryExecutor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
 }

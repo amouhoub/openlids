@@ -15,10 +15,9 @@ import com.hp.hpl.jena.rdf.model.AnonId;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.util.iterator.Filter;
 import com.hp.hpl.jena.util.iterator.Map1;
-import com.ontologycentral.ldspider.Main;
 
 public class MatchIterator implements ExtendedIterator<Triple> {
-	private final static Logger _log = Logger.getLogger(Main.class.getSimpleName());
+	private final static Logger _log = Logger.getLogger(MatchIterator.class.getSimpleName());
 
 	Iterator<Node[]> _it;
 	

@@ -56,7 +56,7 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 
 				Collection<Node[]> results = qe.execQuery(lidsQ.headVars, lidsQ.bgps);
 				incLidsMatches();
-
+                                System.err.println("Found " + results.size() + " results for " + service.toString());
 				int nrHeadVar = 0;
 				for(nrHeadVar=0;nrHeadVar < lidsQ.headVars.length; nrHeadVar++) {
 					if(lidsQ.headVars[nrHeadVar].toString().equals(service.getExposedVar().getName()))
@@ -65,6 +65,7 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 
 				for(final Node[] r : results) {
 					final Resource newR = new Resource(service.makeURI(DataModelConvUtil.convert(lidsQ.headVars, r)));
+                                        System.err.println("newSameAs: + " + r[nrHeadVar] + " = " + newR);
 
 					Node[] newSameAs = new Node[] { r[nrHeadVar], newR };
 					if(!newLIDS.contains(newSameAs)) {
