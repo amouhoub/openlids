@@ -23,6 +23,7 @@ import org.semanticweb.yars.nx.parser.ParseException;
 import org.semanticweb.yars2.rdfxml.RDFXMLParser;
 
 import com.ontologycentral.ldspider.Main;
+import org.semanticweb.yars.nx.Literal;
 
 public class DataSet {
 	private final static Logger _log = Logger.getLogger(Main.class.getSimpleName());
@@ -30,11 +31,11 @@ public class DataSet {
 
 	Set<URL> resolvedURLs = new HashSet<URL>();
 
-	Set<Node[]> _data;
+	public Set<Node[]> _data;
 
 	long uriRetrievalTimes = 0;
 
-	boolean auto_crawl = true;
+	public boolean auto_crawl = true;
 
 	public DataSet() {
 		_data = new TreeSet<Node[]>(NodeComparator.NC);
@@ -60,13 +61,33 @@ public class DataSet {
 		crawlURIs(uris);
 	}
 
-	protected Iterable<Node[]> match(Node[] tp) throws ParseException, IOException {
+	public Iterable<Node[]> match(Node[] tp) throws ParseException, IOException {
 		if(auto_crawl) {
 			crawlURIs(new Node[] { tp[0] });
 			// crawlURIs(tp);
 		}
 		TreeSet<Node[]> results = new TreeSet<Node[]>(NodeComparator.NC);
 
+            if (tp[1].toString().equals("http://www.w3.org/2000/10/swap/log#uri")) {
+                Resource urir = new Resource("http://www.w3.org/2000/10/swap/log#uri");
+                if (tp[0] == null && tp[2] == null) {
+                    for(Node[] nx : _data) {
+                        if(nx[0] instanceof Resource) {
+                            results.add(new Node[]{nx[0], urir, new Literal(nx[0].toString()) });
+                        }
+                        if (nx[2] instanceof Resource) {
+                            results.add(new Node[]{nx[2], urir, new Literal(nx[2].toString()) });
+                        }
+                    }
+                } else if((tp[2] == null) && tp[0] instanceof Resource) {
+                    results.add(new Node[]{tp[0], urir, new Literal(tp[0].toString())});
+                } else if((tp[2] instanceof Literal) && (tp[0] instanceof Resource)) {
+                    if(tp[2].toString().equals(tp[0].toString())) {
+                        results.add(new Node[] {tp[0], urir, tp[2]});
+                    }
+                }
+                return results;
+            }
 
 
 		//	maintainSameAs();
@@ -177,6 +198,7 @@ public class DataSet {
 			};
 
 			try {
+                            
 				System.out.println("U: " + url.toString());
 				RDFXMLParser rdfxml = new RDFXMLParser(is, true, true, url.toString(), cb);
 			} catch(Exception e) {
@@ -244,30 +266,30 @@ public class DataSet {
 	//	}
 
 	static boolean match(Node[] tp, Node[] nx) {
-		for (int i = 0; i < tp.length; i++) {
-			Node n = tp[i];
-			if (n != null) { // null == variable ; !(n instanceof Variable)) {
-				if (!n.equals(nx[i])) {
-					if(n instanceof Resource && nx[i] instanceof Resource) {
-						if(n.toString().startsWith("file:/") && nx[i].toString().startsWith("file:/")) {
-							if(n.toString().startsWith("file:///") && !nx[i].toString().startsWith("file:///")) {
-								if(n.toString().substring(7).equals(nx[i].toString().substring(5))) {
-									continue;
-								}
-							}
-							if(!n.toString().startsWith("file:///") && nx[i].toString().startsWith("file:///")) {
-								if(n.toString().substring(5).equals(nx[i].toString().substring(7))) {
-									continue;
-								}
-							}
-						}
-					}
-					return false;
-				}
-			}
-		}
+            for (int i = 0; i < tp.length; i++) {
+                Node n = tp[i];
+                if (n != null) { // null == variable ; !(n instanceof Variable)) {
+                    if (!n.equals(nx[i])) {
+                        if (n instanceof Resource && nx[i] instanceof Resource) {
+                            if (n.toString().startsWith("file:/") && nx[i].toString().startsWith("file:/")) {
+                                if (n.toString().startsWith("file:///") && !nx[i].toString().startsWith("file:///")) {
+                                    if (n.toString().substring(7).equals(nx[i].toString().substring(5))) {
+                                        continue;
+                                    }
+                                }
+                                if (!n.toString().startsWith("file:///") && nx[i].toString().startsWith("file:///")) {
+                                    if (n.toString().substring(5).equals(nx[i].toString().substring(7))) {
+                                        continue;
+                                    }
+                                }
+                            }
+                        }
+                        return false;
+                    }
+                }
+            }
 
-		return true;
-	}
+            return true;
+    }
 
 }

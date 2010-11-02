@@ -1,15 +1,11 @@
 package org.openlids.interfacing;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
-
 
 import org.openlids.model.BGP;
 import org.openlids.model.BNode;
@@ -34,6 +29,7 @@ import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.parser.Callback;
 import org.semanticweb.yars.nx.parser.NxParser;
 import org.semanticweb.yars.nx.parser.ParseException;
+import org.semanticweb.yars2.rdfxml.RDFXMLParser;
 
 
 
@@ -99,10 +95,10 @@ public class StreamingServiceAnnotator implements Callback {
 	}
 	
 	
-	public void annotate(InputStream in, String lang) throws ParseException, IOException {
+	public void annotate(InputStream in, String baseURI, String lang) throws ParseException, IOException {
 		Iterator<Node[]> parser;
 		if(lang.equals("RDF/XML")) {
-		//	parser = new RDFXMLParser(in,false,true,retrURL.toString(),this);
+			parser = new RDFXMLParser(in,false,true,baseURI,this);
 		} else {
 			parser = new NxParser(in,this);
 		}
@@ -317,7 +313,7 @@ public class StreamingServiceAnnotator implements Callback {
 //			Model m = ModelFactory.createDefaultModel();
 //			m.read(fin, args[0], "N3");
 			try {
-				sa.annotate(new FileInputStream(args[0]), "N3");
+				sa.annotate(new FileInputStream(args[0]), "", "N3");
 			} catch(Exception e) {
 				System.err.println("That went wrong!\n");
 				e.printStackTrace();

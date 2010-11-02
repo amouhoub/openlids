@@ -36,6 +36,10 @@ public class ServiceDescription {
     public Set<BGP> getOutputBGP() {
     	return output;
     }
+
+    public Set<BGP> getInputBGP() {
+        return input;
+    }
     
     private void analyze() {
     	if(analyzed) return;
