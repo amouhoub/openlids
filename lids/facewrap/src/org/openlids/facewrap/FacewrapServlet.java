@@ -209,6 +209,9 @@ public class FacewrapServlet extends HttpServlet {
 		if(uri.endsWith("/")) {
 			return uri;
 		}
+                if(!uri.startsWith("http") && !uri.startsWith("mailto")) {
+                    uri = "http://" + uri;
+                }
 		if(uri.startsWith("http://") || uri.startsWith("https://")) {
 			if(uri.lastIndexOf('/') == uri.indexOf('/') + 1) {
 				return uri + "/";
