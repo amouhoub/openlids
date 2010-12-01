@@ -1,5 +1,0 @@
-#Fri Nov 12 22:04:40 CET 2010
-eclipse.preferences.version=1
-jarsExcludedFromWebInfLib=/media/DOX/Eclipse/twittersearchwrap/xsltc.jar|/media/DOX/Eclipse/twittersearchwrap/serializer.jar|/media/DOX/Eclipse/twittersearchwrap/xalan.jar|/media/DOX/Eclipse/twittersearchwrap/xercesImpl.jar|/media/DOX/Eclipse/twittersearchwrap/xml-apis.jar
-warSrcDir=war
-warSrcDirIsOutput=true
