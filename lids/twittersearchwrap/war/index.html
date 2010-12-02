@@ -14,10 +14,12 @@
 
   <body>
     <h1>Welcome to the Twitter Search Wrapper!</h1>
-	
 	<p>
-		Convert Twitter search queries to RDF.
-		E.g. <a href="/searchwrap?q=test">search.twitter.com/search.atom?lang=en&q=test</a>
+	Convert Twitter search queries to RDF.<br>
+    <form name="input" action="/searchwrap" method="get">
+      <input type="text" name="q" value="Enter search query" /><br/><br>
+	  <input type="submit" value="Get RDF!" />
+    </form> 
 	</p>
   </body>
 </html>
