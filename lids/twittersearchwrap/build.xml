@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <project name="twitterwrap" default="dist">
-  <property name="projname" value="twitterwrap"/>
+  <property name="projname" value="twittersearchwrap"/>
   <property name="version" value="0.1"/>
 
   <target name="prepare">
