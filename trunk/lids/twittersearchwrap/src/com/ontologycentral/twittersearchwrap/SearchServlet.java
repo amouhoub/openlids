@@ -45,6 +45,7 @@ public class SearchServlet extends HttpServlet {
 //			id = id.substring(id.lastIndexOf("/")+1);
 			
 			query = query.replace(" ", "%20");
+			query = query.replace("#", "%23");
 			URL u = new URL("http://search.twitter.com/search.atom?lang=en&q=" + query);
 			
 			System.out.println(u);
