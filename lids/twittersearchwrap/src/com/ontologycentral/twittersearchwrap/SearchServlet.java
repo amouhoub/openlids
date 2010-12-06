@@ -10,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -44,9 +45,9 @@ public class SearchServlet extends HttpServlet {
 //			String id = req.getRequestURI();
 //			id = id.substring(id.lastIndexOf("/")+1);
 			
-			query = query.replace(" ", "%20");
-			query = query.replace("#", "%23");
-			URL u = new URL("http://search.twitter.com/search.atom?lang=en&q=" + query);
+			query = URLEncoder.encode(query, "utf-8");
+			
+			URL u = new URL("http://search.twitter.com/search.atom?lang=en&q=" + query + "&rpp=100");
 			
 			System.out.println(u);
 			
