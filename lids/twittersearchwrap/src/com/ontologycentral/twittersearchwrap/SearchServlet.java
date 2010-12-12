@@ -46,7 +46,9 @@ public class SearchServlet extends HttpServlet {
 //			id = id.substring(id.lastIndexOf("/")+1);
 			
 			query = URLEncoder.encode(query, "utf-8");
-			
+
+			System.out.println(query);
+
 			URL u = new URL("http://search.twitter.com/search.atom?lang=en&q=" + query + "&rpp=100");
 			
 			System.out.println(u);
