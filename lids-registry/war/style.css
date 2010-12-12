@@ -1,0 +1,8 @@
+dl.li { 
+    background-color: yellow;
+}
+
+dl.li > dt { 
+    background-color: green;
+    padding-top: 1em
+}
