@@ -136,8 +136,6 @@ public class SearchServlet extends HttpServlet {
 				
 				str = str.replaceAll("</feed>", "") + seeAlso.toString() + "\n</feed>";
 				
-				System.out.println(str);
-				
 				sr = new StringReader(str);
 			}
 
