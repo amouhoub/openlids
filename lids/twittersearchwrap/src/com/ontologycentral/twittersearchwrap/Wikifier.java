@@ -21,167 +21,170 @@ import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.NumericLiteral;
 import org.semanticweb.yars.nx.Resource;
 
-
-
-
-
 public class Wikifier {
-    Logger _log = Logger.getLogger(this.getClass().getName());
+	Logger _log = Logger.getLogger(this.getClass().getName());
 
+	String _uri;
+	Resource _source;
+	String _uagent;
 
-    
-    String _uri;
-    Resource _source;
-    String _uagent;
-    
+	static String DELIM = " ------------ \n";
 
-    static String DELIM = " ------------ \n";
+	public Wikifier(String uri, String uagent) {
+		_uri = uri;
+		_uagent = uagent;
 
-    public Wikifier(String uri, String uagent) {
-            _uri = uri;
-            _uagent = uagent;
-            
-            _source = new Resource(uri);
-    }
-    
-    /**
-     * Should return a name,value pair (i.e. retain the predicate for which the entity was detected)
-     * @param subj
-     * @param predobjs
-     * @return
-     */
-    Set<String> wikify(Node subj, Set<Node[]> predobjs) {
-            Set<String> result = new HashSet<String>();
-            
-            try {
-                    StringBuffer sb = new StringBuffer();
-                    for (Node[] po : predobjs) {
-                            Node o = po[1];
-                            
-                            if (o instanceof DateTimeLiteral) {
-                                    _log.fine("date");
-                            } else if (o instanceof NumericLiteral) {
-                                    _log.fine("number");                            
-                            } else if (o instanceof Literal) {
-                                    sb.append(o.toString());
-                                    sb.append(DELIM);
-                            } else if (o instanceof Resource) {
-                                    _log.fine("resource");
-                            }
-                    }
-                    
-                    String payload = sb.toString();
-                    _log.fine(payload);
+		_source = new Resource(uri);
+	}
 
-                    URL u = new URL(_uri);
-                    
-                    // &minProbability=0.25
-                    String data = "task=wikify&wrapInXml=false&repeatMode=0&source=" + URLEncoder.encode(payload, "utf-8");
+	/**
+	 * Should return a name,value pair (i.e. retain the predicate for which the
+	 * entity was detected)
+	 * 
+	 * @param subj
+	 * @param predobjs
+	 * @return
+	 */
+	Set<String> wikify(Node subj, Set<Node[]> predobjs) {
+		Set<String> result = new HashSet<String>();
 
-                    URLConnection conn = u.openConnection();
-                    // conn.setConnectTimeout(FetchFeed.CONNECT_TIMEOUT);
-                    // conn.setReadTimeout(FetchFeed.READ_TIMEOUT*2);
-                    conn.setRequestProperty("User-agent", _uagent);
+		try {
+			StringBuffer sb = new StringBuffer();
+			for (Node[] po : predobjs) {
+				Node o = po[1];
 
-                    conn.setDoOutput(true);
-                    OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-                    wr.write(data);
-                    wr.flush();
+				if (o instanceof DateTimeLiteral) {
+					_log.fine("date");
+				} else if (o instanceof NumericLiteral) {
+					_log.fine("number");
+				} else if (o instanceof Literal) {
+					sb.append(o.toString());
+					sb.append(DELIM);
+				} else if (o instanceof Resource) {
+					_log.fine("resource");
+				}
+			}
 
-                    String encoding = "utf-8";
-                    if (conn.getContentEncoding() != null) {
-                            encoding = conn.getContentEncoding();
-                    }
+			String payload = sb.toString();
+			_log.fine(payload);
 
-                    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
+			URL u = new URL(_uri);
 
-                    sb = new StringBuffer();
-                    String inputLine;
-                    while ((inputLine = in.readLine()) != null)  {
-                            sb.append(inputLine);
-                    }
-                    in.close();
+			// &minProbability=0.25
+			String data = "task=wikify&wrapInXml=false&repeatMode=0&source="
+					+ URLEncoder.encode(payload, "utf-8");
 
-                    String html = sb.toString().trim();
-                    
-                    result = getIDs(html);
-            } catch (MalformedURLException e) {
-                    _log.info
+			URLConnection conn = u.openConnection();
+			// conn.setConnectTimeout(FetchFeed.CONNECT_TIMEOUT);
+			// conn.setReadTimeout(FetchFeed.READ_TIMEOUT*2);
+			conn.setRequestProperty("User-agent", _uagent);
 
-(subj.toN3() + " " + e.getMessage());
-            } catch (UnsupportedEncodingException e) {
-                    _log.info
+			conn.setDoOutput(true);
+			OutputStreamWriter wr = new OutputStreamWriter(
+					conn.getOutputStream());
+			wr.write(data);
+			wr.flush();
 
-(subj.toN3() + " " + e.getMessage());
-            } catch (IOException e) {
-                    _log.info
+			String encoding = "utf-8";
+			if (conn.getContentEncoding() != null) {
+				encoding = conn.getContentEncoding();
+			}
 
-(subj.toN3() + " " + e.getMessage());
-            } catch (IndexOutOfBoundsException e) {
-                    _log.info
+			BufferedReader in = new BufferedReader(new InputStreamReader(
+					conn.getInputStream(), encoding));
 
-(subj.toN3() + " " + e.getMessage());                  
-            } catch (IllegalArgumentException e) {
-                    _log.info
+			sb = new StringBuffer();
+			String inputLine;
+			while ((inputLine = in.readLine()) != null) {
+				sb.append(inputLine);
+			}
+			in.close();
 
-(subj.toN3() + " " + e.getMessage());                  
-            }
-            
-            return result;
-    }
+			String html = sb.toString().trim();
 
-    static Set<String> getIDs(String str) {
-            Set<String> result = new HashSet<String>();
+			result = getIDs(html);
+		} catch (MalformedURLException e) {
+			_log.info
 
-            Pattern pattern = Pattern.compile("\\[\\[.*?\\]\\]");
+			(subj.toN3() + " " + e.getMessage());
+		} catch (UnsupportedEncodingException e) {
+			_log.info
 
-            Matcher m = pattern.matcher(str);
-            while (m.find()) {
-                    String concept = m.group();
+			(subj.toN3() + " " + e.getMessage());
+		} catch (IOException e) {
+			_log.info
 
-                    // @@@ what to do when nothing matches? java.lang.IndexOutOfBoundsException: No group 1
-                    if (concept.contains("|")) {
-                            String wiki = concept.substring(2, concept.indexOf("|"));
-                            wiki = wiki.replace(' ', '_');
-                            result.add(wiki);
-                    } else {
-                            String wiki = concept.substring(2, concept.indexOf("]"));
-                            wiki = wiki.replace(' ', '_');
-                            result.add(wiki);
-                    }
-            }
+			(subj.toN3() + " " + e.getMessage());
+		} catch (IndexOutOfBoundsException e) {
+			_log.info
 
-            return result;
-    }
+			(subj.toN3() + " " + e.getMessage());
+		} catch (IllegalArgumentException e) {
+			_log.info
 
-    static String getWikipediaLinks(String str, String wikiuri) {
-            Pattern pattern = Pattern.compile("\\[\\[.*?\\]\\]");
+			(subj.toN3() + " " + e.getMessage());
+		}
 
-            StringBuffer sb = new StringBuffer();
+		return result;
+	}
 
-            Matcher m = pattern.matcher(str);
-            while (m.find()) {
-                    String concept = m.group();
+	static Set<String> getIDs(String str) {
+		Set<String> result = new HashSet<String>();
 
-                    // @@@ what to do when nothing matches? java.lang.IndexOutOfBoundsException: No group 1
-                    if (concept.contains("|")) {
-                            String wiki = concept.substring(2, concept.indexOf("|"));
-                            wiki = wiki.replace(' ', '_');
-                            String text = concept.substring(concept.indexOf("|")+1, concept.length()-2);
-                            m.appendReplacement(sb, "<a href=\"" + wikiuri + wiki + "\">" + text + "</a>");
-                    } else {
-                            String wiki = concept.substring(2, concept.indexOf("]"));
-                            String text = wiki;
-                            wiki = wiki.replace(' ', '_');
-                            m.appendReplacement(sb, "<a href=\"" + wikiuri + wiki + "\">" + text + "</a>");
-                    }
-            }
-            m.appendTail(sb);
+		Pattern pattern = Pattern.compile("\\[\\[.*?\\]\\]");
 
-            return sb.toString();
-    }
+		Matcher m = pattern.matcher(str);
+		while (m.find()) {
+			String concept = m.group();
 
-    public Node getSource() {
-            return _source;
-    }
+			// @@@ what to do when nothing matches?
+			// java.lang.IndexOutOfBoundsException: No group 1
+			if (concept.contains("|")) {
+				String wiki = concept.substring(2, concept.indexOf("|"));
+				wiki = wiki.replace(' ', '_');
+				result.add(wiki);
+			} else {
+				String wiki = concept.substring(2, concept.indexOf("]"));
+				wiki = wiki.replace(' ', '_');
+				result.add(wiki);
+			}
+		}
+
+		return result;
+	}
+
+	static String getWikipediaLinks(String str, String wikiuri) {
+		Pattern pattern = Pattern.compile("\\[\\[.*?\\]\\]");
+
+		StringBuffer sb = new StringBuffer();
+
+		Matcher m = pattern.matcher(str);
+		while (m.find()) {
+			String concept = m.group();
+
+			// @@@ what to do when nothing matches?
+			// java.lang.IndexOutOfBoundsException: No group 1
+			if (concept.contains("|")) {
+				String wiki = concept.substring(2, concept.indexOf("|"));
+				wiki = wiki.replace(' ', '_');
+				String text = concept.substring(concept.indexOf("|") + 1,
+						concept.length() - 2);
+				m.appendReplacement(sb, "<a href=\"" + wikiuri + wiki + "\">"
+						+ text + "</a>");
+			} else {
+				String wiki = concept.substring(2, concept.indexOf("]"));
+				String text = wiki;
+				wiki = wiki.replace(' ', '_');
+				m.appendReplacement(sb, "<a href=\"" + wikiuri + wiki + "\">"
+						+ text + "</a>");
+			}
+		}
+		m.appendTail(sb);
+
+		return sb.toString();
+	}
+
+	public Node getSource() {
+		return _source;
+	}
 }
