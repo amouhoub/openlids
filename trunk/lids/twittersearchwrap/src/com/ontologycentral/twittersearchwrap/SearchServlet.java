@@ -13,7 +13,9 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.Locale;
+import java.util.Set;
 
 import javax.cache.Cache;
 import javax.servlet.ServletContext;
@@ -97,6 +99,44 @@ public class SearchServlet extends HttpServlet {
 //				if (cache != null) {
 //					cache.put(u, str);
 //				}
+				
+				
+				// WIKIFY Search feed data
+
+				String[] split = str.split("</title>");
+				
+				StringBuilder tweets = new StringBuilder();
+				
+				for(int i = 1; i<split.length-1; i++){
+					
+					String[] splitsplit = split[i].split("<title>");
+					
+					tweets.append(" " + splitsplit[1]);
+					
+				}
+
+				Set<String> wikifyResult = Wikify.startWikify(tweets.toString());
+				
+				System.out.println(wikifyResult);
+				
+				// Append DBPedia links to atom feed to include in transformation
+				
+				Iterator it = wikifyResult.iterator();
+				StringBuffer seeAlso = new StringBuffer();
+				while(it.hasNext()){
+					seeAlso.append("<seeAlso>");
+					seeAlso.append("<link>");
+					seeAlso.append("http://dbpedia.org/resource/");
+					seeAlso.append(it.next());
+					seeAlso.append("</link>");
+					seeAlso.append("</seeAlso>");
+					seeAlso.append("\n");
+					
+				}
+				
+				str = str.replaceAll("</feed>", "") + seeAlso.toString() + "\n</feed>";
+				
+				System.out.println(str);
 				
 				sr = new StringReader(str);
 			}
