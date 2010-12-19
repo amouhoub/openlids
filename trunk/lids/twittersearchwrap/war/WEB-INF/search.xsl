@@ -6,13 +6,18 @@
   <xsl:template match="a:feed">
   	<xsl:element name="rdf:RDF">
   	<xsl:element name="rdf:Description">
-  	  <xsl:attribute name="rdf:about"></xsl:attribute>
-  	<xsl:element name="rdfs:comment">Source: Twitter Search API (http://search.twitter.com/) via twittersearchwrap (http://twittersearchwrap.ontologycentral.com/).</xsl:element>
+  	  <xsl:attribute name="rdf:about"><xsl:value-of select="a:title"/></xsl:attribute>
+  	  <xsl:element name="rdfs:comment">Source: Twitter Search API (http://search.twitter.com/) via twittersearchwrap</xsl:element>	
+	  <xsl:for-each select="a:seeAlso">
+		<xsl:element name="rdfs:seeAlso">
+ 	       <xsl:attribute name="rdf:resource"><xsl:value-of select="a:link"/></xsl:attribute>
+ 	    </xsl:element>
+ 	  </xsl:for-each>
   	</xsl:element>
-  	<xsl:apply-templates/>
+	<xsl:apply-templates/>
   	</xsl:element>
   </xsl:template>
-  
+
   <xsl:template match="a:entry">
   		
       <xsl:element name="rdf:Description">
