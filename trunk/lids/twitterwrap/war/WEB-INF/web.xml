@@ -5,17 +5,52 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<listener>
-		<listener-class>com.ontologycentral.twitterwrap.Listener</listener-class>
+		<listener-class>edu.kit.aifb.lids.twitterwrap.Listener</listener-class>
 	</listener>
 
 	<servlet>
-		<servlet-name>user_timeline</servlet-name>
-		<servlet-class>com.ontologycentral.twitterwrap.UserTimelineServlet</servlet-class>
+		<servlet-name>timeline</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.TimelineServlet</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>tweets</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.TweetsServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>users</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.UsersServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>search</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.SearchServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
-		<servlet-name>user_timeline</servlet-name>
+		<servlet-name>timeline</servlet-name>
 		<url-pattern>/statuses/user_timeline</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>timeline</servlet-name>
+		<url-pattern>/statuses/public_timeline</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>tweets</servlet-name>
+		<url-pattern>/statuses/show/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>users</servlet-name>
+		<url-pattern>/users/show</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>search</servlet-name>
+		<url-pattern>/search</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>

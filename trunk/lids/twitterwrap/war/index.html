@@ -14,14 +14,66 @@
 
   <body>
     <h1>Welcome to the Twitter Wrapper!</h1>
-	
-	<p>
-		Convert Twitter status updates to RDF.
-		E.g. <a href="/statuses/user_timeline?screen_name=aharth#id">/statuses/user_timeline?screen_name=aharth#id</a>
-	</p>
-	
-	<p>
-		<a href="lids.rdf">LIDS description</a>.
-	</p>
+
+    <p>
+      The wrapper implements (most of) the <a href="http://twitter4j.org/en/api-support.html">public Twitter API methods</a>.
+    </p>
+
+    <h2>Timeline Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/statuses/public_timeline">./statuses/public_timeline</a></dt>
+      <dd><a href="http://api.twitter.com/1/statuses/public_timeline.xml">XML</a></dd>
+      <dd><a href="./statuses/public_timeline">RDF</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/statuses/user_timeline">./statuses/user_timeline</a></dt>
+      <dd><a href="http://api.twitter.com/1/statuses/user_timeline.xml?screen_name=aharth#id">XML</a></dd>
+      <dd><a href="./statuses/user_timeline?screen_name=aharth#id">RDF</a></dd>
+    </dl>
+
+    <h2>Tweets Resources</h2>
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/statuses/show/:id">./statuses/show/:id</a></dt>
+      <dd><a href="http://api.twitter.com/1/statuses/show/15553627426922496.xml">XML</a>
+      <dd><a href="./statuses/show/15553627426922496">RDF</a></dd>
+    </dl>
+
+    <h2>User Resources</h2>
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/users/show">./users/show</a></dt>
+      <dd><a href="http://api.twitter.com/1/users/show.xml?user_id=14690897">XML</a>
+      <dd><a href="./users/show?user_id=14690897">RDF</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/users/show">users/suggestions</a></dt>
+      <dd><a href="http://api.twitter.com/1/users/suggestions.xml">XML</a>
+
+      <dt><a href="http://dev.twitter.com/doc/get/users/show">users/suggestions/:slug</a></dt>
+      <dd><a href="http://api.twitter.com/1/users/suggestions/books.xml">XML</a>
+
+      <dt><a href="http://dev.twitter.com/doc/get/users/profile_image/:screen_name">users/suggestions/:slug</a></dt>
+      <dd><a href="http://api.twitter.com/1/users/profile_image/aharth.xml">XML</a>
+
+      <dt><a href="http://dev.twitter.com/doc/get/statuses/friends">./statuses/friends</a></dt>
+      <dd><a href="http://api.twitter.com/1/statuses/friends.xml?screen_name=aharth">XML</a>
+      <dd><a href="./statuses/friends?user_id=14690897">RDF</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/statuses/followers">./statuses/followers</a></dt>
+      <dd><a href="http://api.twitter.com/1/statuses/followers.xml?screen_name=aharth">XML</a>
+      <dd><a href="./statuses/friends?user_id=14690897">RDF</a></dd>
+    </dl>
+
+    <h2>Search API Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/search">./search</a></dt>
+      <dd><a href="http://search.twitter.com/search.atom?q=karlsruhe">XML</a>
+      <dd><a href="./search?q=karlsruhe">RDF</a></dd>
+    </dl>
+
+    <h2>LIDS</h2>
+    <p>
+      @@@ probably outdated
+      <a href="lids.rdf">LIDS description</a>.
+    </p>
   </body>
 </html>
