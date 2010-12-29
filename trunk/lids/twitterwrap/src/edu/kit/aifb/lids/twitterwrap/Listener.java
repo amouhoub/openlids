@@ -23,6 +23,7 @@ public class Listener implements ServletContextListener {
 	public static String SEARCH = "search";
 	public static String TWEETS = "tweets";
 	public static String USERS = "users";
+	public static String FRIENDS = "friends";
 
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 
@@ -63,6 +64,15 @@ public class Listener implements ServletContextListener {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
+		
+		try {
+			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/friends.xsl")));
+			ctx.setAttribute(FRIENDS, t);
+		} catch (TransformerConfigurationException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
 	}
 
 	public void contextDestroyed(ServletContextEvent event) {
