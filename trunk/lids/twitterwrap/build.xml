@@ -44,6 +44,7 @@
     <war destfile="dist/${projname}-${version}.war"
 	 webxml="war/WEB-INF/web.xml" basedir="war/">
       <lib file="dist/${projname}-${version}.jar"/>
+      <lib file="lib/json_simple-1.1.jar" />
 <!--
       <lib file="war/WEB-INF/lib/appengine-api-1.0-sdk-1.3.4.jar"/>
       <lib file="war/WEB-INF/lib/appengine-api-labs-1.3.4.jar"/>
@@ -54,13 +55,14 @@
       <lib file="war/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
       <lib file="war/WEB-INF/lib/jdo2-api-2.3-eb.jar"/>
       <lib file="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
--->
+
       <lib file="war/WEB-INF/lib/appengine-jsr107cache-1.3.4.jar"/>
       <lib file="war/WEB-INF/lib/serializer.jar"/>
       <lib file="war/WEB-INF/lib/xalan.jar"/>
       <lib file="war/WEB-INF/lib/xercesImpl.jar"/>
       <lib file="war/WEB-INF/lib/xml-apis.jar"/>
       <lib file="war/WEB-INF/lib/xsltc.jar"/>
+-->
     </war>
   </target>
 </project>
