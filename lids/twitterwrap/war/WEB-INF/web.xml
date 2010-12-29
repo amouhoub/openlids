@@ -11,7 +11,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     <param-value>harth@kit.edu</param-value>
   </context-param>
 
-
 	<listener>
 		<listener-class>edu.kit.aifb.lids.twitterwrap.Listener</listener-class>
 	</listener>
@@ -34,6 +33,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
 		<servlet-name>friends</servlet-name>
 		<servlet-class>edu.kit.aifb.lids.twitterwrap.FriendsServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>geosearch</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.GeoSearchServlet</servlet-class>
 	</servlet>
 	
 	<servlet>
@@ -69,6 +73,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet-mapping>
 		<servlet-name>friends</servlet-name>
 		<url-pattern>/statuses/followers</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>geosearch</servlet-name>
+		<url-pattern>/geo/search</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
