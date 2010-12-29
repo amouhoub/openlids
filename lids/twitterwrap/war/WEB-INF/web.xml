@@ -4,7 +4,7 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-	<display-name>Twitter LIDS</display-name>
+	<display-name>Twitter API LIDS</display-name>
 	
   <context-param>
     <param-name>webmaster</param-name>
@@ -78,6 +78,21 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet-mapping>
 		<servlet-name>geosearch</servlet-name>
 		<url-pattern>/geo/search</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>geosearch</servlet-name>
+		<url-pattern>/geo/similar_places</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>geosearch</servlet-name>
+		<url-pattern>/geo/reverse_geocode</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>geosearch</servlet-name>
+		<url-pattern>/geo/id/*</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>

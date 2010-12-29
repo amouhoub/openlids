@@ -88,6 +88,7 @@ public class GeoSearchServlet extends HttpServlet {
 		PrintWriter pw = new PrintWriter(os);
 		pw.println(xml);     
 
+		pw.close();
 		/*
 
         XMLStreamWriter ch;
