@@ -19,6 +19,10 @@
       The wrapper implements (most of) the <a href="http://twitter4j.org/en/api-support.html">public Twitter API methods</a>.
     </p>
 
+    <p>
+      Many methods suppert pagination (s: since_id, m: max_id, c: count, p: page, C:cursor).
+    </p>
+
     <h2>Timeline Resources</h2>
 
     <dl>
@@ -59,10 +63,87 @@
 
       <dt><a href="http://dev.twitter.com/doc/get/statuses/followers">./statuses/followers</a></dt>
       <dd><a href="http://api.twitter.com/1/statuses/followers.xml?screen_name=aharth">XML</a>
-      <dd><a href="./statuses/friends?user_id=14690897">RDF</a></dd>
+      <dd><a href="./statuses/followers?user_id=14690897">RDF</a></dd>
     </dl>
 
-    <h2>Search API Resources</h2>
+    <h2>Trends Resources</h2>
+
+    <div>n/a (but could make for interesting queries)</div>
+
+    <h2>Local Trends Resources</h2>
+
+    <div>n/a (but could make for interesting queries)</div>
+
+    <h2>List Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/:user/lists/:id/statuses">:user/lists/:id/statuses</a></dt>
+      <dd><a href="http://api.twitter.com/1/aharth/lists/:id/statuses">XML ?</a></dd>
+    </dl>
+
+    <h2>Friendship Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/friendships/exists">./friendships/exists</a></dt>
+      <dd><a href="http://api.twitter.com/1/aharth/friendships/exists.xml?user_a=aharth&user_b=sclopit">XML</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/friendships/show">./friendships/show</a></dt>
+      <dd><a href="http://api.twitter.com/1/friendships/show.xml?source_id=14690897&target_id=17751344">XML</a></dd>
+      <dd>gives an error if both required are not specified</dd>
+    </dl>
+
+    <h2>Friends and Followers Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/friends/ids">friends/ids</a></dt>
+      <dd><a href="http://api.twitter.com/1/friends/ids.xml?user_id=q14690897">XML</a></dd>
+      <dd>requires auth</dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/followers/ids">followers/ids</a></dt>
+      <dd><a href="http://api.twitter.com/1/followers/ids.xml?user_id=q14690897">XML</a></dd>
+      <dd>requires auth</dd>
+    </dl>
+
+    <h2>Account Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/account/rate_limit_status">account/rate_limit_status</a></dt>
+      <dd><a href="http://api.twitter.com/1/account/rate_limit_status.xml">XML</a></dd>
+    </dl>
+
+    <h2>Geo Resources</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/geo/search">./geo/search</a></dt>
+      <dd><a href="http://api.twitter.com/1/geo/search.json?lat=49.009&long=8.412">JSON</a>
+      <dd><a href="./geo/search?lat=49.009&long=8.412">RDF</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/geo/similar_places">./geo/similar_places</a></dt>
+      <dd><a href="http://api.twitter.com/1/geo/similar_places.json?lat=49.009&long=8.412">JSON</a>
+      <dd><a href="./geo/similar_places?lat=49.009&long=8.412">RDF</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/geo/reverse_geocode">./geo/reverse_geocode</a></dt>
+      <dd><a href="http://api.twitter.com/1/geo/reverse_geocode.json?lat=49.009&long=8.412">JSON</a>
+      <dd><a href="./geo/reverse_geocode?lat=49.009&long=8.412">RDF</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/id/:place_id">./geo/id/:place_id</a></dt>
+      <dd><a href="http://api.twitter.com/1/geo/id/fcb944dcd55ff1a8.json">JSON</a></dd>
+      <dd><a href="./geo/id/fcb944dcd55ff1a8">RDF</a></dd>
+    </dl>
+
+
+    <h2>Legal</h2>
+
+    <dl>
+      <dt><a href="http://dev.twitter.com/doc/get/legal/tos">legal/tos</a></dt>
+      <dd><a href="http://api.twitter.com/1/legal/tos.xml">XML</a></dd>
+
+      <dt><a href="http://dev.twitter.com/doc/get/legal/privacy">legal/privacy</a></dt>
+      <dd><a href="http://api.twitter.com/1/legal/privacy.xml">XML</a></dd>
+    </dl>
+
+
+   <h2>Search API Resources</h2>
 
     <dl>
       <dt><a href="http://dev.twitter.com/doc/get/search">./search</a></dt>
