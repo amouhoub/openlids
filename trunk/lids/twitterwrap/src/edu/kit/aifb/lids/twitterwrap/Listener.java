@@ -16,6 +16,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamSource;
 
 public class Listener implements ServletContextListener {
@@ -30,9 +31,10 @@ public class Listener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event) {
 		ServletContext ctx = event.getServletContext();
 
-		javax.xml.transform.TransformerFactory tf =
-			javax.xml.transform.TransformerFactory.newInstance(); //"org.apache.xalan.processor.TransformerFactoryImpl", this.getClass().getClassLoader() ); 
+		TransformerFactory tf = TransformerFactory.newInstance(); //"org.apache.xalan.processor.TransformerFactoryImpl", this.getClass().getClassLoader() ); 
 
+		//System.out.println(ctx.getRealPath("/WEB-INF/timeline.xsl"));
+		
 		try {
 			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/timeline.xsl")));
 			ctx.setAttribute(USERTIMELINE, t);
