@@ -7,13 +7,10 @@ import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import javax.cache.Cache;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,8 +29,6 @@ public class TimelineServlet extends HttpServlet {
 
 		OutputStream os = resp.getOutputStream();
 		//OutputStreamWriter osw = new OutputStreamWriter(os , "UTF-8");
-
-		StringReader sr = null;
 
 		try {
 			Map<String, String[]> params = req.getParameterMap();
@@ -79,7 +74,7 @@ public class TimelineServlet extends HttpServlet {
 
 			String str = sb.toString();
 
-			sr = new StringReader(str);
+			StringReader sr = new StringReader(str);
 
 			Transformer t = (Transformer)ctx.getAttribute(Listener.USERTIMELINE);
 
