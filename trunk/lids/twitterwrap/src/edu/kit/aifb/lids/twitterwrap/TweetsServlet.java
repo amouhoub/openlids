@@ -34,73 +34,68 @@ public class TweetsServlet extends HttpServlet {
 
 		StringReader sr = null;
 
+		Map<String, String[]> params = req.getParameterMap();
+
+		String path = req.getServletPath();
+
+		_log.info("path: " + path);
+		System.out.println("path: " + path);
+		String pathinfo = req.getPathInfo();
+
+		String url = Listener.generateURL("http://api.twitter.com/1" + path + pathinfo + ".xml", params);
+
+		URL u = new URL(url);
+
+		_log.info("url: " + u);
+		System.out.println("url: " + u);
+
+		if (sr == null) {
+			HttpURLConnection conn = (HttpURLConnection)u.openConnection();
+
+			if (conn.getResponseCode() != 200) {
+				resp.sendError(conn.getResponseCode(), u + ": " + Listener.streamToString(conn.getErrorStream()));
+				return;
+			}
+
+			String encoding = conn.getContentEncoding();
+			if (encoding == null) {
+				encoding = "utf-8";
+			}
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
+
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+
+			while ((line = in.readLine()) != null) {
+				sb.append(line);
+				sb.append('\n');
+			}
+
+			in.close();
+
+			if (sb.length() < 40) {
+				resp.sendError(404, "response too short");
+				return;
+			}
+
+			String str = sb.toString();
+
+			sr = new StringReader(str);
+		}
+
+		Transformer t = (Transformer)ctx.getAttribute(Listener.TWEETS);
+
+		resp.setHeader("Cache-Control", "public");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DATE, 1);
+		resp.setHeader("Expires", Listener.RFC822.format(c.getTime()));
+
 		try {
-			Map<String, String[]> params = req.getParameterMap();
-			
-			String path = req.getServletPath();
-			
-			_log.info("path: " + path);
-			System.out.println("path: " + path);
-			String pathinfo = req.getPathInfo();
-
-			String url = Listener.generateURL("http://api.twitter.com/1" + path + pathinfo + ".xml", params);
-
-			URL u = new URL(url);
-
-			_log.info("url: " + u);
-			System.out.println("url: " + u);
-
-			if (sr == null) {
-				HttpURLConnection conn = (HttpURLConnection)u.openConnection();
-
-				if (conn.getResponseCode() != 200) {
-					resp.sendError(conn.getResponseCode(), u + ": " + Listener.streamToString(conn.getErrorStream()));
-					return;
-				}
-
-				String encoding = conn.getContentEncoding();
-				if (encoding == null) {
-					encoding = "utf-8";
-				}
-
-				BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
-
-				StringBuilder sb = new StringBuilder();
-				String line = null;
-
-				while ((line = in.readLine()) != null) {
-					sb.append(line);
-					sb.append('\n');
-				}
-
-				in.close();
-
-				if (sb.length() < 40) {
-					resp.sendError(404, "response too short");
-					return;
-				}
-
-				String str = sb.toString();
-
-				sr = new StringReader(str);
-			}
-
-			Transformer t = (Transformer)ctx.getAttribute(Listener.TWEETS);
-
-			resp.setHeader("Cache-Control", "public");
-			Calendar c = Calendar.getInstance();
-			c.add(Calendar.DATE, 1);
-			resp.setHeader("Expires", Listener.RFC822.format(c.getTime()));
-
-			try {
-				t.transform(new StreamSource(sr), new StreamResult(os));
-			} catch (TransformerException e) {
-				e.printStackTrace(); 
-				resp.sendError(500, e.getMessage());
-			}
-		} catch (IOException ioex) {
-			resp.sendError(500, ioex.getMessage());
-			return;
+			t.transform(new StreamSource(sr), new StreamResult(os));
+		} catch (TransformerException e) {
+			e.printStackTrace(); 
+			resp.sendError(500, e.getMessage());
 		}
 
 		os.close();

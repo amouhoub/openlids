@@ -39,6 +39,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>geosearch</servlet-name>
 		<servlet-class>edu.kit.aifb.lids.twitterwrap.GeoSearchServlet</servlet-class>
 	</servlet>
+
+	<servlet>
+		<servlet-name>geoid</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.GeoIdServlet</servlet-class>
+	</servlet>
 	
 	<servlet>
 		<servlet-name>search</servlet-name>
@@ -91,7 +96,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet-mapping>
-		<servlet-name>geosearch</servlet-name>
+		<servlet-name>geoid</servlet-name>
 		<url-pattern>/geo/id/*</url-pattern>
 	</servlet-mapping>
 

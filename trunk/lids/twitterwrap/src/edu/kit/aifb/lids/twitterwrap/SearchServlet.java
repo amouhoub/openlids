@@ -98,12 +98,12 @@ public class SearchServlet extends HttpServlet {
 				sr = new StringReader(str);
 			}
 
-			Transformer t = (Transformer)ctx.getAttribute(Listener.SEARCH);
-
 			resp.setHeader("Cache-Control", "public");
 			Calendar c = Calendar.getInstance();
 			c.add(Calendar.DATE, 1);
 			resp.setHeader("Expires", Listener.RFC822.format(c.getTime()));
+
+			Transformer t = (Transformer)ctx.getAttribute(Listener.SEARCH);
 
 			try {
 				StreamSource ssource = new StreamSource(sr);

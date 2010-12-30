@@ -25,6 +25,8 @@ public class Listener implements ServletContextListener {
 	public static String TWEETS = "tweets";
 	public static String USERS = "users";
 	public static String FRIENDS = "friends";
+	public static String GEOSEARCH = "geosearch";
+	public static String GEOID = "geoid";
 
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 
@@ -70,6 +72,22 @@ public class Listener implements ServletContextListener {
 		try {
 			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/friends.xsl")));
 			ctx.setAttribute(FRIENDS, t);
+		} catch (TransformerConfigurationException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		try {
+			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/geosearch.xsl")));
+			ctx.setAttribute(GEOSEARCH, t);
+		} catch (TransformerConfigurationException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+		try {
+			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/geoid.xsl")));
+			ctx.setAttribute(GEOID, t);
 		} catch (TransformerConfigurationException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
