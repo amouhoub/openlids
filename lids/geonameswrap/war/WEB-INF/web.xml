@@ -16,29 +16,46 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</listener>
 	
 	<servlet>
-		<servlet-name>findNearbyWikipedia</servlet-name>
-		<servlet-class>edu.kit.aifb.lids.geonameswrap.FindNearbyWikipediaServlet</servlet-class>
+		<servlet-name>geonames</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.geonameswrap.GeoNamesServlet</servlet-class>
 	</servlet>
+
 	<servlet>
-		<servlet-name>findNearbyPlaceName</servlet-name>
-		<servlet-class>edu.kit.aifb.lids.geonameswrap.FindNearbyPlaceNameServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>findNearby</servlet-name>
-		<servlet-class>edu.kit.aifb.lids.geonameswrap.FindNearbyServlet</servlet-class>
+		<servlet-name>earthquakes</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.geonameswrap.EarthquakesServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>findNearby</servlet-name>
+		<servlet-name>geonames</servlet-name>
 		<url-pattern>/findNearby</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>findNearbyWikipedia</servlet-name>
+		<servlet-name>geonames</servlet-name>
 		<url-pattern>/findNearbyWikipedia</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>findNearbyPlaceName</servlet-name>
+		<servlet-name>geonames</servlet-name>
 		<url-pattern>/findNearbyPlaceName</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>geonames</servlet-name>
+		<url-pattern>/findNearbyPostalCodes</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>geonames</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>geonames</servlet-name>
+		<url-pattern>/wikipediaBoundingBox</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>geonames</servlet-name>
+		<url-pattern>/wikipediaSearch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>earthquakes</servlet-name>
+		<url-pattern>/earthquakes</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
