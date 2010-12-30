@@ -28,8 +28,6 @@ public class TimelineServlet extends HttpServlet {
 	Logger _log = Logger.getLogger(this.getClass().getName());
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		resp.setContentType("application/rdf+xml");
-
 		ServletContext ctx = getServletContext();
 
 		OutputStream os = resp.getOutputStream();
@@ -39,9 +37,9 @@ public class TimelineServlet extends HttpServlet {
 
 		try {
 			Map<String, String[]> params = req.getParameterMap();
-			
+
 			String path = req.getServletPath();
-			
+
 			_log.info("path: " + path);
 
 			String url = Listener.generateURL("http://api.twitter.com/1" + path + ".xml", params);
@@ -50,42 +48,42 @@ public class TimelineServlet extends HttpServlet {
 
 			_log.info("url: " + u);
 
-			if (sr == null) {
-				HttpURLConnection conn = (HttpURLConnection)u.openConnection();
+			HttpURLConnection conn = (HttpURLConnection)u.openConnection();
 
-				if (conn.getResponseCode() != 200) {
-					resp.sendError(conn.getResponseCode(), u + ": " + Listener.streamToString(conn.getErrorStream()));
-					return;
-				}
-
-				String encoding = conn.getContentEncoding();
-				if (encoding == null) {
-					encoding = "utf-8";
-				}
-
-				BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
-
-				StringBuilder sb = new StringBuilder();
-				String line = null;
-
-				while ((line = in.readLine()) != null) {
-					sb.append(line);
-					sb.append('\n');
-				}
-
-				in.close();
-
-				if (sb.length() < 40) {
-					resp.sendError(404, "response too short");
-					return;
-				}
-
-				String str = sb.toString();
-
-				sr = new StringReader(str);
+			if (conn.getResponseCode() != 200) {
+				resp.sendError(conn.getResponseCode(), u + ": " + Listener.streamToString(conn.getErrorStream()));
+				return;
 			}
 
+			String encoding = conn.getContentEncoding();
+			if (encoding == null) {
+				encoding = "utf-8";
+			}
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
+
+			StringBuilder sb = new StringBuilder();
+			String line = null;
+
+			while ((line = in.readLine()) != null) {
+				sb.append(line);
+				sb.append('\n');
+			}
+
+			in.close();
+
+			if (sb.length() < 40) {
+				resp.sendError(404, "response too short");
+				return;
+			}
+
+			String str = sb.toString();
+
+			sr = new StringReader(str);
+
 			Transformer t = (Transformer)ctx.getAttribute(Listener.USERTIMELINE);
+
+			resp.setContentType("application/rdf+xml");
 
 			resp.setHeader("Cache-Control", "public");
 			Calendar c = Calendar.getInstance();

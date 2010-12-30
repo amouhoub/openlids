@@ -10,6 +10,6 @@ public class XsltTest extends TestCase {
 	public void testXstl() throws Exception {
 		TransformerFactory tf = TransformerFactory.newInstance(); //"org.apache.xalan.processor.TransformerFactoryImpl", this.getClass().getClassLoader() ); 
 
-		Transformer t = tf.newTransformer(new StreamSource("/home/aharth/workspace/twitterwrap/war/WEB-INF/tweets.xsl"));
+		Transformer t = tf.newTransformer(new StreamSource("/home/aharth/workspace/twitterwrap/war/WEB-INF/search.xsl"));
 	}
 }

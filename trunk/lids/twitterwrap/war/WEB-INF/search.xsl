@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <xsl:stylesheet
+   xmlns:tw="http://openlids.org/twitterwrap/vocab#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -19,9 +20,8 @@
   <xsl:template match="a:feed">
     <rdf:RDF>
       <rdf:Description>
-        <xsl:attribute name="rdf:about">
-          <xsl:value-of select="a:title"/>
-        </xsl:attribute>
+        <xsl:attribute name="rdf:about"/>
+	<dc:title><xsl:value-of select="a:title"/></dc:title>
         <rdfs:comment>Source: Twitter Search API (http://search.twitter.com/) via twitterwrap.</rdfs:comment>
         <xsl:for-each select="a:seeAlso">
           <rdfs:seeAlso>
@@ -34,7 +34,6 @@
       <xsl:apply-templates/>
     </rdf:RDF>
   </xsl:template>
-
 
   <xsl:template match="a:entry">
     <rdf:Description>
@@ -64,6 +63,17 @@
     </rdf:Description>
   </xsl:template>
 
-  <xsl:template match="*"/>
+  <xsl:template match="*">
+    <xsl:element name="tw:{local-name()}">
+      <xsl:choose>
+	<xsl:when test="starts-with(., 'http://')">
+	  <xsl:attribute name="rdf:resource"><xsl:value-of select="."/>/</xsl:attribute>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="."/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
 
 </xsl:stylesheet>
