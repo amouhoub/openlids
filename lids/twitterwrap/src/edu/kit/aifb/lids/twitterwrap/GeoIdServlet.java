@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -26,7 +25,7 @@ import net.sf.json.JSONSerializer;
 import net.sf.json.xml.XMLSerializer;
 
 @SuppressWarnings("serial")
-public class GeoSearchServlet extends HttpServlet {
+public class GeoIdServlet extends HttpServlet {
 	Logger _log = Logger.getLogger(this.getClass().getName());
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -42,12 +41,15 @@ public class GeoSearchServlet extends HttpServlet {
 		String path = req.getServletPath();
 
 		_log.info("path: " + path);
+		System.out.println("path: " + path);
+		String pathinfo = req.getPathInfo();
 
-		String url = Listener.generateURL("http://api.twitter.com/1" + path + ".xml", params);
+		String url = Listener.generateURL("http://api.twitter.com/1" + path + pathinfo + ".json", params);
 
 		URL u = new URL(url);
 
 		_log.info("url: " + u);
+		System.out.println("url: " + u);
 
 		HttpURLConnection conn = (HttpURLConnection)u.openConnection();
 
@@ -85,23 +87,26 @@ public class GeoSearchServlet extends HttpServlet {
 		c.add(Calendar.DATE, 1);
 		resp.setHeader("Expires", Listener.RFC822.format(c.getTime()));
 
+		str = str.replace("174368:admin_order_id", "admin_order_id");
+		str = str.replace("174368:id", "id");
+
 		XMLSerializer serializer = new XMLSerializer(); 
 		JSON json = JSONSerializer.toJSON(str); 
 		String xml = serializer.write(json);
-		
-		Transformer t = (Transformer)ctx.getAttribute(Listener.GEOSEARCH);
+
+//		PrintWriter pw = new PrintWriter(os);
+//		pw.println(xml);
+//		pw.close();
+
+		Transformer t = (Transformer)ctx.getAttribute(Listener.GEOID);
 
 		StringReader sr = new StringReader(xml);
-		
 		try {
-			StreamSource ssource = new StreamSource(sr);
-			StreamResult sresult = new StreamResult(os);
-			t.transform(ssource, sresult);
+			t.transform(new StreamSource(sr), new StreamResult(os));
 		} catch (TransformerException e) {
 			e.printStackTrace(); 
 			resp.sendError(500, e.getMessage());
 		}
-		
 		os.close();
 	}
 }

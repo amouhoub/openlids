@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<status>
+  <created_at>Thu Dec 16 23:47:28 +0000 2010</created_at>
+  <id>15553627426922496</id>
+  <text>Done with the #eurostat hackday in Edinburgh. Coded demos and learned quite a bit. LD Wrapper for Eurostat now uses Data Cube vocab.</text>
+  <source>web</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>14690897</id>
+    <name>Andreas Harth</name>
+    <screen_name>aharth</screen_name>
+    <location></location>
+    <description></description>
+    <profile_image_url>http://a1.twimg.com/profile_images/54494192/andreas_normal.jpg</profile_image_url>
+    <url>http://harth.org/andreas/</url>
+    <protected>false</protected>
+    <followers_count>153</followers_count>
+    <profile_background_color>C0DEED</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>0084B4</profile_link_color>
+    <profile_sidebar_fill_color>DDEEF6</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>C0DEED</profile_sidebar_border_color>
+    <friends_count>57</friends_count>
+    <created_at>Wed May 07 19:48:07 +0000 2008</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>Dublin</time_zone>
+    <profile_background_image_url>http://a3.twimg.com/a/1292606737/images/themes/theme1/bg.png</profile_background_image_url>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>38</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>18</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <contributors/>
+</status>
