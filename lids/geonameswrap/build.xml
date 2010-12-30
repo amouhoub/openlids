@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
 
-<project name="geowrap" default="dist">
+<project name="geonameswrap" default="dist">
+  <property name="projname" value="geonameswrap"/>
+  <property name="version" value="0.1"/>
+
   <target name="prepare">
     <tstamp />
-    <mkdir dir="build"/>
+    <mkdir dir="bin"/>
     <mkdir dir="dist"/>
   </target>
 
   <target name="clean">
-    <delete dir="build"/>
+    <delete dir="bin"/>
     <delete>
       <fileset dir="dist">
 	<include name="*"/>
@@ -17,25 +20,31 @@
   </target>
   
   <path id="classpath">
+    <fileset dir="war/WEB-INF/lib">
+      <include name="*.jar"/>
+    </fileset>
+
     <fileset dir="lib">
       <include name="*.jar"/>
     </fileset>
   </path>
   
+
   <target name="dist" depends="prepare">
-    <javac destdir="build"
+    <javac destdir="bin"
 	   srcdir="src"
 	   debug="yes">
       <classpath refid="classpath"/>
     </javac>
 
-    <war destfile="dist/geowrap.war"
-	 webxml="war/WEB-INF/web.xml">
-      <classes dir="build"/>
-      <classes file="war/WEB-INF/logging.properties"/>
-      <fileset file="war/index.html"/>
-      <fileset file="war/lids.rdf"/>
-      <lib file="lib/javax.cache.jar"/>
+    <jar jarfile="dist/${projname}-${version}.jar"
+	 basedir="bin">
+    </jar>
+
+    <war destfile="dist/${projname}-${version}.war"
+	 webxml="war/WEB-INF/web.xml" basedir="war/">
+      <lib file="dist/${projname}-${version}.jar"/>
+      <lib dir="lib/"/>
     </war>
   </target>
 </project>
