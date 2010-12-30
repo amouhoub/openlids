@@ -31,18 +31,36 @@
     <foaf:name><xsl:value-of select="."/></foaf:name>
   </xsl:template>
 
-<!-- here map the JSON stuff
-  <xsl:template match="*"/>
--->
+  <xsl:template match="contained_within"/>
+
+  <xsl:template match="geometry|bounding_box|polylines">
+    <xsl:element name="tw:{local-name()}">
+      <rdf:Description>
+	<xsl:apply-templates/>
+      </rdf:Description>
+    </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="e[@class='array']">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="e[@type='number']">
+    <xsl:value-of select="."/>
+    <xsl:text> </xsl:text>
+  </xsl:template>
 
   <xsl:template match="*">
     <xsl:element name="tw:{local-name()}">
       <xsl:choose>
 	<xsl:when test="starts-with(., 'http://')">
-	  <xsl:attribute name="rdf:resource"><xsl:value-of select="."/>/</xsl:attribute>
+	  <xsl:attribute name="rdf:resource"><xsl:value-of select="."/></xsl:attribute>
+	</xsl:when>
+	<xsl:when test="text()">
+	  <xsl:value-of select="."/>
 	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:value-of select="."/>
+	  <xsl:apply-templates/>
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:element>
