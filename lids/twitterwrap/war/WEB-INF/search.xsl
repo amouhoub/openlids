@@ -67,7 +67,7 @@
     <xsl:element name="tw:{local-name()}">
       <xsl:choose>
 	<xsl:when test="starts-with(., 'http://')">
-	  <xsl:attribute name="rdf:resource"><xsl:value-of select="."/>/</xsl:attribute>
+	  <xsl:attribute name="rdf:resource"><xsl:value-of select="."/></xsl:attribute>
 	</xsl:when>
 	<xsl:otherwise>
 	  <xsl:value-of select="."/>
