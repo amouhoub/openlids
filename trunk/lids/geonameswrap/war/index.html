@@ -1,57 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>GeoNames LIDS</title>
+    <title>GeoNames API LIDS</title>
   </head>
 
   <body>
-    <h1>GeoNames LIDS</h1>
+    <h1>Welcome to the GeoNames API LIDS</h1>
 	
-	<p>
-		Welcome to the geo-location <a href="http://openlids.org/">Linked Data Service</a> (LIDS).
-		The service wraps selected GeoNames and Google services for use with <a href="http://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.
-	</p>
-	
-	<p>
-		Currently we support the following services:
-	</p>
-	
-	<dl>
-		<dt><a href="http://www.geonames.org/export/web-services.html#findNearby">findNearby</a></dt>
-		<dd>
-				Input: lat and lng.
-		Output: RDF with the nearest place.
-				E.g. <a href="./findNearby?lat=49.009&lng=8.412#point">/findNearby?lat=49.009&lng=8.412#point</a>.
-		</dd>		 
-		<dt><a href="http://www.geonames.org/export/web-services.html#findNearbyPlaceName">findNearbyPlaceName</a></dt>
-		<dd>
-				Input: lat and lng.
-		Output: RDF with the nearest place.
-				E.g. <a href="./findNearbyPlaceName?lat=49.009&lng=8.412#point">/findNearbyPlaceName?lat=49.009&lng=8.412#point</a>.
-		
-		</dd>
-		<dt><a href="http://www.geonames.org/export/web-services.html#findNearbyWiki">findNearbyWikipedia</a></dt>
-		<dd>
-				Input: lat and lng.
-		Output: RDF with the nearest place from Wikipedia (DBpedia in our case).
-				E.g. <a href="./findNearbyWikipedia?lat=49.009&lng=8.412#point">/findNearbyWikipedia?lat=49.009&lng=8.412#point</a>.
-		
-		</dd>
-		<dt><a href="http://code.google.com/apis/maps/documentation/geocoding/">geocode</a></dt>
-		<dd>
-			Input: street address.
-			Output: RDF with lat/lng.
-					E.g. <a href="./geocode?address=Englerstr.11,Karlsruhe,Germany">/geocode?address=Englerstr.11,Karlsruhe,Germany#point</a>.
-		</dd>
-	</dl>	
-	
-	<p>
-		<a href="./lids.rdf">LIDS description</a>
-	</p>
+    <p>
+      Welcome to the GeoNames <a href="http://openlids.org/">Linked Data Service</a> (LIDS).
+      The wrapper implements (some of) the <a href="http://www.geonames.org/export/ws-overview.html">public GeoNames API methods</a> and makes them available for use with <a href="http://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.
+    </p>
+
+    <p>
+      The wrapper passes parameters as-is to the original service.
+    </p>
+
+    <h2>Geo</h2>
+
+    <dl>
+      <dt><a href="http://www.geonames.org/export/web-services.html#findNearby">./findNearby</a></dt>
+      <dd><a href="http://ws.geonames.org/findNearby?lat=49.009&lng=8.412">XML</a></dd>
+      <dd><a href="./findNearby?lat=49.009&lng=8.412#point">RDF</a></dd>
+
+      <dt><a href="http://www.geonames.org/export/web-services.html#findNearbyPlaceName">./findNearbyPlaceName</a></dt>
+      <dd><a href="http://ws.geonames.org/findNearbyPlaceName?lat=49.009&lng=8.412">XML</a></dd>
+      <dd><a href="./findNearbyPlaceName?lat=49.009&lng=8.412#point">RDF</a></dd>
+
+      <dt><a href="http://www.geonames.org/export/web-services.html#findNearbyPostalCodes">./findNearbyPostalCodes</a></dt>
+      <dd><a href="http://ws.geonames.org/findNearbyPostalCodes?lat=49.009&lng=8.412">XML</a></dd>
+      <dd><a href="./findNearbyPostalCodes?lat=49.009&lng=8.412#point">RDF</a></dd>
+    </dl>
+
+    <h2>Wikipedia Geocoding</h2>
+
+    <dl>
+      <dt><a href="http://www.geonames.org/export/web-services.html#findNearbyWiki">./findNearbyWikipedia</a></dt>
+      <dd><a href="http://ws.geonames.org/findNearbyWikipedia?lat=49.009&lng=8.412">XML</a></dd>
+      <dd><a href="./findNearbyWikipedia?lat=49.009&lng=8.412#point">RDF</a></dd>
+
+      <dt><a href="http://www.geonames.org/export/wikipedia-webservice.html#wikipediaSearch">./wikipediaSearch</a></dt>
+      <dd><a href="http://ws.geonames.org/wikipediaSearch?q=karlsruhe">XML</a></dd>
+      <dd><a href="./wikipediaSearch?q=karlsruhe">RDF</a></dd>
+
+      <dt><a href="http://www.geonames.org/export/wikipedia-webservice.html#wikipediaBoundingBox">./wikipediaBoundingBox</a></dt>
+      <dd><a href="http://ws.geonames.org/wikipediaBoundingBox?north=44.1&south=-9.9&east=-22.4&west=55.2">XML</a></dd>
+      <dd><a href="./wikipediaBoundingBox?north=44.1&south=-9.9&east=-22.4&west=55.2">RDF</a></dd>
+    </dl>
+
+    <h2>Earthquakes</h2>
+
+    <dl>
+      <dt><a href="http://www.geonames.org/export/JSON-webservices.html#earthquakesJSON">./earthquakes</a></dt>
+      <dd><a href="http://ws.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2">JSON</a></dd>
+      <dd><a href="./earthquakes?north=44.1&south=-9.9&east=-22.4&west=55.2">RDF</a></dd>
+    </dl>
+
+    <h2>Weather</h2>
+
+    <p>
+      @@@ not now
+    </p>
+
+    <h2>Fulltext Search</h2>
+
+    <p>
+      can use paramter <code>rows</code> to limit amount of data returned.
+    </p>
+
+    <dl>
+      <dt><a href="http://www.geonames.org/export/geonames-search.html">./search</a></dt>
+      <dd><a href="http://ws.geonames.org/search?q=karlsruhe">XML</a></dd>
+      <dd><a href="./search?q=karlsruhe">RDF</a></dd>
+    </dl>
+
+    <h2>LIDS Descriptions</h2>
+    <p>
+      @@@ outdated
+      <a href="./lids.rdf">LIDS description</a>
+    </p>
   </body>
 </html>
