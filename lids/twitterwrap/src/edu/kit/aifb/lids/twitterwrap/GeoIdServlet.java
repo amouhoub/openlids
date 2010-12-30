@@ -80,19 +80,23 @@ public class GeoIdServlet extends HttpServlet {
 			return;
 		}
 
-		String str = sb.toString();
+		String json = sb.toString();
 
 		resp.setHeader("Cache-Control", "public");
 		Calendar c = Calendar.getInstance();
 		c.add(Calendar.DATE, 1);
 		resp.setHeader("Expires", Listener.RFC822.format(c.getTime()));
 
-		str = str.replace("174368:admin_order_id", "admin_order_id");
-		str = str.replace("174368:id", "id");
+		// attributes might contain number:text properties, which are not allowed in XML
+		// e.g "174368:admin_order_id", "174368:id"
+		// strip 'em out: "attributes":{},
+		json = json.replaceAll("\"attributes\":\\{.*?\\},", "");
+		
+		_log.info("json after cleansing: " + json);
 
 		XMLSerializer serializer = new XMLSerializer(); 
-		JSON json = JSONSerializer.toJSON(str); 
-		String xml = serializer.write(json);
+		JSON jsob = JSONSerializer.toJSON(json); 
+		String xml = serializer.write(jsob);
 
 //		PrintWriter pw = new PrintWriter(os);
 //		pw.println(xml);
@@ -100,6 +104,8 @@ public class GeoIdServlet extends HttpServlet {
 
 		Transformer t = (Transformer)ctx.getAttribute(Listener.GEOID);
 
+		_log.info("xml: " + xml);
+		
 		StringReader sr = new StringReader(xml);
 		try {
 			t.transform(new StreamSource(sr), new StreamResult(os));
