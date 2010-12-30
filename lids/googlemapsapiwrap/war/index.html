@@ -2,77 +2,30 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>GeoNames API LIDS</title>
+    <title>Google Maps API LIDS</title>
   </head>
 
   <body>
-    <h1>Welcome to the GeoNames API LIDS</h1>
+    <h1>Welcome to the Google Maps API LIDS</h1>
 	
     <p>
-      Welcome to the GeoNames <a href="http://openlids.org/">Linked Data Service</a> (LIDS).
-      The wrapper implements (some of) the <a href="http://www.geonames.org/export/ws-overview.html">public GeoNames API methods</a> and makes them available for use with <a href="http://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.
+      Welcome to the Google Maps API <a href="http://openlids.org/">Linked Data Service</a> (LIDS).
+      The wrapper implements (some of) the <a href="http://code.google.com/apis/maps/documentation/webservices/">public Google Maps API methods</a> and makes them available for use with <a href="http://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.
     </p>
 
     <p>
       The wrapper passes parameters as-is to the original service.
     </p>
 
-    <h2>Geo</h2>
+    <h2>Geocoding</h2>
 
     <dl>
-      <dt><a href="http://www.geonames.org/export/web-services.html#findNearby">./findNearby</a></dt>
-      <dd><a href="http://ws.geonames.org/findNearby?lat=49.009&lng=8.412">XML</a></dd>
-      <dd><a href="./findNearby?lat=49.009&lng=8.412#point">RDF</a></dd>
+      <dt><a href="http://code.google.com/apis/maps/documentation/geocoding/">./geocoding</a></dt>
+      <dd><a href="http://maps.googleapis.com/maps/api/geocode/xml?latlng=49.009,8.412&sensor=false">XML</a></dd>
+      <dd><a href="./geocoding?latlng=49.009,8.412&sensor=false#point">RDF</a></dd>
 
-      <dt><a href="http://www.geonames.org/export/web-services.html#findNearbyPlaceName">./findNearbyPlaceName</a></dt>
-      <dd><a href="http://ws.geonames.org/findNearbyPlaceName?lat=49.009&lng=8.412">XML</a></dd>
-      <dd><a href="./findNearbyPlaceName?lat=49.009&lng=8.412#point">RDF</a></dd>
-
-      <dt><a href="http://www.geonames.org/export/web-services.html#findNearbyPostalCodes">./findNearbyPostalCodes</a></dt>
-      <dd><a href="http://ws.geonames.org/findNearbyPostalCodes?lat=49.009&lng=8.412">XML</a></dd>
-      <dd><a href="./findNearbyPostalCodes?lat=49.009&lng=8.412#point">RDF</a></dd>
-    </dl>
-
-    <h2>Wikipedia Geocoding</h2>
-
-    <dl>
-      <dt><a href="http://www.geonames.org/export/web-services.html#findNearbyWiki">./findNearbyWikipedia</a></dt>
-      <dd><a href="http://ws.geonames.org/findNearbyWikipedia?lat=49.009&lng=8.412">XML</a></dd>
-      <dd><a href="./findNearbyWikipedia?lat=49.009&lng=8.412#point">RDF</a></dd>
-
-      <dt><a href="http://www.geonames.org/export/wikipedia-webservice.html#wikipediaSearch">./wikipediaSearch</a></dt>
-      <dd><a href="http://ws.geonames.org/wikipediaSearch?q=karlsruhe">XML</a></dd>
-      <dd><a href="./wikipediaSearch?q=karlsruhe">RDF</a></dd>
-
-      <dt><a href="http://www.geonames.org/export/wikipedia-webservice.html#wikipediaBoundingBox">./wikipediaBoundingBox</a></dt>
-      <dd><a href="http://ws.geonames.org/wikipediaBoundingBox?north=44.1&south=-9.9&east=-22.4&west=55.2">XML</a></dd>
-      <dd><a href="./wikipediaBoundingBox?north=44.1&south=-9.9&east=-22.4&west=55.2">RDF</a></dd>
-    </dl>
-
-    <h2>Earthquakes</h2>
-
-    <dl>
-      <dt><a href="http://www.geonames.org/export/JSON-webservices.html#earthquakesJSON">./earthquakes</a></dt>
-      <dd><a href="http://ws.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2">JSON</a></dd>
-      <dd><a href="./earthquakes?north=44.1&south=-9.9&east=-22.4&west=55.2">RDF</a></dd>
-    </dl>
-
-    <h2>Weather</h2>
-
-    <p>
-      @@@ not now
-    </p>
-
-    <h2>Fulltext Search</h2>
-
-    <p>
-      can use paramter <code>rows</code> to limit amount of data returned.
-    </p>
-
-    <dl>
-      <dt><a href="http://www.geonames.org/export/geonames-search.html">./search</a></dt>
-      <dd><a href="http://ws.geonames.org/search?q=karlsruhe">XML</a></dd>
-      <dd><a href="./search?q=karlsruhe">RDF</a></dd>
+      <dd><a href="http://maps.googleapis.com/maps/api/geocode/xml?address=Englerstr.%252011%252C%252076131%2520Karlsruhe&sensor=false">XML</a></dd>
+      <dd><a href="./geocoding?address=Englerstr.%252011%252C%252076131%2520Karlsruhe&sensor=false#point">RDF</a></dd>
     </dl>
 
     <h2>LIDS Descriptions</h2>

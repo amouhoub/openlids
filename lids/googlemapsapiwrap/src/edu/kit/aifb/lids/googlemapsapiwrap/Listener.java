@@ -22,8 +22,7 @@ import javax.xml.transform.stream.StreamSource;
 public class Listener implements ServletContextListener {
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 	
-	public static String GEONAMES = "geonames";
-	public static String EARTHQUAKES = "earthquakes";
+	public static String GEOCODING = "geocode";
 	
 	public void contextInitialized(ServletContextEvent event) {
 		ServletContext ctx = event.getServletContext();
@@ -32,16 +31,8 @@ public class Listener implements ServletContextListener {
 		//System.out.println(ctx.getRealPath("/WEB-INF/timeline.xsl"));
 		
 		try {
-			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/geonames.xsl")));
-			ctx.setAttribute(GEONAMES, t);
-		} catch (TransformerConfigurationException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		}
-		
-		try {
-			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/earthquakes.xsl")));
-			ctx.setAttribute(EARTHQUAKES, t);
+			Transformer t = tf.newTransformer(new StreamSource(ctx.getRealPath("/WEB-INF/geocoding.xsl")));
+			ctx.setAttribute(GEOCODING, t);
 		} catch (TransformerConfigurationException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

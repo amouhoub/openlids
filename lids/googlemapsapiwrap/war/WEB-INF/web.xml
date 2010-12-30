@@ -16,13 +16,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</listener>
 	
 	<servlet>
-		<servlet-name>geocode</servlet-name>
-		<servlet-class>edu.kit.aifb.lids.googlemapsapiwrap.GeocodeServlet</servlet-class>
+		<servlet-name>geocoding</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.googlemapsapiwrap.GeocodingServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>geocode</servlet-name>
-		<url-pattern>/geocode</url-pattern>
+		<servlet-name>geocoding</servlet-name>
+		<url-pattern>/geocoding</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
