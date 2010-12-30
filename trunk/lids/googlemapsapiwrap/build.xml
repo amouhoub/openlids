@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<project name="googlemapsapiwrap" default="dist">
+  <property name="projname" value="googlemapsapiwrap"/>
+  <property name="version" value="0.1"/>
+
+  <target name="prepare">
+    <tstamp />
+    <mkdir dir="bin"/>
+    <mkdir dir="dist"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="bin"/>
+    <delete>
+      <fileset dir="dist">
+	<include name="*"/>
+      </fileset>
+    </delete>
+  </target>
+  
+  <path id="classpath">
+    <fileset dir="war/WEB-INF/lib">
+      <include name="*.jar"/>
+    </fileset>
+
+    <fileset dir="lib">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+  
+
+  <target name="dist" depends="prepare">
+    <javac destdir="bin"
+	   srcdir="src"
+	   debug="yes">
+      <classpath refid="classpath"/>
+    </javac>
+
+    <jar jarfile="dist/${projname}-${version}.jar"
+	 basedir="bin">
+    </jar>
+
+    <war destfile="dist/${projname}-${version}.war"
+	 webxml="war/WEB-INF/web.xml" basedir="war/">
+      <lib file="dist/${projname}-${version}.jar"/>
+      <lib dir="lib/"/>
+    </war>
+  </target>
+</project>
