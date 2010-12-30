@@ -1,4 +1,4 @@
-package edu.kit.aifb.lids.goolemapsapiwrap;
+package edu.kit.aifb.lids.googlemapsapiwrap;
 
 import java.io.BufferedReader;
 import java.io.IOException;
