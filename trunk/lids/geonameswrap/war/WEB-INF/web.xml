@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<display-name>geowrap LIDS</display-name>
+	
+  <context-param>
+    <param-name>webmaster</param-name>
+    <param-value>harth@kit.edu</param-value>
+  </context-param>
+
+	<listener>
+		<listener-class>org.openlids.geowrap.Listener</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>findNearbyWikipedia</servlet-name>
+		<servlet-class>org.openlids.geowrap.FindNearbyWikipediaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>findNearbyPlaceName</servlet-name>
+		<servlet-class>org.openlids.geowrap.FindNearbyPlaceNameServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>findNearby</servlet-name>
+		<servlet-class>org.openlids.geowrap.FindNearbyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>geocode</servlet-name>
+		<servlet-class>org.openlids.geowrap.GeocodeServlet</servlet-class>
+	</servlet>
+    <servlet>
+      <servlet-name>alsoNearby</servlet-name>
+      <servlet-class>org.openlids.geowrap.AlsoNearbyService</servlet-class>
+    </servlet>
+
+	<servlet>
+		<servlet-name>sum</servlet-name>
+		<servlet-class>org.openlids.geowrap.SumServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>findNearby</servlet-name>
+		<url-pattern>/findNearby</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>findNearbyWikipedia</servlet-name>
+		<url-pattern>/findNearbyWikipedia</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>findNearbyPlaceName</servlet-name>
+		<url-pattern>/findNearbyPlaceName</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>geocode</servlet-name>
+		<url-pattern>/geocode</url-pattern>
+	</servlet-mapping>
+<servlet-mapping>
+<servlet-name>alsoNearby</servlet-name>
+<url-pattern>/alsoNearby</url-pattern>
+</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sum</servlet-name>
+		<url-pattern>/count/*</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
