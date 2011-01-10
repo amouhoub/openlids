@@ -37,8 +37,8 @@ import com.hp.hpl.jena.sparql.syntax.ElementTriplesBlock;
  * @author ssp
  */
 public class QueryEngineJena extends QueryEngine {
-	transient private static final Logger _log = Logger.getLogger(CassandraRdf.class);
-
+	private final Logger _log = Logger.getLogger(this.getClass().getSimpleName());
+			
     DataSetGraph _dsgraph;
     private final Model _model;
 
