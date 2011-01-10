@@ -3,6 +3,8 @@
  * and open the template in the editor.
  */
 
+import org.semanticweb.yars.nx.Variable;
+import java.util.Map;
 import org.semanticweb.yars.nx.Nodes;
 import org.openlids.model.data.TripleAddObserver;
 import java.util.Iterator;
@@ -72,12 +74,14 @@ public class TestQuerying {
         dataSet.addObserver(new TripleAddObserver() {
             @Override
             public void notifyAddTriple(DataSet dataSet, Node[] nx) {
-                System.out.println("bb: " + Nodes.toN3(nx));
+//                System.out.println("bb: " + Nodes.toN3(nx));
             }
         });
-        Iterator<Node[]> results = qe.execQuery(q);
-        for(Node[] res = results.next();results.hasNext();res = results.next()) {
-            System.out.println(res[0]);
+        Iterator<Map<Variable,Node>> results = qe.execQuery(q);
+
+        System.out.println("Results:");
+        for(Map<Variable,Node> res = results.next();results.hasNext();res = results.next()) {
+            System.out.println(res.get(new Variable("name")));
         }
     }
 }

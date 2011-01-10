@@ -53,7 +53,7 @@ public class Annotator {
 
         for(LIDSDescription lids : lidsList) {
             Query q = queries.get(lids);
-            System.out.println(q);
+//            System.out.println(q);
             Iterator<Map<Variable,Node>> results = qe.execQuery(q);
             while(results.hasNext()) {
                 Map<Variable,Node> result = results.next();
