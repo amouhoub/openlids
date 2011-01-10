@@ -80,7 +80,6 @@ public class LIDSStrategyBruteForce extends LIDSStrategy {
 						}
 						try {
 							dataSet.crawlURIs(uris, new TripleHandler() {
-								@Override
 								public Node[] handle(Node[] nx) {
 									Node[] n3 = new Node[] { nx[0], nx[1], nx[2] };
 									if(n3[0].toString().contains("dbpedia")) {
