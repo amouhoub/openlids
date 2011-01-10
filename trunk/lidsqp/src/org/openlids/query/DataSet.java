@@ -7,7 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,6 +14,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Logger;
 
+import org.semanticweb.yars.nx.Literal;
 import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.NodeComparator;
 import org.semanticweb.yars.nx.Resource;
@@ -23,7 +23,6 @@ import org.semanticweb.yars.nx.parser.ParseException;
 import org.semanticweb.yars2.rdfxml.RDFXMLParser;
 
 import com.ontologycentral.ldspider.Main;
-import org.semanticweb.yars.nx.Literal;
 
 public class DataSet {
 	private final static Logger _log = Logger.getLogger(Main.class.getSimpleName());
@@ -180,10 +179,8 @@ public class DataSet {
 			}
 
 			Callback cb = new Callback() {
-				@Override
 				public void endDocument() {
 				}
-				@Override
 				public void processStatement(Node[] nx) {
 					if(handler != null) {
 						add(handler.handle(nx));
@@ -191,7 +188,6 @@ public class DataSet {
 						add(nx);
 					}
 				}
-				@Override
 				public void startDocument() {
 				}
 
