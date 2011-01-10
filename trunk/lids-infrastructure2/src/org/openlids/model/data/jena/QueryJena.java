@@ -21,7 +21,7 @@ public class QueryJena extends Query {
 
     com.hp.hpl.jena.query.Query jenaQuery;
     private Map<com.hp.hpl.jena.graph.Node,Variable> varMap = new HashMap<com.hp.hpl.jena.graph.Node,Variable>();
-    private ArrayList<Node> headVars;
+    
 
     public String toString() {
         return jenaQuery.toString();
@@ -42,16 +42,5 @@ public class QueryJena extends Query {
     public Variable getMapping(com.hp.hpl.jena.graph.Node v) {
         return varMap.get(v);
     }
-
-    public void setHeadVars(List<Node> head) {
-        headVars = new ArrayList<Node>();
-        headVars.addAll(head);
-    }
-
-    public List<Node> getHeadVars() {
-        return headVars;
-    }
-
-    
 
 }

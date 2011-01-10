@@ -28,6 +28,7 @@ public abstract class DataSet {
 
     Set<URL> resolvedURLs = new HashSet<URL>();
     Set<TripleAddObserver> observers = new HashSet<TripleAddObserver>();
+    Set<TripleTransformer> transformers = new HashSet<TripleTransformer>();
 
     public void addObserver(TripleAddObserver observer) {
         observers.add(observer);
@@ -37,7 +38,18 @@ public abstract class DataSet {
         observers.remove(observer);
     }
 
+    public void addTransformer(TripleTransformer transformer) {
+        transformers.add(transformer);
+    }
+
+    public void removeTransformer(TripleTransformer transformer) {
+        transformers.remove(transformer);
+    }
+
     public void addTriple(Node[] nx) {
+        for(TripleTransformer t : transformers) {
+            nx = t.transformTriple(this, nx);
+        }
         addTripleImpl(nx);
         for(TripleAddObserver observer : observers) {
             observer.notifyAddTriple(this, nx);
@@ -45,6 +57,9 @@ public abstract class DataSet {
     }
 
     public void addTriples(Set<Node[]> triples) {
+        for(TripleTransformer t : transformers) {
+            triples = t.transformTriples(this, triples);
+        }
         addTriplesImpl(triples);
         for(TripleAddObserver observer : observers) {
             observer.notifyAddTriples(this, triples);
