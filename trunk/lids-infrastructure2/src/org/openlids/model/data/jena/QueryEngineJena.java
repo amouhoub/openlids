@@ -15,6 +15,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.sparql.core.Var;
 import com.hp.hpl.jena.sparql.engine.binding.Binding;
 import com.hp.hpl.jena.sparql.syntax.ElementTriplesBlock;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -29,6 +30,7 @@ import org.openlids.model.parser.arq.NxToJena;
 import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.NodeComparator;
 import org.semanticweb.yars.nx.Variable;
+
 
 /**
  *
@@ -75,7 +77,16 @@ public class QueryEngineJena extends QueryEngine {
     @Override
     public Query createQuery(String sparqlStr) {
         QueryJena query = new QueryJena();
-        query.setJenaQuery(QueryFactory.create(sparqlStr));
+        com.hp.hpl.jena.query.Query jenaQuery = QueryFactory.create(sparqlStr);
+        List<String> headVars = jenaQuery.getResultVars();
+        List<Node> head = new ArrayList<Node>();
+        for (String hvs : headVars) {
+            Variable hv = new Variable(hvs);
+            com.hp.hpl.jena.graph.Node v = NxToJena.convert(hv);
+            query.addMap(v,hv);
+            head.add(hv);
+        }
+        query.setJenaQuery(jenaQuery);
         return query;
     }
 
@@ -114,6 +125,7 @@ public class QueryEngineJena extends QueryEngine {
                 Map<Variable,Node> map = new HashMap<Variable,Node>();
                 while(it.hasNext()) {
                     Var v = it.next();
+System.out.println("Mapping for v = " + v.toString() + " => " +                     query.getMapping(v));
                     map.put(query.getMapping(v), JenaToNx.convert(qb.get(v)));
                 }
                 if (!results.hasNext()) {
