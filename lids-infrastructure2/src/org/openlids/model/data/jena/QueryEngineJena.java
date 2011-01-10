@@ -37,7 +37,7 @@ import com.hp.hpl.jena.sparql.syntax.ElementTriplesBlock;
  * @author ssp
  */
 public class QueryEngineJena extends QueryEngine {
-	private final Logger _log = Logger.getLogger(this.getClass().getSimpleName());
+    private final Logger _log = Logger.getLogger(this.getClass().getSimpleName());
 			
     DataSetGraph _dsgraph;
     private final Model _model;
@@ -57,6 +57,7 @@ public class QueryEngineJena extends QueryEngine {
             if(!(hv instanceof Variable))
                 continue;
             com.hp.hpl.jena.graph.Node v = NxToJena.convert(hv);
+            query.addHeadVar((Variable) hv);
             query.addMap(v,(Variable) hv);
             jenaQuery.addResultVar(v);
         }
@@ -84,6 +85,7 @@ public class QueryEngineJena extends QueryEngine {
         for (String hvs : headVars) {
             Variable hv = new Variable(hvs);
             com.hp.hpl.jena.graph.Node v = NxToJena.convert(hv);
+            query.addHeadVar(hv);
             query.addMap(v,hv);
             head.add(hv);
         }
@@ -126,7 +128,6 @@ public class QueryEngineJena extends QueryEngine {
                 Map<Variable,Node> map = new HashMap<Variable,Node>();
                 while(it.hasNext()) {
                     Var v = it.next();
-                    _log.info("Mapping for v = " + v.toString() + " => " +                     query.getMapping(v));
                     map.put(query.getMapping(v), JenaToNx.convert(qb.get(v)));
                 }
                 if (!results.hasNext()) {
