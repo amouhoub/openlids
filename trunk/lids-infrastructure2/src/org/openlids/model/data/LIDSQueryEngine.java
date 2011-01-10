@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.openlids.model.LIDSDescription;
 import org.openlids.model.data.impl.DataSetNxRetrieve;
 import org.openlids.model.data.jena.QueryEngineJena;
@@ -63,7 +65,7 @@ public class LIDSQueryEngine {
     }
 
     public Set<Node[]> execQuery(String queryStr) {
-        DataSet dataSet = new DataSetNxRetrieve();
+        final DataSet dataSet = new DataSetNxRetrieve();
         QueryEngine qe = new QueryEngineJena(dataSet);
 
         Query q = qe.createQuery(queryStr);
@@ -104,6 +106,9 @@ public class LIDSQueryEngine {
                 }
             }
 
+            boolean threaded = true;
+            List<Thread> threads = new ArrayList<Thread>();
+
             for(LIDSDescription lids : lidsDescriptions) {
                 Query lidsQuery = lidsQueries.get(lids);
 
@@ -125,25 +130,58 @@ public class LIDSQueryEngine {
 
                     final Node inputR = r.get(lids.getInputEntity());
 
-                    TripleTransformer sameAsReplacer = new TripleTransformer() {
-                        @Override
-                        public Node[] transformTriple(DataSet dataSet, Node[] nx) {
-                            for(int j = 0; j < nx.length; j++) {
-                                if (nx[j].equals(newR)) {
-                                    nx[j] = inputR;
-                                }
+                    if(threaded) {
+                        Thread t = new Thread() {
+                            public void run() {
+                                TripleTransformer sameAsReplacer = new TripleTransformer() {
+                                    @Override
+                                    public Node[] transformTriple(DataSet dataSet, Node[] nx) {
+                                        for (int j = 0; j < nx.length; j++) {
+                                            if (nx[j].equals(newR)) {
+                                                nx[j] = inputR;
+                                            }
+                                        }
+                                        return nx;
+                                    }
+                                };
+                                dataSet.addTransformer(sameAsReplacer);
+
+                                dataSet.crawlURI(newR);
+
+                                dataSet.removeTransformer(sameAsReplacer);
                             }
-                            return nx;
-                        }
-                    };
-                    dataSet.addTransformer(sameAsReplacer);
+                        };
+                        t.start();
+                        threads.add(t);
+                    } else {
+                        TripleTransformer sameAsReplacer = new TripleTransformer() {
+                            @Override
+                            public Node[] transformTriple(DataSet dataSet, Node[] nx) {
+                                for (int j = 0; j < nx.length; j++) {
+                                    if (nx[j].equals(newR)) {
+                                        nx[j] = inputR;
+                                    }
+                                }
+                                return nx;
+                            }
+                        };
+                        dataSet.addTransformer(sameAsReplacer);
 
-                    dataSet.crawlURI(newR);
+                        dataSet.crawlURI(newR);
 
-                    dataSet.removeTransformer(sameAsReplacer);
-
+                        dataSet.removeTransformer(sameAsReplacer);
+                    }
                 }
 
+            }
+            if(threaded) {
+                for (Thread t : threads) {
+                    try {
+                        t.join();
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(LIDSQueryEngine.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             }
 
         }
