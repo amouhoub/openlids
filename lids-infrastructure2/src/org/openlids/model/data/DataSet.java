@@ -38,29 +38,32 @@ public abstract class DataSet {
         observers.remove(observer);
     }
 
-    public void addTransformer(TripleTransformer transformer) {
+    public synchronized void addTransformer(TripleTransformer transformer) {
         transformers.add(transformer);
     }
 
-    public void removeTransformer(TripleTransformer transformer) {
+    public synchronized void removeTransformer(TripleTransformer transformer) {
         transformers.remove(transformer);
     }
 
-    public void addTriple(Node[] nx) {
+    public synchronized void addTriple(Node[] nx) {
         for(TripleTransformer t : transformers) {
             nx = t.transformTriple(this, nx);
         }
-        addTripleImpl(nx);
+        synchronized(this) {
+            addTripleImpl(nx);
+        }
         for(TripleAddObserver observer : observers) {
             observer.notifyAddTriple(this, nx);
         }
     }
 
-    public void addTriples(Set<Node[]> triples) {
+    public synchronized void addTriples(Set<Node[]> triples) {
         for(TripleTransformer t : transformers) {
             triples = t.transformTriples(this, triples);
         }
         addTriplesImpl(triples);
+
         for(TripleAddObserver observer : observers) {
             observer.notifyAddTriples(this, triples);
         }
