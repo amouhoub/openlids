@@ -5,7 +5,22 @@
 
 package org.openlids.model.data.jena;
 
-import com.hp.hpl.jena.graph.Triple;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Logger;
+
+import org.openlids.model.data.DataSet;
+import org.openlids.model.data.Query;
+import org.openlids.model.data.QueryEngine;
+import org.openlids.model.parser.arq.JenaToNx;
+import org.openlids.model.parser.arq.NxToJena;
+import org.semanticweb.yars.nx.Node;
+import org.semanticweb.yars.nx.Variable;
+
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
@@ -15,21 +30,6 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.sparql.core.Var;
 import com.hp.hpl.jena.sparql.engine.binding.Binding;
 import com.hp.hpl.jena.sparql.syntax.ElementTriplesBlock;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-import org.openlids.model.data.DataSet;
-import org.openlids.model.data.Query;
-import org.openlids.model.data.QueryEngine;
-import org.openlids.model.parser.arq.JenaToNx;
-import org.openlids.model.parser.arq.NxToJena;
-import org.semanticweb.yars.nx.Node;
-import org.semanticweb.yars.nx.NodeComparator;
-import org.semanticweb.yars.nx.Variable;
 
 
 /**
@@ -37,6 +37,7 @@ import org.semanticweb.yars.nx.Variable;
  * @author ssp
  */
 public class QueryEngineJena extends QueryEngine {
+	transient private static final Logger _log = Logger.getLogger(CassandraRdf.class);
 
     DataSetGraph _dsgraph;
     private final Model _model;
@@ -125,7 +126,7 @@ public class QueryEngineJena extends QueryEngine {
                 Map<Variable,Node> map = new HashMap<Variable,Node>();
                 while(it.hasNext()) {
                     Var v = it.next();
-System.out.println("Mapping for v = " + v.toString() + " => " +                     query.getMapping(v));
+                    _log.info("Mapping for v = " + v.toString() + " => " +                     query.getMapping(v));
                     map.put(query.getMapping(v), JenaToNx.convert(qb.get(v)));
                 }
                 if (!results.hasNext()) {
