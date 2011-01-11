@@ -6,7 +6,8 @@
   <xsl:template match="a:feed">
   	<xsl:element name="rdf:RDF">
   	<xsl:element name="rdf:Description">
-  	  <xsl:attribute name="rdf:about"><xsl:value-of select="a:title"/></xsl:attribute>
+  	  <xsl:attribute name="rdf:about"></xsl:attribute>
+	  <dc:title><xsl:value-of select="a:title"/></dc:title>
   	  <xsl:element name="rdfs:comment">Source: Twitter Search API (http://search.twitter.com/) via twittersearchwrap</xsl:element>	
 	  <xsl:for-each select="a:seeAlso">
 		<xsl:element name="rdfs:seeAlso">
@@ -21,7 +22,7 @@
   <xsl:template match="a:entry">
   		
       <xsl:element name="rdf:Description">
-      	<xsl:attribute name="rdf:ID">s<xsl:value-of select="substring(a:id, 29)"/></xsl:attribute>
+      	<xsl:attribute name="rdf:about">http://km.aifb.kit.edu/services/twitterwrap/statuses/show/<xsl:value-of select="substring(a:id, 29)"/>#id</xsl:attribute>
       	<xsl:element name="foaf:page"> 
           <xsl:attribute name="rdf:resource"><xsl:value-of select="a:link/@href"/></xsl:attribute>
         </xsl:element> 
@@ -37,11 +38,7 @@
           </xsl:element> 
         </xsl:if>
         <xsl:element name="foaf:maker"> 
-          <xsl:element name="foaf:person"> 
-            <xsl:element name="owl:sameAs"> 
-           	  <xsl:attribute name="rdf:resource">http://semantictweet.com/<xsl:value-of select="substring(a:author/a:uri, 20)"/>#me</xsl:attribute>
-         	</xsl:element> 
-          </xsl:element> 
+            <xsl:attribute name="rdf:about">http://km.aifb.kit.edu/services/twitterwrap/users/show?screen_name=<xsl:value-of select="substring(a:author/a:uri, 20)"/>#id</xsl:attribute>
         </xsl:element> 
         <xsl:element name="dc:description"> 
           <xsl:value-of select="a:title"/>
