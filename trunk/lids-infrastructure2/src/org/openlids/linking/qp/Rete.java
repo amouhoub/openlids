@@ -5,9 +5,6 @@
 
 package org.openlids.linking.qp;
 
-import com.sun.org.apache.xpath.internal.operations.And;
-import com.sun.org.apache.xpath.internal.operations.Or;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,8 +14,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.NodeComparator;
 import org.semanticweb.yars.nx.Nodes;
@@ -27,86 +22,19 @@ import org.semanticweb.yars.nx.Variable;
 import org.semanticweb.yars.nx.parser.Callback;
 import org.semanticweb.yars2.rdfxml.RDFXMLParser;
 
-class Manager {
-    final Rete rete;
+/*
+ * @@@@ Manager does never end
+ * @@@@ sameAs Handling
+ * @@@@ Especially Service Input Entity equivalence Expression
+ * @@@@ URI Monitor (find all URIs to retrieve)
+ * @@@@ Everything synchronised? Deadlockfree?
+ * @@@@ URI Prioritizing
+ * @@@@ Credentials of Services
+ * @@@@ Testing Conditions consisting of several patterns.
+ * @@@@ Inefficiencies like List Traversing, no indices
+ * @@@@ Reasoning: Inverse Properties; subClassOf; functional properties; ...
+ */
 
-    Set<String> retrieved_urls = new HashSet<String>();
-
-    final Queue<String> uris = new LinkedList<String>();
-
-    final Queue<Thread> free_loader = new LinkedList<Thread>();
-    final Set<Thread> used_loader = new HashSet<Thread>();
-
-    public Manager(Rete rete) { 
-        this.rete = rete;
-
-        final Manager manager = this;
-        Thread loader = new Thread() {
-            @Override
-            public void run() {
-                while (true) {
-                    final String uri = manager.pullURI();
-                    if(uri != null) {
-                        Thread uriloader = new Thread() {
-                            @Override
-                            public void run() {
-                                Callback cb = new Callback() {
-                                    @Override
-                                    public void endDocument() {
-                                    }
-                                    @Override
-                                    public void processStatement(Node[] nx) {
-                                        manager.rete.addTriple(new Node[]{nx[0], nx[1], nx[2]});
-                                    }
-                                    @Override
-                                    public void startDocument() {
-                                    }
-                                };
-
-
-                                try {
-                                    URL url = new URL(uri);
-                                    InputStream is = url.openStream();
-                                    RDFXMLParser rdfxml = new RDFXMLParser(is, true, true, url.toString(), cb);
-                                } catch (Exception e) {
-                                    System.err.println("Error during parsing: " + uri);
-                                }
-                            }
-                        };
-                        uriloader.start();
-                    }
-                    try {
-                        Thread.sleep(250);
-                    } catch(Exception ex) {
-
-                    }
-                }
-            }
-        };
-        loader.start();
-    }
-
-    public synchronized void addURI(String uri) {
-        URL url;
-        try {
-            url = new URL(uri);
-        } catch (MalformedURLException ex) {
-            return;
-        }
-        if (retrieved_urls.add(url.toString())) {
-            uris.add(uri);
-        }
-    }
-
-    public synchronized String pullURI() {
-        return uris.poll();
-    }
-
-    public synchronized void addTriple(Node[] triple) {
-
-    }
-
-}
 
 
 /**
