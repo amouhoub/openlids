@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:lids="http://openlids.org/vocab#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:og="http://ogp.me/ns#">
+
+  <rdf:Description rdf:about="#facewrap">
+    <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+      PREFIX og: &lt;http://ogp.me/ns#&gt;
+      CONSTRUCT { ?thing foaf:name ?name }
+      FROM &lt;http://km.aifb.kit.edu/services/facewrap/thing&gt;
+      WHERE { ?thing og:id ?facebookid }
+    </lids:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="#uni1">
+    <og:id>140105122708</og:id>
+  </rdf:Description>
+</rdf:RDF>
