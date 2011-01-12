@@ -29,12 +29,14 @@ public class LIDSPNode extends PNode {
 
     int descfield = 0;
     final Rete rete;
+    final Manager manager;
     LIDSParser lidsParser = new LIDSParserARQ();
 //    List<LIDSDescription> lidsDescriptions = new ArrayList<LIDSDescription>();
 
 
-    public LIDSPNode(Rete rete) {
+    public LIDSPNode(Rete rete, Manager manager) {
         this.rete = rete;
+        this.manager = manager;
     }
 
     @Override
@@ -57,27 +59,28 @@ public class LIDSPNode extends PNode {
                 }
                 String service_call = lids.makeURI(varToNode);
                 System.out.println("Service Call: " + service_call);
-                try {
-                    URL url = new URL(service_call);
-                    InputStream is = url.openStream();
-                    Callback cb = new Callback() {
-                        @Override
-                        public void endDocument() {
-                        }
-                        @Override
-                        public void processStatement(Node[] nx) {
-                            rete.addTriple(new Node[]{nx[0], nx[1], nx[2]});
-                        }
-                        @Override
-                        public void startDocument() {
-                        }
-                    };
-
-                    RDFXMLParser rdfxml = new RDFXMLParser(is, true, true, url.toString(), cb);
-
-                } catch (Exception e) {
-                    System.err.println("Error during parsing:");
-                }
+                manager.addURI(service_call);
+//                try {
+//                    URL url = new URL(service_call);
+//                    InputStream is = url.openStream();
+//                    Callback cb = new Callback() {
+//                        @Override
+//                        public void endDocument() {
+//                        }
+//                        @Override
+//                        public void processStatement(Node[] nx) {
+//                            rete.addTriple(new Node[]{nx[0], nx[1], nx[2]});
+//                        }
+//                        @Override
+//                        public void startDocument() {
+//                        }
+//                    };
+//
+//                    RDFXMLParser rdfxml = new RDFXMLParser(is, true, true, url.toString(), cb);
+//
+//                } catch (Exception e) {
+//                    System.err.println("Error during parsing:");
+//                }
             }
         });
     }
