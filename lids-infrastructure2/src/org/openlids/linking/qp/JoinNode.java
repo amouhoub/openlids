@@ -22,7 +22,7 @@ public class JoinNode extends ReteNode {
     
     public void leftActivation() {
         for(ReteNode child : children) {
-            for(Node[] token : amem.getTriples()) {
+            for (Node[] token : amem.getTriples()) {
                 child.leftActivation(token);
             }
         }

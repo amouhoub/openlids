@@ -18,38 +18,6 @@ import org.semanticweb.yars.nx.Nodes;
 import org.semanticweb.yars.nx.Variable;
 
 
-class AlphaMemory {
-
-    Set<Node[]> triples = new TreeSet<Node[]>(NodeComparator.NC);
-    Set<ReteNode> successors = new HashSet<ReteNode>();
-    
-    public void add(Node[] triple) {
-        if(triples.add(triple)) {
-            for(ReteNode jn : successors) {
-                ((JoinNode) jn).rightActivation(triple);
-            }
-        }
-    }
-
-    List<Node[]> get(int posAMem, Node node) {
-        List<Node[]> results = new LinkedList<Node[]>();
-        for(Node[] triple : triples) {
-            if(triple[posAMem].equals(node)) {
-                results.add(triple);
-            }
-        }
-        return results;
-    }
-
-    void addChild(ReteNode aThis) {
-        for(Node[] triple : triples) {
-            ((JoinNode) aThis).rightActivation(triple);
-        }
-        successors.add(aThis);
-    }
-    
-}
-
 /**
  *
  * @author ssp
