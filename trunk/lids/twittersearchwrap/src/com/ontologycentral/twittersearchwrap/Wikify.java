@@ -17,6 +17,7 @@ public class Wikify {
 	};
 	
 	public static String cleanTweets (String input){
+	   input = input.replace("http://", "");
        return input;
 	}
 
@@ -24,13 +25,14 @@ public class Wikify {
 		
 		String uri = "http://km.aifb.kit.edu/services/wpmservlet-en/web/service";
 	    Wikifier w = new Wikifier(uri, "david's bot");
+	    
+	    input = cleanTweets(input);
 			               
 	    Node[] nx = new Node[] { DC.TITLE, new Literal(input) } ;
 			               
 		Set<Node[]> set = new HashSet<Node[]>();
 		set.add(nx);
 			    
-		input = cleanTweets(input);
 		
 		return w.wikify(new Resource("http://example.org/"), set);
 	}
