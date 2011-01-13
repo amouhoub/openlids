@@ -30,7 +30,7 @@ public class DataSet {
 
 	Set<URL> resolvedURLs = new HashSet<URL>();
 
-	public Set<Node[]> _data;
+	private Set<Node[]> _data;
 
 	long uriRetrievalTimes = 0;
 
