@@ -1,27 +1,69 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
+<?xml version="1.0" encoding="utf-8"?>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Hello App Engine</title>
+    <title>Facebook Graph API LIDS</title>
   </head>
 
   <body>
-    <h1>Hello App Engine!</h1>
-	
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href="facewrap">Facewrap</a></td>
-      </tr>
-    </table>
+    <h1>Welcome to the Facebook Graph API LIDS</h1>
+
+    <p>
+      Welcome to the Facebook <a href="http://openlids.org/">Linked Data Service</a> (LIDS).
+      The wrapper implements (some of) the <a href="http://developers.facebook.com/docs/api">public Facebook Graph API methods</a> and makes them available for use with <a href="http://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.
+    </p>
+
+    <h2>Facebook Objects: Persons, Companies, Events, Photos, ...</h2>
+     <dl>
+      <dt>Accessing objects by Facebook id</dt>
+      <dd><a href="https://graph.facebook.com/19292868552">JSON</a></dd>
+      <dd><a href="./thing/19292868552#thing">RDF</a></dd>
+     </dl>
+     <dl>
+      <dt>Accessing objects by Facebook username</dt>
+      <dd><a href="https://graph.facebook.com/cocacola">JSON</a></dd>
+      <dd><a href="./thing/cocacola#thing">RDF</a></dd>
+     </dl>
+
+    <h2>Search for Facebook Objects</h2>
+    <dl>
+        <dt>General search by keywords</dt>
+        <dd><a href="https://graph.facebook.com/search?q=linked+data">JSON</a></dd>
+        <dd><a href="./search?q=linked+data#list">RDF</a></dd>
+    </dl>
+    <dl>
+        <dt>Search posts by keywords</dt>
+        <dd><a href="https://graph.facebook.com/search?q=linked+data&type=post">JSON</a></dd>
+        <dd><a href="./posts/linked%20data#list">RDF</a></dd>
+    </dl>
+    <dl>
+        <dt>Search persons</dt>
+        <dd><a href="https://graph.facebook.com/search?q=mark&type=user">JSON</a></dd>
+        <dd><a href="./users/mark#list">RDF</a></dd>
+    </dl>
+    <dl>
+        <dt>Search pages</dt>
+        <dd><a href="https://graph.facebook.com/search?q=platform&type=page">JSON</a></dd>
+        <dd><a href="./pages/platform#list">RDF</a></dd>
+    </dl>
+    <dl>
+        <dt>Search events</dt>
+        <dd><a href="https://graph.facebook.com/search?q=conference&type=event">JSON</a></dd>
+        <dd><a href="./events/conference#list">RDF</a></dd>
+    </dl>
+    <dl>
+        <dt>Search groups</dt>
+        <dd><a href="https://graph.facebook.com/search?q=programming&type=group">JSON</a></dd>
+        <dd><a href="./groups/programming#list">RDF</a></dd>
+    </dl>
+    <dl>
+        <dt>Search places by coordinates</dt>
+        <dd><a href="https://graph.facebook.com/search?q=university&center=49.009,8.42&type=place">JSON</a></dd>
+        <dd><a href="./places?q=university&lat=49.009&lng=8.42#list">RDF</a></dd>
+    </dl>
+
+
+
   </body>
 </html>
+
