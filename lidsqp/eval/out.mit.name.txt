@@ -1,0 +1,434 @@
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://bblfish.net/people/henry/card#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 63 234334 32843 10 0 http://bblfish.net/people/henry/card#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://bigasterisk.com/foaf.rdf#drewp> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 2835 787 0 0 http://bigasterisk.com/foaf.rdf#drewp
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://captsolo.net/semweb/foaf-captsolo.rdf#Uldis_Bojars> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 7906 278 2 0 http://captsolo.net/semweb/foaf-captsolo.rdf#Uldis_Bojars
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://champin.net/foaf.rdf#pa> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 8 47582 15823 3 0 http://champin.net/foaf.rdf#pa
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://compsoc.nuigalway.ie/~fuzz/foaf.rdf#Fergal_Monaghan> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 14 18792 1214 5 0 http://compsoc.nuigalway.ie/~fuzz/foaf.rdf#Fergal_Monaghan
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://criptonita.com/~nacho/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 132 132 0 0 http://criptonita.com/~nacho/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://crschmidt.net/foaf.rdf#crschmidt> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 37 63526 19097 1 0 http://crschmidt.net/foaf.rdf#crschmidt
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://danbri.org/foaf#danbri> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 25 6442 1164 2 0 http://danbri.org/foaf#danbri
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://danbri.org/foaf.rdf#danbri> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 25 6427 1170 2 0 http://danbri.org/foaf.rdf#danbri
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://danny.ayers.name/index.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 5244 1245 1 0 http://danny.ayers.name/index.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://davelevy.info/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 11 11 0 0 http://davelevy.info/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://dig.csail.mit.edu/2007/wiki/people/JoeLambda#JL> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 30 39823 10111 1 0 http://dig.csail.mit.edu/2007/wiki/people/JoeLambda#JL
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://dig.csail.mit.edu/2007/wiki/people/RobertHoffmann#RMH> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 234 232 0 0 http://dig.csail.mit.edu/2007/wiki/people/RobertHoffmann#RMH
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://dig.csail.mit.edu/People/yosi#YES> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 4829 1433 1 0 http://dig.csail.mit.edu/People/yosi#YES
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://eikeon.com/foaf.rdf#eikeon> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 17017 4685 1 0 http://eikeon.com/foaf.rdf#eikeon
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://eneumann.org/foaf/myFOAF.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 18 203 203 0 0 http://eneumann.org/foaf/myFOAF.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://f-dengler.de/foaf#fd> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 9 22964 4976 4 0 http://f-dengler.de/foaf#fd
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://foaf.me/ah1#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 230 240 0 0 http://foaf.me/ah1#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://foaf.me/melvincarvalho#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 8 1092 1287 0 0 http://foaf.me/melvincarvalho#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://foaf.qdos.com/delicious/people/stefano.bertolo#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 23185 25652 0 0 http://foaf.qdos.com/delicious/people/stefano.bertolo#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://foafbuilder.qdos.com/people/asyd.myopenid.com/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 31 182133 133167 0 0 http://foafbuilder.qdos.com/people/asyd.myopenid.com/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://foafbuilder.qdos.com/people/piaj.blogspot.com/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 115 113 0 0 http://foafbuilder.qdos.com/people/piaj.blogspot.com/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://g1o.net/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 7 7481 1121 1 0 http://g1o.net/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://harth.org/andreas/foaf#ah> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+3 104 760258 111038 16 0 http://harth.org/andreas/foaf#ah
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://heddley.com/edd/foaf.rdf#edd> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 23 5336 1339 1 0 http://heddley.com/edd/foaf.rdf#edd
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://holgerlausen.net/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 5636 832 2 0 http://holgerlausen.net/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://homepage.ntlworld.com/philnjo/phil/rdf/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 29 29 0 0 http://homepage.ntlworld.com/philnjo/phil/rdf/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://iandavis.com/id/me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 38 68477 22033 2 0 http://iandavis.com/id/me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://inamidst.com/sbp/foaf#Sean> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 21 7626 6922 0 0 http://inamidst.com/sbp/foaf#Sean
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://iws.seu.edu.cn/people/gcheng> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 7 5553 3600 0 0 http://iws.seu.edu.cn/people/gcheng
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://kantenwerk.org/metadata/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 4 13124 2975 5 0 http://kantenwerk.org/metadata/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://kasei.us/about/foaf.xrdf#greg> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 486 327 0 0 http://kasei.us/about/foaf.xrdf#greg
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://kashori.com/JohnBlack/foaf.rdf#jpb> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 260 246 0 0 http://kashori.com/JohnBlack/foaf.rdf#jpb
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://kingsley.idehen.net/dataspace/person/kidehen#this> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 9 34488 8439 2 0 http://kingsley.idehen.net/dataspace/person/kidehen#this
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://kmi.open.ac.uk/people/tom/> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 39 33911 5888 3 0 http://kmi.open.ac.uk/people/tom/
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://liris.cnrs.fr/olivier.aubert/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 38 38 0 0 http://liris.cnrs.fr/olivier.aubert/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://mmt.me.uk/foaf.rdf#mischa> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 36 86068 6432 5 0 http://mmt.me.uk/foaf.rdf#mischa
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/AVL/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 49 35529 10581 7 0 http://my.opera.com/AVL/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/InfernalHacker/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 13 9596 3154 0 0 http://my.opera.com/InfernalHacker/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/JavaWoman/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 8 4022 1681 0 0 http://my.opera.com/JavaWoman/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/JibberJim/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 1621 810 0 0 http://my.opera.com/JibberJim/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Joen/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 11 4742 1968 0 0 http://my.opera.com/Joen/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Jon/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 51 40439 16294 0 0 http://my.opera.com/Jon/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Julianaseven/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 11 9223 4263 0 0 http://my.opera.com/Julianaseven/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/KingZo/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 4598 4824 0 0 http://my.opera.com/KingZo/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Lawmune/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 132 73621 40779 0 0 http://my.opera.com/Lawmune/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/LilleHerbern/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 200 201 0 0 http://my.opera.com/LilleHerbern/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Lisien/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 21 11284 5228 0 0 http://my.opera.com/Lisien/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/MacDev_ed/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 24 20108 7268 0 0 http://my.opera.com/MacDev_ed/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/ManneS/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 131 57417 24315 0 0 http://my.opera.com/ManneS/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Mimi5/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 606 711 0 0 http://my.opera.com/Mimi5/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/MissPlaced/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 32 16581 7595 0 0 http://my.opera.com/MissPlaced/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/OperaSinger/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 20 9733 4336 0 0 http://my.opera.com/OperaSinger/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Pecorra/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 1592 864 0 0 http://my.opera.com/Pecorra/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Ramunas/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 86 58848 24476 0 0 http://my.opera.com/Ramunas/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/ResearchWizard/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 184 72936 57269 0 0 http://my.opera.com/ResearchWizard/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/RobbieGee/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 23 11588 3904 0 0 http://my.opera.com/RobbieGee/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Scenariogirl/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 477 437 0 0 http://my.opera.com/Scenariogirl/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/SerbianFighter/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 382 152425 94232 0 0 http://my.opera.com/SerbianFighter/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/SergeWood/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 880 913 0 0 http://my.opera.com/SergeWood/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Sharebear/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 11 4172 2265 0 0 http://my.opera.com/Sharebear/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Snorre/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 73 41556 17832 0 0 http://my.opera.com/Snorre/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Stein/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 58 22603 10872 0 0 http://my.opera.com/Stein/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/SupernevZA/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 1150 1176 0 0 http://my.opera.com/SupernevZA/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/TR3NT/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 37 21410 8352 0 0 http://my.opera.com/TR3NT/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/TheAtilla/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 42 36113 13006 0 0 http://my.opera.com/TheAtilla/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Think/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 56 22436 11361 0 0 http://my.opera.com/Think/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Thruth/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 98 73046 31868 0 0 http://my.opera.com/Thruth/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/TriMN/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 82 74607 38801 0 0 http://my.opera.com/TriMN/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/VovkaUA/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 720 696 0 0 http://my.opera.com/VovkaUA/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/White%20Lynx/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 13 9131 4679 0 0 http://my.opera.com/White%20Lynx/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Xaer/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 6 3209 1054 0 0 http://my.opera.com/Xaer/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Yokanan/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 2600 2741 0 0 http://my.opera.com/Yokanan/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/ZaraL/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 153 74490 32779 0 0 http://my.opera.com/ZaraL/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/alexdavydova/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 215 152194 67058 0 0 http://my.opera.com/alexdavydova/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/alexeik/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 488 447 0 0 http://my.opera.com/alexeik/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/andersm/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 21 18460 7637 0 0 http://my.opera.com/andersm/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/andreasbovens/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 22 3444 3506 0 0 http://my.opera.com/andreasbovens/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/annaraj/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 59 36699 15069 0 0 http://my.opera.com/annaraj/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/anne/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 28 23093 4390 0 0 http://my.opera.com/anne/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/away/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 7 4429 1204 0 0 http://my.opera.com/away/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/azeroo/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 447 419 0 0 http://my.opera.com/azeroo/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/bektour/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 956 801 0 0 http://my.opera.com/bektour/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/brianj/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 57 37982 14299 0 0 http://my.opera.com/brianj/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/brightestvega/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 35 19406 12203 0 0 http://my.opera.com/brightestvega/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/calande/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 8 11316 5502 0 0 http://my.opera.com/calande/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/carolineb/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 8 2528 916 0 0 http://my.opera.com/carolineb/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/castaway/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 1593 598 0 0 http://my.opera.com/castaway/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/chaals/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 167 67224 37838 0 0 http://my.opera.com/chaals/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/cheshrkat/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 893 2449 0 0 http://my.opera.com/cheshrkat/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/chris_uribe/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 25 11407 7281 0 0 http://my.opera.com/chris_uribe/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/citoyen/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 24 20743 7640 0 0 http://my.opera.com/citoyen/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/csant/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 60 129978 15432 17 0 http://my.opera.com/csant/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/danbri/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 5798 2972 2 0 http://my.opera.com/danbri/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/danielcs/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 20 88804 11150 5 0 http://my.opera.com/danielcs/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/danigoldman/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 92 230998 23506 41 0 http://my.opera.com/danigoldman/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/danya5672/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 26 24328 20005 0 0 http://my.opera.com/danya5672/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/dramatic/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 23 70732 8844 5 0 http://my.opera.com/dramatic/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/dstorey/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 49 64340 13981 14 0 http://my.opera.com/dstorey/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/e-jit/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 12 6213 1682 1 0 http://my.opera.com/e-jit/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/eiriks/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 25 48698 5313 10 0 http://my.opera.com/eiriks/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/eskils/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 18 136344 6779 11 0 http://my.opera.com/eskils/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/evamen/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 30 16223 3271 2 0 http://my.opera.com/evamen/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/extremkz/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 766 723 0 0 http://my.opera.com/extremkz/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/fearphage/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 54 89226 13728 18 0 http://my.opera.com/fearphage/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/feldgendler/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 64 76653 38118 0 0 http://my.opera.com/feldgendler/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/InfernalHacker/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 13 5453 2329 0 0 http://my.opera.com/InfernalHacker/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/AquariusAnita/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 129 207737 58334 16 0 http://my.opera.com/AquariusAnita/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Ashina/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 14 5228 4967 0 0 http://my.opera.com/Ashina/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/B%C3%BAzavir%C3%A1g46/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 91 134957 59479 3 0 http://my.opera.com/B%C3%BAzavir%C3%A1g46/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Benjamin%20Joffe/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 38 43075 12834 8 0 http://my.opera.com/Benjamin%20Joffe/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/BrunIF/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 691 644 0 0 http://my.opera.com/BrunIF/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Cesarsan/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 1861 994 0 0 http://my.opera.com/Cesarsan/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/ChiaraInThePond/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 46 63460 28121 8 0 http://my.opera.com/ChiaraInThePond/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Cyro/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 756 1510400 166519 69 0 http://my.opera.com/Cyro/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/DanielHendrycks/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 50 59967 17712 7 0 http://my.opera.com/DanielHendrycks/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/DanielVartanov/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 800 1040 0 0 http://my.opera.com/DanielVartanov/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/DannyAyers/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 2507 529 1 0 http://my.opera.com/DannyAyers/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/DeadFire/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 232 275235 62515 71 0 http://my.opera.com/DeadFire/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Defvyb/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 1770 1903 0 0 http://my.opera.com/Defvyb/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Demre26/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 485 506 0 0 http://my.opera.com/Demre26/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Dizzzing/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 10 5029 1619 1 0 http://my.opera.com/Dizzzing/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/EivindFS/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 60 80547 18859 22 0 http://my.opera.com/EivindFS/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/FataL/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 55 33098 19944 0 0 http://my.opera.com/FataL/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/Helmers/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 109 79539 33222 0 0 http://my.opera.com/Helmers/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/IceArdor/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 12 10439 5292 0 0 http://my.opera.com/IceArdor/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/fmpalinkas/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 28 27015 12622 0 0 http://my.opera.com/fmpalinkas/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/foolip/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 18 4116 4153 0 0 http://my.opera.com/foolip/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/fred/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 91 92234 45130 0 0 http://my.opera.com/fred/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/g00dspeed/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 618 791 0 0 http://my.opera.com/g00dspeed/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/gautam_chandna/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 92 44964 18236 0 0 http://my.opera.com/gautam_chandna/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/gefix/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 8 3604 1751 0 0 http://my.opera.com/gefix/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/georgien/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 529 450 0 0 http://my.opera.com/georgien/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/glish/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 7 923 915 0 0 http://my.opera.com/glish/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/gnapse/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 6 2941 1536 0 0 http://my.opera.com/gnapse/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/gorme/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 16 5860 2697 0 0 http://my.opera.com/gorme/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/gsenarcl/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 44 9640 4367 0 0 http://my.opera.com/gsenarcl/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/haavard/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 79 32803 23596 0 0 http://my.opera.com/haavard/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/hbjarno/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 540 526 0 0 http://my.opera.com/hbjarno/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/hefa/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 27 8391 3596 0 0 http://my.opera.com/hefa/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/howcome/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 40 23885 12322 0 0 http://my.opera.com/howcome/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/huibk/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 39 42492 9952 0 0 http://my.opera.com/huibk/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/inkel/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 757 864 0 0 http://my.opera.com/inkel/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/ismailp/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 30 20869 6984 0 0 http://my.opera.com/ismailp/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/j_stand/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 739 568 0 0 http://my.opera.com/j_stand/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/jax/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 52 28003 8215 0 0 http://my.opera.com/jax/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/jod999/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 558 781 0 0 http://my.opera.com/jod999/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/johnfoliot/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 881 1056 0 0 http://my.opera.com/johnfoliot/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/jorunnix/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 36 17575 8029 0 0 http://my.opera.com/jorunnix/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/jsmanrique/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 23 16889 16047 0 0 http://my.opera.com/jsmanrique/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/keiki/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 107 44342 20984 0 0 http://my.opera.com/keiki/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/ketoyo/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 81 196945 70147 9 0 http://my.opera.com/ketoyo/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/kg1.foresights/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 6 7241 2909 1 0 http://my.opera.com/kg1.foresights/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/kjetilk/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 30 38871 8955 8 0 http://my.opera.com/kjetilk/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/kncarlsen/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 690 362 0 0 http://my.opera.com/kncarlsen/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/koalie/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 9 5536 3064 0 0 http://my.opera.com/koalie/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/kumenova/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 116 219831 50387 13 0 http://my.opera.com/kumenova/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/lachralle/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 46 102371 39343 7 0 http://my.opera.com/lachralle/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/larskl/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 73 162269 34207 28 0 http://my.opera.com/larskl/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/liddyn/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 638 6085 0 0 http://my.opera.com/liddyn/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/lmaspons/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 9 7702 7240 0 0 http://my.opera.com/lmaspons/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/lynnr/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 17 45707 22358 9 0 http://my.opera.com/lynnr/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/magnez/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 12 17076 3109 1 0 http://my.opera.com/magnez/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/malware/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 19 26097 6580 8 0 http://my.opera.com/malware/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/marianh/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 23 31959 7116 2 0 http://my.opera.com/marianh/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/mcx/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 21 61540 58336 4 0 http://my.opera.com/mcx/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/melnichuck/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 159 445384 84194 17 0 http://my.opera.com/melnichuck/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/merlo/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 809 1427 0 0 http://my.opera.com/merlo/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/minch/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 41 58138 11147 3 0 http://my.opera.com/minch/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/mitchman2/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 79 148217 27984 0 0 http://my.opera.com/mitchman2/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/mollydotcom/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 80 152629 78442 0 0 http://my.opera.com/mollydotcom/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/msmiffy/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 518 3082 0 0 http://my.opera.com/msmiffy/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://my.opera.com/mursya/xml/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 14 13502 7420 0 0 http://my.opera.com/mursya/xml/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://nets.ii.uam.es/~rlara/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 8 84 86 0 0 http://nets.ii.uam.es/~rlara/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www-di.inf.puc-rio.br/schwabe/foaf-schwabe.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 21 4491 1810 0 0 http://www-di.inf.puc-rio.br/schwabe/foaf-schwabe.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.aaronsw.com/about.xrdf#aaronsw> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 7 984 997 0 0 http://www.aaronsw.com/about.xrdf#aaronsw
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.advogato.org/person/connolly/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 22 4480 3319 0 0 http://www.advogato.org/person/connolly/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.aifb.uni-karlsruhe.de/WBS/awa/foaf.rdf#andreas> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 28531 4494 1 0 http://www.aifb.uni-karlsruhe.de/WBS/awa/foaf.rdf#andreas
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.anjeve.de/foaf.rdf#AnjaJentzsch> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 30 5834 994 1 0 http://www.anjeve.de/foaf.rdf#AnjaJentzsch
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.b-kaempgen.de/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 11658 244 2 0 http://www.b-kaempgen.de/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.cs.rpi.edu/~hendler/foaf.rdf#jhendler> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 58408 56523 0 0 http://www.cs.rpi.edu/~hendler/foaf.rdf#jhendler
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.cs.umd.edu/~hendler/2003/foaf.rdf#jhendler> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 56768 57079 0 0 http://www.cs.umd.edu/~hendler/2003/foaf.rdf#jhendler
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.cs.vu.nl/~laroyo/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 21 50 27 0 0 http://www.cs.vu.nl/~laroyo/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.dajobe.org/foaf.rdf#i> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 16 176 176 0 0 http://www.dajobe.org/foaf.rdf#i
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.dcs.shef.ac.uk/~mrowe/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 342 613 612 0 0 http://www.dcs.shef.ac.uk/~mrowe/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.discoveringidentity.com/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 343 284 0 0 http://www.discoveringidentity.com/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.georgikobilarov.com/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 3831 232 0 0 http://www.georgikobilarov.com/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.holgerlausen.net/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 3920 250 0 0 http://www.holgerlausen.net/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.ibiblio.org/hhalpin/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 1654 773 0 0 http://www.ibiblio.org/hhalpin/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.informatik.uni-leipzig.de/~auer/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 40 2218 303 0 0 http://www.informatik.uni-leipzig.de/~auer/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.isi.edu/~gil/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 181 180 0 0 http://www.isi.edu/~gil/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.ivan-herman.net/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 100 111711 49759 0 0 http://www.ivan-herman.net/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.johnbreslin.com/foaf/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 18 3890 695 0 0 http://www.johnbreslin.com/foaf/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.kjetil.kjernsmo.net/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 18 11076 3497 0 0 http://www.kjetil.kjernsmo.net/foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.kjetil.kjernsmo.net/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 18 6977 3850 0 0 http://www.kjetil.kjernsmo.net/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.lassila.org/ora.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 1410 645 0 0 http://www.lassila.org/ora.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.leobard.net/rdf/foaf.xml#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 43 763 111 0 0 http://www.leobard.net/rdf/foaf.xml#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.lri.fr/~pietriga/foaf.rdf#EP> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 17 296 36 0 0 http://www.lri.fr/~pietriga/foaf.rdf#EP
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.polleres.net/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 42 94029 26371 0 0 http://www.polleres.net/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.real-programmer.com/foaf/chbussler.foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 158 158 0 0 http://www.real-programmer.com/foaf/chbussler.foaf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.semantic-web.at/people/blumauer/card#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 10 19945 1907 3 0 http://www.semantic-web.at/people/blumauer/card#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.siegfried-handschuh.net/metadata/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 7 154 22 0 0 http://www.siegfried-handschuh.net/metadata/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.soumitrabhattacharya.com/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 2 125 129 0 0 http://www.soumitrabhattacharya.com/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.stud.uni-karlsruhe.de/~uhbnq/martin/foaf.rdf#mz> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 4 8103 788 2 0 http://www.stud.uni-karlsruhe.de/~uhbnq/martin/foaf.rdf#mz
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.topquadrant.com/people/dallemang/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 14 320 320 0 0 http://www.topquadrant.com/people/dallemang/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.tudorgroza.org/res/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 1 38 36 0 0 http://www.tudorgroza.org/res/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.umbrich.net/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 24 44472 17814 3 0 http://www.umbrich.net/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.uni-koblenz.de/~sschenk/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 5 11804 585 2 0 http://www.uni-koblenz.de/~sschenk/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.w3.org/People/Berners-Lee/card#i> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 61 124809 80765 3 0 http://www.w3.org/People/Berners-Lee/card#i
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.w3.org/People/Bratt/stevenrbratt.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 224 223 0 0 http://www.w3.org/People/Bratt/stevenrbratt.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.w3.org/People/EM/contact#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 4660 1318 1 0 http://www.w3.org/People/EM/contact#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.w3.org/People/Sandro/data#Sandro_Hawke> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 99 67061 60054 0 0 http://www.w3.org/People/Sandro/data#Sandro_Hawke
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.w3.org/People/djweitzner/foaf#DJW> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 3 444 446 0 0 http://www.w3.org/People/djweitzner/foaf#DJW
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.wchulseiee.net/foaf#elieuw> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 15 1610 255 0 0 http://www.wchulseiee.net/foaf#elieuw
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.wikier.org/foaf#wikier> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 40 143692 31822 6 0 http://www.wikier.org/foaf#wikier
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://www.williamviker.net/rdf/foaf.rdf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+1 4 12501 1504 1 0 http://www.williamviker.net/rdf/foaf.rdf#me
+roqet -e "PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?p ?location WHERE { <http://xircles.codehaus.org/users/evenisse/foaf#me> foaf:knows ?p . ?p foaf:based_near ?feature . ?feature <http://www.geonames.org/ontology#name> ?location }" -D tmpo.n3
+0 141 4565 5132 0 0 http://xircles.codehaus.org/users/evenisse/foaf#me

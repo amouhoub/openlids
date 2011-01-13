@@ -1,0 +1,849 @@
+<http://xircles.codehaus.org/users/evenisse/> <http://webns.net/mvcb/errorReportsTo> <mailto:support@codehaus.org> .
+<http://xircles.codehaus.org/users/evenisse/> <http://webns.net/mvcb/generatorAgent> <http://xircles.codehaus.org/> .
+<http://xircles.codehaus.org/users/evenisse/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/PersonalProfileDocument> .
+<http://xircles.codehaus.org/users/evenisse/> <http://xmlns.com/foaf/0.1/maker> <http://xircles.codehaus.org/users/evenisse/foaf#me> .
+<http://xircles.codehaus.org/users/evenisse/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://xircles.codehaus.org/users/evenisse/foaf#me> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://xircles.codehaus.org/projects/maven/doap> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://xircles.codehaus.org/projects/modello/doap> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://xircles.codehaus.org/projects/mojo/doap> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://xircles.codehaus.org/projects/plexus/doap> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/currentProject> <http://xircles.codehaus.org/projects/redback/doap> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/img> <http://media.xircles.codehaus.org/users/evenisse/photos/medium.png> .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode1 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode10 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode100 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode102 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode103 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode105 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode106 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode107 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode108 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode109 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode110 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode111 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode112 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode113 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode115 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode118 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode12 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode120 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode121 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode122 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode123 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode124 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode125 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode126 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode127 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode13 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode130 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode131 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode132 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode133 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode135 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode136 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode137 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode138 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode140 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode15 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode16 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode17 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode18 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode19 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode2 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode20 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode22 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode23 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode24 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode25 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode27 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode28 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode29 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode3 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode30 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode31 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode32 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode33 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode34 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode36 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode38 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode39 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode4 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode40 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode41 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode42 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode44 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode45 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode46 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode48 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode49 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode51 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode55 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode58 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode6 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode61 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode62 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode63 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode64 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode65 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode66 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode67 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode68 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode69 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode7 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode70 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode71 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode72 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode73 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode74 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode75 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode76 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode77 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode78 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode8 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode80 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode82 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode83 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode84 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode85 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode86 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode87 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode88 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode89 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode9 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode90 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode91 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode93 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode94 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode96 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode97 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode98 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/knows> _:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode99 .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "50b331d79758460b4d7bded3b24028ff64663d03" .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6492dd926d7137a6068f1c15a3818fb6ba4d51c5" .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "81aa2b6b1bae6e71fe20cabaa70068d28b749686" .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/name> "Emmanuel Venisse" .
+<http://xircles.codehaus.org/users/evenisse/foaf#me> <http://xmlns.com/foaf/0.1/nick> "evenisse" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/maguro/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 <http://xmlns.com/foaf/0.1/mbox_sha1> "0391714ba529073de8f5659d954f5cb1495f1c69" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 <http://xmlns.com/foaf/0.1/mbox_sha1> "ee472ffbf694c8f0a9fd1f879ce78df57c36a74a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 <http://xmlns.com/foaf/0.1/mbox_sha1> "ef838b77f446da87403cdfb619b16264ba009b50" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode0 <http://xmlns.com/foaf/0.1/name> "Alan D. Cabrera" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/romale/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode1 <http://xmlns.com/foaf/0.1/mbox_sha1> "be4fbc17a96d30cca98ec1bc9072727a9fc96182" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode1 <http://xmlns.com/foaf/0.1/name> "Alexandre ROMAN" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode10 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/zhangwx/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode10 <http://xmlns.com/foaf/0.1/mbox_sha1> "093682c085a1bd9b160ab7bbb2f66098b6b4b63b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode10 <http://xmlns.com/foaf/0.1/mbox_sha1> "162ca1ac1bd71a467a4f14d3c5664e00e7bb51b3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode10 <http://xmlns.com/foaf/0.1/name> "Bill Zhang" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode100 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/pikus/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode100 <http://xmlns.com/foaf/0.1/mbox_sha1> "bad7d81537a3e3c7786366d5b49408260e8daa1e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode100 <http://xmlns.com/foaf/0.1/name> "Tomasz Pik" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/tcurdt/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 <http://xmlns.com/foaf/0.1/mbox_sha1> "557fe298a7bcbe3400058e8e0d2b5f1e5da8c16d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 <http://xmlns.com/foaf/0.1/mbox_sha1> "68c2da3d8c4a570bbe0ceb67d3fbb11feba8ccff" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 <http://xmlns.com/foaf/0.1/mbox_sha1> "ca03a190eff317600520a1cfa0c6b46d58ee08b2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode101 <http://xmlns.com/foaf/0.1/name> "Torsten Curdt" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode102 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/trygvis/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode102 <http://xmlns.com/foaf/0.1/mbox_sha1> "1200f7e4cf4b1baf4180fbad271c7713409c2fcc" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode102 <http://xmlns.com/foaf/0.1/mbox_sha1> "7a392e67c9373c05dcf83cff319974faf920e7f7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode102 <http://xmlns.com/foaf/0.1/name> "Trygve Laugst\u00F8l" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode103 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/ervalerio/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode103 <http://xmlns.com/foaf/0.1/mbox_sha1> "d2f4dd94f815faaf0cd8c48d33612257accd62e3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode103 <http://xmlns.com/foaf/0.1/name> "Valerio Schiavoni" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/vmassol/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://xmlns.com/foaf/0.1/mbox_sha1> "39cacc52581ae06289ae9f3f7d5daa68e8d3660b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://xmlns.com/foaf/0.1/mbox_sha1> "6c6e81d405b84972c72c2fea3d6beb856de50d5f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://xmlns.com/foaf/0.1/mbox_sha1> "8520364a5980980bdca85c267761fc07e988745e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://xmlns.com/foaf/0.1/mbox_sha1> "e133d5bc490e17ecb5adfa5780c27104156c1caa" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://xmlns.com/foaf/0.1/mbox_sha1> "e16b7db651233df0157ac56b2e7f51ed50087f6f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode104 <http://xmlns.com/foaf/0.1/name> "Vincent Massol" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode105 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/vsiveton/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode105 <http://xmlns.com/foaf/0.1/mbox_sha1> "f0e97fd4a90d2547c48bca6fd7b648a279f11e99" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode105 <http://xmlns.com/foaf/0.1/mbox_sha1> "f3e0f7ffc0370edd979de632cf58e04fc3f90fa2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode105 <http://xmlns.com/foaf/0.1/name> "Vincent Siveton" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode106 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/wfay/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode106 <http://xmlns.com/foaf/0.1/mbox_sha1> "a115cd7f6cd11dbc05c16efafb02fbb12edd39bc" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode106 <http://xmlns.com/foaf/0.1/name> "Wayne Fay" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode107 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/wsmoak/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode107 <http://xmlns.com/foaf/0.1/mbox_sha1> "62f1960385a49418ace8a194bfec3c33a0849ba6" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode107 <http://xmlns.com/foaf/0.1/name> "Wendy Smoak" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode108 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/wguttmn/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode108 <http://xmlns.com/foaf/0.1/mbox_sha1> "6a322eeb68c7a037b30488af97d0dd47b17802b9" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode108 <http://xmlns.com/foaf/0.1/mbox_sha1> "839e3b5cd61f3fe84f10c8a5a2e02e4335965990" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode108 <http://xmlns.com/foaf/0.1/name> "Werner Guttmann" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode109 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/arsenalist/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode109 <http://xmlns.com/foaf/0.1/mbox_sha1> "87de4bbfc9fd7cfb41bb5d7fb029e3af4318c49c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode109 <http://xmlns.com/foaf/0.1/name> "Zarar Siddiqi" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/bob/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "01525520da935ab7b57b58e6e5a08e93779c054d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "059a29951cdf4d7f5365a4f40f8f54494be917b7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "4e669d944ff2eb9e064cc789e2232c5751d09c4d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "760022f51d29744a713d44e69c77d741ec554ab8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "c588fab1bed0b3757f351af3b3410a74056aef65" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "d114f5fc5103340a5ec82cc96e57972157a2fde4" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/mbox_sha1> "f1c35a7c2aa77931b64ed30bcc0be2babf5d681b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode11 <http://xmlns.com/foaf/0.1/name> "Bob 'The Despot' McWhirter" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode110 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/agwilliams1000/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode110 <http://xmlns.com/foaf/0.1/mbox_sha1> "ade4306727a3eced4b867c1ce6ca5c5c9a905cc1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode110 <http://xmlns.com/foaf/0.1/mbox_sha1> "e789738f00b1362ed9b6632945da72910d32f399" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode110 <http://xmlns.com/foaf/0.1/name> "agwilliams1000 agwilliams1000" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode111 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/akarasulu/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode111 <http://xmlns.com/foaf/0.1/mbox_sha1> "6f0260de135945537cac37813f4c6661bdf4454e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode111 <http://xmlns.com/foaf/0.1/mbox_sha1> "ce499c8e536ec99c2437b34d663ae1c10bb54220" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode111 <http://xmlns.com/foaf/0.1/name> "akarasulu akarasulu" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode112 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/aramirez/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode112 <http://xmlns.com/foaf/0.1/mbox_sha1> "6dd2843f6425e1afc73ebfb41813bd4a2ce537fd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode112 <http://xmlns.com/foaf/0.1/mbox_sha1> "a5b818d9ccd8ff368af75523fe5d76d45eb3d0fe" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode112 <http://xmlns.com/foaf/0.1/name> "aramirez aramirez" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode113 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/brianfox/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode113 <http://xmlns.com/foaf/0.1/mbox_sha1> "9463490cb70f58a67a9cbd763edea994be410cb3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode113 <http://xmlns.com/foaf/0.1/name> "brianfox brianfox" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/brozow/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 <http://xmlns.com/foaf/0.1/mbox_sha1> "87e0d2b90376bb17a3fd98b67148494e687a0cf6" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 <http://xmlns.com/foaf/0.1/mbox_sha1> "96351b0a3ac065d6d8672ae6401591e2371b222d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 <http://xmlns.com/foaf/0.1/mbox_sha1> "ce0d150ecf0d237c34e2487a64e02012281c16fe" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode114 <http://xmlns.com/foaf/0.1/name> "brozow brozow" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode115 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/cameronbraid/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode115 <http://xmlns.com/foaf/0.1/mbox_sha1> "ad4e1516d0d650f0cba6390b99ac59dcce6f0931" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode115 <http://xmlns.com/foaf/0.1/name> "cameronbraid cameronbraid" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/carlos/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 <http://xmlns.com/foaf/0.1/mbox_sha1> "62e17b9733e17bc79133c152e51891890d72fe7b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 <http://xmlns.com/foaf/0.1/mbox_sha1> "7d36faece63d2652a999ff907ca788fc6b6d785d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 <http://xmlns.com/foaf/0.1/mbox_sha1> "7f9ed0bc7da51b52228ec3452a7542e9d05e8c12" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode116 <http://xmlns.com/foaf/0.1/name> "carlos carlos" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/cberry/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 <http://xmlns.com/foaf/0.1/mbox_sha1> "01a0fa9c2f0dd3fcdc25a5d755d5776a217932c7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 <http://xmlns.com/foaf/0.1/mbox_sha1> "08aae4e36e784d712934869df0fa1e7c4d068606" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 <http://xmlns.com/foaf/0.1/mbox_sha1> "293a7d64560af37ff8126c9b6b9271beac384134" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode117 <http://xmlns.com/foaf/0.1/name> "cberry cberry" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode118 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dain/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode118 <http://xmlns.com/foaf/0.1/mbox_sha1> "22f11ecdc1e2a366aa88d77d3d77af260b7a0b45" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode118 <http://xmlns.com/foaf/0.1/mbox_sha1> "47fd4be9b99e2d4f68a6ee2d61d4b9b0a202af82" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode118 <http://xmlns.com/foaf/0.1/name> "dain dain" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dblevins/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 <http://xmlns.com/foaf/0.1/mbox_sha1> "006281ed87e255f22e04ba896c45ab4a4673e87c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 <http://xmlns.com/foaf/0.1/mbox_sha1> "389877cd691c08580f89546e3801b3fbd85e2ec3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 <http://xmlns.com/foaf/0.1/mbox_sha1> "93c89401a046740b91217599a9c191649f952e8a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode119 <http://xmlns.com/foaf/0.1/name> "dblevins dblevins" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode12 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/boba/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode12 <http://xmlns.com/foaf/0.1/mbox_sha1> "05b2c7fcb3ac2f57be8f9690ab9e5f1f4335921a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode12 <http://xmlns.com/foaf/0.1/name> "Bob Allison" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode120 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dhawkins/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode120 <http://xmlns.com/foaf/0.1/mbox_sha1> "d3f4b4e2f0ee2b3cfd339824d305b4e9f5508c51" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode120 <http://xmlns.com/foaf/0.1/mbox_sha1> "dd24817632d74514926c6fca4032c3fd257a9d9a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode120 <http://xmlns.com/foaf/0.1/name> "dhawkins dhawkins" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode121 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/eburghar/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode121 <http://xmlns.com/foaf/0.1/mbox_sha1> "0d3430bc2bd9e783df2b812892666cff3bb645b0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode121 <http://xmlns.com/foaf/0.1/mbox_sha1> "819192038e436eb42aa19d527dfd32792cef1a06" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode121 <http://xmlns.com/foaf/0.1/name> "eburghar eburghar" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode122 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/eredmond/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode122 <http://xmlns.com/foaf/0.1/mbox_sha1> "4002920f76a4aa4ef587508cee3075876c8ef44d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode122 <http://xmlns.com/foaf/0.1/mbox_sha1> "e9a1dcd5a8b19195d5cabd582f8ebbd4f25ba913" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode122 <http://xmlns.com/foaf/0.1/name> "eredmond eredmond" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode123 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/fgiust/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode123 <http://xmlns.com/foaf/0.1/mbox_sha1> "1354e16ee7745a7adecd0a88db83e6033a294449" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode123 <http://xmlns.com/foaf/0.1/mbox_sha1> "8ec98d010a6f648b3cf8261e54664232b91df7d8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode123 <http://xmlns.com/foaf/0.1/name> "fgiust fgiust" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode124 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/inder/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode124 <http://xmlns.com/foaf/0.1/mbox_sha1> "427f9d4092ba846d3bd79729ad532233772aac98" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode124 <http://xmlns.com/foaf/0.1/name> "inder sabharwal" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode125 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jfallows/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode125 <http://xmlns.com/foaf/0.1/mbox_sha1> "1e15c7d46ce467ccf6806e8d2a455eac63c5d8f8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode125 <http://xmlns.com/foaf/0.1/mbox_sha1> "2451e935e8066d148f677ad17f3f52bdc10ea973" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode125 <http://xmlns.com/foaf/0.1/name> "jfallows jfallows" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode126 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jgenender/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode126 <http://xmlns.com/foaf/0.1/mbox_sha1> "96a8e6bb1934b0fd2c18d7a94577c53e25f2a887" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode126 <http://xmlns.com/foaf/0.1/mbox_sha1> "f842a414d416b16151b2a30a2145c40cb35377ff" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode126 <http://xmlns.com/foaf/0.1/name> "jgenender jgenender" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode127 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jruiz/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode127 <http://xmlns.com/foaf/0.1/mbox_sha1> "697f69b7f34269d5855f7462be9df630cafea6a0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode127 <http://xmlns.com/foaf/0.1/mbox_sha1> "bd5556d30be2d9858f8dfd689d6acb859de862b8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode127 <http://xmlns.com/foaf/0.1/name> "jruiz jruiz" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jstrachan/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 <http://xmlns.com/foaf/0.1/mbox_sha1> "01f729ba81e789cbf549cbe3f7de5373ab9fc20a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 <http://xmlns.com/foaf/0.1/mbox_sha1> "935a589032a394fe70e4dae44bcc3245029d750c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 <http://xmlns.com/foaf/0.1/mbox_sha1> "b649970b1a061734c91f0663394dcd12efd81a9a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode128 <http://xmlns.com/foaf/0.1/name> "jstrachan jstrachan" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kaare/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 <http://xmlns.com/foaf/0.1/mbox_sha1> "5e9d8065a0772b75906bfafdad56ae5f24419fe8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 <http://xmlns.com/foaf/0.1/mbox_sha1> "6d4d4cefb82ac47767aed81b590187d0873331e5" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 <http://xmlns.com/foaf/0.1/mbox_sha1> "7063fd182a136ae75ded79a2aeda7fa175ef7a9e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode129 <http://xmlns.com/foaf/0.1/name> "kaare kaare" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode13 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/bokken/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode13 <http://xmlns.com/foaf/0.1/mbox_sha1> "651aa7cc5cf2367387eb3f964d2452610900762c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode13 <http://xmlns.com/foaf/0.1/mbox_sha1> "e4402fc198ff7e45eb6c2d84657dfa08c58dcb60" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode13 <http://xmlns.com/foaf/0.1/name> "Brett Okken" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode130 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kbravo/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode130 <http://xmlns.com/foaf/0.1/mbox_sha1> "9ca7daca10533436ccedde6e9872531f977ffebf" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode130 <http://xmlns.com/foaf/0.1/mbox_sha1> "f0c78a30b09d3a4f42c0976fca779580afaf1450" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode130 <http://xmlns.com/foaf/0.1/name> "kbravo kbravo" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode131 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/pkernevez/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode131 <http://xmlns.com/foaf/0.1/mbox_sha1> "14d29f6855dd2f7be2c263b580fdf836be6f0263" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode131 <http://xmlns.com/foaf/0.1/name> "kernevez kernevez" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode132 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kristian/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode132 <http://xmlns.com/foaf/0.1/mbox_sha1> "13ce1e21008dddc709b8af1f4a7488bc154e891c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode132 <http://xmlns.com/foaf/0.1/mbox_sha1> "525207a78fc37dde2de2e5726e0b6bae45d9ff6a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode132 <http://xmlns.com/foaf/0.1/name> "kristian kristian" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode133 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/lacostej/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode133 <http://xmlns.com/foaf/0.1/mbox_sha1> "5a511c4ca06f9996b33936cacd72e4dd5382d8df" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode133 <http://xmlns.com/foaf/0.1/mbox_sha1> "ba4e224e63131d72ccea0c0720ae3be89aabc5dc" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode133 <http://xmlns.com/foaf/0.1/name> "lacostej lacostej" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/lars3loff/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 <http://xmlns.com/foaf/0.1/mbox_sha1> "84c6de03e838e3c43849f00a32d8eef178a81a9f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 <http://xmlns.com/foaf/0.1/mbox_sha1> "b8906dece4cca9a4c33c8cd74a641d14ec6a6af2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 <http://xmlns.com/foaf/0.1/mbox_sha1> "d3392b515e96a205fef7783b36b0fcc11a8e088d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode134 <http://xmlns.com/foaf/0.1/name> "lars3loff lars3loff" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode135 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/mark/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode135 <http://xmlns.com/foaf/0.1/mbox_sha1> "5d6cb5fa30223d5b216e2596b8c5b90b2002a1ac" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode135 <http://xmlns.com/foaf/0.1/mbox_sha1> "a909003c8d4f004154d553b5894091d9251069d6" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode135 <http://xmlns.com/foaf/0.1/name> "mark mark" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode136 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/mperham/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode136 <http://xmlns.com/foaf/0.1/mbox_sha1> "8c7878987e9b4f5f2885443917afeb957622e824" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode136 <http://xmlns.com/foaf/0.1/mbox_sha1> "cd3614967705ad0d42a2c51a68b5629f5cfa4887" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode136 <http://xmlns.com/foaf/0.1/name> "mperham mperham" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode137 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/snambi/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode137 <http://xmlns.com/foaf/0.1/mbox_sha1> "8fc79a4b783f56e295ffda9132e7c2a8fd7fb2bf" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode137 <http://xmlns.com/foaf/0.1/name> "nambi sankaran" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode138 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/ndeloof/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode138 <http://xmlns.com/foaf/0.1/mbox_sha1> "d4cf90e24b4c52e32fb39e6051cc3bfa2db86e03" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode138 <http://xmlns.com/foaf/0.1/name> "nicolas de loof" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/scryan/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 <http://xmlns.com/foaf/0.1/mbox_sha1> "04af3753f2f52c6b342093c3862d06f2148ba66c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 <http://xmlns.com/foaf/0.1/mbox_sha1> "5c195e6ea681943b8f60f277bfe96d920661adb9" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 <http://xmlns.com/foaf/0.1/mbox_sha1> "fa4f1711dc80adb3e71ffdf433675f3863101093" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode139 <http://xmlns.com/foaf/0.1/name> "scryan scryan" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/brett/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://xmlns.com/foaf/0.1/mbox_sha1> "2bc301a7dd2af0e602af7ca310df08d72aba1bdd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://xmlns.com/foaf/0.1/mbox_sha1> "803ec80372595e726d2409c70af6eaa81fca81e5" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://xmlns.com/foaf/0.1/mbox_sha1> "ad75478a6bb3228cca09f2127bf4b4a76a7acf3a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://xmlns.com/foaf/0.1/mbox_sha1> "c008ec25f4fa77bd882955e2d064d241c8afca8c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode14 <http://xmlns.com/foaf/0.1/name> "Brett Porter" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode140 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/snicoll/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode140 <http://xmlns.com/foaf/0.1/mbox_sha1> "7b534855f035222eaa1cb9c874b598a284a487e7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode140 <http://xmlns.com/foaf/0.1/mbox_sha1> "ce6c3520c5db9f4121dcbb60859854389a9e0ce3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode140 <http://xmlns.com/foaf/0.1/name> "snicoll snicoll" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode15 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/demers/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode15 <http://xmlns.com/foaf/0.1/mbox_sha1> "1f18add6b85309d4422051566fb34275a3132517" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode15 <http://xmlns.com/foaf/0.1/name> "Brian Demers" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode16 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/topping/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode16 <http://xmlns.com/foaf/0.1/mbox_sha1> "5745bda2facf7d0b9bd2d70f9cb36f331ce4e24b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode16 <http://xmlns.com/foaf/0.1/mbox_sha1> "cf777737cca526b13f0ab24d9bd8bd35eb8d135f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode16 <http://xmlns.com/foaf/0.1/name> "Brian Topping" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode17 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/sisbell/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode17 <http://xmlns.com/foaf/0.1/mbox_sha1> "86eb2591451732a9a7af00f90057741b5ba4c1dc" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode17 <http://xmlns.com/foaf/0.1/name> "Britton Shane Isbell" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode18 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/charlie.collins/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode18 <http://xmlns.com/foaf/0.1/mbox_sha1> "4c718d8344c37e2eb066e9f1f522eafcb3a50175" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode18 <http://xmlns.com/foaf/0.1/name> "Charlie Collins" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode19 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/christiangasser/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode19 <http://xmlns.com/foaf/0.1/mbox_sha1> "f9b38665a8465fad10a65977deecd0c794e7715b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode19 <http://xmlns.com/foaf/0.1/name> "Christian Gasser" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/adreghiciu/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode2 <http://xmlns.com/foaf/0.1/mbox_sha1> "aa394465fe30df3c23963926a472778036be5e75" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode2 <http://xmlns.com/foaf/0.1/name> "Alin Dreghiciu" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode20 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/chtrutz/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode20 <http://xmlns.com/foaf/0.1/mbox_sha1> "2f5b1e9fa26126ab1294c11c10d79dd75d04b4c0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode20 <http://xmlns.com/foaf/0.1/name> "Christian Trutz" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/chris/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://xmlns.com/foaf/0.1/mbox_sha1> "2b320a434b780c456b78e6d5f3b1e42e352272d3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://xmlns.com/foaf/0.1/mbox_sha1> "8846049b43fd9b94433074fb2baf0990ca89540b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://xmlns.com/foaf/0.1/mbox_sha1> "982b3b151bbc7fde85f082dcda4b43a118d1cad0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://xmlns.com/foaf/0.1/mbox_sha1> "9b3aacb7960bb338020888fad43873bfa39e4abb" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode21 <http://xmlns.com/foaf/0.1/name> "Christoph Sturm" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode22 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dandiep/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode22 <http://xmlns.com/foaf/0.1/mbox_sha1> "2aca7fbdc6677649f9a44460e998c5fd9b2060ad" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode22 <http://xmlns.com/foaf/0.1/mbox_sha1> "66cab3876bb8129fb8812acdc4fe885f9c0ddde0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode22 <http://xmlns.com/foaf/0.1/name> "Dan Diephouse" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode23 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dfabulich/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode23 <http://xmlns.com/foaf/0.1/mbox_sha1> "f6af71c8da73c4da13c7b988de23b9d8bb5b9d25" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode23 <http://xmlns.com/foaf/0.1/name> "Dan Fabulich" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode24 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dantran/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode24 <http://xmlns.com/foaf/0.1/mbox_sha1> "593a80e20baa08b7297712ce35239a1845cc1200" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode24 <http://xmlns.com/foaf/0.1/mbox_sha1> "84c7dfbb146fa077145fc9505211a693d2918af5" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode24 <http://xmlns.com/foaf/0.1/name> "Dan Tran" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode25 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dholroyd/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode25 <http://xmlns.com/foaf/0.1/mbox_sha1> "ac6c47e01fbe94d32ae412ab17b3dc06b728de4e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode25 <http://xmlns.com/foaf/0.1/name> "David Holroyd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/david/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 <http://xmlns.com/foaf/0.1/mbox_sha1> "801a0eeb3cc5d6032f9f5f4b33232216a9c2121c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 <http://xmlns.com/foaf/0.1/mbox_sha1> "bdb6e38cd0b0ac93739ac5b53309d5ca036712f6" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 <http://xmlns.com/foaf/0.1/mbox_sha1> "e93c47ff7c4bb95c4cbcfeae20b5fe28d20f7f4f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode26 <http://xmlns.com/foaf/0.1/name> "David J. M. Karlsen" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode27 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/djencks/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode27 <http://xmlns.com/foaf/0.1/mbox_sha1> "77fcd3ce744291d1ac7bd74848b4a393dc273840" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode27 <http://xmlns.com/foaf/0.1/mbox_sha1> "962faded3bc33a0020da833a8a886c07be93fea3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode27 <http://xmlns.com/foaf/0.1/name> "David Jencks" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode28 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dsimonek/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode28 <http://xmlns.com/foaf/0.1/mbox_sha1> "1ea0500df7a41f8aa6f57cb86bbf995c249b4f2e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode28 <http://xmlns.com/foaf/0.1/mbox_sha1> "9dd1d72b1bfb3918344a589448e32dac7f521c60" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode28 <http://xmlns.com/foaf/0.1/name> "David Simonek" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode29 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dvicente72/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode29 <http://xmlns.com/foaf/0.1/mbox_sha1> "af31e6e8ac6a110bf69526d19d2a54674ba1e377" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode29 <http://xmlns.com/foaf/0.1/name> "David Vicente" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/handyande/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode3 <http://xmlns.com/foaf/0.1/mbox_sha1> "e579a8ac12e0bb812991562194323d22a218f622" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode3 <http://xmlns.com/foaf/0.1/name> "Andrew Williams" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode30 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dennisl/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode30 <http://xmlns.com/foaf/0.1/mbox_sha1> "6a8920d705ea7a4ce0f7cfe9a310995351d7708c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode30 <http://xmlns.com/foaf/0.1/mbox_sha1> "aa1f5533b20048ad9414941189d655d0141a7dc8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode30 <http://xmlns.com/foaf/0.1/name> "Dennis Lundberg" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode31 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/dpleiss/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode31 <http://xmlns.com/foaf/0.1/mbox_sha1> "f3ce7b7bef1ec3552b6e740e80aa1a241929e91a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode31 <http://xmlns.com/foaf/0.1/name> "Detlef Pleiss" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode32 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/darasan/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode32 <http://xmlns.com/foaf/0.1/mbox_sha1> "024ff5083b68663a86e136d113866e6f0ead9d67" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode32 <http://xmlns.com/foaf/0.1/name> "Durai Arasan" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode33 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/epunzalan/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode33 <http://xmlns.com/foaf/0.1/mbox_sha1> "3816f0db596e5cb4587a00e472716831ed2f8667" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode33 <http://xmlns.com/foaf/0.1/mbox_sha1> "a945e9577db409ef6071640cad142939c5003c0d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode33 <http://xmlns.com/foaf/0.1/name> "Edwin Punzalan" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode34 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/ehsavoie/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode34 <http://xmlns.com/foaf/0.1/mbox_sha1> "48df57acc3c460b5c09f772a02142dc07ca003dd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode34 <http://xmlns.com/foaf/0.1/name> "Emmanuel Hugonnet" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/evenisse/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 <http://xmlns.com/foaf/0.1/mbox_sha1> "50b331d79758460b4d7bded3b24028ff64663d03" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 <http://xmlns.com/foaf/0.1/mbox_sha1> "6492dd926d7137a6068f1c15a3818fb6ba4d51c5" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 <http://xmlns.com/foaf/0.1/mbox_sha1> "81aa2b6b1bae6e71fe20cabaa70068d28b749686" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode35 <http://xmlns.com/foaf/0.1/name> "Emmanuel Venisse" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode36 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/sherriff/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode36 <http://xmlns.com/foaf/0.1/mbox_sha1> "c363d03abf579963447ce74397d5e5c9b8193380" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode36 <http://xmlns.com/foaf/0.1/name> "Erik Drolshammer" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/eu/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 <http://xmlns.com/foaf/0.1/mbox_sha1> "607b054adac9d1e7cac92b2576ca1dd2680d4c19" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 <http://xmlns.com/foaf/0.1/mbox_sha1> "b6f53f09c9bb2e20702bb1b06cc7af76806c8053" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 <http://xmlns.com/foaf/0.1/mbox_sha1> "e154236c735184462551044a1f85043dcceb3998" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode37 <http://xmlns.com/foaf/0.1/name> "Eugene Kuleshov" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode38 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/godin/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode38 <http://xmlns.com/foaf/0.1/mbox_sha1> "25e1ef5dead6842f425112e5ccde48532aa3e34d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode38 <http://xmlns.com/foaf/0.1/name> "Evgeny Mandrikov" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode39 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/fabemn/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode39 <http://xmlns.com/foaf/0.1/mbox_sha1> "e20d3c3864cc668d81cbc367d4acdb9c21e986a3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode39 <http://xmlns.com/foaf/0.1/mbox_sha1> "fe84042d89d215696e3a3897df3b706b77a25353" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode39 <http://xmlns.com/foaf/0.1/name> "Fabrice BELLINGARD" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode4 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/averet/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode4 <http://xmlns.com/foaf/0.1/mbox_sha1> "3e636b435cfa55e76e2f57ecc990507520f9e00f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode4 <http://xmlns.com/foaf/0.1/name> "Antoine V\u00E9ret" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode40 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/seidinger/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode40 <http://xmlns.com/foaf/0.1/mbox_sha1> "9c09fa7a7f01c0b3f8c6aec99bbcda3fc3dd142b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode40 <http://xmlns.com/foaf/0.1/mbox_sha1> "bfa40ee520e6236c0b90740bb2167d648dc72c11" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode40 <http://xmlns.com/foaf/0.1/name> "Frank Seidinger" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode41 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/gleclaire/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode41 <http://xmlns.com/foaf/0.1/mbox_sha1> "c5950319d1c31b71f5ca8ffb817bb94d1739e0da" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode41 <http://xmlns.com/foaf/0.1/name> "Garvin LeClaire" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode42 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/gregrluck/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode42 <http://xmlns.com/foaf/0.1/mbox_sha1> "d9a8e7ba6d22a706f9c3719d30fc9590bb92f7f8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode42 <http://xmlns.com/foaf/0.1/name> "Greg Luck" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/gjoseph/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://xmlns.com/foaf/0.1/mbox_sha1> "994b9e6f7e69b9cb3799ea634a750530e73cde4a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://xmlns.com/foaf/0.1/mbox_sha1> "c84183d059a03186e1de30b001b138bb3a4831cc" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://xmlns.com/foaf/0.1/mbox_sha1> "e41a0f5aa969e0f298a732ef471550496e8b06a4" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://xmlns.com/foaf/0.1/mbox_sha1> "e752d1f9dd4c2ff42b8dd62943e537293d1d0d25" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode43 <http://xmlns.com/foaf/0.1/name> "Gr\u00E9gory Joseph" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode44 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/hisidro/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode44 <http://xmlns.com/foaf/0.1/mbox_sha1> "c6d6b9e91790dd5f17d2af7e6bd29becf11bb05e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode44 <http://xmlns.com/foaf/0.1/name> "Henry Isidro" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode45 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/hermod/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode45 <http://xmlns.com/foaf/0.1/mbox_sha1> "c90f7a9b3e8c747d0bb8815b3e12a17e8937ca76" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode45 <http://xmlns.com/foaf/0.1/mbox_sha1> "d5eedaa75ba9dfee8828999f102f641bf9e26eee" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode45 <http://xmlns.com/foaf/0.1/name> "Hermod Opstvedt" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode46 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/hboutemy/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode46 <http://xmlns.com/foaf/0.1/mbox_sha1> "93389bef12d5d08e761f1097a65c65095385e927" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode46 <http://xmlns.com/foaf/0.1/mbox_sha1> "9fa1c146de3959f9118187dba28186074bb8bbeb" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode46 <http://xmlns.com/foaf/0.1/name> "Herv\u00E9 Boutemy" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/chirino/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 <http://xmlns.com/foaf/0.1/mbox_sha1> "ae8758db0d6eb46050e6ac9b387f90632522b77f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 <http://xmlns.com/foaf/0.1/mbox_sha1> "d9922a213efd871146788edbdbae8850aeaae2eb" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 <http://xmlns.com/foaf/0.1/mbox_sha1> "f84022d7814a07875780e029b13c34104bf0abf0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode47 <http://xmlns.com/foaf/0.1/name> "Hiram Chirino" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode48 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/igorife/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode48 <http://xmlns.com/foaf/0.1/mbox_sha1> "919bd12ff43da83b95ae856cd10ed6b90b624d6d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode48 <http://xmlns.com/foaf/0.1/name> "Igor Fedorenko" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode49 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/james.w.dumay/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode49 <http://xmlns.com/foaf/0.1/mbox_sha1> "47550177906f39d3a1b95a4e1703bc1fa037fec8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode49 <http://xmlns.com/foaf/0.1/name> "James William Dumay" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/aheritier/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://xmlns.com/foaf/0.1/mbox_sha1> "043acd037139824055805c41d2927f597b7da90c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://xmlns.com/foaf/0.1/mbox_sha1> "bf1bfe744f2e526c09f11de774442cf54152f3d2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://xmlns.com/foaf/0.1/mbox_sha1> "d10072c910a66a558d27d293d32b04cdd12ae921" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://xmlns.com/foaf/0.1/mbox_sha1> "d123e8b0e77b94b6ba90697eec22f93d6df68f50" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode5 <http://xmlns.com/foaf/0.1/name> "Arnaud Heritier" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/user57/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://xmlns.com/foaf/0.1/mbox_sha1> "0b9d0ca58a53f3aa15caa10e2764ec265cb16280" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://xmlns.com/foaf/0.1/mbox_sha1> "5a5ccdebc97ebf91ee6de1f849effeae40691668" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://xmlns.com/foaf/0.1/mbox_sha1> "7a069ab6c499fe5f47d9e831b4bb6fa7d8ae11f7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://xmlns.com/foaf/0.1/mbox_sha1> "d8e982bab0adaedefc9ec01b2a1ceec4165e2d03" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://xmlns.com/foaf/0.1/mbox_sha1> "e138486ed689ce4f984ea819cee9244b56728d3f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode50 <http://xmlns.com/foaf/0.1/name> "Jason Dillon" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode51 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jvanzyl/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode51 <http://xmlns.com/foaf/0.1/mbox_sha1> "0b8d5902bf93080b4c9defdeecbd8b5a336551a3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode51 <http://xmlns.com/foaf/0.1/mbox_sha1> "8a2313f975acff36cefa57cf204568937308071b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode51 <http://xmlns.com/foaf/0.1/name> "Jason van Zyl" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jeanlaurent/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 <http://xmlns.com/foaf/0.1/mbox_sha1> "9d9e427efdf0d92259706b508211e0d9c6d2e16b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 <http://xmlns.com/foaf/0.1/mbox_sha1> "d91dcebaec756c0bcf24d8bfaf54163b6f5db7ec" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 <http://xmlns.com/foaf/0.1/mbox_sha1> "dd0c1d2bfc02eece1dddb0d498ac255576ce6427" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode52 <http://xmlns.com/foaf/0.1/name> "Jean-Laurent de Morlhon" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jboynes/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 <http://xmlns.com/foaf/0.1/mbox_sha1> "013417a01527b895cab6f3d0110f3e9bd4085f92" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 <http://xmlns.com/foaf/0.1/mbox_sha1> "05dc7c0a89b80b3f09b98e76dfd91a8143189a8e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 <http://xmlns.com/foaf/0.1/mbox_sha1> "c445eb94c848309bccd9eae991c5481b99a1bd46" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode53 <http://xmlns.com/foaf/0.1/name> "Jeremy Boynes" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jesse/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 <http://xmlns.com/foaf/0.1/mbox_sha1> "6256c7af61681a3f2e8e00b3e93dd6f1b0fc531c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 <http://xmlns.com/foaf/0.1/mbox_sha1> "65497d90352e7326099c006cf682f4c829355a34" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 <http://xmlns.com/foaf/0.1/mbox_sha1> "df855791aa2858ea3b2a9ef4fb85c774fa5f19e2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode54 <http://xmlns.com/foaf/0.1/name> "Jesse McConnell" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode55 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jimisola/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode55 <http://xmlns.com/foaf/0.1/mbox_sha1> "3e6e770c1621627f1366106bea325659fca4ec8d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode55 <http://xmlns.com/foaf/0.1/name> "Jimisola Laursen" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/joakime/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://xmlns.com/foaf/0.1/mbox_sha1> "2a49ce52498389c5abdd7528883c1d85aa5a0fd2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://xmlns.com/foaf/0.1/mbox_sha1> "38b9ecde90bcc728568d89521a298a5ef675d376" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://xmlns.com/foaf/0.1/mbox_sha1> "9f2cd4f09679bb334f88218f87751efb83a606fc" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://xmlns.com/foaf/0.1/mbox_sha1> "a2cc189f40acc04cac42dad1bd1068bc8d4305cd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://xmlns.com/foaf/0.1/mbox_sha1> "a6a62e2e2df30f055af1cdd951c830f844a0376a" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode56 <http://xmlns.com/foaf/0.1/name> "Joakim Erdfelt" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jochen/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 <http://xmlns.com/foaf/0.1/mbox_sha1> "6e5232fd6943f0eaee77ddfe94770352bb173137" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 <http://xmlns.com/foaf/0.1/mbox_sha1> "d641d30cd2d26bcb1c9f1bb5608d07b7cded5e63" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 <http://xmlns.com/foaf/0.1/mbox_sha1> "f2355ca70c83dfd5affeb3e67d172369a10641ac" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode57 <http://xmlns.com/foaf/0.1/name> "Jochen Wiedmann" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode58 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jreyes/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode58 <http://xmlns.com/foaf/0.1/mbox_sha1> "b2814712f40ddc6bf860b30a35cb94a8bb5c9d46" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode58 <http://xmlns.com/foaf/0.1/mbox_sha1> "c984a5a188fa6a1a73410bf727f8edfb599397db" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode58 <http://xmlns.com/foaf/0.1/name> "Johann Reyes" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jdcasey/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 <http://xmlns.com/foaf/0.1/mbox_sha1> "128b8c3bc9ea586166ad7be17f10ac86f6515480" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 <http://xmlns.com/foaf/0.1/mbox_sha1> "18d608d45ff3d7a9f3f77da07256a8d3833eb79e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 <http://xmlns.com/foaf/0.1/mbox_sha1> "7e07309223f1c3cd90da6c21f869e4884f04c6c1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode59 <http://xmlns.com/foaf/0.1/name> "John Casey" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode6 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jvaughan/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode6 <http://xmlns.com/foaf/0.1/mbox_sha1> "10801ea12677e8a8f105dc8e451cd0e6a33f832d" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode6 <http://xmlns.com/foaf/0.1/mbox_sha1> "ba176e3bfda45e9562c2eac03b2ad72433a6cd67" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode6 <http://xmlns.com/foaf/0.1/name> "Aron Vaughan" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jtolentino/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 <http://xmlns.com/foaf/0.1/mbox_sha1> "7d8089368fe08616f71ace7a03abc04487b9d9e3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 <http://xmlns.com/foaf/0.1/mbox_sha1> "84ad912aa086b8cefd923db913b0b9a5aa8e801c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 <http://xmlns.com/foaf/0.1/mbox_sha1> "a4473c16c970aafe38793cf8fb83af56405c8bd8" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode60 <http://xmlns.com/foaf/0.1/name> "John Tolentino" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode61 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jonnio/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode61 <http://xmlns.com/foaf/0.1/mbox_sha1> "a4720e8737e908855f4ba3235f8c9f8765255e91" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode61 <http://xmlns.com/foaf/0.1/name> "Jon Osborn" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode62 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jgonzalez/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode62 <http://xmlns.com/foaf/0.1/mbox_sha1> "0e54efd3ea20e78577313bbe867e7ffa68d7a237" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode62 <http://xmlns.com/foaf/0.1/name> "Jos\u00E9 Gonz\u00E1lez G\u00F3mez" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode63 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jponge/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode63 <http://xmlns.com/foaf/0.1/mbox_sha1> "21ccf5436ea333643810da7b5b09ac6642558cbd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode63 <http://xmlns.com/foaf/0.1/mbox_sha1> "243e05acd63cbe0b0bf67e0cd53673c2c583f845" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode63 <http://xmlns.com/foaf/0.1/name> "Julien Ponge" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode64 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jubu/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode64 <http://xmlns.com/foaf/0.1/mbox_sha1> "1c5547ba7961c97df30483292fee9e3d7ae473d7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode64 <http://xmlns.com/foaf/0.1/name> "Juraj Burian" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode65 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/jdlandsh/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode65 <http://xmlns.com/foaf/0.1/mbox_sha1> "a307a92fb605d6f196be38d62843c434f56ee0c2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode65 <http://xmlns.com/foaf/0.1/name> "Jurgen De Landsheer" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode66 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/joerg.hohwiller/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode66 <http://xmlns.com/foaf/0.1/mbox_sha1> "fd7f4fda8faea4a97e1104545fc2d6a806791026" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode66 <http://xmlns.com/foaf/0.1/name> "J\u00F6rg Hohwiller" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode67 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kenney/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode67 <http://xmlns.com/foaf/0.1/mbox_sha1> "3c4881efa3e5e8613f407fc6038633ee36eef0da" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode67 <http://xmlns.com/foaf/0.1/mbox_sha1> "db6eae6f298b15e17a86221032a8eed52096ace1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode67 <http://xmlns.com/foaf/0.1/name> "Kenney Westerhof" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode68 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/soelvpil/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode68 <http://xmlns.com/foaf/0.1/mbox_sha1> "0ea2972985df306fb8605215ae74e1b87189f0b1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode68 <http://xmlns.com/foaf/0.1/name> "Kent S\u00F8lvsten" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode69 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kohsuke/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode69 <http://xmlns.com/foaf/0.1/mbox_sha1> "4ef2e1f38eb194e96113bae63e40129d51392548" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode69 <http://xmlns.com/foaf/0.1/name> "Kohsuke Kawaguchi" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode7 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/bentmann/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode7 <http://xmlns.com/foaf/0.1/mbox_sha1> "4cd3c59142c1b1c3e30d75666f348c19e066e720" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode7 <http://xmlns.com/foaf/0.1/name> "Benjamin Bentmann" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode70 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/ko5tik/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode70 <http://xmlns.com/foaf/0.1/mbox_sha1> "931b0295f4a6e2d356f6ab4e3fd56a84fb779fd3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode70 <http://xmlns.com/foaf/0.1/mbox_sha1> "c153bb2becef000225aec1a4a763d4c507e554b6" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode70 <http://xmlns.com/foaf/0.1/name> "Konstantin Pribluda" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode71 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/krosenvold/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode71 <http://xmlns.com/foaf/0.1/mbox_sha1> "626ff83a11cc3e3b40e8be48b30b3b7d64b7d15b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode71 <http://xmlns.com/foaf/0.1/name> "Kristian Rosenvold" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode72 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kpardo/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode72 <http://xmlns.com/foaf/0.1/mbox_sha1> "abff53ffc8137be315ac27b76855e40d2e3c940b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode72 <http://xmlns.com/foaf/0.1/name> "Kristine Pardo" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode73 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/stimpy/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode73 <http://xmlns.com/foaf/0.1/mbox_sha1> "32cc49bf0ba843d88037f85a241f04d2aae78903" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode73 <http://xmlns.com/foaf/0.1/mbox_sha1> "3f96258e371e5f4d9039cff1ff040ec15b5f9beb" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode73 <http://xmlns.com/foaf/0.1/name> "Lee Thompson" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode74 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/slonopotamus/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode74 <http://xmlns.com/foaf/0.1/mbox_sha1> "bb2e0450841b130b573777599ed91c14765961c5" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode74 <http://xmlns.com/foaf/0.1/name> "Marat Radchenko" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode75 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/ctan/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode75 <http://xmlns.com/foaf/0.1/mbox_sha1> "9b3174f886489cd2a80131679070ba612ca415a6" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode75 <http://xmlns.com/foaf/0.1/name> "Maria Catherine Tan" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode76 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/oching/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode76 <http://xmlns.com/foaf/0.1/mbox_sha1> "82e0b53c15c64abedbbe916b5f9275248e4453c4" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode76 <http://xmlns.com/foaf/0.1/mbox_sha1> "8c783f6e6451bf9ea02f21662fd26052c0283160" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode76 <http://xmlns.com/foaf/0.1/name> "Maria Odea Ching" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode77 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/struberg/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode77 <http://xmlns.com/foaf/0.1/mbox_sha1> "5524f736a7e9aaff648017823af3faba06f18086" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode77 <http://xmlns.com/foaf/0.1/name> "Mark Struberg" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode78 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/mauro/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode78 <http://xmlns.com/foaf/0.1/mbox_sha1> "801f1fe8799885b710d59b0d2a832e39d45bc844" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode78 <http://xmlns.com/foaf/0.1/mbox_sha1> "83d1e738ce46bbd3cb910a6462fad2feb4df2565" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode78 <http://xmlns.com/foaf/0.1/name> "Mauro Talevi" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/mward/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 <http://xmlns.com/foaf/0.1/mbox_sha1> "0f8d3dcd10ba441e022b586d1f506d359ceb40f5" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 <http://xmlns.com/foaf/0.1/mbox_sha1> "4e50415f00c82b6118de90541c1a02a7f04f2ee3" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 <http://xmlns.com/foaf/0.1/mbox_sha1> "fb5dc263d753badef500d13758545146f2c0fd6c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode79 <http://xmlns.com/foaf/0.1/name> "Michael Ward" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode8 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/gruenebe/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode8 <http://xmlns.com/foaf/0.1/mbox_sha1> "b7643be2faa98ed918cae7c51dc704cc332c8afb" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode8 <http://xmlns.com/foaf/0.1/name> "Bernhard Gr\u00FCnewaldt" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode80 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/mkleint/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode80 <http://xmlns.com/foaf/0.1/mbox_sha1> "62b4de53478f08ddc5f024672d10a6ea9dd980a0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode80 <http://xmlns.com/foaf/0.1/mbox_sha1> "b833bc06035dbfd3882567e625f3976b7ace14a7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode80 <http://xmlns.com/foaf/0.1/name> "Milos Kleint" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/olamy/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 <http://xmlns.com/foaf/0.1/mbox_sha1> "5376dc6815e7b49a0212ca34def831eaa15cacfe" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 <http://xmlns.com/foaf/0.1/mbox_sha1> "8a9787e9127cc528b92076ebe4fc98a57a53559e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 <http://xmlns.com/foaf/0.1/mbox_sha1> "ba4ae7c5d9feece4608aae643b604664b1deb181" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode81 <http://xmlns.com/foaf/0.1/name> "Olivier Lamy" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode82 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/pgier/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode82 <http://xmlns.com/foaf/0.1/mbox_sha1> "35cc0f64e4b540f3d083c45c1c372fa24560098c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode82 <http://xmlns.com/foaf/0.1/name> "Paul Gier" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode83 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/paranoiabla/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode83 <http://xmlns.com/foaf/0.1/mbox_sha1> "2e299d3f735bacef3a1c4f551fa8f6ef0581be3e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode83 <http://xmlns.com/foaf/0.1/name> "Petar Tahchiev" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode84 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/prkolbus/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode84 <http://xmlns.com/foaf/0.1/mbox_sha1> "bc229562c5444265cdf59a8d557181700a3940cb" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode84 <http://xmlns.com/foaf/0.1/name> "Peter Kolbus" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode85 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/ptab/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode85 <http://xmlns.com/foaf/0.1/mbox_sha1> "22013b61f32c4e9f38ffedd3cd438643af26decd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode85 <http://xmlns.com/foaf/0.1/name> "Piotr Tabor" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode86 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/rahul/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode86 <http://xmlns.com/foaf/0.1/mbox_sha1> "23437d5164c5b736222b09e86984c77c46dacb39" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode86 <http://xmlns.com/foaf/0.1/mbox_sha1> "d4d42a9e460935e218057887c69a8047c2d9cb44" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode86 <http://xmlns.com/foaf/0.1/name> "Rahul Thakur" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode87 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/rafale/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode87 <http://xmlns.com/foaf/0.1/mbox_sha1> "759cf81c7cb5bb7871dfab91e47e2f294de36cc1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode87 <http://xmlns.com/foaf/0.1/mbox_sha1> "d69f56d9e3adf21a9000aef90a6201442ba5c767" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode87 <http://xmlns.com/foaf/0.1/name> "Rapha\u00EBl Pi\u00E9roni" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode88 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/rfscholte/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode88 <http://xmlns.com/foaf/0.1/mbox_sha1> "72e11c23144942aae06a88e50d92f4d0bf417163" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode88 <http://xmlns.com/foaf/0.1/name> "Robert Scholte" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode89 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/rhoover/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode89 <http://xmlns.com/foaf/0.1/mbox_sha1> "1611514f9d68917bf57891806437bc8b6ab75243" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode89 <http://xmlns.com/foaf/0.1/mbox_sha1> "8bebdb63167e54744e653710764073eaac12c82c" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode89 <http://xmlns.com/foaf/0.1/name> "Roger Hoover" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode9 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/bpaquet/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode9 <http://xmlns.com/foaf/0.1/mbox_sha1> "e666c5a64773d524dfb6d907150a2fdde1a596c2" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode9 <http://xmlns.com/foaf/0.1/name> "Bertrand Paquet" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode90 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/sanlavre/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode90 <http://xmlns.com/foaf/0.1/mbox_sha1> "03fee0bcc7011d80a94b0927c9ae60de6e3e0a05" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode90 <http://xmlns.com/foaf/0.1/name> "R\u00E9my Sanlaville" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode91 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/sheadrick/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode91 <http://xmlns.com/foaf/0.1/mbox_sha1> "c27d85f751bad76738994d08ed392d91eb28f7fa" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode91 <http://xmlns.com/foaf/0.1/name> "Sam Headrick" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/shinobu/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://xmlns.com/foaf/0.1/mbox_sha1> "0e79b8f809ea7bb2e75d9176b0409b85c07a1cc7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://xmlns.com/foaf/0.1/mbox_sha1> "19925499d76a1aa3842b35e99212a08290848ec7" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://xmlns.com/foaf/0.1/mbox_sha1> "7f3087edd01bcc6df46ad025aae5453250e17572" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://xmlns.com/foaf/0.1/mbox_sha1> "ba68cc14615fbff008cd88c95db475acb41eebac" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode92 <http://xmlns.com/foaf/0.1/name> "Shinobu Kawai" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode93 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/sgoeschl/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode93 <http://xmlns.com/foaf/0.1/mbox_sha1> "2eafa9a5de721f84ebe93d108c96b6917874098e" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode93 <http://xmlns.com/foaf/0.1/name> "Siegfried Goeschl" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode94 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/kismet/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode94 <http://xmlns.com/foaf/0.1/mbox_sha1> "557766a32fea013f6d5aea036c65c1c24605d21f" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode94 <http://xmlns.com/foaf/0.1/mbox_sha1> "6ccda93b3477ed0a278caa1749000c85f7c5f138" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode94 <http://xmlns.com/foaf/0.1/name> "Stefano Lenzi" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/stephenconnolly/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 <http://xmlns.com/foaf/0.1/mbox_sha1> "3398cf58bfc68bd20dbed084c627fb7e364b7cfd" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 <http://xmlns.com/foaf/0.1/mbox_sha1> "3da60a60f9d3e67c87edbcd38fda7c6aea5ca019" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 <http://xmlns.com/foaf/0.1/mbox_sha1> "99bb0105265ef514ec4bc5210e2c851b06d13f0b" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode95 <http://xmlns.com/foaf/0.1/name> "Stephen Connolly" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode96 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/steve_hibernate/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode96 <http://xmlns.com/foaf/0.1/mbox_sha1> "32875dfc8bcedbd97c714bd255895b9a99b65ebe" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode96 <http://xmlns.com/foaf/0.1/name> "Steve Ebersole" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode97 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/cstamas/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode97 <http://xmlns.com/foaf/0.1/mbox_sha1> "b2809fa67acd9f34bb075360102237ea593459c0" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode97 <http://xmlns.com/foaf/0.1/name> "Tamas Cservenak" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode98 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/tobrien/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode98 <http://xmlns.com/foaf/0.1/mbox_sha1> "4669d6e3987b759781a0138586b6b3b3ae5f1de1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode98 <http://xmlns.com/foaf/0.1/name> "Tim O'Brien" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode99 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xircles.codehaus.org/users/tom/foaf> .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode99 <http://xmlns.com/foaf/0.1/mbox_sha1> "67ab3e09d9dc056669627ef07e6bbf65d32af5a1" .
+_:httpx3Ax2Fx2Fx78irclesx2Ecodehausx2Eorgx2Fusersx2Fevenissex2Ffoafx23mexxbnode99 <http://xmlns.com/foaf/0.1/name> "Tom Huybrechts" .
+    
