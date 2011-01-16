@@ -47,10 +47,14 @@
   </xsl:template>
 
   <xsl:template match="result">
-    <geo:Point>
-      <xsl:apply-templates/>
+    <rdf:Description rdf:ID="point">
+        <foaf:based_near>
+                <geo:Point>
+                    <xsl:apply-templates/>
       <!--<xsl:value-of select="geometry/location/lat"/>,<xsl:value-of select="geometry/location/lng"/>-->
-    </geo:Point>
+                </geo:Point>
+            </foaf:based_near>
+        </rdf:Description>
   </xsl:template>
   
   <xsl:template match="*">
