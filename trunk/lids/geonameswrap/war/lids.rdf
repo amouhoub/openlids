@@ -5,6 +5,15 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="#findNearby">
+    <lids:lids_description>
+      <rdf:Description>
+        <lids:endpoint rdf:resource="http://km.aifb.kit.edu/services/geonameswrap/findNearby" />
+	<lids:service_entity>point</lids:service_entity>
+	<lids:input_bgp>?point &lt;http://www.w3.org/2003/01/geo/wgs84_pos#lat&gt; ?lat . ?point &lt;http://www.w3.org/2003/01/geo/wgs84_pos#long&gt; lng</lids:input_bgp>
+	<lids:output_bgp>?point &lt;http://xmlns.com/foaf/0.1/based_near&gt; ?feat</lids:output_bgp>
+	<lids:required_vars>lat,lng</lids:required_vars>
+      </rdf:Description>
+    </lids:lids_description>
     <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
 CONSTRUCT {
@@ -13,30 +22,7 @@ CONSTRUCT {
 FROM &lt;http://geowrap.openlids.org/findNearby&gt;
 WHERE {
    ?point geo:lat ?lat . ?point geo:long ?lng .
-}</lids:description>
+}    </lids:description>
   </rdf:Description>
 
-  <rdf:Description rdf:about="#findNearbyPlaceName">
-    <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
-CONSTRUCT {
-   ?point foaf:based_near ?feature .
-}
-FROM &lt;http://geowrap.openlids.org/findNearbyPlaceName&gt;
-WHERE {
-   ?point geo:lat ?lat . ?point geo:long ?lng .
-}</lids:description>
-  </rdf:Description>
-  
-    <rdf:Description rdf:about="#location">
-    <lids:description>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
-PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
-CONSTRUCT {
-   ?point owl:sameAs ?location .
-}
-FROM &lt;http://geowrap.openlids.org/loc&gt;
-WHERE {
-   ?point geo:lat ?lat . ?point geo:long ?lng .
-}</lids:description>
-  </rdf:Description>
 </rdf:RDF>

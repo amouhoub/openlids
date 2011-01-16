@@ -29,6 +29,8 @@
   <xsl:template match="totalResultsCount"/>
 
   <xsl:template match="geoname|entry|code">
+      <rdf:Description rdf:ID="point">
+          <foaf:based_near>
     <rdf:Description>
       <xsl:if test="geonameId">
 	<xsl:attribute name="rdf:about">http://sws.geonames.org/<xsl:value-of select="geonameId"/>/</xsl:attribute>
@@ -52,6 +54,8 @@
 	</foaf:page>
       </xsl:if>
       <xsl:apply-templates/>
+    </rdf:Description>
+    </foaf:based_near>
     </rdf:Description>
   </xsl:template>
 
