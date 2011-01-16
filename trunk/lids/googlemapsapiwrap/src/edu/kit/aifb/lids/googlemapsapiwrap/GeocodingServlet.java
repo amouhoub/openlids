@@ -36,6 +36,15 @@ public class GeocodingServlet extends HttpServlet {
 
 			_log.info("path: " + path);
 
+                        if(!params.containsKey("sensor")) {
+                            params.put("sensor", new String[] { "false" });
+                        }
+                        if(params.containsKey("lat") && params.containsKey("lng")) {
+                            params.put("latlng", new String[] { "" + params.get("lat")[0] + "," + params.get("lng")[0] });
+                            params.remove("lat");
+                            params.remove("lng");
+                        }
+
 			String url = Listener.generateURL("http://maps.googleapis.com/maps/api/geocode/xml", params);
 
 			URL u = new URL(url);

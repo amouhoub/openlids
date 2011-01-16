@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:lids="http://openlids.org/vocab#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="">
+    <rdfs:label>OpenLIDS Geocoding Service Description</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#addrtocoord">
+    <lids:lids_description>
+      <rdf:Description>
+        <lids:endpoint rdf:resource="http://km.aifb.kit.edu/services/googlemapsapiwrap/geocoding" />
+	<lids:service_entity>point</lids:service_entity>
+	<lids:output_bgp>?point &lt;http://xmlns.com/foaf/0.1/based_near&gt; ?feat . ?feat &lt;http://www.w3.org/2003/01/geo/wgs84_pos#lat&gt; ?lat . ?feat &lt;http://www.w3.org/2003/01/geo/wgs84_pos#long&gt; ?lng</lids:output_bgp>
+	<lids:input_bgp>?point &lt;http://openlids.org/googlemapsapiwrap/vocab#formatted_addr&gt; ?addr</lids:input_bgp>
+	<lids:required_vars>formatted_addr</lids:required_vars>
+      </rdf:Description>
+    </lids:lids_description>
+  </rdf:Description>
+
+</rdf:RDF>
