@@ -357,7 +357,7 @@ public class FacewrapServlet extends HttpServlet {
                                                 if (friend.containsKey("id") && friend.containsKey("id")) {
                                                     ch.writeStartElement("foaf:knows");
                                                     ch.writeStartElement("rdf:Description");
-                                                    ch.writeAttribute("about", "/facewrap/thing/" + friend.get("id") + "#thing");
+                                                    ch.writeAttribute("about", "/services/facewrap/thing/" + friend.get("id") + "#thing");
                                                     ch.writeStartElement("foaf:name");
                                                     ch.writeCharacters(friend.get("name").toString());
                                                     ch.writeEndElement();
@@ -484,7 +484,7 @@ public class FacewrapServlet extends HttpServlet {
             }
             ch.writeStartElement("rdf:Description");
             if (obj.containsKey("id")) {
-                ch.writeAttribute("rdf:about", "/facewrap/thing/" + obj.get("id") + "#thing");
+                ch.writeAttribute("rdf:about", "/services/facewrap/thing/" + obj.get("id") + "#thing");
             }
             for (Object key : obj.keySet()) {
                 if (key instanceof String) {
