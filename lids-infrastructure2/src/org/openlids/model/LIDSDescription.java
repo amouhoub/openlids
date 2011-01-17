@@ -10,6 +10,7 @@ import java.net.URI;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -32,7 +33,7 @@ public class LIDSDescription {
     Variable input_entity;
     Set<Node[]> input;
     Set<Node[]> output;
-    List<Variable> required_vars;
+    List<Variable> required_vars = new LinkedList<Variable>();
 
     public LIDSDescription() {
         input = new TreeSet<Node[]>(NodeComparator.NC);
@@ -156,6 +157,22 @@ public class LIDSDescription {
             }
         }
         changed = false;
+    }
+
+    public void setChanged(boolean b) {
+        this.changed = b;
+    }
+
+    public void setInputBGP(List<Node[]> ibgp) {
+       this.input.addAll(ibgp);
+    }
+
+    public void setOutputBGP(List<Node[]> obgp) {
+        this.output.addAll(obgp);
+    }
+
+    public void addRequiredVar(Variable var) {
+        this.required_vars.add(var);
     }
 
 

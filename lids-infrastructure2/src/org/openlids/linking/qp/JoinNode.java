@@ -46,18 +46,24 @@ public class JoinNode extends ReteNode {
     }
 
     public void rightActivation(Node[] item) {
-        List<Node[]> tokens = ((BetaMemory) parent).get(posBMem, item[posAMem]);
-        for (Node[] token : tokens) {
-            Node[] new_token = new Node[token.length + item.length];
-            int i = 0;
-            for(Node n : token) {
-                new_token[i++] = n;
-            }
-            for(Node n : item) {
-                new_token[i++] = n;
-            }
+        if(parent instanceof DummyNode) {
             for(ReteNode child : children) {
-                child.leftActivation(new_token);
+                child.leftActivation(item);
+            }
+        } else {
+            List<Node[]> tokens = ((BetaMemory) parent).get(posBMem, item[posAMem]);
+            for (Node[] token : tokens) {
+                Node[] new_token = new Node[token.length + item.length];
+                int i = 0;
+                for (Node n : token) {
+                    new_token[i++] = n;
+                }
+                for (Node n : item) {
+                    new_token[i++] = n;
+                }
+                for (ReteNode child : children) {
+                    child.leftActivation(new_token);
+                }
             }
         }
     }

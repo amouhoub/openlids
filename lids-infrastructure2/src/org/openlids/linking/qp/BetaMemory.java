@@ -5,6 +5,7 @@
 
 package org.openlids.linking.qp;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -20,7 +21,7 @@ public class BetaMemory extends ReteNode {
 
     Set<Node[]> tokens = new TreeSet<Node[]>(NodeComparator.NC);
 
-    public void leftActivation(Node[] token) {
+    public synchronized void leftActivation(Node[] token) {
         if (tokens.add(token)) {
             for (ReteNode child : children) {
                 child.leftActivation(token);
@@ -28,7 +29,7 @@ public class BetaMemory extends ReteNode {
         }
     }
 
-    List<Node[]> get(int posBMem, Node node) {
+    synchronized List<Node[]> get(int posBMem, Node node) {
         List<Node[]> results = new LinkedList<Node[]>();
         for(Node[] token : tokens) {
             if(token[posBMem].equals(node)) {
@@ -39,8 +40,8 @@ public class BetaMemory extends ReteNode {
     }
 
     @Override
-    public void addChild(ReteNode aThis) {
-        for(Node[] token : tokens) {
+    public synchronized void addChild(ReteNode aThis) {
+        for (Node[] token : tokens) {
             aThis.leftActivation(token);
         }
         children.add(aThis);
