@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:lids="http://openlids.org/vocab#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:og="http://ogp.me/ns#">
+<rdf:RDF xmlns:lids="http://openlids.org/vocab#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:og="http://ogp.me/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+  <rdf:Description rdf:about="#joe">
+    <foaf:name>John Doe</foaf:name>
+    <foaf:homepage rdf:resource="http://google.com/" />
+    <foaf:knows>
+      <rdf:Description>
+	<foaf:name>Jane Doe</foaf:name>
+      </rdf:Description>
+    </foaf:knows>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hans">
+    <foaf:name>Hans Mustermann</foaf:name>
+    <foaf:homepage rdf:resource="http://google.de/" />
+    <foaf:knows>
+      <rdf:Description rdf:about="#else">
+	<foaf:name>Else</foaf:name>
+      </rdf:Description>
+    </foaf:knows>
+  </rdf:Description>
+
 
   <rdf:Description rdf:about="#facewrap">
+    <lids:lids_description>
+      <rdf:Description rdf:about="#facewrapdesc">
+        <lids:endpoint rdf:resource="http://km.aifb.kit.edu/services/facewrap/thing" />
+	<lids:service_entity>thing</lids:service_entity>
+	<lids:input_bgp>?thing &lt;http://ogp.me/ns#id&gt; ?facebookid</lids:input_bgp>
+	<lids:output_bgp>?thing &lt;http://xmlns.com/foaf/0.1/name&gt; ?name</lids:output_bgp>
+	<lids:required_vars>facebookid</lids:required_vars>
+      </rdf:Description>
+    </lids:lids_description>
     <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
       PREFIX og: &lt;http://ogp.me/ns#&gt;
       CONSTRUCT { ?thing foaf:name ?name }
@@ -9,6 +39,19 @@
       WHERE { ?thing og:id ?facebookid }
     </lids:description>
   </rdf:Description>
+
+  <rdf:Description rdf:about="#facebookusersearchwrap">
+    <lids:lids_description>
+      <rdf:Description>
+        <lids:endpoint rdf:resource="http://km.aifb.kit.edu/services/facewrap/users" />
+	<lids:service_entity>list</lids:service_entity>
+	<lids:input_bgp>?user &lt;http://xmlns.com/foaf/0.1/name&gt; ?q</lids:input_bgp>
+	<lids:output_bgp>?list &lt;http://xmlns.com/foaf/0.1/topic&gt; ?user . ?user &lt;http://ogp.me/ns#id&gt; ?facebookid</lids:output_bgp>
+	<lids:required_vars>q</lids:required_vars>
+      </rdf:Description>
+    </lids:lids_description>
+  </rdf:Description>
+
   <rdf:Description rdf:about="#uni1">
     <og:id>140105122708</og:id>
   </rdf:Description>

@@ -43,7 +43,7 @@ class AlphaMemory {
 
     void addChild(ReteNode aThis) {
         for(Node[] triple : triples) {
-            aThis.leftActivation(triple);
+            ((JoinNode) aThis).rightActivation(triple);
         }
         successors.add(aThis);
     }

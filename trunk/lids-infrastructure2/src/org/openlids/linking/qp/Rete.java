@@ -5,13 +5,9 @@
 
 package org.openlids.linking.qp;
 
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashSet;
+import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 import org.semanticweb.yars.nx.Node;
@@ -19,8 +15,7 @@ import org.semanticweb.yars.nx.NodeComparator;
 import org.semanticweb.yars.nx.Nodes;
 import org.semanticweb.yars.nx.Resource;
 import org.semanticweb.yars.nx.Variable;
-import org.semanticweb.yars.nx.parser.Callback;
-import org.semanticweb.yars2.rdfxml.RDFXMLParser;
+
 
 /*
  * @@@@ Manager does never end
@@ -36,68 +31,11 @@ import org.semanticweb.yars2.rdfxml.RDFXMLParser;
  */
 
 
-
 /**
  *
  * @author ssp
  */
 public class Rete {
-
-   
-
-    public static void main(String args[]) {
-        final Rete rete = new Rete();
-        final Manager manager = new Manager(rete);
-
-  
-        List<Node[]> lidsDescRule = new LinkedList<Node[]>();
-//        lidsDescRule.add(new Node[] { new Variable("x"), new Resource("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new Resource("http://openlids.org/vocab#" ???));
-        lidsDescRule.add(new Node[]{new Variable("x"), new Resource("http://openlids.org/vocab#description"), new Variable("desc")});
-        rete.addProduction(lidsDescRule, new LIDSPNode(rete, manager));
-
-//        Callback cb = new Callback() {
-//            @Override
-//            public void endDocument() {
-//            }
-//            @Override
-//            public void processStatement(Node[] nx) {
-//                rete.addTriple(new Node[] { nx[0], nx[1], nx[2] });
-//            }
-//            @Override
-//            public void startDocument() {
-//            }
-//        };
-//
-//        String fname = "/Users/ssp/Documents/w/Code/openlids/lids-infrastructure2/test.rdf";
-//        try {
-//            FileInputStream is = new FileInputStream(fname);
-//            RDFXMLParser rdfxml = new RDFXMLParser(is, true, true, "file://" + fname, cb);
-//
-//        } catch (Exception e) {
-//            System.err.println("Error during parsing: " + fname);
-//        }
-
-
-       manager.addURI("file:///Users/ssp/Documents/w/Code/openlids/lids-infrastructure2/test.rdf");
-        
-        List<Node[]> foafNRule = new LinkedList<Node[]>();
-        foafNRule.add(new Node[]{new Variable("x"), new Resource("http://xmlns.com/foaf/0.1/name"), new Variable("name")});
-        rete.addProduction(foafNRule, new PNode() {
-            @Override
-            public void leftActivation(Node[] token) {
-                System.out.println("Foaf: " + Nodes.toN3(token));
-            }
-
-            @Override
-            public void addChild(ReteNode aThis) {
-                System.out.println("Adding chilld: " + aThis + " to PNode " + this);
-            }
-        });
-
-
-
-        System.out.println("OKAY");
-    }
 
     AlphaNetwork anet = new AlphaNetwork();
     Set<Node[]> triples = new TreeSet<Node[]>(NodeComparator.NC);
@@ -175,20 +113,22 @@ public class Rete {
             } else {
                 int j = 0;
                 for (Node f : fields) {
-                    if (f == pattern[0]) {
-                        join.posAMem = 0;
-                        join.posBMem = j;
-                        break;
-                    }
-                    if (f == pattern[1]) {
-                        join.posAMem = 1;
-                        join.posBMem = j;
-                        break;
-                    }
-                    if (f == pattern[2]) {
-                        join.posAMem = 2;
-                        join.posBMem = j;
-                        break;
+                    if(f instanceof Variable) {
+                        if (f.equals(pattern[0])) {
+                            join.posAMem = 0;
+                            join.posBMem = j;
+                            break;
+                        }
+                        if (f.equals(pattern[1])) {
+                            join.posAMem = 1;
+                            join.posBMem = j;
+                            break;
+                        }
+                        if (f.equals(pattern[2])) {
+                            join.posAMem = 2;
+                            join.posBMem = j;
+                            break;
+                        }
                     }
                     j++;
                 }
@@ -204,9 +144,10 @@ public class Rete {
             current = bmem;
             varpos += 3;
         }
-    
-        current.addChild(pnode);
+        
         pnode.setFields(fields);
+        current.addChild(pnode);
+
         // for each condition get amem and join
 
 
