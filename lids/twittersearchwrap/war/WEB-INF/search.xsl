@@ -35,7 +35,7 @@
           </xsl:element> 
         </xsl:if>
         <xsl:element name="foaf:maker"> 
-            <xsl:attribute name="rdf:about">http://km.aifb.kit.edu/services/twitterwrap/users/show?screen_name=<xsl:value-of select="substring(a:author/a:uri, 20)"/>#id</xsl:attribute>
+            <xsl:attribute name="rdf:resource">http://km.aifb.kit.edu/services/twitterwrap/users/show?screen_name=<xsl:value-of select="substring(a:author/a:uri, 20)"/>#id</xsl:attribute>
         </xsl:element> 
         <xsl:element name="dc:description"> 
           <xsl:value-of select="a:title"/>
