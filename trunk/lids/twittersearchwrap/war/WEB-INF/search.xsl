@@ -30,8 +30,11 @@
           <xsl:value-of select="a:updated"/>
         </xsl:element>
         <xsl:if test="twitter:geo != ''">
-          <xsl:element name="geo:point"> 
-            <xsl:value-of select="twitter:geo/georss:point"/>
+          <xsl:element name="geo:lat"> 
+            <xsl:value-of select="substring-before(twitter:geo/georss:point,' ')"/>
+          </xsl:element> 
+          <xsl:element name="geo:long"> 
+            <xsl:value-of select="substring-after(twitter:geo/georss:point,' ')"/>
           </xsl:element> 
         </xsl:if>
         <xsl:element name="foaf:maker"> 
