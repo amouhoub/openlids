@@ -1,15 +1,19 @@
 package com.ontologycentral.twittersearchwrap;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.Reader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,6 +30,14 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+
+import com.google.appengine.api.urlfetch.FetchOptions;
+import com.google.appengine.api.urlfetch.FetchOptions.Builder;
+import com.google.appengine.api.urlfetch.HTTPMethod;
+import com.google.appengine.api.urlfetch.HTTPRequest;
+import com.google.appengine.api.urlfetch.HTTPResponse;
+import com.google.appengine.api.urlfetch.URLFetchService;
+import com.google.appengine.api.urlfetch.URLFetchServiceFactory;
 
 @SuppressWarnings("serial")
 public class SearchServlet extends HttpServlet {
@@ -100,25 +112,77 @@ public class SearchServlet extends HttpServlet {
 //					cache.put(u, str);
 //				}
 				
-				
 				// WIKIFY Search feed data
 
 				String[] split = str.split("</title>");
-				
 				StringBuilder tweets = new StringBuilder();
 				
 				for(int i = 1; i<split.length-1; i++){
 					
 					String[] splitsplit = split[i].split("<title>");
-					
 					tweets.append(" " + splitsplit[1]);
 					
+				}
+				
+				// If extern=true get content from referenced websites as string and use in wikifier
+				String extern = req.getParameter("extern");
+				if(extern==null){
+					extern = "false";
+				}
+				
+				StringBuffer externalWebsites = new StringBuffer();
+				
+				if(extern.equals("true")){
+					
+					// Get HTTP-links
+					String[] splitContent = str.split("</content>");
+					StringBuilder tweetsHTML = new StringBuilder();
+					
+					for(int i = 1; i<splitContent.length-1; i++){
+						String[] splitsplitContent = splitContent[i].split("<content type=\"html\">");
+						tweetsHTML.append(" " + splitsplitContent[1]);	
+					}
+					
+					String[] tweetsHTMLSplit = tweetsHTML.toString().split("&lt;a href=&quot;");
+					String[] urls = new String[tweetsHTMLSplit.length-1];
+					
+					for(int i = 1; i<tweetsHTMLSplit.length; i++){
+					    urls[i-1] = tweetsHTMLSplit[i].toString().split("&quot;&gt;")[0];
+					}
+					
+					// Get content of linked sites
+					for (int i = 0; i < urls.length; i++) {
+						
+						// Dont use internal twitter links containing javascript which cannot be handled
+						if(!urls[i].contains(";")){
+							HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.POST, Builder.allowTruncate());
+							URLFetchService service = URLFetchServiceFactory.getURLFetchService();
+							HTTPResponse response = service.fetch(request);
+							byte[] content = response.getContent();
+							
+							if (response.getResponseCode() == 200){
+								ByteArrayInputStream bais = new ByteArrayInputStream(content);
+								BufferedReader reader = new BufferedReader(new InputStreamReader(bais, "utf-8"));
+
+								String lines = null;
+								while ((lines = reader.readLine()) != null) {
+									//System.out.println(lines);
+									externalWebsites.append(lines.toString().replaceAll("\\<.*?\\>", ""));
+								}
+
+							    
+							}
+						}
+					}
+					tweets.append(externalWebsites);
 				}
 
 				Set<String> wikifyResult = Wikify.startWikify(tweets.toString());
 				
+				// TEST
 				System.out.println(wikifyResult);
-				
+				//
+			
 				// Append DBPedia links to atom feed to include in transformation
 				
 				Iterator it = wikifyResult.iterator();
