@@ -32,8 +32,8 @@ public class Wikify {
 	    Wikifier w = new Wikifier(uri, "david's bot");
 	    
 	    input = cleanTweets(input);
-		System.out.println("WIKIFIER Input:");
-		System.out.println(input);
+		//System.out.println("WIKIFIER Input:");
+		//System.out.println(input);
 	    Node[] nx = new Node[] { DC.TITLE, new Literal(input) } ;
 			               
 		Set<Node[]> set = new HashSet<Node[]>();
