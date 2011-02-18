@@ -11,10 +11,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.StringTokenizer;
 
 import javax.cache.Cache;
 import javax.servlet.ServletContext;
@@ -27,6 +30,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import com.google.appengine.api.urlfetch.FetchOptions.Builder;
+import com.google.appengine.api.urlfetch.HTTPHeader;
 import com.google.appengine.api.urlfetch.HTTPMethod;
 import com.google.appengine.api.urlfetch.HTTPRequest;
 import com.google.appengine.api.urlfetch.HTTPResponse;
@@ -50,16 +54,20 @@ public class SearchServlet extends HttpServlet {
 
 		try {
 			String query = req.getParameter("q");
+			String lang = req.getParameter("lang");
+			if(lang==null){
+				lang="en";
+			}
 //			String id = req.getRequestURI();
 //			id = id.substring(id.lastIndexOf("/")+1);
 			
 			query = URLEncoder.encode(query, "utf-8");
 
-			System.out.println("SEARCH-QUERY: " + query);
+			System.out.println("SEARCH-QUERY:   " + query);
 
-			URL u = new URL("http://search.twitter.com/search.atom?lang=en&q=" + query + "&rpp=100");
+			URL u = new URL("http://search.twitter.com/search.atom?q=" + query + "&rpp=100");
 			
-			System.out.println("SEARCH-URL:   " + u);
+			System.out.println("SEARCH-URL:     " + u);
 			
 			try {
 				if (cache != null && cache.containsKey(u)) {
@@ -153,13 +161,18 @@ public class SearchServlet extends HttpServlet {
 							HTTPResponse response = null;
 							Boolean timeout = false;
 							byte[] content = null;
+							String encoded = "utf-8";
 							
 							try {
 								HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.GET, Builder.allowTruncate());
 								URLFetchService service = URLFetchServiceFactory.getURLFetchService();
 								response = service.fetch(request);
+								List<HTTPHeader> responseHeaders = response.getHeaders();
+								HTTPHeader responseHeader = responseHeaders.get(7);
+								encoded = responseHeader.getValue().split("charset=")[1];
 								content = response.getContent();
 							} catch (Exception e) {
+								System.out.println("TIMEOUT connecting to " + urls[i]);
 								timeout = true;
 							}
 							
@@ -167,27 +180,32 @@ public class SearchServlet extends HttpServlet {
 							if (response.getResponseCode() == 200){
 								System.out.println("EXTERNAL URL: " + urls[i]);
 								ByteArrayInputStream bais = new ByteArrayInputStream(content);
-								BufferedReader reader = new BufferedReader(new InputStreamReader(bais, "utf-8"));
-
+								BufferedReader reader = new BufferedReader(new InputStreamReader(bais, encoded));								
+								
+								List<String> words = new ArrayList<String>();
 								String lines = null;
-								int count = 0;
 								Boolean contained1 = false;
 								Boolean contained2 = false;
-								while ((lines = reader.readLine()) != null && count<100) {
-									// Only information contained in <body> tags
-									if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
-										contained2 = true;
+								while ((lines = reader.readLine()) != null && words.size()<1000) {
+								StringTokenizer st = new StringTokenizer(lines.toString().replaceAll("\\<.*?\\>", ""));
+								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
+									contained2 = true;
+								}
+								if(lines.toLowerCase().contains(("<body"))){
+									contained1 = true;
+								}
+								if(contained1 && !contained2){
+									while (st.hasMoreTokens() && words.size()<1000) {
+										  String tok = st.nextToken();
+										  words.add(tok);
 									}
-									if(lines.toLowerCase().contains(("<body"))){
-										contained1 = true;
-									}
-									if(contained1 && !contained2){
-										externalWebsites.append(lines.toString().replaceAll("\\<.*?\\>", ""));
-										externalWebsites.append(" ");
-										// System.out.println(lines);
-										// Only read 100 rows maximum
-										count = count+1;
-									}
+								}
+								for (int j = 0; j < words.size(); j++) {
+									externalWebsites.append(words.get(j));
+									externalWebsites.append(" ");
+								}
+									
+								
 								}
 
 							    
@@ -198,7 +216,7 @@ public class SearchServlet extends HttpServlet {
 					// Remove multiple whitespaces and add to string containing tweets
 					tweets.append(externalWebsites.toString().replaceAll("\\s+", " "));
 				}
-				Set<String> wikifyResult = Wikify.startWikify(tweets.toString());
+				Set<String> wikifyResult = Wikify.startWikify(tweets.toString(),lang);
 				System.out.println("WIKIFY RESULTS:");
 				System.out.println(wikifyResult);
 			
