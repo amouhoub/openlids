@@ -12,7 +12,7 @@ public class Wikify {
 	
 	public static void main(String[] args){
 		
-		startWikify(args[0]);
+		startWikify(args[0], "en");
 		
 	};
 	
@@ -22,9 +22,13 @@ public class Wikify {
        return input;
 	}
 
-	public static Set<String> startWikify (String input){
-		
+	public static Set<String> startWikify (String input, String lang){
 		String uri = "http://km.aifb.kit.edu/services/wpmservlet-en/web/service";
+		
+		if(lang.equals("de")){
+			uri = "http://km.aifb.kit.edu/services/wpmservlet-de/web/service";
+		}
+		
 	    Wikifier w = new Wikifier(uri, "david's bot");
 	    
 	    input = cleanTweets(input);
