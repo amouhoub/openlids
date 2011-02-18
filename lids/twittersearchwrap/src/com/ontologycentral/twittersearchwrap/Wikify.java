@@ -18,6 +18,7 @@ public class Wikify {
 	
 	public static String cleanTweets (String input){
 	   input = input.replace("http://", "");
+	   input = input.replaceAll("<.*>", "");
        return input;
 	}
 
