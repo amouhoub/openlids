@@ -2,18 +2,13 @@ package com.ontologycentral.twittersearchwrap;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.Reader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -31,7 +26,6 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import com.google.appengine.api.urlfetch.FetchOptions;
 import com.google.appengine.api.urlfetch.FetchOptions.Builder;
 import com.google.appengine.api.urlfetch.HTTPMethod;
 import com.google.appengine.api.urlfetch.HTTPRequest;
@@ -61,11 +55,11 @@ public class SearchServlet extends HttpServlet {
 			
 			query = URLEncoder.encode(query, "utf-8");
 
-			System.out.println(query);
+			System.out.println("SEARCH-QUERY: " + query);
 
 			URL u = new URL("http://search.twitter.com/search.atom?lang=en&q=" + query + "&rpp=100");
 			
-			System.out.println(u);
+			System.out.println("SEARCH-URL:   " + u);
 			
 			try {
 				if (cache != null && cache.containsKey(u)) {
@@ -154,34 +148,59 @@ public class SearchServlet extends HttpServlet {
 					for (int i = 0; i < urls.length; i++) {
 						
 						// Dont use internal twitter links containing javascript which cannot be handled
-						if(!urls[i].contains(";")){
-							HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.POST, Builder.allowTruncate());
-							URLFetchService service = URLFetchServiceFactory.getURLFetchService();
-							HTTPResponse response = service.fetch(request);
-							byte[] content = response.getContent();
+						if(!urls[i].contains("twitter")){
 							
+							HTTPResponse response = null;
+							Boolean timeout = false;
+							byte[] content = null;
+							
+							try {
+								HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.GET, Builder.allowTruncate());
+								URLFetchService service = URLFetchServiceFactory.getURLFetchService();
+								response = service.fetch(request);
+								content = response.getContent();
+							} catch (Exception e) {
+								timeout = true;
+							}
+							
+							if (!timeout && response!=null && content!=null){
 							if (response.getResponseCode() == 200){
+								System.out.println("EXTERNAL URL: " + urls[i]);
 								ByteArrayInputStream bais = new ByteArrayInputStream(content);
 								BufferedReader reader = new BufferedReader(new InputStreamReader(bais, "utf-8"));
 
 								String lines = null;
-								while ((lines = reader.readLine()) != null) {
-									//System.out.println(lines);
-									externalWebsites.append(lines.toString().replaceAll("\\<.*?\\>", ""));
+								int count = 0;
+								Boolean contained1 = false;
+								Boolean contained2 = false;
+								while ((lines = reader.readLine()) != null && count<100) {
+									// Only information contained in <body> tags
+									if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
+										contained2 = true;
+									}
+									if(lines.toLowerCase().contains(("<body"))){
+										contained1 = true;
+									}
+									if(contained1 && !contained2){
+										externalWebsites.append(lines.toString().replaceAll("\\<.*?\\>", ""));
+										externalWebsites.append(" ");
+										// System.out.println(lines);
+										// Only read 100 rows maximum
+										count = count+1;
+									}
 								}
 
 							    
 							}
+							}
 						}
 					}
-					tweets.append(externalWebsites);
+					// Remove multiple whitespaces and add to string containing tweets
+					tweets.append(externalWebsites.toString().replaceAll("\\s+", " "));
 				}
-
 				Set<String> wikifyResult = Wikify.startWikify(tweets.toString());
-				
-				// TEST
+				System.out.println("WIKIFY RESULTS:");
 				System.out.println(wikifyResult);
-				//
 			
 				// Append DBPedia links to atom feed to include in transformation
 				
