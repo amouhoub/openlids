@@ -172,8 +172,8 @@ public class SearchServlet extends HttpServlet {
 								encoded = responseHeader.getValue().split("charset=")[1];
 								content = response.getContent();
 							} catch (Exception e) {
-								System.out.println("ERROR connecting to " + urls[i]);
-								timeout = true;
+//								System.out.println("ERROR connecting to " + urls[i]);
+//								timeout = true;
 							}
 							
 							if (!timeout && response!=null && content!=null){
