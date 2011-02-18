@@ -186,7 +186,7 @@ public class SearchServlet extends HttpServlet {
 								String lines = null;
 								Boolean contained1 = false;
 								Boolean contained2 = false;
-								while ((lines = reader.readLine()) != null && words.size()<1000) {
+								while ((lines = reader.readLine()) != null && words.size()<50) {
 								StringTokenizer st = new StringTokenizer(lines.toString().replaceAll("\\<.*?\\>", ""));
 								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
 									contained2 = true;
@@ -195,7 +195,7 @@ public class SearchServlet extends HttpServlet {
 									contained1 = true;
 								}
 								if(contained1 && !contained2){
-									while (st.hasMoreTokens() && words.size()<1000) {
+									while (st.hasMoreTokens() && words.size()<50) {
 										  String tok = st.nextToken();
 										  words.add(tok);
 									}
