@@ -1,4 +1,5 @@
-\documentclass[a4paper]{article}
+\documentclass{llncs}
+%\documentclass[a4paper]{article}
 
 \usepackage{fullpage}
 \usepackage{setspace}
@@ -13,16 +14,21 @@
 
 \onehalfspacing
 
-\newtheorem{definition}{Definition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{example}{Example}
+%\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{example}{Example}
 \newtheorem{query}{Query}
 
 \newcommand{\nop}[1]{}
 
 \title{Mapping Microblogging Posts to Encyclopedia Articles}
-\author{David M\"{u}ller \and Uta L\"{o}sch \and Andreas Harth}
-
+\author{Uta L\"{o}sch \and David M\"{u}ller \and Andreas Harth}
+\institute{
+	Karlsruhe Institute of Technology (KIT), D-76131 Karlsruhe, Germany\\ 
+	\email{uta.loesch@kit.edu},\\
+	\email{david.mueller@student.kit.edu},\\
+	\email{harth@kit.edu}
+}
 \begin{document}
 
 \maketitle
@@ -33,6 +39,12 @@ We describe a method to map Twitter posts to Wikipedia articles.
 
 \section{Introduction}
 
+Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted to 140 characters. Twitter has a total of about 190 million of users who produce 65 million tweets a day. Thus, Twitter represents a huge data source on the web.
+
+Twitter offers the possibility to search for tweets containing a specific term or hash tags. This search returns a fixed number of most recent tweets containing the search term. However, it is hard to grasp the context of these tweets and to get further information on the topic that was searched for. As ach single tweet is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. To facilitate this 
+
+Why need Wikipedia entities?
+
 Need context/signal to feed wikifier \cite{key:wikifier}.
 
 \section{Method Overview}
@@ -41,7 +53,7 @@ System Architecture shown in Figure \ref{fig:arch}.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=.6\linewidth]{architecture.eps}
+  \includegraphics[width=.6\linewidth]{architecture}
   \caption{System architecture}
   \label{fig:arch}
 \end{figure}
@@ -62,6 +74,15 @@ Karlsruhe\\
 \caption{Search terms}\label{tbl:terms}
 \end{table}
 
+\begin{definition}[Stability]
+
+\end{definition}
+
+\section{Related Work}
+
+Bringing Semantic Web technologies and Semantic Web technologies together, has been proposed before.
+
+Passant et al. \cite{key:smob} have proposed a data model for making twitter data available on the Semantic Web. They propose a data model which allows for the association of URIs with users, microblogs and microposts. To this end, SIOC and FOAF vocabularies are used and extended. Specifically, the new concepts \emph{Microblog} and {MicroBlogPost} are introduced. Additionally, they propose the use of so-called semantic hash tags. The idea is to use URIs as hash tags (e.g. \emph{\#geo:Paris\_France}). It becomes thus possible to link microposts to entities in the Linked Open Data cloud.
 \section{Conclusion}
 
 
