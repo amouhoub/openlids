@@ -2,10 +2,12 @@ package com.ontologycentral.twittersearchwrap;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.Reader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -28,6 +30,13 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+
+import org.apache.xerces.xni.parser.XMLDocumentFilter;
+import org.apache.xerces.xni.parser.XMLInputSource;
+import org.apache.xerces.xni.parser.XMLParserConfiguration;
+import org.cyberneko.html.HTMLConfiguration;
+import org.cyberneko.html.filters.ElementRemover;
+import org.cyberneko.html.filters.Writer;
 
 import com.google.appengine.api.urlfetch.FetchOptions.Builder;
 import com.google.appengine.api.urlfetch.HTTPHeader;
@@ -161,7 +170,7 @@ public class SearchServlet extends HttpServlet {
 							HTTPResponse response = null;
 							Boolean timeout = false;
 							byte[] content = null;
-							String encoded = "utf-8";
+							String encoded = "UTF-8";
 							
 							try {
 								HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.GET, Builder.allowTruncate());
@@ -181,32 +190,46 @@ public class SearchServlet extends HttpServlet {
 								timeout = true;
 							}
 							
+							
+							// create element remover filter
+							ElementRemover remover;
+							remover = new ElementRemover();
+							remover.removeElement("script");
+							remover.removeElement("link");
+							remover.removeElement("style");
+							remover.removeElement("CDATA");
+							remover.removeElement("<!--");
+							remover.removeElement("meta");
+							
 							if (!timeout && response!=null && content!=null){
 							if (response.getResponseCode() == 200){
 								System.out.println("EXTERNAL URL: " + urls[i]);
 								ByteArrayInputStream bais = new ByteArrayInputStream(content);
-								BufferedReader reader = new BufferedReader(new InputStreamReader(bais, encoded));								
+								BufferedReader firstreader = new BufferedReader(new InputStreamReader(bais, encoded));	
+								String readerstring = getHtmlFilteredString(firstreader);
+								BufferedReader reader = new BufferedReader(new StringReader(readerstring));
 								
 								List<String> words = new ArrayList<String>();
 								String lines = null;
-								Boolean contained1 = false;
-								Boolean contained2 = false;
-								while ((lines = reader.readLine()) != null && words.size()<100) {
+//								Boolean contained1 = false;
+//								Boolean contained2 = false;
+								while ((lines = reader.readLine()) != null && words.size()<50) {
 								String thisline = lines.replaceAll("\\<.*?\\>", "");
-								thisline = lines.replaceAll("<.*?>", "");
+								thisline = thisline.replaceAll("<.*?>", "");
+//								thisline = thisline.replaceAll("(.*?)", "");
 								StringTokenizer st = new StringTokenizer(thisline);
-								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
-									contained2 = true;
-								}
-								if(lines.toLowerCase().contains(("<body"))){
-									contained1 = true;
-								}
-								if(contained1 && !contained2){
-									while (st.hasMoreTokens() && words.size()<100) {
+//								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
+//									contained2 = true;
+//								}
+//								if(lines.toLowerCase().contains(("<body"))){
+//									contained1 = true;
+//								}
+//								if(contained1 && !contained2){
+									while (st.hasMoreTokens() && words.size()<50) {
 										  String tok = st.nextToken();
 										  words.add(tok);
 									}
-								}
+//								}
 								for (int j = 0; j < words.size(); j++) {
 									externalWebsites.append(words.get(j));
 									externalWebsites.append(" ");
@@ -294,4 +317,44 @@ public class SearchServlet extends HttpServlet {
 
 		return sb.toString();
 	}
+
+	private String getHtmlFilteredString(Reader reader)
+	{
+	 
+	  // create element remover filter
+	  ElementRemover remover;
+	  remover = new ElementRemover();
+	  remover.removeElement("script");
+	  remover.removeElement("link");
+	  remover.removeElement("style");
+	  remover.removeElement("CDATA");
+	  remover.removeElement("<!--");
+	  remover.removeElement("meta");
+	 
+	  OutputStream stream = new ByteArrayOutputStream();
+	
+	  try
+	  {
+	    String encoding = "ISO-8859-1";
+	    XMLDocumentFilter writer = new Writer(stream, encoding);
+	 
+	    XMLDocumentFilter[] filters = {remover, writer};
+	 
+	    XMLInputSource source = new XMLInputSource(null, null, null, reader, null);
+	 
+	    XMLParserConfiguration parser = new HTMLConfiguration();
+	    parser.setProperty("http://cyberneko.org/html/properties/filters", filters);
+	 
+	    parser.parse(source);
+	 
+	  } catch (Exception e) {
+	 
+	    e.printStackTrace();
+	  }
+	 
+	  String content = stream.toString().trim();
+	 
+	  return content;
+	}
+	
 }
