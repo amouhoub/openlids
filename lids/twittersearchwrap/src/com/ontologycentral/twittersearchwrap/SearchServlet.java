@@ -215,8 +215,9 @@ public class SearchServlet extends HttpServlet {
 //								Boolean contained2 = false;
 								while ((lines = reader.readLine()) != null && words.size()<50) {
 								String thisline = lines.replaceAll("\\<.*?\\>", "");
-								thisline = thisline.replaceAll("<.*?>", "");
-//								thisline = thisline.replaceAll("(.*?)", "");
+								thisline = thisline.replaceAll("\\(.*?\\)", "");
+								thisline = thisline.replaceAll("\\{.*?\\}", "");
+								thisline = thisline.replaceAll("\\s+", " ");
 								StringTokenizer st = new StringTokenizer(thisline);
 //								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
 //									contained2 = true;
@@ -243,9 +244,8 @@ public class SearchServlet extends HttpServlet {
 							}
 						}
 					}
-					// Remove multiple whitespaces and add to string containing tweets
-					System.out.println(externalWebsites.toString().replaceAll("\\s+", " "));
-					tweets.append(externalWebsites.toString().replaceAll("\\s+", " "));
+					// Append external content to tweet content
+					tweets.append(externalWebsites.toString());
 				}
 				Set<String> wikifyResult = Wikify.startWikify(tweets.toString(),lang);
 				System.out.println("WIKIFY RESULTS:");
