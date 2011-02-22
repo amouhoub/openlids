@@ -57,8 +57,8 @@ The rest of this paper is organized as follows: in Section~\ref{sect:method} we 
 The implemented
 system\footnote{\url{http://km.aifb.kit.edu/services/twittersearchwrap/}}
 (further called Twitter Search Wrapper) is called with a query and returns a
-rdf\footnote{\url{http://www.w3.org/RDF/}} document describing the most recent
-twitter posts (further called tweets) matching the given query. The returned rdf
+rdf\footnote{\url{http://www.w3.org/RDF/}} document semantically describing the
+most recent twitter posts (further called tweets) matching the given query. The returned rdf
 document furthermore contains a mapping of the query to Encyclopedia articles
 which based on the content published by users that most recently used the query
 in their posts maps to articles best describing the content of tweets related to
@@ -84,8 +84,8 @@ their content, publishing date, authors and optionally a geographic location.
 
 In a second (optional) step hyperlinks posted in tweets of the fetched
 feed are followed, content of the referenced website's body is fetched and
-processed to the Wrapper. This option is triggered calling the Wrapper
-service with attribute extern=true.
+processed to the Wrapper. This option is triggered calling the Twitter Search
+Wrapper with attribute extern=true.
 
 The Wrapper now calls the Wikifier \cite{key:wikifier} service. Content of the
 tweets that matched the search query and optional content of their referenced websites is merged
@@ -95,7 +95,7 @@ Wikipedia. Optionally the wrapper can be initially called with lang=de to
 trigger mapping to the German Wikipedia.
 
 The list of matching Wikipedia articles is returned to the Wrapper. The Wrapper
-generates a rdf document using popular ontologies (foaf, dublincore,\ldots) to
+generates a rdf document using popular ontologies (foaf, dublincore, geo) to
 describe the data related to the returned tweets and their content including 'rdfs:seeAlso' links to
 DBPedia\footnote{\url{http://dbpedia.org/About}} URIs (converted output of the
 Wikifier) describing the documents content.
