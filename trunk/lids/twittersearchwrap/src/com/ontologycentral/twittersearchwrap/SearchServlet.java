@@ -167,13 +167,18 @@ public class SearchServlet extends HttpServlet {
 								HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.GET, Builder.allowTruncate());
 								URLFetchService service = URLFetchServiceFactory.getURLFetchService();
 								response = service.fetch(request);
-								List<HTTPHeader> responseHeaders = response.getHeaders();
-								HTTPHeader responseHeader = responseHeaders.get(7);
-								encoded = responseHeader.getValue().split("charset=")[1];
+								try {
+									List<HTTPHeader> responseHeaders = response.getHeaders();
+									HTTPHeader responseHeader = responseHeaders.get(7);
+									encoded = responseHeader.getValue().split("charset=")[1];
+								} catch (Exception e) {
+//									System.out.println("CHARSET not retrievable at " + urls[i]);
+//									System.out.println("CHARSET assuming utf-8");
+								}
 								content = response.getContent();
 							} catch (Exception e) {
-//								System.out.println("ERROR connecting to " + urls[i]);
-//								timeout = true;
+								System.out.println("ERROR connecting to " + urls[i]);
+								timeout = true;
 							}
 							
 							if (!timeout && response!=null && content!=null){
@@ -186,8 +191,10 @@ public class SearchServlet extends HttpServlet {
 								String lines = null;
 								Boolean contained1 = false;
 								Boolean contained2 = false;
-								while ((lines = reader.readLine()) != null && words.size()<50) {
-								StringTokenizer st = new StringTokenizer(lines.toString().replaceAll("\\<.*?\\>", ""));
+								while ((lines = reader.readLine()) != null && words.size()<100) {
+								String thisline = lines.replaceAll("\\<.*?\\>", "");
+								thisline = lines.replaceAll("<.*?>", "");
+								StringTokenizer st = new StringTokenizer(thisline);
 								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
 									contained2 = true;
 								}
@@ -195,7 +202,7 @@ public class SearchServlet extends HttpServlet {
 									contained1 = true;
 								}
 								if(contained1 && !contained2){
-									while (st.hasMoreTokens() && words.size()<50) {
+									while (st.hasMoreTokens() && words.size()<100) {
 										  String tok = st.nextToken();
 										  words.add(tok);
 									}
@@ -214,6 +221,7 @@ public class SearchServlet extends HttpServlet {
 						}
 					}
 					// Remove multiple whitespaces and add to string containing tweets
+					System.out.println(externalWebsites.toString().replaceAll("\\s+", " "));
 					tweets.append(externalWebsites.toString().replaceAll("\\s+", " "));
 				}
 				Set<String> wikifyResult = Wikify.startWikify(tweets.toString(),lang);
@@ -227,7 +235,11 @@ public class SearchServlet extends HttpServlet {
 				while(it.hasNext()){
 					seeAlso.append("<seeAlso>");
 					seeAlso.append("<link>");
-					seeAlso.append("http://dbpedia.org/resource/");
+					if(lang.equals("de")){
+						seeAlso.append("http://de.dbpedia.org/resource/");
+					}else{
+						seeAlso.append("http://dbpedia.org/resource/");
+					}
 					seeAlso.append(it.next());
 					seeAlso.append("</link>");
 					seeAlso.append("</seeAlso>");
