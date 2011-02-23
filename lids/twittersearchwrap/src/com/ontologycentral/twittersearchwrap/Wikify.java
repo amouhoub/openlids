@@ -18,7 +18,13 @@ public class Wikify {
 	
 	public static String cleanTweets (String input){
 	   input = input.replaceAll("http://.*?\\s", "");
-	   //input = input.replaceAll("<.*?>", "");
+	   input = input.trim();
+	   input = input.replaceAll("\\r|\\n", "");
+	   input = input.replaceAll("\\\\", "");
+	   input = input.replace("/", "");
+	   input = input.replace(";", "");
+	   input = input.replace("<", "");
+	   input = input.replace(">", "");
        return input;
 	}
 
@@ -32,15 +38,23 @@ public class Wikify {
 	    Wikifier w = new Wikifier(uri, "david's bot");
 	    
 	    input = cleanTweets(input);
-		//System.out.println("WIKIFIER Input:");
-		//System.out.println(input);
+
+//	    System.out.println("WIKIFY Input:");
+//		System.out.println(input);
 	    Node[] nx = new Node[] { DC.TITLE, new Literal(input) } ;
 			               
 		Set<Node[]> set = new HashSet<Node[]>();
 		set.add(nx);
 			    
+		Set<String> ret = null;
+	
+		try {
+			ret = w.wikify(new Resource("http://example.org/"), set);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-		return w.wikify(new Resource("http://example.org/"), set);
+		return ret;
 	}
 	
 }
