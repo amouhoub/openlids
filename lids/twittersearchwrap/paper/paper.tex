@@ -77,8 +77,8 @@ A system for mapping text to Wikipedia entities has been proposed by Milne and W
 
 The implemented
 system\footnote{\url{http://km.aifb.kit.edu/services/twittersearchwrap/}} (further called Twitter Search Wrapper) is called with a query representing
-the twitter search term and returns a RDF\footnote{\url{http://www.w3.org/RDF/}}
-document semantically describing the most recent twitter posts matching the
+the Twitter search term and returns a RDF\footnote{\url{http://www.w3.org/RDF/}}
+document semantically describing the most recent Twitter messages matching the
 given query. The returned RDF document furthermore contains a mapping of the
 query to Encyclopedia articles which based on the content published by users that most recently used the search
 term in their posts maps to articles best describing the content of Twitter
@@ -89,17 +89,12 @@ Twitter Search Wrapper can be grouped into five sequential steps (see Figure
 \#ka (a hashtag frequently used to describe posts related to the city of
 Karlsruhe, Germany) as search term for the Twitter Search wrapper.
 
- 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=.6\linewidth]{architecture}
   \caption{System Architecture}
   \label{fig:arch}
 \end{figure}
-
-% 1. Schicke Suchanfrage an Twitter Search API
-% Ich würde etwas ausführlicher erklären, was die Twitter Search API macht (an welcher Stelle im Paper müsste man nochmal überlegen).
-% 2. Greife Ergebnisse ab
 
 \begin{enumerate}
   \item 
@@ -173,8 +168,8 @@ output of the Wikifier) that have been mapped to the documents content.
 At this point DBPedia is chosen as referenced encyclopedia, because its
 semantic nature and description of Wikipedia article content contributes to a
 coherent semantic description. \newline\linebreak Coming back to the example,
-the output RDF document containes the following triples to reference the DBPedia
-mappings:\newline\linebreak \texttt{<rdfs:seeAlso
+the output RDF document containes the following triples to reference the
+DBPedia mappings:\newline\linebreak \texttt{<rdfs:seeAlso
 rdf:resource="http://dbpedia.org/resource/Karlsruhe"/>}\newline
 \texttt{<rdfs:seeAlso
 rdf:resource="http://dbpedia.org/resource/Germany"/>}\newline
