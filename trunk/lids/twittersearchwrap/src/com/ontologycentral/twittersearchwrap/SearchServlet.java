@@ -163,10 +163,9 @@ public class SearchServlet extends HttpServlet {
 					
 					// Get content of linked sites
 					for (int i = 0; i < urls.length; i++) {
-						
+
 						// Dont use internal twitter links containing javascript which cannot be handled
 						if(!urls[i].contains("twitter")){
-							
 							HTTPResponse response = null;
 							Boolean timeout = false;
 							byte[] content = null;
@@ -201,51 +200,49 @@ public class SearchServlet extends HttpServlet {
 							remover.removeElement("<!--");
 							remover.removeElement("meta");
 							
-							if (!timeout && response!=null && content!=null){
-							if (response.getResponseCode() == 200){
-								System.out.println("EXTERNAL URL: " + urls[i]);
-								ByteArrayInputStream bais = new ByteArrayInputStream(content);
-								BufferedReader firstreader = new BufferedReader(new InputStreamReader(bais, encoded));	
-								String readerstring = getHtmlFilteredString(firstreader);
-								BufferedReader reader = new BufferedReader(new StringReader(readerstring));
-								
-								List<String> words = new ArrayList<String>();
-								String lines = null;
-//								Boolean contained1 = false;
-//								Boolean contained2 = false;
-								while ((lines = reader.readLine()) != null && words.size()<50) {
-								String thisline = lines.replaceAll("\\<.*?\\>", "");
-								thisline = thisline.replaceAll("\\(.*?\\)", "");
-								thisline = thisline.replaceAll("\\{.*?\\}", "");
-								thisline = thisline.replaceAll("\\s+", " ");
-								StringTokenizer st = new StringTokenizer(thisline);
-//								if(contained1 && lines.toLowerCase().contains(("<\\body>"))){
-//									contained2 = true;
-//								}
-//								if(lines.toLowerCase().contains(("<body"))){
-//									contained1 = true;
-//								}
-//								if(contained1 && !contained2){
-									while (st.hasMoreTokens() && words.size()<50) {
-										  String tok = st.nextToken();
-										  words.add(tok);
-									}
-//								}
-								for (int j = 0; j < words.size(); j++) {
-									externalWebsites.append(words.get(j));
-									externalWebsites.append(" ");
-								}
-									
-								
-								}
 
-							    
-							}
+							if (!timeout && response != null && content != null) {
+								if (response.getResponseCode() == 200) {
+									System.out.println("EXTERNAL URL: "
+											+ urls[i]);
+									ByteArrayInputStream bais = new ByteArrayInputStream(
+											content);
+									BufferedReader firstreader = new BufferedReader(
+											new InputStreamReader(bais, encoded));
+									String readerstring = getHtmlFilteredString(firstreader);
+									readerstring = readerstring.replaceAll("\\<.*?\\>", "");
+									readerstring = readerstring.replaceAll("\\(.*?\\)", "");
+									readerstring = readerstring.replaceAll("\\{.*?\\}", "");
+									readerstring = readerstring.replaceAll("\\s+", " ");
+									BufferedReader reader = new BufferedReader(
+											new StringReader(readerstring));
+
+									List<String> words = new ArrayList<String>();
+
+									String lines = null;
+
+									while ((lines = reader.readLine()) != null) {
+										StringTokenizer st = new StringTokenizer(
+												lines);
+
+										while (st.hasMoreTokens()
+												&& words.size() < 100) {
+											String tok = st.nextToken();
+											words.add(tok);
+										}
+									}
+									for (int j = 0; j < words.size(); j++) {
+										externalWebsites.append(words.get(j));
+										externalWebsites.append(" ");
+									}
+									words.clear();
+
+								}
 							}
 						}
 					}
 					// Append external content to tweet content
-					tweets.append(externalWebsites.toString());
+					tweets.append(externalWebsites.toString().replaceAll("\\s+", " "));
 				}
 				Set<String> wikifyResult = Wikify.startWikify(tweets.toString(),lang);
 				System.out.println("WIKIFY RESULTS:");
