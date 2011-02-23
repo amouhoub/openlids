@@ -21,7 +21,7 @@
 
 %\newcommand{\nop}[1]{}
 
-\title{Mapping Microblogging Posts to Encyclopedia Articles}
+\title{Mapping Microblog Posts to Encyclopedia Articles}
 \author{Uta L\"{o}sch \and David M\"{u}ller \and Andreas Harth}
 \institute{
 	Karlsruhe Institute of Technology (KIT), D-76131 Karlsruhe, Germany\\ 
@@ -41,17 +41,26 @@ Keywords: Twitter, Wikipedia, DBpedia, RDF
 
 \section{Introduction}
 
-Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted to 140 characters. Twitter has a total of about 190 million of users who produce 65 million tweets a day. Thus, Twitter represents a huge data source on the web.
+Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted to 140 characters. Twitter has a total of about 190 million of users who produce 65 million twitter messages a day. Thus, twitter represents a huge data source on the web.
 
-Twitter offers the possibility to search for tweets containing a specific term or hash tags. This search returns a fixed number of most recent tweets containing the search term. However, it is hard to grasp the context of these tweets and to get further information on the topic that was searched for. As ach single tweet is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. To facilitate this putting into context of the search results, we propose to annotate search results with a set of entities which reflect the content of the result feeds. These entities will not only help to understand the search terms, but also serve as a starting point when searching for further information related to the search result. This also helps to determine what the meaning of cryptic hash tags such as $\#s21$ or $\#ka$ mean. 
+Twitter offers the possibility to search for twitter messages containing a specific term or hash tags. This search returns a fixed number of most recent messages containing the search term. However, it is hard to grasp the context of the results and to get further information on the topic that was searched for. As each single twitter message is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. To facilitate this putting into context of the search results, we propose to annotate search results with a set of entities which reflect the content of the result feeds. These entities will not only help to understand the search terms, but also serve as a starting point for refining the search or searching for further information related to the search result. 
 
-In this paper, we present a system which automatically annotates a Twitter search result with Wikipedia entities. While it would be more interesting to annotate each single tweet with relevant entities, tweets are too short to contain much relevant information which could be used as input for the annotation tool. Thus, we chose to generate annotations for the whole search result. 
+On twitter, hash tags are frequently used to associate messages with a specific topic, place, person or evecnt. For example, twitter messages talking about what is going on at the European Semantic Web Conference 2011 will probably be tagged with $\#eswc2011$. If a user encounters this hash tag and does not understand it, he can search for this hash tag. Using our approach the search will not only return messages using the tag but also a set of entities which have been detected in the search result. These tags will help the user to gain an understanding in which context the hash tag is used and what it may mean.
+
+In this paper, we present a system which automatically annotates a Twitter search result with Wikipedia entities. While it would be more interesting to annotate each single twitter message with relevant entities, twitter messages are too short to contain much relevant information which could be used as input for the annotation tool. Thus, we chose to generate annotations for the whole search result. 
 
 The motivation for choosing Wikipedia entities was that it offers a wide coverage of topics. Furthermore, automatic tools for annotating text with Wikipedia entities are readily available (see \cite{key:wikifier}).
 
-Annotations should be stable over time, unless the topics discussed in the tweets containing the search term change. In nan evaluation of our approach we have tried to analyse the stability of the result.
+Annotations should be stable over time, unless the topics discussed in the twitter messages containing the search term change. In an evaluation of our approach we have tried to analyze the stability of the result.
 
-The rest of this paper is organized as follows: in Section~\ref{sect:method} we present our system, in Section~\ref{sect:eval} we present the results of our evaluation
+Our contributions thus are:
+\begin{itemize}
+	\item an approach for finding entities which are related to a search on twitter
+	\item an implementation of our approach
+	\item an evaluation of the stability and relevance of the entities found with our approach.
+\end{itemize}
+
+The rest of this paper is organized as follows: in Section~\ref{sect:method} we present our system, in Section~\ref{sect:eval} we present the results of our evaluation, we are dealing with Related Work in Section~\ref{sect:relWork}, before we conclude in Section~\ref{sect:conclusion}.
 
 \section{Method Overview}
 \label{sect:method}
@@ -60,10 +69,10 @@ The implemented
 system\footnote{\url{http://km.aifb.kit.edu/services/twittersearchwrap/}}
 (further called Twitter Search Wrapper) is called with a query representing
 the twitter search term and returns a rdf\footnote{\url{http://www.w3.org/RDF/}}
-document semantically describing the most recent twitter posts (further called tweets) matching the given query. The returned rdf
+document semantically describing the most recent twitter posts (further called twitter messages) matching the given query. The returned rdf
 document furthermore contains a mapping of the query to Encyclopedia articles
 which based on the content published by users that most recently used the search
-term in their posts maps to articles best describing the content of tweets
+term in their posts maps to articles best describing the content of twitter messages
 related to the term. An overview of the System Architecture is given in Figure
 \ref{fig:arch}. Taking a more detailed look, methods performed by the Twitter
 Search Wrapper can be grouped into five sequential steps (see Figure
@@ -86,18 +95,18 @@ In a first step the Twitter Search Wrapper fetches the atom feed
 generated by the Twitter Search
 API\footnote{\url{http://dev.twitter.com/doc/get/search}} for a given search
 query. The generated feed contains the data of the 100 most recently published
-publicly visible tweets and their authors which match the search query. The tweets themselves are described by
+publicly visible twitter messages and their authors which match the search query. The twitter messages themselves are described by
 their content, publishing date, authors and optionally a geographic location. 
 
 %Sind das XML-Daten oder wie werden die beschrieben? 
 
-In a second (optional) step hyperlinks posted in tweets of the fetched
+In a second (optional) step hyperlinks posted in twitter messages of the fetched
 feed are followed, content of the referenced website's body is fetched and
 processed to the Wrapper. This option is triggered calling the Twitter Search
 Wrapper with attribute extern=true.
 
 The Wrapper now calls the Wikifier (see \cite{key:wikifier}). Content of
-the tweets that matched the search query and optional content of their referenced websites is merged
+the twitter messages that matched the search query and optional content of their referenced websites is merged
 to a single input string which is used as input for the Wikifier. The service
 returns a list of matching articles of the English
 Wikipedia. Optionally the wrapper can be initially called with attribute lang=de
@@ -108,7 +117,7 @@ to trigger mapping to the German Wikipedia.
 
 The list of matching Wikipedia articles is finally returned to the Wrapper. The
 Wrapper generates a rdf document using popular ontologies (foaf, dublincore, geo) to
-describe the data related to the returned tweets and their content using
+describe the data related to the returned twitter messages and their content using
 'rdfs:seeAlso' triples to link the document to
 DBPedia\footnote{\url{http://dbpedia.org/About}} URIs (converted output of the
 Wikifier) that have been mapped to the documents content.
@@ -136,13 +145,15 @@ Karlsruhe\\
 \end{definition}
 
 \section{Related Work}
+\label{sect:relWork}
 
 Bringing Semantic Web technologies and Semantic Web technologies together, has been proposed before.
 
 Passant et al. \cite{key:smob} have proposed a data model for making twitter
 data available on the Semantic Web. They propose a data model which allows for the association of URIs with users, microblogs and microposts. To this end, SIOC and FOAF vocabularies are used and extended. Specifically, the new concepts \emph{Microblog} and {MicroBlogPost} are introduced. Additionally, they propose the use of so-called semantic hash tags. The idea is to use URIs as hash tags (e.g. \emph{\#geo:Paris\_France}). It becomes thus possible to link microposts to entities in the Linked Open Data cloud.
-\section{Conclusion}
 
+\section{Conclusion}
+\label{sect:conclusion}
 
 
 
