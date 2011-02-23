@@ -48,11 +48,9 @@ public class Wikify {
 			    
 		Set<String> ret = null;
 	
-		try {
-			ret = w.wikify(new Resource("http://example.org/"), set);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
+		ret = w.wikify(new Resource("http://example.org/"), set);
+
 		
 		return ret;
 	}

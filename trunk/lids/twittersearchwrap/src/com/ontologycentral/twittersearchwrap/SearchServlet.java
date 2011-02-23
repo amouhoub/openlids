@@ -275,9 +275,9 @@ public class SearchServlet extends HttpServlet {
 			Transformer t = (Transformer)ctx.getAttribute(Listener.T);
 
 			resp.setHeader("Cache-Control", "public");
-			Calendar c = Calendar.getInstance();
-			c.add(Calendar.DATE, 1);
-			resp.setHeader("Expires", RFC822.format(c.getTime()));
+//			Calendar c = Calendar.getInstance();
+//			c.add(Calendar.DATE, 1);
+//			resp.setHeader("Expires", RFC822.format(c.getTime()));
 
 			try {
 				    StreamSource ssource = new StreamSource(sr);
