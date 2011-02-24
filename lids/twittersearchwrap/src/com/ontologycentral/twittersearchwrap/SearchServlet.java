@@ -160,13 +160,18 @@ public class SearchServlet extends HttpServlet {
 				     }
 				    
 				    Iterator<String> urlit = urls.iterator();
+				    
+				    // Maximum of 25 links used
+				    int count=0;
+				    
 				    // Get content of linked sites
-				    while (urlit.hasNext()) {
+				    while (urlit.hasNext() && count<25) {
+				    	
 						String thisurl = urlit.next().toString();
 
 						// Dont use internal twitter links containing javascript which cannot be handled
 						if(!thisurl.contains("twitter")){
-							
+
 						    BufferedReader content = null;
 							String response = "";
 							String encoded = "UTF-8";
@@ -208,7 +213,10 @@ public class SearchServlet extends HttpServlet {
 							
 
 							if (response.equals("OK") && content != null) {
-									System.out.println("EXTERNAL URL: " + thisurl);
+								
+								   	count=count+1;
+								
+									System.out.println("EXTERNAL URL No.: " + count + " : " + thisurl);
 									String readerstring = getHtmlFilteredString(content, encoded);
 									readerstring = readerstring.replaceAll("\\<.*?\\>", "");
 									readerstring = readerstring.replaceAll("\\(.*?\\)", "");
