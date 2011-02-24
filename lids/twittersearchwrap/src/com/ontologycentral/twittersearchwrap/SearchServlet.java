@@ -186,6 +186,7 @@ public class SearchServlet extends HttpServlet {
 								content = response.getContent();
 							} catch (Exception e) {
 								System.out.println("ERROR connecting to " + urls[i]);
+								e.printStackTrace();
 								timeout = true;
 							}
 							
