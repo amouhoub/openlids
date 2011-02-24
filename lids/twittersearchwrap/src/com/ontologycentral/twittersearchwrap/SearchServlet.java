@@ -13,6 +13,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -146,28 +147,36 @@ public class SearchServlet extends HttpServlet {
 					}
 					
 					String[] tweetsHTMLSplit = tweetsHTML.toString().split("&lt;a href=&quot;");
-					String[] urls = new String[tweetsHTMLSplit.length-1];
+					String[] urlarray = new String[tweetsHTMLSplit.length-1];
 					
 					for(int i = 1; i<tweetsHTMLSplit.length; i++){
-					    urls[i-1] = tweetsHTMLSplit[i].toString().split("&quot;&gt;")[0];
+					    urlarray[i-1] = tweetsHTMLSplit[i].toString().split("&quot;&gt;")[0];
 					}
 					
-					// Get content of linked sites
-					for (int i = 0; i < urls.length; i++) {
+					Set<String> urls = new HashSet();
+					
+				    for(int i=0; i<urlarray.length;i++){
+				        urls.add(urlarray[i]);
+				     }
+				    
+				    Iterator<String> urlit = urls.iterator();
+				    // Get content of linked sites
+				    while (urlit.hasNext()) {
+						String thisurl = urlit.next().toString();
 
 						// Dont use internal twitter links containing javascript which cannot be handled
-						if(!urls[i].contains("twitter")){
+						if(!thisurl.contains("twitter")){
 							
 						    BufferedReader content = null;
 							String response = "";
 							String encoded = "UTF-8";
 							try {
 								// Create the HttpURLConnection
-								URL url = new URL(urls[i]);
+								URL url = new URL(thisurl);
 								HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 								content = null;
 								connection.setRequestMethod("GET");
-								connection.setReadTimeout(15*1000);
+								connection.setReadTimeout(2*1000);
 								connection.connect();
 
 								// Read the output from the server
@@ -178,12 +187,12 @@ public class SearchServlet extends HttpServlet {
 										encoded = connection.getContentEncoding();
 									};
 								} catch (Exception e) {
-									System.out.println("ERROR retrieving charset from " + urls[i]);
+									System.out.println("ERROR retrieving charset from " + thisurl);
 									System.out.println("Assuming UTF-8 Encoding...");
 								}
 								
 							} catch (Exception e) {
-								System.out.println("ERROR connecting to " + urls[i]);
+								System.out.println("ERROR connecting to " + thisurl);
 								e.printStackTrace();
 							}
 						      
@@ -199,7 +208,7 @@ public class SearchServlet extends HttpServlet {
 							
 
 							if (response.equals("OK") && content != null) {
-									System.out.println("EXTERNAL URL: " + urls[i]);
+									System.out.println("EXTERNAL URL: " + thisurl);
 									String readerstring = getHtmlFilteredString(content, encoded);
 									readerstring = readerstring.replaceAll("\\<.*?\\>", "");
 									readerstring = readerstring.replaceAll("\\(.*?\\)", "");
