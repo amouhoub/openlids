@@ -1,7 +1,6 @@
 package com.ontologycentral.twittersearchwrap;
 
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -38,13 +36,6 @@ import org.cyberneko.html.HTMLConfiguration;
 import org.cyberneko.html.filters.ElementRemover;
 import org.cyberneko.html.filters.Writer;
 
-import com.google.appengine.api.urlfetch.FetchOptions.Builder;
-import com.google.appengine.api.urlfetch.HTTPHeader;
-import com.google.appengine.api.urlfetch.HTTPMethod;
-import com.google.appengine.api.urlfetch.HTTPRequest;
-import com.google.appengine.api.urlfetch.HTTPResponse;
-import com.google.appengine.api.urlfetch.URLFetchService;
-import com.google.appengine.api.urlfetch.URLFetchServiceFactory;
 
 @SuppressWarnings("serial")
 public class SearchServlet extends HttpServlet {
@@ -166,32 +157,37 @@ public class SearchServlet extends HttpServlet {
 
 						// Dont use internal twitter links containing javascript which cannot be handled
 						if(!urls[i].contains("twitter")){
-							HTTPResponse response = null;
-							Boolean timeout = false;
-							byte[] content = null;
-							String encoded = "UTF-8";
 							
+						    BufferedReader content = null;
+							String response = "";
+							String encoded = "UTF-8";
 							try {
-								HTTPRequest request = new HTTPRequest(new URL(urls[i]), HTTPMethod.GET, Builder.allowTruncate());
-								URLFetchService service = URLFetchServiceFactory.getURLFetchService();
-								response = service.fetch(request);
+								// Create the HttpURLConnection
+								URL url = new URL(urls[i]);
+								HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+								content = null;
+								connection.setRequestMethod("GET");
+								connection.setReadTimeout(15*1000);
+								connection.connect();
+
+								// Read the output from the server
+								content = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+								response = connection.getResponseMessage();
 								try {
-									List<HTTPHeader> responseHeaders = response.getHeaders();
-									HTTPHeader responseHeader = responseHeaders.get(7);
-									encoded = responseHeader.getValue().split("charset=")[1];
+									if(connection.getContentEncoding()!=null){
+										encoded = connection.getContentEncoding();
+									};
 								} catch (Exception e) {
-//									System.out.println("CHARSET not retrievable at " + urls[i]);
-//									System.out.println("CHARSET assuming utf-8");
+									System.out.println("ERROR retrieving charset from " + urls[i]);
+									System.out.println("Assuming UTF-8 Encoding...");
 								}
-								content = response.getContent();
+								
 							} catch (Exception e) {
 								System.out.println("ERROR connecting to " + urls[i]);
 								e.printStackTrace();
-								timeout = true;
 							}
-							
-							
-							// create element remover filter
+						      
+							// Create element remover filter
 							ElementRemover remover;
 							remover = new ElementRemover();
 							remover.removeElement("script");
@@ -202,21 +198,14 @@ public class SearchServlet extends HttpServlet {
 							remover.removeElement("meta");
 							
 
-							if (!timeout && response != null && content != null) {
-								if (response.getResponseCode() == 200) {
-									System.out.println("EXTERNAL URL: "
-											+ urls[i]);
-									ByteArrayInputStream bais = new ByteArrayInputStream(
-											content);
-									BufferedReader firstreader = new BufferedReader(
-											new InputStreamReader(bais, encoded));
-									String readerstring = getHtmlFilteredString(firstreader);
+							if (response.equals("OK") && content != null) {
+									System.out.println("EXTERNAL URL: " + urls[i]);
+									String readerstring = getHtmlFilteredString(content, encoded);
 									readerstring = readerstring.replaceAll("\\<.*?\\>", "");
 									readerstring = readerstring.replaceAll("\\(.*?\\)", "");
 									readerstring = readerstring.replaceAll("\\{.*?\\}", "");
 									readerstring = readerstring.replaceAll("\\s+", " ");
-									BufferedReader reader = new BufferedReader(
-											new StringReader(readerstring));
+									BufferedReader reader = new BufferedReader(new StringReader(readerstring));
 
 									List<String> words = new ArrayList<String>();
 
@@ -238,7 +227,7 @@ public class SearchServlet extends HttpServlet {
 									}
 									words.clear();
 
-								}
+								
 							}
 						}
 					}
@@ -251,7 +240,7 @@ public class SearchServlet extends HttpServlet {
 			
 				// Append DBPedia links to atom feed to include in transformation
 				
-				Iterator it = wikifyResult.iterator();
+				Iterator<String> it = wikifyResult.iterator();
 				StringBuffer seeAlso = new StringBuffer();
 				while(it.hasNext()){
 					seeAlso.append("<seeAlso>");
@@ -316,7 +305,7 @@ public class SearchServlet extends HttpServlet {
 		return sb.toString();
 	}
 
-	private String getHtmlFilteredString(Reader reader)
+	private String getHtmlFilteredString(Reader reader, String encoding)
 	{
 	 
 	  // create element remover filter
@@ -333,7 +322,6 @@ public class SearchServlet extends HttpServlet {
 	
 	  try
 	  {
-	    String encoding = "ISO-8859-1";
 	    XMLDocumentFilter writer = new Writer(stream, encoding);
 	 
 	    XMLDocumentFilter[] filters = {remover, writer};
