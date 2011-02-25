@@ -276,6 +276,8 @@ The RDF document describes the result by means of the popular vocabularies FOAF 
 \section{Experiments and Evaluation}
 \label{sect:eval}
 
+\subsection{Setup}
+
 Trending topics are listed in Table \ref{tbl:terms}.
 
 \begin{table}[ht*]
@@ -289,6 +291,7 @@ Karlsruhe\\
 \caption{Search terms}\label{tbl:terms}
 \end{table}
 
+\subsection{Measures}
 
 The goal of our evaluation was to examine the stability of the entity annotations over time. To achieve this, we have repeatedly executed the same set of queries. \myremark{TODO}{How frequently? How long? Which queries?}
 In a first step we have filtered the result sets such that each set is disjoint to all the other sets for the same query with respect to the messages it contains. We have then evaluated the results with respect to several measures:
@@ -310,7 +313,16 @@ $$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
 \end{itemize}
 \end{definition}
 
+\subsection{Results}
+
 \myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
+
+\subsection{Discussion}
+
+@@@highlight the remarkable outcomes
+@@@what is did we learn from the results?
+
+
 \section{Conclusion}
 \label{sect:conclusion}
 
