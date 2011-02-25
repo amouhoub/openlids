@@ -43,21 +43,25 @@ Keywords: Twitter, Wikipedia, DBpedia, RDF
 
 \section{Introduction}
 
-Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted, in the case of twitter the restriction is 140 characters. Twitter has a total of about 190 million of users who produce 65 million twitter messages a day. Thus, twitter represents a huge data source on the web.
+Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted, in the case of Twitter the restriction is 140 characters. Twitter has a total of about 190 million of users who produce 65 million Twitter messages a day. Thus, Twitter represents a huge data source on the web.
 
-On Twitter it is possible to search for messages containing a specific term or hash tag. This search returns a fixed number of most recent messages containing the search term. However, it is hard to grasp the context of the results and to get further information on the topic that was searched for. As each single twitter message is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. To facilitate this putting into context of the search results, we propose to annotate search results with a set of entities which reflect the content of the result feeds. These entities will not only help to understand the search terms, but also serve as a starting point for refining the search or searching for further information related to the search result. 
+On Twitter it is possible to search for messages containing a specific term or hash tag. This search returns a fixed number of most recent messages containing the search term. However, it is hard to grasp the context of the results and to get further information on the topic that was searched for. As each single Twitter message is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. 
 
-On twitter, hash tags are frequently used to associate messages with a specific topic, place, person or event. For example, twitter messages talking about what is going on at the European Semantic Web Conference 2011 will frequently be tagged with $\#eswc2011$. If a user encounters this hash tag and does not understand it, he can search for it on twitter. Using our approach the search will not only return messages using the tag but also a set of entities which have been detected in the search result. These tags will help the user to gain an understanding in which context the hash tag is used and what it may mean.
+To facilitate this putting into context of the search results, we propose to annotate search results with a set of entities which reflect the content of the result feeds. These entities will not only help to understand the search terms, but also serve as a starting point for refining the search or searching for further information related to the search result. 
 
-In this paper, we present a system which automatically annotates a Twitter search result with Wikipedia entities. While it would be more interesting to annotate each single twitter message with relevant entities, twitter messages are too short to contain much relevant information which could be used as input for the annotation tool. Thus, we chose to generate annotations for the whole search result. 
+Furthermore, this annotation will help to understand hash tags. Hash tags are frequently used to associate messages with a specific topic, place, person or event on Twitter. For example, messages talking about what is going on at the European Semantic Web Conference 2011 will frequently be tagged with $\#eswc2011$. If a user encounters this hash tag and does not understand it, he can search for it on Twitter. However, as discussed before, to understand a search result is difficult and time-consuming. Using our approach the search will not only return messages using the tag but also a set of entities which have been detected in the search result. These entities will help the user to gain an understanding in which context the hash tag is used and what it may mean.
+
+Finding entities matching a query, especially a query for a given hash tag is difficult due to synonyms and homonyms in the set of hash tags that are frequently used. For example, both the hash tags $\#ka$ and $\#karlsruhe$ are frequently used when talking about topics which are related to the city Karlsruhe. The tag $\#ka$ is however also used in the context of the car type Ford Ka. Thus, when searching for $\#ka$ on Twitter, messages relating to Karlsruhe will be found as well as messages related to Ford Ka. An approach which aims at finding relevant entities for a given search will have to be able to deal with these problems.
+
+In this paper, we present a system which automatically annotates a Twitter search result with Wikipedia entities. While it would be more interesting to annotate each single Twitter message with relevant entities, Twitter messages are too short to contain much relevant information which could be used as input for the annotation tool. Thus, we chose to generate annotations for the whole search result. 
 
 The motivation for choosing Wikipedia as entity source was that it offers a wide coverage of topics. Furthermore, automatic tools for annotating text with Wikipedia entities are readily available (see \cite{key:wikifier}).
 
-Annotations should be stable over time, unless the topics discussed in the twitter messages containing the search term change. In an evaluation of our approach we have tried to analyze the stability of the result.
+Annotations should be stable over time, unless the topics discussed in the Twitter messages containing the search term change. In an evaluation of our approach we have tried to analyze the stability of the result.
 
 Our contributions thus are:
 \begin{itemize}
-	\item an approach for finding entities which are related to a search on twitter
+	\item an approach for finding entities which are related to a search on Twitter
 	\item an implementation of our approach
 	\item an evaluation of the stability and relevance of the entities found with our approach.
 \end{itemize}
@@ -71,10 +75,10 @@ Bringing Semantic Web technologies and Semantic Web technologies together, has b
 
 The SemanticTweet\footnote{\url{http://semantictweet.com}} service is a tool which allows for the generation of a FOAF file describing one's network of followers and friends on Twitter. Thus, an automatic way of mapping the Twitter social network to semantic data is made available.
 
-Passant et al. \cite{key:smob} have proposed a data model for making twitter data available on the Semantic Web. They propose a data model which allows for the association of URIs with users, microblogs and microposts. To this end, SIOC and FOAF vocabularies are used and extended. Specifically, the new concepts \emph{Microblog} and \emph{MicroBlogPost} are introduced. Additionally, they propose the use of so-called semantic hash tags. The idea is to use URIs as hash tags (e.g. \emph{\#geo:Paris\_France}). It becomes thus possible to link microposts to entities in the Linked Open Data cloud via these semantic hash tags. 
-\myremark{Uta}{Andreas, hättest Du noch einen Satz dazu, warum das Mapping auf RDF anders gemacht wurde als in SMOB?}
+Passant et al. \cite{key:smob} have proposed a data model for making Twitter data available on the Semantic Web. They propose a data model which allows for the association of URIs with users, microblogs and microposts. To this end, SIOC and FOAF vocabularies are used and extended. Specifically, the new concepts \emph{Microblog} and \emph{MicroBlogPost} are introduced. Additionally, they propose the use of so-called semantic hash tags. The idea is to use URIs as hash tags (e.g. \emph{\#geo:Paris\_France}). It becomes thus possible to link microposts to entities in the Linked Open Data cloud via these semantic hash tags. 
+In contrast to this approach we do not require users to change their behavior by requiring them to use another type of hash tags. Instead, our method finds Linked Open Data entities which are related to the query automatically.
 
-Softic et al \cite{key:softic} have developed a framework and system for mining data from social networks. They have instantiated their system to analyze data from Twitter. In their system, they collect data from one or several users. The system by Passant et al. \cite{key:smob} is used for transforming twitter data to semantic data. The triplified data can then be analysed using SPARQL. They propose that the result data could be enriched using entities from other Linked Open data vocabularies like dbpedia\footnote{\url{http://dbpedia.org}} or GeoNames\footnote{\url{http://www.geonames.org}}, but they do not provide a method for achieving this.
+Softic et al \cite{key:softic} have developed a framework and system for mining data from social networks. They have instantiated their system to analyze data from Twitter. In their system, they collect data from one or several users. The system by Passant et al. \cite{key:smob} is used for transforming Twitter data to semantic data. The triplified data can then be analysed using SPARQL. They propose that the result data could be enriched using entities from other Linked Open data vocabularies like dbpedia\footnote{\url{http://dbpedia.org}} or GeoNames\footnote{\url{http://www.geonames.org}}, but they do not provide a method for achieving this.
 
 A system for mapping text to Wikipedia entities has been proposed by Milne and Witten \cite{key:wikifier}. 
 %uhe: System beschreiben
@@ -84,7 +88,7 @@ A system for mapping text to Wikipedia entities has been proposed by Milne and W
 \section{Method Overview}
 \label{sect:method}
 
-The goal of our method is to, given a search query as input, provide the user with an RDF\footnote{\url{http://www.w3.org/RDF/}} document describing the search result, i.e. the most recent messages that match the query, the authors of these messages and the most relevant entities for this result.
+The goal of our method is to, given a search query $q$ as input, provide the user with an RDF\footnote{\url{http://www.w3.org/RDF/}} document describing the search result $R$, i.e. the most recent messages that match the query, the authors of these messages and the most relevant entities $E$ for this result.
 
 The architecture of our proposed system is shown in Figure~\ref{fig:arch}. Upon receipt of a query four steps are performed. In the following we will illustrate these steps using the example of a search for the hash tag $\#ka$, a hashtag which is frequently used to describe posts related to the city of Karlsruhe, Germany.
 
@@ -123,7 +127,7 @@ In the example, we would expect to find entities which are related to Karlsruhe,
 	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/\newline
 	Karlsruhe\_Institute\_of\_Technology"/>}
 	
-	The twitter posts matching the search term \#ka are all described in the output document. As an example, the description for the initially given post results in the following RDF output:
+	The Twitter posts matching the search term \#ka are all described in the output document. As an example, the description for the initially given post results in the following RDF output:
 	
 	\texttt{<rdf:Description rdf:about="http://km.aifb.kit.edu/services/twitterwrap/statuses/\newline
 	show/1234567890\#id">\newline
@@ -145,7 +149,7 @@ In the example, we would expect to find entities which are related to Karlsruhe,
 
 In the Twitter Search Wrapper\footnote{Available at \url{http://km.aifb.kit.edu/services/twittersearchwrap/}} we provide an implementation of our approach.
 
-The implementation is based on a set of existing components: Twitter search results are obtained by using the twitter search API\footnote{\url{http://dev.twitter.com/doc/get/search}}. The result is a feed containing the 100 most recently published Twitter messages, which are publicly visible and match the query, and their authors. The messages themselves are described by their content, publishing date, authors
+The implementation is based on a set of existing components: Twitter search results are obtained by using the Twitter search API\footnote{\url{http://dev.twitter.com/doc/get/search}}. The result is a feed containing the 100 most recently published Twitter messages, which are publicly visible and match the query, and their authors. The messages themselves are described by their content, publishing date, authors
 and optionally a geographic location.
 
 The optional step of dereferencing URLs which are posted in messages contained in the result set can be triggered using the option \texttt{extern=true}. To keep the input size for the next steps manageable, we do not use the whole content of the referenced sites but only the first $k$ words.
@@ -290,16 +294,23 @@ The goal of our evaluation was to examine the stability of the entity annotation
 In a first step we have filtered the result sets such that each set is disjoint to all the other sets for the same query with respect to the messages it contains. We have then evaluated the results with respect to several measures:
 
 \begin{definition}[Evaluation Measures]
-Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with entities $E_1,\ldots,E_n$, we define:
+Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with sets of entities $E_1,\ldots,E_n$, we define:
 \begin{itemize}
 	\item The average disjoint time $adt$ for a query is the average time that has to lie between two result sets in order to obtain disjoint results: $$adt(q)=\frac{\sum_{i=1}^{n}t_{i+1}-t_i}{n-1}$$
-	\item The global stability of the results shows how stable the whole set of entity terms for a query is. It is defined as: $$gs(q)=\frac{\bigcap_{i=1}^{n}E_i}{\bigcup_{i=1}^{n}E_i}$$
-	\item The stability for a single term is defined as the fraction of result sets in which it occurs: 
-$$st(t)=\frac{|\{i|t\in E_i\}|}{n}$$
+	A high $adt(q)$ means that new messages that match the query $q$ are not generated very often. If new messages matching the query $q$ are frequently published, then the $adt(q)$ is low.
+	\item The global stability $gs$ of the results shows how stable the whole set of entity terms for a query is. It is defined as: $$gs(q)=\frac{|\bigcap_{i=1}^{n}E_i|}{|\bigcup_{i=1}^{n}E_i|}$$
+	A value of $gs(q)$ of $1$ means that the set of entities is the same at each point in time $t_i$. On the other hand, a value of $0$ means that at least two of the sets of entities, with which the results were annotated, are disjoint.
+	\item The time stability $ts$ for a query $q$ at time $t_i$ is the fraction of entities which are unchanged between the result set at $t_{i-1}$ and $t_i$:
+	$$ts(q,t_i)=\begin{cases} |E_i| & i=1 \\
+														\frac{|E_{i-1}\cap E_i|}{|E_{i-1}\cup E_i|} & i>1\end{cases}$$
+	Here again, a value of $1$ means that the two sets of entities are identical, a value of $0$ means they are disjoint.
+	\item The stability for a single term is defined as the fraction of result sets for a query $q$ in which it occurs: 
+$$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
+	If the value of $sts$ is $1$ the term occurs in all of the result sets for the query, if it is close to $0$ it occurs in few result sets.
 \end{itemize}
 \end{definition}
 
-
+\myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
 \section{Conclusion}
 \label{sect:conclusion}
 
