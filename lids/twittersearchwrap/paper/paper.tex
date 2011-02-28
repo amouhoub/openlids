@@ -75,24 +75,29 @@ Bringing Semantic Web technologies and Semantic Web technologies together, has b
 
 The SemanticTweet\footnote{\url{http://semantictweet.com}} service is a tool which allows for the generation of a FOAF file describing one's network of followers and friends on Twitter. Thus, an automatic way of mapping the Twitter social network to semantic data is made available.
 
+The challenge task in the WePS-3 Online Reputation Management Task\cite{key:clef} requires systems to detect mentions of company names in Twitter messages.
+The corpus contains evaluation results solicited via Mechanical Turk.
+In contrast to the WePS-3 task, we associate generic hash tags to Wikipedia/DBpedia concepts.
+@@@even with hashtags we have ambiguity, how would be map Twitter message containing the keyword ``apple''?
+
 Wagner \cite{key:clauwa} proposes to use aggregations of social awareness streams for knowledge extraction.
 As such, our approach is closely related.
 Stankovic et al. \cite{key:stanko} propose to use the Zemanta\footnote{\url{http://developer.zemanta.com/}} keyword extraction API to detect topics of single Twitter messages.
+% from stakovic et al.
+%In order to make tweets more searchable and make them useful for the described
+%scenario one would need to have represent them in a structured format and associate
+%those tweets with the topics that refer to. As a basic approach we process the text of
+%the tweets using Zemanta16 keyword extraction API. This approach gives DBPedia
+%concepts related to a tweet, but is useful only on a limited number of tweets directly
+%mentioning a particular topic. In the example data set we produced from ESWC2010,
+%tweet topics are represented using dc:subject property.
+
 Instead of mining single messages which provide little signal to the extraction algorithm we use an aggregation of messages (as proposed by Wagner \cite{key:clauwa}) as input to the extraction component.
 The system we use for mapping text to Wikipedia entities has been proposed by Milne and Witten \cite{key:wikifier}. 
 The so-called Wikifier maps text to Wikipedia pages, which in turn directly map to DBpedia URIs.
 %uhe: System beschreiben
 Kinsella et al. \cite{key:kinsella} use hyperlinks in posts to derive a richer representation of those posts.
 We too use external data to augment the set of Twitter messages supplied to the Wikifier system.
-
-In order to make tweets more searchable and make them useful for the described
-scenario one would need to have represent them in a structured format and associate
-those tweets with the topics that refer to. As a basic approach we process the text of
-the tweets using Zemanta16 keyword extraction API. This approach gives DBPedia
-concepts related to a tweet, but is useful only on a limited number of tweets directly
-mentioning a particular topic. In the example data set we produced from ESWC2010,
-tweet topics are represented using dc:subject property.
-
 
 Passant et al. \cite{key:smob} have proposed a data model for making Twitter data available on the Semantic Web. They propose a data model which allows for the association of URIs with users, microblogs and microposts. To this end, SIOC and FOAF vocabularies are used and extended. Specifically, the new concepts \emph{Microblog} and \emph{MicroBlogPost} are introduced. Additionally, they propose the use of so-called semantic hash tags. The idea is to use URIs as hash tags (e.g. \emph{\#geo:Paris\_France}). It becomes thus possible to link microposts to entities in the Linked Open Data cloud via these semantic hash tags. 
 In contrast to this approach we do not require users to change their behavior by requiring them to use another type of hash tags. Instead, our method finds Linked Open Data entities which are related to the query automatically.
