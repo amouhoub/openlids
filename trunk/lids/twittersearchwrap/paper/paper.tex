@@ -80,6 +80,8 @@ The corpus contains evaluation results solicited via Mechanical Turk.
 In contrast to the WePS-3 task, we associate generic hash tags to Wikipedia/DBpedia concepts.
 @@@even with hashtags we have ambiguity, how would be map Twitter message containing the keyword ``apple''?
 
+Softic et al \cite{key:softic} have developed a framework and system for mining
+data from social networks. They have instantiated their system to analyze data from Twitter. In their system, they collect data from one or several users. The system by Passant et al. \cite{key:smob} is used for transforming twitter data to semantic data. The triplified data can then be analysed using SPARQL. They propose that the result data could be enriched using entities from other Linked Open data vocabularies like dbpedia\footnote{\url{http://dbpedia.org}} or GeoNames\footnote{\url{http://www.geonames.org}}, but they do not provide a method for achieving this.
 Wagner \cite{key:clauwa} proposes to use aggregations of social awareness streams for knowledge extraction.
 As such, our approach is closely related.
 Stankovic et al. \cite{key:stanko} propose to use the Zemanta\footnote{\url{http://developer.zemanta.com/}} keyword extraction API to detect topics of single Twitter messages.
@@ -122,16 +124,24 @@ The architecture of our proposed system is shown in Figure~\ref{fig:arch}. Upon 
 \end{figure}
 
 \begin{enumerate}
-	\item In a first step, the most recent search results for the query are obtained. In our example, calling the Wrapper with query $\#ka$ will return a
-document containing all most recent Twitter posts whose content matched the search string $\#ka$ and their meta information. 
+	\item In a first step, the most recent search results for the query are
+	obtained.\newline In our example, calling the Wrapper with query $\#ka$ will
+	return a document containing all most recent Twitter posts whose content matched the search string $\#ka$ and their meta information.
 
-An example for a single retrieved post is the following: \texttt{''Just returned from a wonderful holiday in \#ka. \url{http://www.karlsruhe.de/stadt/tourismus.en} @KarlsruheTweets''}
-\myremark{Frage}{Sollte man da auch noch die Metadaten (Autor, Uhrzeit) mit angeben?}
+An example for a single retrieved post is the following: ''\texttt{Just
+returned from a wonderful holiday in \#ka.
+\url{http://www.karlsruhe.de/stadt/tourismus.en} @KarlsruheTweets}'', posted by
+Twitter user \texttt{sample\_user\_12345}; geo coordinates and the date
+the message has been posted be furthermore known.
   
-  \item In a second (optional) step hyperlinks posted in messages of the fetched feed are followed, content of the referenced website's body is fetched and processed by the Wrapper. The idea is to acquire additional content which is used as additional signal when searching for entities. We have thought of other methods for enriching the result, like searching for other messages posted by users which have posted messages in the result set. However, these alternative method are more likely to introduce noise in the signal which is used for obtaining relevant entities.
+  \item In a second (optional) step hyperlinks posted in messages of the fetched
+  feed are followed, content of the referenced website is fetched and processed by the Wrapper. The idea is to acquire additional content which is used as additional signal when searching for entities. We have thought of other methods for enriching the result, like searching for other messages posted by users which have posted messages in the result set. However, these alternative methods are more likely to introduce noise in the signal which is used for obtaining relevant entities.
   
-In our example, the message contains a link to\url{http://www.karlsruhe.de/stadt/tourismus.en}, the official homepage of the tourist office of the city of Karlsruhe. Dereferencing this URL and grabbing the text found at the link gives us the following text:''\texttt{Karlsruhe, where paths converge - a legendary city in the sunny
-south-west of Germany, famed for its fan-shaped historic street plan, where margraves reigned in times past, and German joie de vivre reigns today.}'' 
+In our example, the message contains a link to
+\url{http://www.karlsruhe.de/stadt/tourismus.en}, the official homepage of the
+tourist office of the city of Karlsruhe. Dereferencing this URL and grabbing the
+text found at the link gives us the following text: ''\texttt{Karlsruhe, where
+paths converge - a legendary city in the sunny south-west of Germany, famed for its fan-shaped historic street plan, where margraves reigned in times past, and German joie de vivre reigns today.}''
 	
 	\item In a third step entities matching the search result are retrieved. The content of the Twitter messages that matched the search query and, if available, the content of referenced websites is merged to a single input string and used as input for the annotation. The result of this step is a list of matching articles of the English Wikipedia.
 
@@ -142,13 +152,14 @@ In the example, we would expect to find entities which are related to Karlsruhe,
 
 	\item	Finally, an RDF document is generated representing the search results and the annotations.  
 	
-	Continuing our example, the output RDF document contains the following triples to reference the DBPedia mappings: 
-	\myremark{Uta}{Bei den Tripeln fehlt das Subjekt}
+	Continuing our example, the output RDF document contains the following triples
+	to reference the DBPedia mappings:\newline
+	\texttt{<rdf:Description rdf:about=""/>}\newline
 	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Karlsruhe"/>}\newline
 	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Germany"/>}\newline
 	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/\newline
-	Karlsruhe\_Institute\_of\_Technology"/>}
-	
+	Karlsruhe\_Institute\_of\_Technology"/>}\newline
+	\texttt{</rdf:Description>}\newline
 	The Twitter posts matching the search term \#ka are all described in the output document. As an example, the description for the initially given post results in the following RDF output:
 	
 	\texttt{<rdf:Description rdf:about="http://km.aifb.kit.edu/services/twitterwrap/statuses/\newline
@@ -174,8 +185,8 @@ In the Twitter Search Wrapper\footnote{Available at \url{http://km.aifb.kit.edu/
 The implementation is based on a set of existing components: Twitter search results are obtained by using the Twitter search API\footnote{\url{http://dev.twitter.com/doc/get/search}}. The result is a feed containing the 100 most recently published Twitter messages, which are publicly visible and match the query, and their authors. The messages themselves are described by their content, publishing date, authors
 and optionally a geographic location.
 
-The optional step of dereferencing URLs which are posted in messages contained in the result set can be triggered using the option \texttt{extern=true}. To keep the input size for the next steps manageable, we do not use the whole content of the referenced sites but only the first $k$ words.
-\myremark{TODO}{Was ist der cut-off-Wert?}
+The optional step of dereferencing URLs which are posted in messages contained
+in the result set can be triggered using the option \texttt{extern=true}. To keep the input size for the next steps manageable, we do not use the whole content of the referenced sites but only the first 50 words.
 
 The Wikifier \cite{key:wikifier} is used for obtaining content annotations. This tool takes a text as input and returns a set of Wikipedia entities which are relevant for the analyzed text.
 
