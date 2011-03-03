@@ -313,7 +313,7 @@ The RDF document describes the result by means of the popular vocabularies FOAF 
 
 \subsection{Setup}
 
-Topics trending worldwide and in Germany at Twitter retrieved at February 24th
+Topics trending worldwide and in Germany at Twitter retrieved on February 24th
 17:20h (GMT) are listed in Table \ref{tbl:terms}. These trending topics will
 constitute a basis of input search terms for our evaluation of the Twitter
 Search Wrapper.
@@ -352,11 +352,25 @@ Vorratsdatenspeicherung & Germany \\
 
 The goal of our evaluation was to examine the stability of the entity
 annotations over time. To achieve this, we have repeatedly executed the same set
-of queries using the retrieved trending topics given in Table \ref{tbl:terms}
-as input queries for the evaluation. The set of queries was executed twice per
-hour in a 24 hour time frame starting from the moment the topics were identified
-and retrieved as trending topics. In a first step we have filtered the result
-sets such that each set is disjoint to all the other sets for the same query with respect to the messages it contains. We have then evaluated the results with respect to several measures:
+of queries and saved the returned data. Two methods for this data acquisition
+were identified: \begin{definition}[Data Acquisition Methods]
+\begin{itemize}
+\item Temporal Sliding Window: The query is executed and the n most
+recent results are retrieved every t minutes. The Temporal Sliding Window method
+may lead to duplicate messages in the retrieved documents, but needs to handle much less data and
+allows for an analysis over larger time frames.
+\item k-item Sliding Window: The k-item Sliding Window methods retrieves all
+messages that match the query exactly one time. Each time k new messages are
+available matching the given query a document containing those k messages
+is retrieved. This method can lead to high data volume and needs constant
+monitoring of recently posted messages matching the search term.
+\end{itemize}
+\end{definition}
+
+Using the retrieved trending topics given in Table \ref{tbl:terms}
+as input queries for the evaluation, the set of queries was executed twice
+per hour using the Temporal Sliding Window method for data acquisition in a 24
+hour time frame starting from the moment the topics were identified as trending topics.  We have then evaluated the results with respect to several measures:
 
 \begin{definition}[Evaluation Measures]
 Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with sets of entities $E_1,\ldots,E_n$, we define:
