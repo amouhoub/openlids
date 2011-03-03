@@ -21,6 +21,8 @@
 
 %\newcommand{\nop}[1]{}
 
+\setlength{\tabcolsep}{2pt}
+
 \newcommand{\myremark}[2]{{\textbf{\marginpar{$\parallel$}(* \textit{#1:} #2 *)}}}
 
 \title{Mapping Microblog Posts to Encyclopedia Articles}
@@ -311,23 +313,50 @@ The RDF document describes the result by means of the popular vocabularies FOAF 
 
 \subsection{Setup}
 
-Trending topics are listed in Table \ref{tbl:terms}.
+Topics trending worldwide and in Germany at Twitter retrieved at February 24th
+17:20h (GMT) are listed in Table \ref{tbl:terms}. These trending topics will
+constitute a basis of input search terms for our evaluation of the Twitter
+Search Wrapper.
 
 \begin{table}[ht*]
 \centering
-\begin{tabular}{ c }
-Search term                    \\
+\begin{tabular}{ |l|l| }
 \hline
-\#s21 \\
-Karlsruhe\\
+\textsc{Trending Topic} & \textsc{Location}  \\
+\hline
+\#goodlucknickj & Worldwide \\
+\#smalljoys & Worldwide \\
+\#thingsthedevilinvented & Worldwide \\
+Adam Wainwright & Worldwide \\
+CatchPetrovaFire & Worldwide \\
+Gadafi & Worldwide \\
+Libia & Worldwide \\
+Precious Minaj & Worldwide \\
+Tommy John & Worldwide \\
+\hline
+\#gaddafi & Germany \\
+\#guttenberg & Germany \\
+\#libya & Germany \\
+Doktorarbeit & Germany \\
+Gef\"{u}hl & Germany \\
+Lion & Germany \\
+MBP & Germany \\
+Thunderbolt & Germany \\
+Vorratsdatenspeicherung & Germany \\
+\hline
 \end{tabular}
 \caption{Search terms}\label{tbl:terms}
 \end{table}
 
 \subsection{Measures}
 
-The goal of our evaluation was to examine the stability of the entity annotations over time. To achieve this, we have repeatedly executed the same set of queries. \myremark{TODO}{How frequently? How long? Which queries?}
-In a first step we have filtered the result sets such that each set is disjoint to all the other sets for the same query with respect to the messages it contains. We have then evaluated the results with respect to several measures:
+The goal of our evaluation was to examine the stability of the entity
+annotations over time. To achieve this, we have repeatedly executed the same set
+of queries using the retrieved trending topics given in Table \ref{tbl:terms}
+as input queries for the evaluation. The set of queries was executed twice per
+hour in a 24 hour time frame starting from the moment the topics were identified
+and retrieved as trending topics. In a first step we have filtered the result
+sets such that each set is disjoint to all the other sets for the same query with respect to the messages it contains. We have then evaluated the results with respect to several measures:
 
 \begin{definition}[Evaluation Measures]
 Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with sets of entities $E_1,\ldots,E_n$, we define:
