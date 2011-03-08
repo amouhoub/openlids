@@ -45,6 +45,8 @@ Keywords: Twitter, Wikipedia, DBpedia, RDF
 
 \section{Introduction}
 
+\myremark{todo}{warum kein direktes Mapping auf dbpedia-Entitäten?}
+
 Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted, in the case of Twitter the restriction is 140 characters. Twitter has a total of about 190 million of users who produce 65 million Twitter messages a day. Thus, Twitter represents a huge data source on the web.
 
 On Twitter it is possible to search for messages containing a specific term or hash tag. This search returns a fixed number of most recent messages containing the search term. However, it is hard to grasp the context of the results and to get further information on the topic that was searched for. As each single Twitter message is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. 
@@ -54,6 +56,8 @@ To facilitate this putting into context of the search results, we propose to ann
 Furthermore, this annotation will help to understand hash tags. Hash tags are frequently used to associate messages with a specific topic, place, person or event on Twitter. For example, messages talking about what is going on at the European Semantic Web Conference 2011 will frequently be tagged with $\#eswc2011$. If a user encounters this hash tag and does not understand it, he can search for it on Twitter. However, as discussed before, to understand a search result is difficult and time-consuming. Using our approach the search will not only return messages using the tag but also a set of entities which have been detected in the search result. These entities will help the user to gain an understanding in which context the hash tag is used and what it may mean.
 
 Finding entities matching a query, especially a query for a given hash tag is difficult due to synonyms and homonyms in the set of hash tags that are frequently used. For example, both the hash tags $\#ka$ and $\#karlsruhe$ are frequently used when talking about topics which are related to the city Karlsruhe. The tag $\#ka$ is however also used in the context of the car type Ford Ka. Thus, when searching for $\#ka$ on Twitter, messages relating to Karlsruhe will be found as well as messages related to Ford Ka. An approach which aims at finding relevant entities for a given search will have to be able to deal with these problems.
+
+\myremark{todo}{ergänzen: abkürzungen, verschmelzen von Wörtern}
 
 In this paper, we present a system which automatically annotates a Twitter search result with Wikipedia entities. While it would be more interesting to annotate each single Twitter message with relevant entities, Twitter messages are too short to contain much relevant information which could be used as input for the annotation tool. Thus, we chose to generate annotations for the whole search result. 
 
@@ -72,6 +76,8 @@ The rest of this paper is organized as follows: in Section~\ref{sect:relWork} we
 
 \section{Related Work}
 \label{sect:relWork}
+
+\myremark{todo}{aufräumen!}
 
 Bringing Semantic Web technologies and Semantic Web technologies together, has been proposed several times.
 
@@ -99,7 +105,7 @@ Stankovic et al. \cite{key:stanko} propose to use the Zemanta\footnote{\url{http
 Instead of mining single messages which provide little signal to the extraction algorithm we use an aggregation of messages (as proposed by Wagner \cite{key:clauwa}) as input to the extraction component.
 The system we use for mapping text to Wikipedia entities has been proposed by Milne and Witten \cite{key:wikifier}. 
 The so-called Wikifier maps text to Wikipedia pages, which in turn directly map to DBpedia URIs.
-%uhe: System beschreiben
+
 Kinsella et al. \cite{key:kinsella} use hyperlinks in posts to derive a richer representation of those posts.
 We too use external data to augment the set of Twitter messages supplied to the Wikifier system.
 
@@ -134,11 +140,12 @@ An example for a single retrieved post is the following: ''\texttt{Just
 returned from a wonderful holiday in \#ka.
 \url{http://www.karlsruhe.de/stadt/tourismus.en} @KarlsruheTweets}'', posted by
 Twitter user \texttt{sample\_user\_12345}; geo coordinates and the date
-the message has been posted be furthermore known.
+the message has been posted are furthermore known.
   
   \item In a second (optional) step hyperlinks posted in messages of the fetched
   feed are followed, content of the referenced website is fetched and processed by the Wrapper. The idea is to acquire additional content which is used as additional signal when searching for entities. We have thought of other methods for enriching the result, like searching for other messages posted by users which have posted messages in the result set. However, these alternative methods are more likely to introduce noise in the signal which is used for obtaining relevant entities.
   
+  \myremark{todo}{ausführen}
 In our example, the message contains a link to
 \url{http://www.karlsruhe.de/stadt/tourismus.en}, the official homepage of the
 tourist office of the city of Karlsruhe. Dereferencing this URL and grabbing the
@@ -178,9 +185,10 @@ In the example, we would expect to find entities which are related to Karlsruhe,
 	</dc:description>\newline
 	</rdf:Description>\newline}
 \end{enumerate}
-\myremark{Uta}{Gibt es was, was man zu Dublin Core zitieren kann?}
 
 \section{Implementation}
+
+\myremark{todo}{Wo ist das System zugreifbar?}
 
 In the Twitter Search Wrapper\footnote{Available at \url{http://km.aifb.kit.edu/services/twittersearchwrap/}} we provide an implementation of our approach.
 
@@ -188,7 +196,7 @@ The implementation is based on a set of existing components: Twitter search resu
 and optionally a geographic location.
 
 The optional step of dereferencing URLs which are posted in messages contained
-in the result set can be triggered using the option \texttt{extern=true}. To keep the input size for the next steps manageable, we do not use the whole content of the referenced sites but only the first 50 words.
+in the result set can be triggered using the option \texttt{extern=true} in our system. To keep the input size for the next steps manageable, we do not use the whole content of the referenced sites but only the first 50 words.
 
 The Wikifier \cite{key:wikifier} is used for obtaining content annotations. This tool takes a text as input and returns a set of Wikipedia entities which are relevant for the analyzed text.
 
@@ -313,7 +321,7 @@ The RDF document describes the result by means of the popular vocabularies FOAF 
 
 \subsection{Setup}
 
-Topics trending worldwide and in Germany at Twitter retrieved on February 24th
+Topics trending worldwide and in Germany on Twitter retrieved on February 24th
 17:20h (GMT) are listed in Table \ref{tbl:terms}. These trending topics will
 constitute a basis of input search terms for our evaluation of the Twitter
 Search Wrapper.
@@ -348,6 +356,8 @@ Vorratsdatenspeicherung & Germany \\
 \caption{Search terms}\label{tbl:terms}
 \end{table}
 
+\myremark{todo}{Deutsche Themen nicht ausgewertet wegen Sprachproblem}
+
 \subsection{Measures}
 
 The goal of our evaluation was to examine the stability of the entity
@@ -364,6 +374,7 @@ retrieves all messages that match the query exactly one time. Each time k new me
 available matching the given query a document containing those k messages
 is retrieved. This method can lead to high data volume and needs constant
 monitoring of recently posted messages matching the search term.
+\myremark{todo}{Nicht genau machbar wegen Zeitpunkt, wann Lookup gemacht werden soll, nicht bekannt}
 \end{itemize}
 \end{definition}
 
@@ -375,25 +386,30 @@ further processing. Using the retrieved trending topics given in Table
 with respect to several measures:
 
 \begin{definition}[Evaluation Measures]
-Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with sets of entities $E_1,\ldots,E_n$, we define:
+Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with sets of entities $E_1,\ldots,E_n$, where each result set $R_i$ consists of twitter messages $r_i1,\ldots,r_iK$ with time stamps $t_i1,\ldots,t_iK$ we define:
 \begin{itemize}
-	\item The average disjoint time $adt$ for a query is the average time that has to lie between two result sets in order to obtain disjoint results: $$adt(q)=\frac{\sum_{i=1}^{n}t_{i+1}-t_i}{n-1}$$
-	A high $adt(q)$ means that new messages that match the query $q$ are not generated very often. If new messages matching the query $q$ are frequently published, then the $adt(q)$ is low.
-	\item The global stability $gs$ of the results shows how stable the whole set of entity terms for a query is. It is defined as: $$gs(q)=\frac{|\bigcap_{i=1}^{n}E_i|}{|\bigcup_{i=1}^{n}E_i|}$$
-	A value of $gs(q)$ of $1$ means that the set of entities is the same at each point in time $t_i$. On the other hand, a value of $0$ means that at least two of the sets of entities, with which the results were annotated, are disjoint.
-	\item The time stability $ts$ for a query $q$ at time $t_i$ is the fraction of entities which are unchanged between the result set at $t_{i-1}$ and $t_i$:
-	$$ts(q,t_i)=\begin{cases} |E_i| & i=1 \\
-														\frac{|E_{i-1}\cap E_i|}{|E_{i-1}\cup E_i|} & i>1\end{cases}$$
-	Here again, a value of $1$ means that the two sets of entities are identical, a value of $0$ means they are disjoint.
+	\item The average update time within a result set $aut(R_i)$ for a query is the average time that lies between messages that match the query which produced the search result: $$aut(R_i)=\frac{\sum_{j=1}^{n}t_{i,j+1}-t_{i,j}}{K-1}$$
+	A high $aut(R)$ means that new messages that match the query are not generated very often. If new messages matching the query are frequently published, then the $adt(R)$ is low.
+	
+	The mean $aut(q)$ and the variance $autv(q)$ of the $aut(R_i)$ can be used to describe update properties for the result sets that are generated for a given query. E.g. if for a given query $aut(q)$ is high and $autv(q)$ is low, then the rate at which messages are published is stable at a quite low level.
+%	\item The global stability $gs$ of the results shows how stable the whole set of entity terms for a query is. It is defined as: $$gs(q)=\frac{|\bigcap_{i=1}^{n}E_i|}{|\bigcup_{i=1}^{n}E_i|}$$
+%	A value of $gs(q)$ of $1$ means that the set of entities is the same at each point in time $t_i$. On the other hand, a value of $0$ means that at least two of the sets of entities, with which the results were annotated, are disjoint.
 	\item The stability for a single term is defined as the fraction of result sets for a query $q$ in which it occurs: 
 $$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
 	If the value of $sts$ is $1$ the term occurs in all of the result sets for the query, if it is close to $0$ it occurs in few result sets.
+	\item The time stability $ts$ for a query $q$ at time $t_i$ is the fraction of entities which are unchanged between the result set at $t_{i-1}$ and $t_i$:
+	$$ts(q,t_i)=\begin{cases} |E_i| & i=1 \\
+														\frac{|E_{i-1}\cap E_i|}{|E_{i-1}\cup E_i|} & i>1\end{cases}$$
+	A value of $1$ means that the two sets of entities are identical, a value of $0$ means they are disjoint.
+	
+	The variance of time stabilities $ts(q,t_i)$ over all $t_i$ helps to determine whether the rate at which the found entities change is rather stable or whether it is changing a lot over time.
 \end{itemize}
 \end{definition}
 
 \subsection{Results}
 
 \myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
+\myremark{todo}{Hypothesis: high average update time leads to stable results}
 
 \subsection{Discussion}
 
