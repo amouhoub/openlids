@@ -19,7 +19,7 @@
 %\newtheorem{example}{Example}
 \newtheorem{query}{Query}
 
-%\newcommand{\nop}[1]{}
+\newcommand{\nop}[1]{}
 
 \setlength{\tabcolsep}{2pt}
 
@@ -42,6 +42,10 @@ To facilitate understanding the meaning of a hash tag in the context of Twitter,
 \end{abstract}
 
 Keywords: Twitter, Wikipedia, DBpedia, RDF
+
+\nop{
+http://tagdef.com/ has a list of popular tags
+}
 
 \section{Introduction}
 
@@ -325,6 +329,76 @@ Topics trending worldwide and in Germany on Twitter retrieved on February 24th
 17:20h (GMT) are listed in Table \ref{tbl:terms}. These trending topics will
 constitute a basis of input search terms for our evaluation of the Twitter
 Search Wrapper.
+
+We have sampled the Twitter message feed using Twitter's Streaming API for one minute twice an hour from 2011-03-03 to
+2011-03-06.
+The top-50 hashtags dervied from the aggregate sample are listed in Table \ref{tbl:hashtags}.
+We then recorded search results for these 50 hashtags during the course of 24 hours (2011-03-07).
+
+\begin{table}[ht*]
+\centering
+\begin{tabular}{ l|l }
+Hashtag & Count  \\
+\hline
+ff &     460 \\
+np &     172 \\
+nowplaying &     144 \\
+winning &     134 \\
+fb &     105 \\
+rt &      83 \\
+mentionke &      61 \\
+blackpeoplemovies &      57 \\
+tigerblood &      56 \\
+thataintwinning &      53 \\
+fail &      53 \\
+teamfollowback &      52 \\
+iftwitterwashighschool &      51 \\
+bieberfact &      51 \\
+news &      46 \\
+jobs &      45 \\
+libya &      44 \\
+followmejp &      44 \\
+partiu &      41 \\
+sougofollow &      39 \\
+damnitstrue &      39 \\
+tilltheworldends &      37 \\
+soalcinta &      35 \\
+nicovideo &      35 \\
+quran &      33 
+\end{tabular}
+\begin{tabular}{ l|l }
+Hashtag & Count  \\
+\hline
+nw &      32 \\
+quote &      31 \\
+shoutout &      30 \\
+jfb &      30 \\
+carnaval &      27 \\
+tfb &      26 \\
+followme &      26 \\
+followfriday &      25 \\
+follow &      24 \\
+egypt &      23 \\
+retweet &      22 \\
+fact &      22 \\
+win &      20 \\
+tweetmyjobs &      20 \\
+music &      20 \\
+in &      20 \\
+imagine &      20 \\
+nowwatching &      19 \\
+cumannanyaindonesia &      19 \\
+twexit &      18 \\
+lcv &      18 \\
+fui &      18 \\
+bot &      18 \\
+nemuritsuzuketeshinu &      17 \\
+fato &      17 \\
+\end{tabular}
+\caption{Popular hashtags sampled during a three-day period.}\label{tbl:hashtags}
+\end{table}
+
+
 
 \begin{table}[ht*]
 \centering
