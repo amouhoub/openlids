@@ -118,12 +118,16 @@ public class Start {
 		    		while(entityItOld.hasNext()){
 		    			allEntities.add((String)entityItOld.next());
 		    		}
-		    		timestability = helpersum/allEntities.size();
-			    	// Delete decimals
-			    	int decimalPlace3 = 3;
-			    	BigDecimal bd2 = new BigDecimal(timestability);
-			    	bd2 = bd2.setScale(decimalPlace3,BigDecimal.ROUND_HALF_UP);
-			    	timestability = bd2.doubleValue();
+		    		if(allEntities.size()!=0){
+		    			timestability = helpersum/Double.valueOf(allEntities.size());
+			    		// Delete decimals
+			    		int decimalPlace3 = 3;
+			    		BigDecimal bd2 = new BigDecimal(timestability);
+			    		bd2 = bd2.setScale(decimalPlace3,BigDecimal.ROUND_HALF_UP);
+			    		timestability = bd2.doubleValue();
+		    		}else{
+		    			timestability=0;
+		    		}
 			    	
 			    	exFile.setTimestability(timestability);
 		    	}
@@ -172,12 +176,16 @@ public class Start {
 		    		while(entityItOld.hasNext()){
 		    			allEntities.add((String)entityItOld.next());
 		    		}
-		    		timestability = helpersum/allEntities.size();
-			    	// Delete decimals
-			    	int decimalPlace3 = 3;
-			    	BigDecimal bd2 = new BigDecimal(timestability);
-			    	bd2 = bd2.setScale(decimalPlace3,BigDecimal.ROUND_HALF_UP);
-			    	timestability = bd2.doubleValue();
+		    		if(allEntities.size()!=0){
+		    			timestability = helpersum/Double.valueOf(allEntities.size());
+			    		// Delete decimals
+			    		int decimalPlace3 = 3;
+			    		BigDecimal bd2 = new BigDecimal(timestability);
+			    		bd2 = bd2.setScale(decimalPlace3,BigDecimal.ROUND_HALF_UP);
+			    		timestability = bd2.doubleValue();
+		    		}else{
+		    			timestability=0;
+		    		}
 			    	
 			    	exFileEXT.setTimestability(timestability);
 		    	}
