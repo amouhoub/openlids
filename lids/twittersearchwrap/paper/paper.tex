@@ -1,7 +1,7 @@
 \documentclass{llncs}
 %\documentclass[a4paper]{article}
 
-\usepackage{fullpage}
+%\usepackage{fullpage}
 \usepackage{setspace}
 \usepackage{url}
 \usepackage{algorithmic}
@@ -12,7 +12,7 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 
-\onehalfspacing
+%\onehalfspacing
 
 %\newtheorem{definition}{Definition}
 %\newtheorem{theorem}{Theorem}
@@ -49,23 +49,20 @@ http://tagdef.com/ has a list of popular tags
 
 \section{Introduction}
 
-\myremark{todo}{warum kein direktes Mapping auf dbpedia-Entitäten?}
-
 Twitter\footnote{\url{http://twitter.com}} is a micro-blogging service that has become very influential over the last years. The idea of micro-blogs is the same as that of blogs, except that the message length is restricted, in the case of Twitter the restriction is 140 characters. Twitter has a total of about 190 million of users who produce 65 million Twitter messages a day. Thus, Twitter represents a huge data source on the web.
 
-On Twitter it is possible to search for messages containing a specific term or hash tag. This search returns a fixed number of most recent messages containing the search term. However, it is hard to grasp the context of the results and to get further information on the topic that was searched for. As each single Twitter message is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. 
+On Twitter it is possible to search for messages containing a specific hash tag. This search returns a fixed number of most recent messages containing the tag. However, it is hard to grasp the context of the results and to get further information on the topic that was searched for. As each single Twitter message is very short and contains little information, it is necessary to parse the whole set in order to get an overview of the context(s) in which the search term is used. 
 
 To facilitate this putting into context of the search results, we propose to annotate search results with a set of entities which reflect the content of the result feeds. These entities will not only help to understand the search terms, but also serve as a starting point for refining the search or searching for further information related to the search result. 
 
 Furthermore, this annotation will help to understand hash tags. Hash tags are frequently used to associate messages with a specific topic, place, person or event on Twitter. For example, messages talking about what is going on at the European Semantic Web Conference 2011 will frequently be tagged with $\#eswc2011$. If a user encounters this hash tag and does not understand it, he can search for it on Twitter. However, as discussed before, to understand a search result is difficult and time-consuming. Using our approach the search will not only return messages using the tag but also a set of entities which have been detected in the search result. These entities will help the user to gain an understanding in which context the hash tag is used and what it may mean.
 
-Finding entities matching a query, especially a query for a given hash tag is difficult due to synonyms and homonyms in the set of hash tags that are frequently used. For example, both the hash tags $\#ka$ and $\#karlsruhe$ are frequently used when talking about topics which are related to the city Karlsruhe. The tag $\#ka$ is however also used in the context of the car type Ford Ka. Thus, when searching for $\#ka$ on Twitter, messages relating to Karlsruhe will be found as well as messages related to Ford Ka. An approach which aims at finding relevant entities for a given search will have to be able to deal with these problems.
+Finding entities matching a query, especially a query for a given hash tag is difficult due to synonyms and homonyms in the set of hash tags that are frequently used. For example, both the hash tags $\#ka$ and $\#karlsruhe$ are frequently used when talking about topics which are related to the city Karlsruhe. The tag $\#ka$ is however also used in the context of the car type Ford Ka. Thus, when searching for $\#ka$ on Twitter, messages relating to Karlsruhe will be found as well as messages related to Ford Ka. An approach which aims at finding relevant entities for a given search will have to be able to deal with these problems. 
 
-\myremark{todo}{ergänzen: abkürzungen, verschmelzen von Wörtern}
 
 In this paper, we present a system which automatically annotates a Twitter search result with Wikipedia entities. While it would be more interesting to annotate each single Twitter message with relevant entities, Twitter messages are too short to contain much relevant information which could be used as input for the annotation tool. Thus, we chose to generate annotations for the whole search result. 
 
-The motivation for choosing Wikipedia as entity source was that it offers a wide coverage of topics. Furthermore, automatic tools for annotating text with Wikipedia entities are readily available (see \cite{key:wikifier}).
+The motivation for choosing Wikipedia as entity source was that it offers a wide coverage of topics. Furthermore, automatic tools for annotating text with Wikipedia entities are readily available (see \cite{key:wikifier}). Note however that a direct mapping of hash tags to entities is not possible in many cases: e.g. there is no entity in dbpedia which describes the European Semantic Web Conference 2011, thus the tag $\#eswc2011$ can not mapped directly.
 
 Annotations should be stable over time, unless the topics discussed in the Twitter messages containing the search term change. In an evaluation of our approach we have tried to analyze the stability of the result.
 
@@ -149,7 +146,6 @@ the message has been posted are furthermore known.
   \item In a second (optional) step hyperlinks posted in messages of the fetched
   feed are followed, content of the referenced website is fetched and processed by the Wrapper. The idea is to acquire additional content which is used as additional signal when searching for entities. We have thought of other methods for enriching the result, like searching for other messages posted by users which have posted messages in the result set. However, these alternative methods are more likely to introduce noise in the signal which is used for obtaining relevant entities.
   
-  \myremark{todo}{ausführen}
 In our example, the message contains a link to
 \url{http://www.karlsruhe.de/stadt/tourismus.en}, the official homepage of the
 tourist office of the city of Karlsruhe. Dereferencing this URL and grabbing the
@@ -191,8 +187,6 @@ In the example, we would expect to find entities which are related to Karlsruhe,
 \end{enumerate}
 
 \section{Implementation}
-
-\myremark{todo}{Wo ist das System zugreifbar?}
 
 In the Twitter Search Wrapper\footnote{Available at \url{http://km.aifb.kit.edu/services/twittersearchwrap/}} we provide an implementation of our approach.
 
@@ -323,17 +317,47 @@ The RDF document describes the result by means of the popular vocabularies FOAF 
 \section{Experiments and Evaluation}
 \label{sect:eval}
 
+We have evaluated our approach to assess whether the entities which are found as related to a specific hash tag are useful and stable over time.
+
 \subsection{Setup}
 
-Topics trending worldwide and in Germany on Twitter retrieved on February 24th
-17:20h (GMT) are listed in Table \ref{tbl:terms}. These trending topics will
-constitute a basis of input search terms for our evaluation of the Twitter
-Search Wrapper.
+We have conducted the evaluation on two sets of queries: the first set are the trending topics worldwide and in Germany on Twitter retrieved on February 24th 17:20h (GMT) -- these topics are listed in Table \ref{tbl:terms}. Trending topics are chosen as they cover a variety of recently talked about topics which due to its recent nature may be of high interest for further processing. 
 
-We have sampled the Twitter message feed using Twitter's Streaming API for one minute twice an hour from 2011-03-03 to
-2011-03-06.
-The top-50 hashtags dervied from the aggregate sample are listed in Table \ref{tbl:hashtags}.
-We then recorded search results for these 50 hashtags during the course of 24 hours (2011-03-07).
+\begin{table}[ht*]
+\centering
+\begin{tabular}{ l }
+Trending Topics Worldwide  \\
+\hline
+\#goodlucknickj  \\
+\#smalljoys \\
+\#thingsthedevilinvented \\
+Adam Wainwright  \\
+CatchPetrovaFire \\
+Gadafi  \\
+Libia \\
+Precious Minaj \\
+Tommy John  \\
+\end{tabular}
+\begin{tabular}{l}
+Trending Topics Germany \\
+\hline
+\#gaddafi \\
+\#guttenberg  \\
+\#libya  \\
+Doktorarbeit \\
+Gef\"{u}hl  \\
+Lion  \\
+MBP \\
+Thunderbolt \\
+Vorratsdatenspeicherung \\
+\end{tabular}
+\caption{Search terms}\label{tbl:terms}
+\end{table}
+
+
+The second query set consists of hash tags that are frequently used on Twitter. To obtain these, we have sampled the Twitter message feed using Twitter's Streaming API for one minute twice an hour from 2011-03-03 to 2011-03-06. The top-50 hashtags dervied from the aggregate sample are listed in Table \ref{tbl:hashtags}. 
+
+
 
 \begin{table}[ht*]
 \centering
@@ -399,65 +423,29 @@ fato &      17 \\
 \end{table}
 
 
+The goal of our evaluation was to examine the stability of the entity annotations over time. To achieve this, we have repeatedly executed the same set of queries and analysed the returned data. 
 
-\begin{table}[ht*]
-\centering
-\begin{tabular}{ |l|l| }
-\hline
-\textsc{Trending Topic} & \textsc{Location}  \\
-\hline
-\#goodlucknickj & Worldwide \\
-\#smalljoys & Worldwide \\
-\#thingsthedevilinvented & Worldwide \\
-Adam Wainwright & Worldwide \\
-CatchPetrovaFire & Worldwide \\
-Gadafi & Worldwide \\
-Libia & Worldwide \\
-Precious Minaj & Worldwide \\
-Tommy John & Worldwide \\
-\hline
-\#gaddafi & Germany \\
-\#guttenberg & Germany \\
-\#libya & Germany \\
-Doktorarbeit & Germany \\
-Gef\"{u}hl & Germany \\
-Lion & Germany \\
-MBP & Germany \\
-Thunderbolt & Germany \\
-Vorratsdatenspeicherung & Germany \\
-\hline
-\end{tabular}
-\caption{Search terms}\label{tbl:terms}
-\end{table}
-
-\myremark{todo}{Deutsche Themen nicht ausgewertet wegen Sprachproblem}
-
-\subsection{Measures}
-
-The goal of our evaluation was to examine the stability of the entity
-annotations over time. To achieve this, we have repeatedly executed the same set
-of queries and saved the returned data. Two methods for this data acquisition
-were identified: \begin{definition}[Data Acquisition Methods]
+In principle, two methods for data acquisition were identified: \begin{definition}[Data Acquisition Methods]
 \begin{itemize}
 \item {\bf Temporal Sliding Window}\newline The query is executed and the n
 most recent results are retrieved every t minutes. The Temporal Sliding Window
 method may lead to duplicate messages in the retrieved documents, but needs to
 handle much less data and allows for an analysis over larger time frames.
-\item {\bf k-item Sliding Window}\newline  The k-item Sliding Window methods
+\item {\bf $k$-item Sliding Window}\newline  The k-item Sliding Window methods
 retrieves all messages that match the query exactly one time. Each time k new messages are
 available matching the given query a document containing those k messages
 is retrieved. This method can lead to high data volume and needs constant
 monitoring of recently posted messages matching the search term.
-\myremark{todo}{Nicht genau machbar wegen Zeitpunkt, wann Lookup gemacht werden soll, nicht bekannt}
 \end{itemize}
 \end{definition}
 
-We considered the trending topics on Twitter a good set of input queries for
-our evaluation approach. Trending topics often cover a variety of recently
-talked about topics which due to its recent nature may be of high interest for
-further processing. Using the retrieved trending topics given in Table
-\ref{tbl:terms} as input queries for the evaluation, the set of queries was executed twice per hour using the Temporal Sliding Window method for data acquisition in a 24 hour time frame starting from the moment the topics were identified as trending topics. We chose the Temporal Sliding Window method for data acquisition because of the expected data volume generated by trending topics as search terms and the long term nature of our evaluation approach. We have then evaluated the results
-with respect to several measures:
+The disadvantage of the first method is that it is neither possible to guarantee that all messages matching the search are collected, nor is it possible to avoid overlaps between the search results. However, while the second method seems to overcome these problems, it does not: Using the $k$-item sliding window method, it is not clear when the next search result should be fetched: even when frequently querying for new messages, if updates are frequent it is likely to lack messages in the result set.
+
+For both data set queries were executed twice per hour using the Temporal Sliding Window method for data acquisition in a 24 hour time frame. Data for the trending topics was collected on 2011-02-24, for the frequent hash tags data was collected on 2011-03-07. 
+
+\subsection{Measures}
+
+For analysing the collected data, several measures were defined:
 
 \begin{definition}[Evaluation Measures]
 Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t_1,\ldots,t_n$ and annotated with sets of entities $E_1,\ldots,E_n$, where each result set $R_i$ consists of twitter messages $r_i1,\ldots,r_iK$ with time stamps $t_i1,\ldots,t_iK$ we define:
