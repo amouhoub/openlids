@@ -471,10 +471,13 @@ A similar problem was encountered when analysing the trending topics in Germany.
 Surprisingly, the second highest stability value was reached with the tag $\#partiu$ which is mainly used in Spanish twitter messages. 
 
 The third highest stability was achieved by the tag $\#tilltheworldends$ which refers to Britney Spears' newest single. Accordingly, the entities which were most frequently used for annotation are "Britney Spears" ($95.83\%$), "iTunes" ($68.75\%$), "itunes" ($62.5\%$), "Itunes" ($31.25\%$), "Madonna\_(entertainer)" ($16.6\%$). The values in brackets indicate the single term stabilities for each of the terms.
-\myremark{Uta}{Weiß jemand, wie Madonna da reinkommt?}
+\myremark{Uta}{Weiß jemand, wie Madonna da reinkommt? Gibt es ne Erklärung für die unterschiedlichen Schreibweisen von iTunes?}
 
-
+Very low time stability was obtained for the tag $\#nowplaying$ which is used to tell which song one is currently listening to (a similarly low stability is obtained for the tag $\#np$ which is often used synonymously with $\#nowplaying$). As these messages contain all kinds of artist names and songs names. It is thus expected that the entities which are found vary between the result sets. In this case the most frequent entities were "iTunes" ($52.08\%$), "Michael Jackson" ($33.3\%$), "Lady Gaga" ($33.3\%$), "Lil Wayne" ($29.16\%$), "Katy Perry" ($22.92\%$).
 %\myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
+
+The effect of considering external content in the annotation is beneficial in some cases, in others the effect was destabilizing. 
+\myremark{Uta}{Meine Hypothese wäre, dass es in Fällen, wo auf sehr unterschiedliche Quellen verwiesen wird, destabilisierend wirkt, in Fällen wo auf die gleichen/ähnliche Seiten verwiesen wird, stabilisierend - habe aber keine Daten, um das zu überprüfen.}
 \myremark{todo}{Hypothesis: high average update time leads to stable results}
 
 \subsection{Discussion}
