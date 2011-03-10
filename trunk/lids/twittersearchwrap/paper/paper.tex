@@ -78,8 +78,6 @@ The rest of this paper is organized as follows: in Section~\ref{sect:relWork} we
 \section{Related Work}
 \label{sect:relWork}
 
-\myremark{todo}{aufr‰umen!}
-
 Bringing Semantic Web technologies and Semantic Web technologies together, has been proposed several times.
 
 The SemanticTweet\footnote{\url{http://semantictweet.com}} service is a tool which allows for the generation of a FOAF file describing one's network of followers and friends on Twitter. Thus, an automatic way of mapping the Twitter social network to semantic data is made available.
@@ -350,68 +348,68 @@ Vorratsdatenspeicherung \\
 \end{table}
 
 
-The second query set consists of hash tags that are frequently used on Twitter. To obtain these, we have sampled the Twitter message feed using Twitter's Streaming API for one minute twice an hour from 2011-03-03 to 2011-03-06. The top-50 hashtags dervied from the aggregate sample are listed in Table \ref{tbl:hashtags}. 
+The second query set consists of hash tags that are frequently used on Twitter. To obtain these, we have sampled the Twitter message feed using Twitter's Streaming API for one minute twice an hour from 2011-03-03 to 2011-03-06. The top-50 hashtags dervied from the aggregate sample are listed in Table \ref{tbl:hashtags}, count is the number of times we encountered them during the collection period. 
 
 
 
 \begin{table}[ht*]
 \centering
 \begin{tabular}{ l|l|l|l|l|l|l|l|l }
-Hashtag & Count & $N_{ext}$ & $E(aut)$ & $Var(aut)$ & $E(ts)$ & $Var(ts)$ & $E(ts_{ext}$ & $Var(ts_{ext})$\\
+Hashtag & Count & $N_{ext}$ & $E(aut)$ & $Var(aut)$ & $E(ts)$ & $Var(ts)$ & $E(ts_{ext})$ & $Var(ts_{ext})$\\
 \hline
 ff &     460 & 48 & 2.2936 & 0.7014 & 0.1268 & 0.0681 & 0.2037 & 0.0281 \\
-np &     172 & 48 & 0,4737 & 0,0287 & 0,0655 & 0,0196 & 0,0717 & 0,0195\\
-nowplaying & 144 & 17 & 0,4514 & 0,0251 & 0,0565 & 0,0198 & 0,0458 & 0,0212 \\
-winning &     134 & 48 & 0,8236 & 0,2365 & 0,1101 & 0,0666 & 0,1816 & 0,0272 \\
+np &     172 & 48 & 0.4737 & 0.0287 & 0.0655 & 0.0196 & 0.0717 & 0.0195\\
+nowplaying & 144 & 17 & 0.4514 & 0.0251 & 0.0565 & 0.0198 & 0.0458 & 0.0212 \\
+winning &     134 & 48 & 0.8236 & 0.2365 & 0.1101 & 0.0666 & 0.1816 & 0.0272 \\
 fb & 105 & 1 & 1.1705 & 1.1826 & 0.1083 & 0.0933 & 0.0208 & 0.0204 \\
-rt & 83 & 48 & 1,7980 & 3,7309 & 0,0979 & 0,0763 & 0,1487 & 0,0267 \\
-mentionke & 61 & 48 & 7,5459 & 195,6829 & 0,1406 & 0,0921 & 0,2215 & 0,0408 \\
-blackpeoplemovies & 57 & 90,6195 & 2007,5551 & 0,3327 & 0,0606 & 0,0349 & 0,0244\\
-tigerblood & 56 & 48 & 3,4029 & 4,8740 & 0,1497 & 0,0692 & 0,2330 & 0,0278 \\
-thataintwinning & 53 & 48 & 16,8075 & 236,8694 & 0,0768 & 0,0435 & 0,1668 & 0,0387 \\
+rt & 83 & 48 & 1.7980 & 3.7309 & 0.0979 & 0.0763 & 0.1487 & 0.0267 \\
+mentionke & 61 & 48 & 7.5459 & 195.6829 & 0.1406 & 0.0921 & 0.2215 & 0.0408 \\
+blackpeoplemovies & 57 & 3 & 90.6195 & 2007.5551 & 0.3327 & 0.0606 & 0.0349 & 0.0244\\
+tigerblood & 56 & 48 & 3.4029 & 4.8740 & 0.1497 & 0.0692 & 0.2330 & 0.0278 \\
+thataintwinning & 53 & 48 & 16.8075 & 236.8694 & 0.0768 & 0.0435 & 0.1668 & 0.0387 \\
 fail & 53 & 48 & 2.3356 & 2.0669 & 0.1927 & 0.1517 & 0.1073 & 0.0460 \\
-teamfollowback & 52 & 48 & 0,9269 & 0,4871 & 0,1912 & 0,0932 & 0,1813 & 0,0245 \\
-iftwitterwashighschool & 51 & 48 & 114,8342 & 1771,4564 & 0,5113 & 0,0405 & 0,5144 & 0,0352 \\
-bieberfact & 51 & 48 & 11.0126 & 63.0455 & 0.0587 & 0.0290 & 0.0765\\
-news & 46 & 0 & 1,8696 & 0,1943 & 0,1024 & 0,0210 & 0,0000 & 0,0000  \\
-jobs & 45 & 0 & 1,3866 & 0,4198 & 0,1006 & 0,0192 & 0,0000 & 0,0000 \\
-libya & 44 & 1 & 16,0309 & 117,2024 & 0,2701 & 0,0427 & 0,0208 & 0,0204 \\
-followmejp & 44 & 0	& 1,5398 & 0,1255 & 0,0688 & 0,0410 & 0,0000 & 0,0000\\
-partiu & 41 & 48 & 7,5809 & 84,0531 & 0,6042 & 0,2391 & 0,5313 & 0,2438 \\
-sougofollow & 39 & 0 & 2,1010 & 0,1820 & 0,0720 & 0,0427 & 0,0000 & 0,0000 \\
+teamfollowback & 52 & 48 & 0.9269 & 0.4871 & 0.1912 & 0.0932 & 0.1813 & 0.0245 \\
+iftwitterwashighschool & 51 & 48 & 114.8342 & 1771.4564 & 0.5113 & 0.0405 & 0.5144 & 0.0352 \\
+bieberfact & 51 & 48 & 11.0126 & 63.0455 & 0.0587 & 0.0290 & 0.0765 & 0.0270 \\
+news & 46 & 0 & 1.8696 & 0.1943 & 0.1024 & 0.0210 & 0.0000 & 0.0000  \\
+jobs & 45 & 0 & 1.3866 & 0.4198 & 0.1006 & 0.0192 & 0.0000 & 0.0000 \\
+libya & 44 & 1 & 16.0309 & 117.2024 & 0.2701 & 0.0427 & 0.0208 & 0.0204 \\
+followmejp & 44 & 0	& 1.5398 & 0.1255 & 0.0688 & 0.0410 & 0.0000 & 0.0000\\
+partiu & 41 & 48 & 7.5809 & 84.0531 & 0.6042 & 0.2391 & 0.5313 & 0.2438 \\
+sougofollow & 39 & 0 & 2.1010 & 0.1820 & 0.0720 & 0.0427 & 0.0000 & 0.0000 \\
 damnitstrue & 39 & 48 & 5.7507 & 16.5725 & 0.1805 & 0.1387 & 0.2177 & 0.1579 \\
-tilltheworldends & 37 & 48 & 85,4526 & 1366,8588 & 0,5682 & 0,0709 & 0,5116 & 0,0324 \\
-soalcinta & 35 & 48 & 8,4143 & 103,7817 & 0,3451 & 0,1987 & 0,3120 & 0,2014 \\
-nicovideo & 35 & 0	51,0720 & 5521,3529 & 0,3604 & 0,1893 & 0,0000 & 0,0000 \\
-quran & 33 & 48 & 45,8290 & 90,4157 & 0,4271 & 0,0501 & 0,4188 & 0,0387 \\
+tilltheworldends & 37 & 48 & 85.4526 & 1366.8588 & 0.5682 & 0.0709 & 0.5116 & 0.0324 \\
+soalcinta & 35 & 48 & 8.4143 & 103.7817 & 0.3451 & 0.1987 & 0.3120 & 0.2014 \\
+nicovideo & 35 & 0 & 51.0720 & 5521.3529 & 0.3604 & 0.1893 & 0.0000 & 0.0000 \\
+quran & 33 & 48 & 45.8290 & 90.4157 & 0.4271 & 0.0501 & 0.4188 & 0.0387 \\
 %\end{tabular}
 %\begin{tabular}{ l|l|l|l|l|l|l|l|l }
 %Hashtag & Count  \\
 %\hline
-nw & 32 & 48 & 2,6054 & 2,1094 & 0,0672 & 0,0231 & 0,0901 & 0,0418 \\
-quote & 31 & 48 & 4,3007 & 0,5706 & 0,1074 & 0,0197 & 0,1012 & 0,0212 \\
-shoutout & 30 & 48 & 2,6030 & 3,3256 & 0,2347 & 0,0987 & 0,2526 & 0,0488 \\
-jfb & 30 & 48 & 23,9911 & 1453,3113 & 0,2483 & 0,1654 & 0,2158 & 0,1379 \\
+nw & 32 & 48 & 2.6054 & 2.1094 & 0.0672 & 0.0231 & 0.0901 & 0.0418 \\
+quote & 31 & 48 & 4.3007 & 0.5706 & 0.1074 & 0.0197 & 0.1012 & 0.0212 \\
+shoutout & 30 & 48 & 2.6030 & 3.3256 & 0.2347 & 0.0987 & 0.2526 & 0.0488 \\
+jfb & 30 & 48 & 23.9911 & 1453.3113 & 0.2483 & 0.1654 & 0.2158 & 0.1379 \\
 carnaval & 27 & 48 & 34.2574 & 1100.9818 & 0.3229 & 0.2134 & 0.2578 & 0.1646 \\
-tfb & 26 & 48 & 2,5994 & 0,8777 & 0,2292 & 0,1766 & 0,1760 & 0,0319 \\
+tfb & 26 & 48 & 2.5994 & 0.8777 & 0.2292 & 0.1766 & 0.1760 & 0.0319 \\
 followme & 26 & 0 & 3.2194 & 0.4650 & 0.1209 & 0.0952 &	0.0000 &	0.0000 \\
 followfriday & 25 & 48 & 13.6749 & 20.0701 & 0.1910 & 0.1152 & 0.2060 & 0.0676 \\
 follow & 24 & 48 & 3.0945 & 1.9622 & 0.2916 & 0.1927 & 0.2046 & 0.0305 \\
 egypt & 23 & 16 & 3.1850 & 3.2745 & 0.1357 & 0.0239 & 0.0704 & 0.0263 \\
-retweet & 22 & 48	4,6991 & 13,4434 & 0,1570 & 0,1232 & 0,1353 & 0,0306 \\
+retweet & 22 & 48 & 4.6991 & 13.4434 & 0.1570 & 0.1232 & 0.1353 & 0.0306 \\
 fact & 22 & 48 & 5.5613 & 12.0766 & 0.0915 & 0.0762 & 0.0783 & 0.0612 \\
-win & 20 & 0 & 4,2949 & 5,1856 & 0,0347 & 0,0221 & 0,0000 & 0,0000 \\
-tweetmyjobs & 20 & 0 & 35,5697 & 1590,6997 & 0,3244 & 0,0621 & 0,0000 & 0,0000 \\
-music & 20 & 1 & 4,4665 & 4,6392 & 0,0833 & 0,0196 & 0,0208 & 0,0204 \\
-in & 20 & 3	8,2367 & 6,8944 & 0,0649 & 0,0236 & 0,0251 & 0,0206 \\
-imagine & 20 & 48	& 8,3378 & 30,4317 & 0,2465 & 0,1759 & 0,1813 & 0,1375 \\
-nowwatching & 19 & 48 & 7,9110 & 8,6833 & 0,0672 & 0,0214 & 0,1293 & 0,0211 \\
+win & 20 & 0 & 4.2949 & 5.1856 & 0.0347 & 0.0221 & 0.0000 & 0.0000 \\
+tweetmyjobs & 20 & 0 & 35.5697 & 1590.6997 & 0.3244 & 0.0621 & 0.0000 & 0.0000 \\
+music & 20 & 1 & 4.4665 & 4.6392 & 0.0833 & 0.0196 & 0.0208 & 0.0204 \\
+in & 20 & 3	& 8.2367 & 6.8944 & 0.0649 & 0.0236 & 0.0251 & 0.0206 \\
+imagine & 20 & 48	& 8.3378 & 30.4317 & 0.2465 & 0.1759 & 0.1813 & 0.1375 \\
+nowwatching & 19 & 48 & 7.9110 & 8.6833 & 0.0672 & 0.0214 & 0.1293 & 0.0211 \\
 cumannanyaindonesia & 19 & 48 & 77.9680 & 2739.7782 & 0.3901 & 0.1885 & 0.4323 & 0.2033 \\
-twexit & 18 & 48 & 12,5672 & 255,8178 & 0,3125 & 0,2148 & 0,2417 & 0,1783 \\
-lcv & 18 & 48 & 28,6309 & 477,9193 & 0,4236 & 0,2395 & 0,2813 & 0,1969 \\
-fui & 18 & 48 & 11,5515 & 165,3850 & 0,4896 & 0,2447 & 0,4635 & 0,2448 \\
+twexit & 18 & 48 & 12.5672 & 255.8178 & 0.3125 & 0.2148 & 0.2417 & 0.1783 \\
+lcv & 18 & 48 & 28.6309 & 477.9193 & 0.4236 & 0.2395 & 0.2813 & 0.1969 \\
+fui & 18 & 48 & 11.5515 & 165.3850 & 0.4896 & 0.2447 & 0.4635 & 0.2448 \\
 bot &      18 & 1 & 13.3533 &	8.2469 & 0.2708 & 0.1975 & 0.0208 & 0.0204  \\
-nemuritsuzuketeshinu & 17 & 48 & 314,1120 & 25053,5657 & 1,0000 & 0,0000 & 1,0000 & 0,0000 \\
+nemuritsuzuketeshinu & 17 & 48 & 314.1120 & 25053.5657 & 1.0000 & 0.0000 & 1.0000 & 0.0000 \\
 fato & 17 & 48 & 17.6223 & 569.5627 & 0.1875 & 0.1523 & 0.2353 & 0.1304 \\
 \end{tabular}
 \caption{Popular hashtags sampled during a three-day period.}\label{tbl:hashtags}
@@ -455,7 +453,7 @@ Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t
 $$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
 	If the value of $sts$ is $1$ the term occurs in all of the result sets for the query, if it is close to $0$ it occurs in few result sets.
 	\item The time stability $ts$ for a query $q$ at time $t_i$ is the fraction of entities which are unchanged between the result set at $t_{i-1}$ and $t_i$:
-	$$ts(q,t_i)=\begin{cases} |E_i| & i=1 \\
+	$$ts(q,t_i)=\begin{cases} 1 & i=1 \\
 														\frac{|E_{i-1}\cap E_i|}{|E_{i-1}\cup E_i|} & i>1\end{cases}$$
 	A value of $1$ means that the two sets of entities are identical, a value of $0$ means they are disjoint.
 	
@@ -465,7 +463,18 @@ $$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
 
 \subsection{Results}
 
-\myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
+An overview of the results we obtained for the frequently used hash tags is given in Table~\ref{tbl:hashtags}. In total, we have analysed 48 result sets for each of the query tags. However, in some cases, the analysis which includes the content of external web pages led to a timeout of the Wikifier. $N_{ext}$ gives the number of result sets which we could analyse when the external content is included. $E(aut)$ and $Var(aut)$ give the results for analysing the average update times of the result sets. A low $E(aut)$ means that updates are frequently posted, a high $E(aut)$ means that updates are rather infrequent. In the case of our analysis estimated update frequencies range from $0.45$ seconds to $314.11$ seconds, i.e. approximately $5$ minutes. In order to avoid any duplicates in the result sets, an average update time of less than $18$ seconds is needed. Note that this value is only an average and does not guarantee disjointness of the result sets, as high update frequencies in one result set may outweigh low update frequencies in other result sets. Thus, we have additionally analysed the variance of the $aut$s. A low variance means that the update intervals remain relatively stable over time, while a high variance indicates that messages using the hash tag were posted rather irregularly. In general, higher average update times are associated with a higher variance in the update times. In some cases however, the variance of the average update time is surprisingly low when the mean average update time is rather high: this is e.g. the case for the tags $\#bieberfact$, $\#quran$, $\#followfriday$. For these tags updates came at a relatively regular level.
+
+We also report the average time stability over all time points as well as the variance for each hash tag. A high time stability indicates that more or less the same entities were used for annotation at all times. The high stability of $1$ was achieved for the tag $\#nemuritsuzuketeshinu$, because no entities could be associated with the results of this search. This can be explained as the tag is only used by Japanese twitter users in Japanese twitter messages. However, the Wikifier analyses the content of the results as being English text.
+A similar problem was encountered when analysing the trending topics in Germany. We assumed that these topics would mostly be tweeted about in German and thus called the German version of the Wikifier when analysing the results. However, it turned out that although the topics were trending in Germany, the tags were also used in messages in other languages.
+
+Surprisingly, the second highest stability value was reached with the tag $\#partiu$ which is mainly used in Spanish twitter messages. 
+
+The third highest stability was achieved by the tag $\#tilltheworldends$ which refers to Britney Spears' newest single. Accordingly, the entities which were most frequently used for annotation are "Britney Spears" ($95.83\%$), "iTunes" ($68.75\%$), "itunes" ($62.5\%$), "Itunes" ($31.25\%$), "Madonna\_(entertainer)" ($16.6\%$). The values in brackets indicate the single term stabilities for each of the terms.
+\myremark{Uta}{Weiﬂ jemand, wie Madonna da reinkommt?}
+
+
+%\myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
 \myremark{todo}{Hypothesis: high average update time leads to stable results}
 
 \subsection{Discussion}
