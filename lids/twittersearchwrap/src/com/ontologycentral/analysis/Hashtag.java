@@ -11,6 +11,8 @@ public class Hashtag {
 	double avgtimestabilityEXT;
 	double vartimestability;
 	double vartimestabilityEXT;
+	int n;
+	int nEXT;
 	List<Entity> entities;
 	List<Entity> entitiesEXT;
 	
@@ -73,5 +75,17 @@ public class Hashtag {
 	}
 	public void setVaravgtimebetweentweets(double varavgtimebetweentweets) {
 		this.varavgtimebetweentweets = varavgtimebetweentweets;
+	}
+	public int getN() {
+		return n;
+	}
+	public void setN(int n) {
+		this.n = n;
+	}
+	public int getnEXT() {
+		return nEXT;
+	}
+	public void setnEXT(int nEXT) {
+		this.nEXT = nEXT;
 	}
 }

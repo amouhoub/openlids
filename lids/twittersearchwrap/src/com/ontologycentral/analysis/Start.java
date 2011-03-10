@@ -32,6 +32,15 @@ public class Start {
 		File file = new File(dir.getCanonicalPath() + "/analysis/input" );
 	    File[] listOfFiles = file.listFiles();
 	    
+		StringBuffer csvString = new StringBuffer();
+		csvString.append("Hashtag;N;N[EXT];E(aut);VAR(aut);E(ts);VAR(ts);E(ts)[EXT];VAR(ts)[EXT];");
+		csvString.append("Entity 1; sts(Entity 1);Entity 2; sts(Entity 2);Entity 3; sts(Entity 3);Entity 4; sts(Entity 4);Entity 5; sts(Entity 5);");
+		csvString.append("Entity 1[EXT]; sts(Entity 1)[EXT];Entity 2[EXT]; sts(Entity 2)[EXT];Entity 3[EXT]; sts(Entity 3)[EXT];Entity 4[EXT]; sts(Entity 4)[EXT];Entity 5[EXT]; sts(Entity 5)[EXT];");
+		csvString.append("\n");
+    	BufferedWriter out = new BufferedWriter(new FileWriter(dir.getCanonicalPath() + "/analysis/analysis.csv"));
+    	out.write(csvString.toString().replace(".", ","));
+    	out.close();
+    	
 		for(int i = 0; i<uri.length; i++){
 			
 			// Find documents for URI
@@ -39,7 +48,7 @@ public class Start {
 			List<File> listOfFilesHashtagExtern = new ArrayList();
 			
 			for(int j = 0; j<listOfFiles.length;j++){
-				if (listOfFiles[j].getAbsolutePath().contains(uri[i])){
+				if (listOfFiles[j].getAbsolutePath().contains(uri[i]+".")||listOfFiles[j].getAbsolutePath().contains(uri[i]+"&extern")){
 					if(listOfFiles[j].getAbsolutePath().contains("extern=true")) {
 						listOfFilesHashtagExtern.add(listOfFiles[j]);
 						}else{
@@ -55,7 +64,7 @@ public class Start {
 			int count = 0;
 			while(fileIt.hasNext()){
 				try{
-				String thisFile = fileToString((File) fileIt.next());
+				String thisFile = new String(fileToString((File) fileIt.next()));
 				ExtractedInformationOfFile exFile = new ExtractedInformationOfFile();
 		    	// Find all DBPedia links in current document
 		    	List<String> entities = new ArrayList<String>();
@@ -66,6 +75,11 @@ public class Start {
 		    	exFile.setEntities(entities);
 		    	// Calculate avgTimeBetweenTweets in current document
 		    	String[] dates = getStringBetweenString(thisFile, "<dc:date xmlns:dc=\"http://purl.org/dc/elements/1.1/\">", "</dc:date>");
+		    	Boolean error = false;
+		    	if(dates.length<1||dates==null){
+		    		error = true;
+		    	}
+		    	if(!error){
 		    	Long[] dateIntervalls = new Long[dates.length-1];
 		    	
 		        DateFormat rfcDateTimeUTCTZFormat = new SimpleDateFormat("yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'");
@@ -126,7 +140,7 @@ public class Start {
 			    		bd2 = bd2.setScale(decimalPlace3,BigDecimal.ROUND_HALF_UP);
 			    		timestability = bd2.doubleValue();
 		    		}else{
-		    			timestability=0;
+		    			timestability=1;
 		    		}
 			    	
 			    	exFile.setTimestability(timestability);
@@ -134,9 +148,11 @@ public class Start {
 		    	
 		    	exFiles[count] = exFile;
 		    	count = count+1;
+		    	}
 				}catch(Exception e){
 					e.printStackTrace();
 				}
+				
 			}
 			// Analysis for extern=true
 			Iterator fileItEXT = listOfFilesHashtagExtern.iterator();
@@ -144,7 +160,7 @@ public class Start {
 			int countEXT = 0;
 			while(fileItEXT.hasNext()){
 				try{
-				String thisFile = fileToString((File) fileItEXT.next());
+				String thisFile = new String(fileToString((File) fileItEXT.next()));
 				ExtractedInformationOfFile exFileEXT = new ExtractedInformationOfFile();
 		    	// Find all DBPedia links in current document
 		    	List<String> entitiesEXT = new ArrayList<String>();
@@ -184,7 +200,7 @@ public class Start {
 			    		bd2 = bd2.setScale(decimalPlace3,BigDecimal.ROUND_HALF_UP);
 			    		timestability = bd2.doubleValue();
 		    		}else{
-		    			timestability=0;
+		    			timestability=1;
 		    		}
 			    	
 			    	exFileEXT.setTimestability(timestability);
@@ -204,7 +220,8 @@ public class Start {
 			double squaresumtimestability = 0;
 			List<String> entitiesUsed = new ArrayList();
 			List<Entity> entitiesProb = new ArrayList();
-			for(ExtractedInformationOfFile item:exFiles){
+			for(int y=0; y<count;y++){
+				ExtractedInformationOfFile item = exFiles[y];
 				sumavgtimebetweentweets = sumavgtimebetweentweets + item.getAvgtimebetweentweets();
 				squaresumavgtimebetweentweets = squaresumavgtimebetweentweets + item.getAvgtimebetweentweets()*item.getAvgtimebetweentweets();
 				sumtimestability = sumtimestability + item.getTimestability();
@@ -233,10 +250,12 @@ public class Start {
 			}
 			
 			hashtag.setEntities(entitiesProb);
-			hashtag.setAvgavgtimebetweentweets(sumavgtimebetweentweets/exFiles.length);
-			hashtag.setVaravgtimebetweentweets(squaresumavgtimebetweentweets-(sumavgtimebetweentweets/exFiles.length)*(sumavgtimebetweentweets/exFiles.length));
-			hashtag.setAvgtimestability(sumtimestability/exFiles.length);
-			hashtag.setVartimestability(squaresumtimestability-(sumtimestability/exFiles.length)*(sumtimestability/exFiles.length));
+			hashtag.setN(count);
+			hashtag.setnEXT(countEXT);
+			hashtag.setAvgavgtimebetweentweets(sumavgtimebetweentweets/Double.valueOf(exFiles.length));
+			hashtag.setVaravgtimebetweentweets(squaresumavgtimebetweentweets/Double.valueOf(exFiles.length)-(sumavgtimebetweentweets/Double.valueOf(exFiles.length))*(sumavgtimebetweentweets/Double.valueOf(exFiles.length)));
+			hashtag.setAvgtimestability(sumtimestability/Double.valueOf(exFiles.length));
+			hashtag.setVartimestability(squaresumtimestability/Double.valueOf(exFiles.length)-(sumtimestability/Double.valueOf(exFiles.length))*(sumtimestability/Double.valueOf(exFiles.length)));
 			double sumtimestabilityEXT = 0;
 			double squaresumtimestabilityEXT = 0;
 			List<String> entitiesUsedEXT = new ArrayList();
@@ -269,26 +288,22 @@ public class Start {
 				}
 			}
 			hashtag.setEntitiesEXT(entitiesProbEXT);
-			hashtag.setAvgtimestabilityEXT(sumtimestabilityEXT/exFilesEXT.length);
-			hashtag.setVartimestabilityEXT(squaresumtimestabilityEXT-(sumtimestabilityEXT/exFilesEXT.length)*(sumtimestabilityEXT/exFilesEXT.length));
+			hashtag.setAvgtimestabilityEXT(sumtimestabilityEXT/Double.valueOf(exFiles.length));
+			hashtag.setVartimestabilityEXT(squaresumtimestabilityEXT/Double.valueOf(exFiles.length)-(sumtimestabilityEXT/Double.valueOf(exFiles.length))*(sumtimestabilityEXT/Double.valueOf(exFiles.length)));
 			hashtag.setName(uri[i]);
 			hashtags.add(hashtag);
-		}
-		StringBuffer csvString = new StringBuffer();
-		csvString.append("Hashtag;E(aut);VAR(aut);E(ts);VAR(ts);E(ts)[EXT];VAR(ts)[EXT];");
-		csvString.append("Entity 1; sts(Entity 1);Entity 2; sts(Entity 2);Entity 3; sts(Entity 3);Entity 4; sts(Entity 4);Entity 5; sts(Entity 5);");
-		csvString.append("Entity 1[EXT]; sts(Entity 1)[EXT];Entity 2[EXT]; sts(Entity 2)[EXT];Entity 3[EXT]; sts(Entity 3)[EXT];Entity 4[EXT]; sts(Entity 4)[EXT];Entity 5[EXT]; sts(Entity 5)[EXT];");
-		csvString.append("\n");
-		for(Hashtag htag : hashtags){
-			csvString.append(htag.getName()+";");
-			csvString.append(htag.getAvgavgtimebetweentweets()/1000+";");
-			csvString.append(htag.getVaravgtimebetweentweets()/(1000*1000)+";");
-			csvString.append(htag.getAvgtimestability()+";");
-			csvString.append(htag.getVartimestability()+";");
-			csvString.append(htag.getAvgtimestabilityEXT()+";");
-			csvString.append(htag.getVartimestabilityEXT()+";");
+			csvString = new StringBuffer();
+			csvString.append(hashtag.getName()+";");
+			csvString.append(hashtag.getN()+";");
+			csvString.append(hashtag.getnEXT()+";");
+			csvString.append(hashtag.getAvgavgtimebetweentweets()/1000+";");
+			csvString.append(hashtag.getVaravgtimebetweentweets()/(1000*1000)+";");
+			csvString.append(hashtag.getAvgtimestability()+";");
+			csvString.append(hashtag.getVartimestability()+";");
+			csvString.append(hashtag.getAvgtimestabilityEXT()+";");
+			csvString.append(hashtag.getVartimestabilityEXT()+";");
 			// Find Top entities
-			List<Entity> init = new ArrayList(htag.getEntities());
+			List<Entity> init = new ArrayList(hashtag.getEntities());
 			for(int v =0;v<5;v++){
 			Entity highest = new Entity();
 			highest.setName("0");
@@ -307,7 +322,7 @@ public class Start {
 			}
 			}
 			// Find Top entities Extern
-			List<Entity> initEXT = new ArrayList(htag.getEntitiesEXT());
+			List<Entity> initEXT = new ArrayList(hashtag.getEntitiesEXT());
 			for(int v =0;v<5;v++){
 			Entity highest = new Entity();
 			highest.setName("0");
@@ -327,13 +342,14 @@ public class Start {
 			}
 		csvString.replace(csvString.lastIndexOf(";"), csvString.lastIndexOf(";")+1, "");
 		csvString.append("\n");
-		}
-
-    	BufferedWriter out = new BufferedWriter(new FileWriter(dir.getCanonicalPath() + "/analysis/analysis.csv"));
+    	out = new BufferedWriter(new FileWriter(dir.getCanonicalPath() + "/analysis/analysis.csv", true));
     	out.write(csvString.toString().replace(".", ","));
     	out.close();
-		
+		}		
 	}
+	
+		
+	
 	
 	public static String fileToString(File file) throws IOException {
 
