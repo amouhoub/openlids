@@ -10,15 +10,29 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Twitter Search Wrapper</title>
+    <style>
+        body {
+		font-family: verdana, arial, helvetica, sans-serif;
+		font-size: 12px;
+		} 
+    </style>
+
   </head>
 
   <body>
     <h1>Welcome to the Twitter Search Wrapper!</h1>
 	<p>
-	Convert Twitter search queries to RDF.<br>
+	Convert Twitter search queries to RDF and maps to DBpedia entities.<br>
     <form name="input" action="./searchwrap" method="get">
       <input type="text" name="q" value="Enter search query" /><br/><br>
-	  <input type="submit" value="Get RDF!" />
+	  <input type="checkbox" name="extern" value="true" />&nbsp;&nbsp;Follow external links<br><br>
+	  Language version:<br><br>
+	  <select name="lang">
+      <option value="en">English</option>
+      <option value="de">German</option>
+      </select><br>
+      <br>
+	  <input type="submit" value="Get RDF for Query!" />
     </form> 
 	</p>
   </body>
