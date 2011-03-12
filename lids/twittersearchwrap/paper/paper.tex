@@ -24,6 +24,13 @@
 \setlength{\tabcolsep}{2pt}
 
 \newcommand{\myremark}[2]{{\textbf{\marginpar{$\parallel$}(* \textit{#1:} #2 *)}}}
+\newcommand*\justify{%
+  \fontdimen2\font=0.4em% interword space
+  \fontdimen3\font=0.2em% interword stretch
+  \fontdimen4\font=0.1em% interword shrink
+  \fontdimen7\font=0.1em% extra space
+}
+
 
 \title{Mapping Microblog Posts to Encyclopedia Articles}
 \author{Uta L\"{o}sch \and David M\"{u}ller \and Andreas Harth}
@@ -116,7 +123,10 @@ The corpus contains evaluation results solicited via Mechanical Turk. In contras
 
 The goal of our method is to, given a search query $q$ as input, provide the user with an RDF\footnote{\url{http://www.w3.org/RDF/}} document describing the search result $R$, i.e. the most recent messages that match the query, the authors of these messages and the most relevant entities $E$ for this result.
 
-The architecture of our proposed system is shown in Figure~\ref{fig:arch}. Upon receipt of a query four steps are performed. In the following we will illustrate these steps using the example of a search for the hash tag $\#ka$, a hashtag which is frequently used to describe posts related to the city of Karlsruhe, Germany.
+The architecture of our proposed system is shown in Figure~\ref{fig:arch}. Upon
+receipt of a query four steps are performed. In the following we will illustrate
+these steps using the example of a search for the hash tag $\#Libya$, a hashtag
+which is frequently used to describe posts related to the country of Libya.
 
 \begin{figure}[htb]
   \centering
@@ -127,64 +137,65 @@ The architecture of our proposed system is shown in Figure~\ref{fig:arch}. Upon 
 
 \begin{enumerate}
 	\item In a first step, the most recent search results for the query are
-	obtained.\newline In our example, calling the Wrapper with query $\#ka$ will
-	return a document containing all most recent Twitter posts whose content matched the search string $\#ka$ and their meta information.
-
-An example for a single retrieved post is the following: \begin{sloppypar}
-''\texttt{Just
-returned from a wonderful holiday in \#ka.
-\url{http://www.karlsruhe.de/stadt/tourismus.en}
-@KarlsruheTweets}'',\end{sloppypar} posted by Twitter user
-\texttt{sample\_user\_12345}; geo coordinates and the date the message has been posted are furthermore known.
+	obtained.\newline In our example, calling the Wrapper with query $\#Libya$ will
+	return a document containing all most recent Twitter posts whose content
+	matched the search string $\#Libya$ and their meta information. 
+	\newline
+	An
+example\footnote{\url{http://twitter.com/SenJohnMcCain/statuses/46619460060196865}}
+for a single retrieved post is the following:\newline\texttt{\justify{"Arab
+League calls for no-fly zone in \#Libya http://t.co/ZsLNIWa"}},\newline posted
+by Twitter user \texttt{SenJohnMcCain}; geo coordinates\footnote{The original Twitter message posted by SenJohnMcCain was not geotagged} and the date the message has been posted are furthermore known.
   
   \item In a second (optional) step hyperlinks posted in messages of the fetched
   feed are followed, content of the referenced website is fetched and processed by the Wrapper. The idea is to acquire additional content which is used as additional signal when searching for entities. We have thought of other methods for enriching the result, like searching for other messages posted by users which have posted messages in the result set. However, these alternative methods are more likely to introduce noise in the signal which is used for obtaining relevant entities.
   
 In our example, the message contains a link to
-\url{http://www.karlsruhe.de/stadt/tourismus.en}, the official homepage of the
-tourist office of the city of Karlsruhe. Dereferencing this URL and grabbing the
-text found at the link gives us the following text:
-\begin{sloppypar}''\texttt{Karlsruhe, where paths converge - a legendary city in the sunny south-west of Germany, famed for its fan-shaped historic street plan, where margraves reigned in times past, and German joie de vivre reigns today.}''
-\end{sloppypar}	
+\url{http://t.co/ZsLNIWa}, which redirects to an article on the situation in
+Libya published on \url{http://reuters.com}. Dereferencing this URL and grabbing
+the text found at the link should return the following text:\newline
+\texttt{\justify{"Arab League calls for Libya no-fly zone-state TV
+- CAIRO, March 12 (Reuters) - The Arab League on Saturday called on the U.N.
+Security Council to impose a no-fly zone on Libya, Egyptian state television
+reported, a decision that would give a regional seal of approval that NATO has
+said is needed for any military action."}}
 	\item In a third step entities matching the search result are retrieved. The
 	content of the Twitter messages that matched the search query and, if available, the content of referenced websites is merged to a single input string and used as input for the annotation. The result of this step is a list of matching articles of the English Wikipedia.
 
-In our example, the contents of all posts related to the search term '\#ka' are
-merged with the retrieved external website content. Thus, the post obtained from
+In our example, the contents of all posts related to the search term '\#Libya'
+are merged with the retrieved external website content. Thus, the post obtained from
 step 1 would be matched with the website content obtained in step 2 into a
-single input stream: \begin{sloppypar}"\texttt{Just returned from a wonderful
-holiday in \#ka. \url{http://www.karlsruhe.de/stadt/tourismus.en}
-@KarlsruheTweets. Karlsruhe, where paths converge - a legendary city in the
-sunny south-west of Germany, famed for its fan-shaped historic street plan, where margraves reigned in times past, and German joie de vivre reigns today.}"\end{sloppypar}This string is appended to the Twitter content and the external content of all other posts in the result.
+single input stream:\newline\texttt{\justify{"Arab
+League calls for no-fly zone in \#Libya Arab League calls for Libya no-fly zone-state TV
+- CAIRO, March 12 (Reuters) - The Arab League on Saturday called on the U.N.
+Security Council to impose a no-fly zone on Libya, Egyptian state television
+reported, a decision that would give a regional seal of approval that NATO has
+said is needed for any military action."}}\newline This string is appended to
+the Twitter content and the external content of all other posts in the result.
 
-In the example, we would expect to find entities which are related to Karlsruhe, like Karlsruhe, Germany or the Karlsruhe\_Institute\_of\_Technology.
+In the example, we would expect to find entities which are related to Libya,
+like Libya, Gaddafi or the Arab\_League.
 
-	\item	Finally, an RDF document is generated representing the search results and the annotations.  
-	
+	\item	Finally, an RDF document is generated representing the search results and
+	the annotations. \newline
 	Continuing our example, the output RDF document should contain the following
-	triples to reference the DBPedia mappings:
-    \begin{enumerate}
-      \item \texttt{\#ka rdfs:seeAlso http://dbpedia.org/resource/Karlsruhe.}
-      \item \texttt{\#ka rdfs:seeAlso http://dbpedia.org/resource/Germany.}
-      \item \texttt{\#ka rdfs:seeAlso\newline
-      http://dbpedia.org/resource/Karlsruhe\_Institute\_of\_Technology.}
-    \end{enumerate}
-
-	The Twitter posts matching the search term \#ka are likewise all described in
-	the output document. Here, the description for the initially given post
+	triples to reference the DBPedia mappings:\newline
+    \texttt{\justify{<http://km.aifb.kit.edu/services/twittersearchwrap/searchwrap?q\newline=\%23lybia>
+    rdfs:seeAlso <http://dbpedia.org/resource/Lybia> ,\newline
+    <http://dbpedia.org/resource/Gaddafi> ,\newline
+    <http://dbpedia.org/resource/Arab\_League> .}}\newline
+	The Twitter posts matching the search term \#Libya are likewise all described
+	in the output document. Here, the description for the initially given post
 	abbreviated \texttt{m} results in the following
-	triples:
-	\begin{enumerate}
-      \item \texttt{twitter:m foaf:page\newline
-      ``http://twitter.com/sample\_user\_12345/statuses/1234567890.''}
-      \item \texttt{twitter:m dc:date ``2011-02-23T12:00:00Z''.}
-      \item \texttt{twitter:m geo:lat ``49.010239''.}
-      \item \texttt{twitter:m geo:long ``8.411879''.}
-      \item \texttt{twitter:m foaf:maker twitter:sample\_user\_12345}
-      \item \texttt{twitter:m dc:description ``Just returned from a
-      wonderful\newline holiday in
-      \#ka.\url{http://www.karlsruhe.de/stadt/tourismus.en}\newline @KarlsruheTweets''.}
-    \end{enumerate}
+	triples:\newline
+	\texttt{\justify{<http://km.aifb.kit.edu/services/twitterwrap/statuses/show/4661\newline
+	9460060196865\#id> foaf:page
+	<http://twitter.com/SenJohnMcCain/\newline statuses/46619460060196865>
+	;\newline dc:date "2011-03-12T17:12:00Z" ;\newline geo:lat "49.010239" ;\newline geo:long "8.411879" ;\newline foaf:maker
+	<http://km.aifb.kit.edu/services/twitterwrap/users/\newline
+	 show?screen\_name=SenJohnMcCain\#id> ;\newline dc:description "Arab League
+	calls for no-fly zone in \#Libya http://\newline t.co/ZsLNIWa" . }}
+     
 \end{enumerate}
 
 \section{Implementation}
@@ -204,41 +215,53 @@ Library\footnote{\url{http://sourceforge.net/projects/nekohtml/}}.
 
 The Wikifier \cite{key:wikifier} is used for obtaining content annotations. This tool takes a text as input and returns a set of Wikipedia entities which are relevant for the analyzed text.
 
-The system generates and outputs an RDF document containing a
-semantic description of the retrieved messages matching the search query for the
-given query and references to the DBpedia articles that have been returned by the Wikifier. It describes
-the result by means of the popular vocabularies FOAF \cite{key:foaf}, Dublin Core\footnote{\url{http://dublincore.org/documents/dcmi-terms/}}, the Basic Geo Vocabulary \cite{key:geo}. The annotations are added to the search result using \texttt{rdf:seeAlso} links to DBpedia entities \cite{key:dbpedia} which are obtained by a direct transformation of the Wikipedia entities' URLs. DBpedia has been chosen as these entities allow for a more coherent presentation of the content in the context of RDF.
+The system generates and outputs an RDF document in RDF/XML Syntax containing a
+description of the retrieved messages matching the search query for the given query and references to the DBpedia articles that have been returned by the Wikifier. It describes
+the result by means of the popular vocabularies FOAF \cite{key:foaf}, Dublin
+Core\footnote{\url{http://dublincore.org/documents/dcmi-terms/}}, the Basic Geo
+Vocabulary \cite{key:geo}. A single twitter message is described by its
+individual page using \texttt{foaf:page} predicate. The date and time the
+message has been posted is specified using \texttt{dc:date} predicate. The messages content
+is annotated using \texttt{dc:description}, while the geographic location of the
+message is indicated by \texttt{geo:lat} and \texttt{geo:long} predicates. The
+creator of the Twitter message is referenced by \texttt{foaf:maker} predicate which points to a service that
+uses RDF to describe information related to a Twitter user which has previously
+been implemented here at the institute as the message creators URI.
 
-The example twitter message given in the previous section is represented in
-the output of the Twitter Search Wrapper as follows:\newline
-\linebreak
-\texttt{<rdf:Description
-rdf:about="http://km.aifb.kit.edu/services/\newline
-twitterwrap/statuses/show/1234567890\#id">\newline
-	<foaf:page
-	rdf:resource="http://twitter.com/sample\_user\_12345/\newline
-	statuses/1234567890"/>\newline
-	<dc:date>2011-02-23T12:00:00Z</dc:date>\newline <geo:lat>49.010239</geo:lat>\newline 
-	<geo:long>8.411879</geo:long>\newline
-	<foaf:maker
-	rdf:resource="http://km.aifb.kit.edu/services/\newline
-	twitterwrap/users/show?screen\_name=sample\_user\_12345\#id"/>\newline <dc:description>\newline
-	Just returned from a wonderful holiday in \#ka.
-	\url{http://www.karlsruhe.de/stadt/tourismus.en} @KarlsruheTweets\newline
-	</dc:description>\newline
-	</rdf:Description>\newline}
-	\linebreak
-Furthermore the mappings to DBpedia articles returned by the Wikifier
-are represented in the output document. In the Twitter Search Wrapper the
-representation is done the following way, again using the introductory
-example from the previous section:\newline
-\linebreak
-	\texttt{<rdf:Description rdf:about=""/>}\newline
-	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Karlsruhe"/>}\newline
-	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Germany"/>}\newline
-	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/\newline
-	Karlsruhe\_Institute\_of\_Technology"/>}\newline
-	\texttt{</rdf:Description>}\newline
+The annotations are added to the search result using \texttt{rdf:seeAlso} links to DBpedia entities \cite{key:dbpedia} which are obtained by a direct transformation of the Wikipedia entities' URLs. DBpedia has been chosen as these entities allow for a more coherent presentation of the content in the context of RDF.
+
+%The example twitter message given in the previous section is represented in
+%the output of the Twitter Search Wrapper as follows:\newline
+%\linebreak
+%\texttt{<rdf:Description
+%rdf:about="http://km.aifb.kit.edu/services/\newline
+%twitterwrap/statuses/show/1234567890\#id">\newline
+%	<foaf:page
+%	rdf:resource="http://twitter.com/sample\_user\_12345/\newline
+%	statuses/1234567890"/>\newline
+%	<dc:date>2011-02-23T12:00:00Z</dc:date>\newline
+%	<geo:lat>49.010239</geo:lat>\newline <geo:long>8.411879</geo:long>\newline
+%	<foaf:maker
+%	rdf:resource="http://km.aifb.kit.edu/services/\newline
+%	twitterwrap/users/show?screen\_name=sample\_user\_12345\#id"/>\newline
+%	<dc:description>\newline Just returned from a wonderful holiday in \#ka.
+%	\url{http://www.karlsruhe.de/stadt/tourismus.en} @KarlsruheTweets\newline
+%	</dc:description>\newline
+%	</rdf:Description>\newline}
+%	\linebreak
+%Furthermore the mappings to DBpedia articles returned by the Wikifier
+%are represented in the output document. In the Twitter Search Wrapper the
+%representation is done the following way, again using the introductory
+%example from the previous section:\newline
+%\linebreak
+%	\texttt{<rdf:Description rdf:about=""/>}\newline
+%	\texttt{<rdfs:seeAlso
+%	rdf:resource="http://dbpedia.org/resource/Karlsruhe"/>}\newline
+%	\texttt{<rdfs:seeAlso
+%	rdf:resource="http://dbpedia.org/resource/Germany"/>}\newline
+%	\texttt{<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/\newline
+%	Karlsruhe\_Institute\_of\_Technology"/>}\newline
+%	\texttt{</rdf:Description>}\newline
 
 \section{Experiments and Evaluation}
 \label{sect:eval}
@@ -281,7 +304,12 @@ Vorratsdatenspeicherung \\
 \end{table}
 
 
-The second query set consists of hash tags that are frequently used on Twitter. To obtain these, we have sampled the Twitter message feed using Twitter's Streaming API for one minute twice an hour from 2011-03-03 to 2011-03-06. The top-50 hashtags dervied from the aggregate sample are listed in Table \ref{tbl:hashtags}, count is the number of times we encountered them during the collection period. 
+The second query set consists of hash tags that are frequently used on Twitter.
+To obtain these, we have sampled the Twitter message feed using Twitter's
+Streaming API for one minute twice an hour from 2011-03-03 to 2011-03-06. The
+top-50 hashtags dervied from the aggregate sample are listed in Table
+\ref{tbl:hashtags}, count is the number of times we encountered them during the
+collection period.
 
 
 
@@ -367,7 +395,11 @@ monitoring of recently posted messages matching the search term.
 
 The disadvantage of the first method is that it is neither possible to guarantee that all messages matching the search are collected, nor is it possible to avoid overlaps between the search results. However, while the second method seems to overcome these problems, it does not: Using the $k$-item sliding window method, it is not clear when the next search result should be fetched: even when frequently querying for new messages, if updates are frequent it is likely to lack messages in the result set.
 
-For both data set queries were executed twice per hour using the Temporal Sliding Window method for data acquisition in a 24 hour time frame. Data for the trending topics was collected on 2011-02-24, for the frequent hash tags data was collected on 2011-03-07. 
+For both data set queries were executed twice per hour using the Temporal
+Sliding Window method for data acquisition in a 24 hour time frame. Data for the
+trending topics was collected on 2011-02-24, for the frequent hash tags data was
+collected on 2011-03-07\footnote{Collected data is available under
+\url{http://people.aifb.kit.edu/aha/2011/twittersearch/twittersearch-2011-03-10.zip}}.
 
 \subsection{Measures}
 
