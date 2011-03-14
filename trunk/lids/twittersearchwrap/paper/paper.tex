@@ -24,12 +24,12 @@
 \setlength{\tabcolsep}{2pt}
 
 \newcommand{\myremark}[2]{{\textbf{\marginpar{$\parallel$}(* \textit{#1:} #2 *)}}}
-\newcommand*\justify{%
-  \fontdimen2\font=0.4em% interword space
-  \fontdimen3\font=0.2em% interword stretch
-  \fontdimen4\font=0.1em% interword shrink
-  \fontdimen7\font=0.1em% extra space
-}
+%\newcommand*\justify{%
+%  \fontdimen2\font=0.4em% interword space
+%  \fontdimen3\font=0.2em% interword stretch
+%  \fontdimen4\font=0.1em% interword shrink
+%  \fontdimen7\font=0.1em% extra space
+%}
 
 
 \title{Mapping Microblog Posts to Encyclopedia Articles}
@@ -124,7 +124,7 @@ The corpus contains evaluation results solicited via Mechanical Turk. In contras
 The goal of our method is to, given a search query $q$ as input, provide the user with an RDF\footnote{\url{http://www.w3.org/RDF/}} document describing the search result $R$, i.e. the most recent messages that match the query, the authors of these messages and the most relevant entities $E$ for this result.
 
 The architecture of our proposed system is shown in Figure~\ref{fig:arch}. Upon
-receipt of a query four steps are performed. In the following we will illustrate
+receipt of a query $q$ four steps are performed. In the following we will illustrate
 these steps using the example of a search for the hash tag $\#Libya$, a hashtag
 which is frequently used to describe posts related to the country of Libya.
 
@@ -136,16 +136,18 @@ which is frequently used to describe posts related to the country of Libya.
 \end{figure}
 
 \begin{enumerate}
-	\item In a first step, the most recent search results for the query are
+	\item In a first step, the most recent search results $R$ for the query are
 	obtained.\newline In our example, calling the Wrapper with query $\#Libya$ will
 	return a document containing all most recent Twitter posts whose content
 	matched the search string $\#Libya$ and their meta information. 
 	\newline
-	An
-example\footnote{\url{http://twitter.com/SenJohnMcCain/statuses/46619460060196865}}
-for a single retrieved post is the following:\newline\texttt{\justify{"Arab
-League calls for no-fly zone in \#Libya http://t.co/ZsLNIWa"}},\newline posted
-by Twitter user \texttt{SenJohnMcCain}; geo coordinates\footnote{The original Twitter message posted by SenJohnMcCain was not geotagged} and the date the message has been posted are furthermore known.
+	An example\footnote{\url{http://twitter.com/SenJohnMcCain/statuses/46619460060196865}}
+for a single retrieved post is the following:
+\begin{verbatim}
+"Arab League calls for no-fly zone in \#Libya 
+http://t.co/ZsLNIWa"}}
+\end{verbatim}
+,posted by Twitter user \texttt{SenJohnMcCain}; geo coordinates\footnote{The original Twitter message posted by SenJohnMcCain was not geotagged} and the date the message has been posted are furthermore known.
   
   \item In a second (optional) step hyperlinks posted in messages of the fetched
   feed are followed, content of the referenced website is fetched and processed by the Wrapper. The idea is to acquire additional content which is used as additional signal when searching for entities. We have thought of other methods for enriching the result, like searching for other messages posted by users which have posted messages in the result set. However, these alternative methods are more likely to introduce noise in the signal which is used for obtaining relevant entities.
@@ -153,59 +155,74 @@ by Twitter user \texttt{SenJohnMcCain}; geo coordinates\footnote{The original Tw
 In our example, the message contains a link to
 \url{http://t.co/ZsLNIWa}, which redirects to an article on the situation in
 Libya published on \url{http://reuters.com}. Dereferencing this URL and grabbing
-the text found at the link should return the following text:\newline
-\texttt{\justify{"Arab League calls for Libya no-fly zone-state TV
-- CAIRO, March 12 (Reuters) - The Arab League on Saturday called on the U.N.
-Security Council to impose a no-fly zone on Libya, Egyptian state television
-reported, a decision that would give a regional seal of approval that NATO has
-said is needed for any military action."}}
+the text found at the link should return the following text:
+\begin{verbatim}
+"Arab League calls for Libya no-fly zone-state TV - CAIRO, 
+March 12 (Reuters) - The Arab League on Saturday called on the
+U.N. Security Council to impose a no-fly zone on Libya, 
+Egyptian state television reported, a decision that would give
+a regional seal of approval that NATO has said is needed for 
+any military action."
+\end{verbatim}
 	\item In a third step entities matching the search result are retrieved. The
 	content of the Twitter messages that matched the search query and, if available, the content of referenced websites is merged to a single input string and used as input for the annotation. The result of this step is a list of matching articles of the English Wikipedia.
 
 In our example, the contents of all posts related to the search term '\#Libya'
 are merged with the retrieved external website content. Thus, the post obtained from
 step 1 would be matched with the website content obtained in step 2 into a
-single input stream:\newline\texttt{\justify{"Arab
-League calls for no-fly zone in \#Libya Arab League calls for Libya no-fly zone-state TV
-- CAIRO, March 12 (Reuters) - The Arab League on Saturday called on the U.N.
-Security Council to impose a no-fly zone on Libya, Egyptian state television
-reported, a decision that would give a regional seal of approval that NATO has
-said is needed for any military action."}}\newline This string is appended to
-the Twitter content and the external content of all other posts in the result.
+single input stream:
+\begin{verbatim}"Arab League calls for no-fly zone in #Libya
+Arab League calls for Libya no-fly zone-state TV - CAIRO, 
+March 12 (Reuters) - The Arab League on Saturday called on the 
+U.N. Security Council to impose a no-fly zone on Libya, 
+Egyptian state television reported, a decision that would give
+a regional seal of approval that NATO has said is needed for 
+any military action."}
+\end{verbatim}
+This string is appended to the Twitter content and the external content of all other posts in the result.
 
 In the example, we would expect to find entities which are related to Libya,
 like Libya, Gaddafi or the Arab\_League.
 
 	\item	Finally, an RDF document is generated representing the search results and
-	the annotations. \newline
-	Continuing our example, the output RDF document should contain the following
-	triples to reference the DBPedia mappings:\newline
-    \texttt{\justify{<http://km.aifb.kit.edu/services/twittersearchwrap/searchwrap?q\newline=\%23lybia>
-    rdfs:seeAlso <http://dbpedia.org/resource/Lybia> ,\newline
-    <http://dbpedia.org/resource/Gaddafi> ,\newline
-    <http://dbpedia.org/resource/Arab\_League> .}}\newline
+	the annotations. Continuing our example, the output RDF document should contain the following
+	triples to reference the DBPedia mappings:
+	\begin{verbatim}
+	<http://km.aifb.kit.edu/services/twittersearchwrap/searchwrap
+	?q=\%23lybia>
+     rdfs:seeAlso <http://dbpedia.org/resource/Lybia> ,
+        <http://dbpedia.org/resource/Gaddafi> ,
+        <http://dbpedia.org/resource/Arab\_League> .
+  \end{verbatim}
 	The Twitter posts matching the search term \#Libya are likewise all described
-	in the output document. Here, the description for the initially given post
-	abbreviated \texttt{m} results in the following
-	triples:\newline
-	\texttt{\justify{<http://km.aifb.kit.edu/services/twitterwrap/statuses/show/4661\newline
-	9460060196865\#id> foaf:page
-	<http://twitter.com/SenJohnMcCain/\newline statuses/46619460060196865>
-	;\newline dc:date "2011-03-12T17:12:00Z" ;\newline geo:lat "49.010239" ;\newline geo:long "8.411879" ;\newline foaf:maker
-	<http://km.aifb.kit.edu/services/twitterwrap/users/\newline
-	 show?screen\_name=SenJohnMcCain\#id> ;\newline dc:description "Arab League
-	calls for no-fly zone in \#Libya http://\newline t.co/ZsLNIWa" . }}
+	in the output document. The description for the post from our example 
+	%abbreviated \texttt{m} 
+	results in the following triples:
+	\begin{verbatim}
+	<http://km.aifb.kit.edu/services/twitterwrap/statuses/
+	show/46619460060196865\#id> 
+		foaf:page <http://twitter.com/SenJohnMcCain/statuses/
+			46619460060196865>;
+		dc:date "2011-03-12T17:12:00Z" ;\newline geo:lat "49.010239" ;
+		geo:long "8.411879" ;
+		foaf:maker <http://km.aifb.kit.edu/services/twitterwrap/users/
+			show?screen\_name=SenJohnMcCain\#id> ;
+		dc:description "Arab League calls for no-fly zone in \#Libya 
+			http://\newline t.co/ZsLNIWa" . 
+	\end{verbatim}
      
 \end{enumerate}
 
 \section{Implementation}
 
-In the Twitter Search Wrapper\footnote{Available at \url{http://km.aifb.kit.edu/services/twittersearchwrap/}} we provide an implementation of our approach.
+In the Twitter Search Wrapper\footnote{Online at \url{http://km.aifb.kit.edu/services/twittersearchwrap/}} we provide an implementation of our approach.
 
-The implementation is based on a set of existing components: Twitter search results are obtained by using the Twitter search API\footnote{\url{http://dev.twitter.com/doc/get/search}}. The result is a feed containing the 100 most recently published Twitter messages, which are publicly visible and match the query, and their authors. The messages themselves are described by their content, publishing date, authors
+The implementation is based on a set of existing components: 
+\begin{itemize}
+\item Twitter search results are obtained by using the Twitter search API\footnote{\url{http://dev.twitter.com/doc/get/search}}, a RESTful API which delivers search results in JSON. The result is a feed containing the 100 most recently published Twitter messages, which are publicly visible and match the query, and their authors. The messages themselves are described by their content, publishing date, authors
 and optionally a geographic location.
 
-The optional step of dereferencing URLs which are posted in messages contained
+\item The optional step of dereferencing URLs which are posted in messages contained
 in the result set can be triggered using the option \texttt{extern=true} in our
 system. To keep the input size for the next steps manageable, we do not use the
 whole content of the referenced sites but only the first 50 words. The content
@@ -213,9 +230,9 @@ retrieved from external websites is beautified for our purpose removing
 HTML-tags and scripting elements using the CyberNeko Java HTML Parser
 Library\footnote{\url{http://sourceforge.net/projects/nekohtml/}}.
 
-The Wikifier \cite{key:wikifier} is used for obtaining content annotations. This tool takes a text as input and returns a set of Wikipedia entities which are relevant for the analyzed text.
+\item The Wikifier \cite{key:wikifier} is used for obtaining content annotations. This tool takes a text as input and returns a set of Wikipedia entities which are relevant for the analyzed text. It represents a state-of-the-art annotation tool. It was chosen as it allows for finding entities not from some tool-specific knowledge base but from dbpedia, which is one of the most widely used data sources within the Linked Open Data cloud.
 
-The system generates and outputs an RDF document in RDF/XML Syntax containing a
+\item The system generates and outputs an RDF document in RDF/XML Syntax containing a
 description of the retrieved messages matching the search query for the given query and references to the DBpedia articles that have been returned by the Wikifier. It describes
 the result by means of the popular vocabularies FOAF \cite{key:foaf}, Dublin
 Core\footnote{\url{http://dublincore.org/documents/dcmi-terms/}}, the Basic Geo
@@ -227,6 +244,8 @@ message is indicated by \texttt{geo:lat} and \texttt{geo:long} predicates. The
 creator of the Twitter message is referenced by \texttt{foaf:maker} predicate which points to a service that
 uses RDF to describe information related to a Twitter user which has previously
 been implemented here at the institute as the message creators URI.
+
+\end{itemize}
 
 The annotations are added to the search result using \texttt{rdf:seeAlso} links to DBpedia entities \cite{key:dbpedia} which are obtained by a direct transformation of the Wikipedia entities' URLs. DBpedia has been chosen as these entities allow for a more coherent presentation of the content in the context of RDF.
 
@@ -270,41 +289,7 @@ We have evaluated our approach to assess whether the entities which are found as
 
 \subsection{Setup}
 
-We have conducted the evaluation on two sets of queries: the first set are the trending topics worldwide and in Germany on Twitter retrieved on February 24th 17:20h (GMT) -- these topics are listed in Table \ref{tbl:terms}. Trending topics are chosen as they cover a variety of recently talked about topics which due to its recent nature may be of high interest for further processing. 
-
-\begin{table}[ht*]
-\centering
-\begin{tabular}{ l }
-Trending Topics Worldwide  \\
-\hline
-\#goodlucknickj  \\
-\#smalljoys \\
-\#thingsthedevilinvented \\
-Adam Wainwright  \\
-CatchPetrovaFire \\
-Gadafi  \\
-Libia \\
-Precious Minaj \\
-Tommy John  \\
-\end{tabular}
-\begin{tabular}{l}
-Trending Topics Germany \\
-\hline
-\#gaddafi \\
-\#guttenberg  \\
-\#libya  \\
-Doktorarbeit \\
-Gef\"{u}hl  \\
-Lion  \\
-MBP \\
-Thunderbolt \\
-Vorratsdatenspeicherung \\
-\end{tabular}
-\caption{Search terms}\label{tbl:terms}
-\end{table}
-
-
-The second query set consists of hash tags that are frequently used on Twitter.
+We have conducted experiments on a set of queries which were identified to be hash tags which are frequently used on Twitter.
 To obtain these, we have sampled the Twitter message feed using Twitter's
 Streaming API for one minute twice an hour from 2011-03-03 to 2011-03-06. The
 top-50 hashtags dervied from the aggregate sample are listed in Table
@@ -320,9 +305,9 @@ Hashtag & Count & $N_{ext}$ & $E(aut)$ & $Var(aut)$ & $E(ts)$ & $Var(ts)$ & $E(t
 \hline
 ff &     460 & 48 & 2.2936 & 0.7014 & 0.1268 & 0.0681 & 0.2037 & 0.0281 \\
 np &     172 & 48 & 0.4737 & 0.0287 & 0.0655 & 0.0196 & 0.0717 & 0.0195\\
-nowplaying & 144 & 17 & 0.4514 & 0.0251 & 0.0565 & 0.0198 & 0.0458 & 0.0212 \\
+nowplaying & 144 & 17 & \textbf{0.4514} & \textbf{0.0251} & 0.0565 & 0.0198 & 0.0458 & 0.0212 \\
 winning &     134 & 48 & 0.8236 & 0.2365 & 0.1101 & 0.0666 & 0.1816 & 0.0272 \\
-fb & 105 & 1 & 1.1705 & 1.1826 & 0.1083 & 0.0933 & - & - \\
+fb & 105 & 1 & 1.1705 & 1.1826 & 0.1083 & 0.0933 & -- & -- \\
 rt & 83 & 48 & 1.7980 & 3.7309 & 0.0979 & 0.0763 & 0.1487 & 0.0267 \\
 mentionke & 61 & 48 & 7.5459 & 195.6829 & 0.1406 & 0.0921 & 0.2215 & 0.0408 \\
 blackpeoplemovies & 57 & 3 & 90.6195 & 2007.5551 & 0.3327 & 0.0606 & 0.0349 & 0.0244\\
@@ -332,16 +317,16 @@ fail & 53 & 48 & 2.3356 & 2.0669 & 0.1927 & 0.1517 & 0.1073 & 0.0460 \\
 teamfollowback & 52 & 48 & 0.9269 & 0.4871 & 0.1912 & 0.0932 & 0.1813 & 0.0245 \\
 iftwitterwashighschool & 51 & 48 & 114.8342 & 1771.4564 & 0.5113 & 0.0405 & 0.5144 & 0.0352 \\
 bieberfact & 51 & 48 & 11.0126 & 63.0455 & 0.0587 & 0.0290 & 0.0765 & 0.0270 \\
-news & 46 & 0 & 1.8696 & 0.1943 & 0.1024 & 0.0210 & - & -  \\
-jobs & 45 & 0 & 1.3866 & 0.4198 & 0.1006 & 0.0192 & - & - \\
-libya & 44 & 1 & 16.0309 & 117.2024 & 0.2701 & 0.0427 & - & - \\
-followmejp & 44 & 0	& 1.5398 & 0.1255 & 0.0688 & 0.0410 & - & -\\
+news & 46 & 0 & 1.8696 & 0.1943 & 0.1024 & 0.0210 & -- & --  \\
+jobs & 45 & 0 & 1.3866 & 0.4198 & 0.1006 & 0.0192 & -- & -- \\
+libya & 44 & 1 & 16.0309 & 117.2024 & 0.2701 & 0.0427 & -- & -- \\
+followmejp & 44 & 0	& 1.5398 & 0.1255 & 0.0688 & 0.0410 & -- & --\\
 partiu & 41 & 48 & 7.5809 & 84.0531 & 0.6042 & 0.2391 & 0.5313 & 0.2438 \\
-sougofollow & 39 & 0 & 2.1010 & 0.1820 & 0.0720 & 0.0427 & - & - \\
+sougofollow & 39 & 0 & 2.1010 & 0.1820 & 0.0720 & 0.0427 & -- & -- \\
 damnitstrue & 39 & 48 & 5.7507 & 16.5725 & 0.1805 & 0.1387 & 0.2177 & 0.1579 \\
 tilltheworldends & 37 & 48 & 85.4526 & 1366.8588 & 0.5682 & 0.0709 & 0.5116 & 0.0324 \\
 soalcinta & 35 & 48 & 8.4143 & 103.7817 & 0.3451 & 0.1987 & 0.3120 & 0.2014 \\
-nicovideo & 35 & 0 & 51.0720 & 5521.3529 & 0.3604 & 0.1893 & - & - \\
+nicovideo & 35 & 0 & 51.0720 & 5521.3529 & 0.3604 & 0.1893 & -- & -- \\
 quran & 33 & 48 & 45.8290 & 90.4157 & 0.4271 & 0.0501 & 0.4188 & 0.0387 \\
 %\end{tabular}
 %\begin{tabular}{ l|l|l|l|l|l|l|l|l }
@@ -353,24 +338,24 @@ shoutout & 30 & 48 & 2.6030 & 3.3256 & 0.2347 & 0.0987 & 0.2526 & 0.0488 \\
 jfb & 30 & 48 & 23.9911 & 1453.3113 & 0.2483 & 0.1654 & 0.2158 & 0.1379 \\
 carnaval & 27 & 48 & 34.2574 & 1100.9818 & 0.3229 & 0.2134 & 0.2578 & 0.1646 \\
 tfb & 26 & 48 & 2.5994 & 0.8777 & 0.2292 & 0.1766 & 0.1760 & 0.0319 \\
-followme & 26 & 0 & 3.2194 & 0.4650 & 0.1209 & 0.0952 &	- &	- \\
+followme & 26 & 0 & 3.2194 & 0.4650 & 0.1209 & 0.0952 &	-- &	-- \\
 followfriday & 25 & 48 & 13.6749 & 20.0701 & 0.1910 & 0.1152 & 0.2060 & 0.0676 \\
 follow & 24 & 48 & 3.0945 & 1.9622 & 0.2916 & 0.1927 & 0.2046 & 0.0305 \\
 egypt & 23 & 16 & 3.1850 & 3.2745 & 0.1357 & 0.0239 & 0.0704 & 0.0263 \\
 retweet & 22 & 48 & 4.6991 & 13.4434 & 0.1570 & 0.1232 & 0.1353 & 0.0306 \\
 fact & 22 & 48 & 5.5613 & 12.0766 & 0.0915 & 0.0762 & 0.0783 & 0.0612 \\
-win & 20 & 0 & 4.2949 & 5.1856 & 0.0347 & 0.0221 & - & - \\
-tweetmyjobs & 20 & 0 & 35.5697 & 1590.6997 & 0.3244 & 0.0621 & - & - \\
-music & 20 & 1 & 4.4665 & 4.6392 & 0.0833 & 0.0196 & - & - \\
-in & 20 & 3	& 8.2367 & 6.8944 & 0.0649 & 0.0236 & 0.0251 & 0.0206 \\
+win & 20 & 0 & 4.2949 & 5.1856 & \textbf{0.0347} & 0.0221 & -- & -- \\
+tweetmyjobs & 20 & 0 & 35.5697 & 1590.6997 & 0.3244 & 0.0621 & -- & -- \\
+music & 20 & 1 & 4.4665 & 4.6392 & 0.0833 & 0.0196 & -- & -- \\
+in & 20 & 3	& 8.2367 & 6.8944 & 0.0649 & 0.0236 & \textbf{0.0251} & 0.0206 \\
 imagine & 20 & 48	& 8.3378 & 30.4317 & 0.2465 & 0.1759 & 0.1813 & 0.1375 \\
 nowwatching & 19 & 48 & 7.9110 & 8.6833 & 0.0672 & 0.0214 & 0.1293 & 0.0211 \\
 cumannanyaindonesia & 19 & 48 & 77.9680 & 2739.7782 & 0.3901 & 0.1885 & 0.4323 & 0.2033 \\
 twexit & 18 & 48 & 12.5672 & 255.8178 & 0.3125 & 0.2148 & 0.2417 & 0.1783 \\
 lcv & 18 & 48 & 28.6309 & 477.9193 & 0.4236 & 0.2395 & 0.2813 & 0.1969 \\
-fui & 18 & 48 & 11.5515 & 165.3850 & 0.4896 & 0.2447 & 0.4635 & 0.2448 \\
-bot &      18 & 1 & 13.3533 &	8.2469 & 0.2708 & 0.1975 & - & -  \\
-nemuritsuzuketeshinu & 17 & 48 & 314.1120 & 25053.5657 & 1.0000 & 0.0000 & 1.0000 & 0.0000 \\
+fui & 18 & 48 & 11.5515 & 165.3850 & 0.4896 & \textbf{0.2447} & 0.4635 & \textbf{0.2448} \\
+bot &      18 & 1 & 13.3533 &	8.2469 & 0.2708 & 0.1975 & -- & --  \\
+nemuritsuzuketeshinu & 17 & 48 & \textbf{314.1120} & \textbf{25053.5657} & \textbf{1.0000} & \textbf{0.0000} & \textbf{1.0000} & \textbf{0.0000} \\
 fato & 17 & 48 & 17.6223 & 569.5627 & 0.1875 & 0.1523 & 0.2353 & 0.1304 \\
 \end{tabular}
 \caption{Popular hashtags sampled during a three-day period.}\label{tbl:hashtags}
@@ -418,7 +403,9 @@ Given disjoint result sets $R_1,\ldots,R_n$ for a query $q$ obtained at times $t
 $$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
 	If the value of $sts$ is $1$ the term occurs in all of the result sets for the query, if it is close to $0$ it occurs in few result sets.
 	\item The time stability $ts$ for a query $q$ at time $t_i$ is the fraction of
-	entities which are unchanged between the result set at $t_{i-1}$ and $t_i$: $$ts(q,t_i)=\begin{cases} 1 & i=1 \\
+	entities which are unchanged between the result set at $t_{i-1}$ and $t_i$: 
+	$$ts(q,t_i)=\begin{cases} 1 & i=1 \\
+														1 & E_{i-1}\cup E_i = \emptyset\\														
 														\frac{|E_{i-1}\cap E_i|}{|E_{i-1}\cup E_i|} & i>1\end{cases}$$
 	A value of $1$ means that the two sets of entities are identical, a value of $0$ means they are disjoint.
 	
@@ -428,38 +415,66 @@ $$sts(q,t)=\frac{|\{i|t\in E_i\}|}{n}$$
 
 \subsection{Results}
 
-An overview of the results we obtained for the frequently used hash tags is given in Table~\ref{tbl:hashtags}. In total, we have analysed 48 result sets for each of the query tags. However, in some cases, the analysis which includes the content of external web pages led to a timeout of the Wikifier. $N_{ext}$ gives the number of result sets which we could analyse when the external content is included. $E(aut)$ and $Var(aut)$ give the results for analysing the average update times of the result sets. A low $E(aut)$ means that updates are frequently posted, a high $E(aut)$ means that updates are rather infrequent. In the case of our analysis estimated update frequencies range from $0.45$ seconds to $314.11$ seconds, i.e. approximately $5$ minutes. In order to avoid any duplicates in the result sets, an average update time of less than $18$ seconds is needed. Note that this value is only an average and does not guarantee disjointness of the result sets, as high update frequencies in one result set may outweigh low update frequencies in other result sets. Thus, we have additionally analysed the variance of the $aut$s. A low variance means that the update intervals remain relatively stable over time, while a high variance indicates that messages using the hash tag were posted rather irregularly. In general, higher average update times are associated with a higher variance in the update times. In some cases however, the variance of the average update time is surprisingly low when the mean average update time is rather high: this is e.g. the case for the tags $\#bieberfact$, $\#quran$, $\#followfriday$. For these tags updates came at a relatively regular level.
+An overview of the results we obtained for the frequently used hash tags is given in Table~\ref{tbl:hashtags}. The most frequent entities for some of the tags are listed in Table~\ref{tbl:entities}. In total, we have analysed 48 result sets for each of the query tags. However, in some cases, the analysis which includes the content of external web pages led to a timeout of the Wikifier. $N_{ext}$ gives the number of result sets which we could analyse when the external content is included. $E(aut)$ and $Var(aut)$ give the results for analysing the average update times of the result sets. A low $E(aut)$ means that updates are frequently posted, a high $E(aut)$ means that updates are rather infrequent. In the case of our analysis estimated update frequencies range from $0.45$ seconds to $314.11$ seconds, i.e. approximately $5$ minutes. In order to avoid any duplicates in the result sets, an average update time of less than $18$ seconds is needed. Note that update times below this value do not guarantee disjointness of the result sets, as the value is only an average, and high update frequencies in one result set may outweigh low update frequencies in other result sets. Thus, we have additionally analysed the variance of the $aut$s. A low variance means that the update intervals remain relatively stable over time, while a high variance indicates that messages using the hash tag were posted rather irregularly. In general, higher average update times are associated with a higher variance in the update times. In some cases however, the variance of the average update time is surprisingly low when the mean average update time is rather high: this is e.g. the case for the tags $\#bieberfact$, $\#quran$, $\#followfriday$. For these tags updates came at a relatively regular level.
 
-We also report the average time stability over all time points as well as the variance for each hash tag. A high time stability indicates that more or less the same entities were used for annotation at all times. The high stability of $1$ was achieved for the tag $\#nemuritsuzuketeshinu$, because no entities could be associated with the results of this search. This can be explained as the tag is only used by Japanese twitter users in Japanese twitter messages. However, the Wikifier analyses the content of the results as being English text.
-A similar problem was encountered when analysing the trending topics in Germany. We assumed that these topics would mostly be tweeted about in German and thus called the German version of the Wikifier when analysing the results. However, it turned out that although the topics were trending in Germany, the tags were also used in messages in other languages.
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l|l}
+Tag & extern & $E$ & $sts$ \\%& $E_2$ & $sts(E_2)$ & $E_3$ & $sts(E_3)$ \\
+\hline
+$\#tilltheworldends$ & false & Britney Spears .9583 \\
+& &  iTunes & .6875 \\
+& &  itunes & .625 \\ 
+$\#nowplaying$ & false & iTunes & .5208 \\
+& & Michael Jackson & .333 \\
+& & Lady Gaga & .333 \\
+$\#nowplaying$ & true & YouTube & .8235 \\
+& & Hip Hop Music & .6471 \\
+& & The Notorious B.I.G. & .5883 \\
+$\#np$ & false & Chris Brown\_(entertainer) & .5 \\
+& & Usher & .3125 \\
+& & Lil Wayne & .2917 \\
+$\#np$ & true & Chris Brown\_(entertainer) & .5 \\
+& & YouTube & .375 \\
+& & Ne-Yo & .315 \\
+$\#thataintwinning$ & false & Mozilla Firefox & .2291 \\
+& & Twitter & .2291 \\
+& & twitter & .1667 \\
+$\#thataintwinning$ & true & twitter & .5208 \\
+& & Twitter & .5 \\
+& & Two and a half men & .125 \\
+$\#blackpeoplemovies$ & false & Devil & .4791 \\
+& & Tyler Perry & .2708 \\
+& & Harry Potter & .2292 \\
+$\#blackpeoplemovies$ & true & Amazon.com & 1 \\
+& & YouTube & 1 \\
+& & amazon.com & 1
+\end{tabular}
+\label{tbl:entities}
+\caption{Most frequent entities and their single term stabilities}
+\end{table}
 
-Surprisingly, the second highest stability value was reached with the tag $\#partiu$ which is mainly used in Spanish twitter messages. 
-\myremark{Uta}{Liegt auch an nichtgefundenen Entitäten}
+We also report the average time stability over all time points as well as the variance for each hash tag. A high time stability indicates that more or less the same entities were used for annotation at all times. The highest stabilities were achieved for the tags $\#nemuritsuzuketeshinu$ and $\#partiu$, because no (resp. very few) entities could be associated with the results of this search. This can be explained as the tags are only used in Japanese resp. Spanish twitter messages. However, the Wikifier analyses the content of the results as being English text. A solution could be to search only for English messages, however, this is not possible as Twitter messages have no language tags and location attributes are no sufficient indicator for the language in which a user will write messages.
 
-The third highest stability was achieved by the tag $\#tilltheworldends$ which refers to Britney Spears' newest single. Accordingly, the entities which were most frequently used for annotation are "Britney Spears" ($95.83\%$), "iTunes" ($68.75\%$), "itunes" ($62.5\%$), "Itunes" ($31.25\%$), "Madonna\_(entertainer)" ($16.6\%$). The values in brackets indicate the single term stabilities for each of the terms.
-\myremark{Uta}{Weiß jemand, wie Madonna da reinkommt? Gibt es ne Erklärung für die unterschiedlichen Schreibweisen von iTunes? JA, liegt am Wikifier der keine normalisierten URIs zurückliefert}
+The third highest stability was achieved by the tag $\#tilltheworldends$ which refers to Britney Spears' newest single. The different URIs which are used for annotation are explained by the fact, that the Wikifier does not return normalized entities.
 
-Very low time stability was obtained for the tag $\#nowplaying$ which is used to tell which song one is currently listening to (a similarly low stability is obtained for the tag $\#np$ which is often used synonymously with $\#nowplaying$). As these messages contain all kinds of artist names and songs names. It is thus expected that the entities which are found vary between the result sets. In this case the most frequent entities were "iTunes" ($52.08\%$), "Michael Jackson" ($33.3\%$), "Lady Gaga" ($33.3\%$), "Lil Wayne" ($29.16\%$), "Katy Perry" ($22.92\%$).
-%\myremark{Uta}{In der Evaluationstabelle sollte dann auf jeden Fall noch dabei stehen, wie viele Resultsets wir zu den einzelnen Queries haben}
+Very low time stability was obtained for the tag $\#nowplaying$ which is used to tell which song one is currently listening to (a similarly low stability is obtained for the tag $\#np$ which is often used synonymously with $\#nowplaying$). As these messages contain all kinds of artist names and songs names, it is thus expected that the entities which are found vary between the result sets.
 
-The effect of considering external content in the annotation is beneficial in some cases, in others the effect was destabilizing. 
-\myremark{Uta}{Meine Hypothese wäre, dass es in Fällen, wo auf sehr unterschiedliche Quellen verwiesen wird, destabilisierend wirkt, in Fällen wo auf die gleichen/ähnliche Seiten verwiesen wird, stabilisierend - habe aber keine Daten, um das zu überprüfen.}
-\myremark{todo}{Hypothesis: high average update time leads to stable results}
+The effect of considering external content in the annotation is beneficial in some cases, in others the effect was destabilizing. The highest decrease in stability was observed for the tag $\#thataintwinning$, the highest increase occured for the tag $\#blackpeoplemovies$. Our hypothesis is that destabilization occurs especially in cases where the posted links cover a variety of topics, while for more specific hash tags referenced web sites are more likely to cover a specific topics and will thus be stabilizing.
 
-\subsection{Discussion}
 
-@@@highlight the remarkable outcomes
-@@@what is did we learn from the results?
+
 
 
 \section{Conclusion}
 \label{sect:conclusion}
 
-@@@ not possible to map one hashtag to a single dbpedia concept: \#ka may be used for Karlsruhe or Ford Ka
+We have presented an approach for annotating search results on microblogging platforms with Wikipedia entities. Our evaluation has shown that a direct mapping of hashtags to a single dbpedia concept is not possible in many cases. One reason is the use of hashtags in different contexts, another reason is that hash tags do not necessarily describe an entity, but are rather used to describe contexts.
 
-@@@ tricky to deal with different languages - wikifier (or any nlp technique) is language dependent, but the trending topics may be commented on in a variety of languages
+Another difficult problem we encountered is that different languages have to be dealt with: Topics are often commented on in a variety of languages on microblogging platforms. However, NLP techniques which are used to analyze the messages are language dependent.
 
-@@@ how to select external data (parse text from HTML, which part of web page to select - boilerplate stuff might spoil the results (reference blog cleansing paper
+
+%@@@ how to select external data (parse text from HTML, which part of web page to select - boilerplate stuff might spoil the results (reference blog cleansing paper
 
 \bibliographystyle{abbrv}
 \bibliography{bib}
