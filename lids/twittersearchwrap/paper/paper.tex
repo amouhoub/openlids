@@ -8,6 +8,7 @@
 \usepackage{algorithm}
 \usepackage{amsmath}
 \usepackage{latexsym}
+\usepackage{multirow}
 
 \usepackage{graphicx}
 \usepackage{subfig}
@@ -401,44 +402,44 @@ An overview of the results we obtained for the frequently used hashtags is given
 \begin{table}[ht]
 \centering
 \small
-\begin{tabular}{l|l|l|l}
-Hashtag & Extern & $E$ & $sts$ \\%& $E_2$ & $sts(E_2)$ & $E_3$ & $sts(E_3)$ \\
+\begin{tabular}{l|l|l|l|l}
+Hashtag & Definition on tagdef.com & Extern & $E$ & $sts$ \\%& $E_2$ & $sts(E_2)$ & $E_3$ & $sts(E_3)$ \\
 \hline
-\#tilltheworldends & false & Britney Spears & .9583 \\
-& &  iTunes & .6875 \\
-& &  itunes & .625 \\ 
+\#tilltheworldends & - & false & Britney Spears & .9583 \\
+& & &  iTunes & .6875 \\
+& & &  itunes & .625 \\ 
 \hline
-\#nowplaying & false & iTunes & .5208 \\
-& & Michael Jackson & .333 \\
-& & Lady Gaga & .333 \\
+\#nowplaying & What people on Twitter & false & iTunes & .5208 \\
+             & are currently listening & & Michael Jackson & .333 \\
+             & to. & & Lady Gaga & .333 \\
 \hline
-\#nowplaying & true & YouTube & .8235 \\
-& & Hip Hop Music & .6471 \\
-& & The Notorious B.I.G. & .5883 \\
+\#nowplaying & same & true & YouTube & .8235 \\
+             &  &  & Hip Hop Music & .6471 \\
+             &  &  & The Notorious B.I.G. & .5883 \\
 \hline
-\#np & false & Chris Brown\_(entertainer) & .5 \\
-& & Usher & .3125 \\
-& & Lil Wayne & .2917 \\
+\#np         & Now playing = \#NP & false & Chris Brown\_(entertainer) & .5 \\
+& & & Usher & .3125 \\
+& & & Lil Wayne & .2917 \\
 \hline
-\#np & true & Chris Brown\_(entertainer) & .5 \\
-& & YouTube & .375 \\
-& & Ne-Yo & .315 \\
+\#np & same & true & Chris Brown\_(entertainer) & .5 \\
+& & & YouTube & .375 \\
+& & & Ne-Yo & .315 \\
 \hline
-\#thataintwinning & false & Mozilla Firefox & .2291 \\
-& & Twitter & .2291 \\
-& & twitter & .1667 \\
+\#thataintwinning & -& false & Mozilla Firefox & .2291 \\
+& & & Twitter & .2291 \\
+& & & twitter & .1667 \\
 \hline
-\#thataintwinning & true & twitter & .5208 \\
-& & Twitter & .5 \\
-& & Two and a half men & .125 \\
+\#thataintwinning & - & true & twitter & .5208 \\
+& & & Twitter & .5 \\
+& & & Two and a half men & .125 \\
 \hline
-\#blackpeoplemovies & false & Devil & .4791 \\
-& & Tyler Perry & .2708 \\
-& & Harry Potter & .2292 \\
+\#blackpeoplemovies & - & false & Devil & .4791 \\
+& & & Tyler Perry & .2708 \\
+& & & Harry Potter & .2292 \\
 \hline
-\#blackpeoplemovies & true & Amazon.com & 1 \\
-& & YouTube & 1 \\
-& & amazon.com & 1
+\#blackpeoplemovies & - & true & Amazon.com & 1 \\
+& & & YouTube & 1 \\
+& & & amazon.com & 1
 \end{tabular}
 \label{tbl:entities}
 \caption{Most frequent entities and their single term stabilities}
