@@ -200,7 +200,7 @@ like Libya, Gaddafi or the Arab\_League.
 	   dc:date "2011-03-12T17:12:00Z" ;\newline geo:lat "49.010239" ;
 	   geo:long "8.411879" ;
 	   foaf:maker <http://km.aifb.kit.edu/services/twitterwrap/users/
-		    show?screen\_name=SenJohnMcCain\#id> ;
+	      show?screen\_name=SenJohnMcCain\#id> ;
 	   dc:description "Arab League calls for no-fly zone in \#Libya 
 	      http://\newline t.co/ZsLNIWa" . \end{verbatim}}     
 \end{enumerate}
@@ -407,6 +407,10 @@ Hashtag & Definition on tagdef.com & Extern & $E$ & $sts$ \\%& $E_2$ & $sts(E_2)
 & & &  iTunes & .6875 \\
 & & &  itunes & .625 \\ 
 \hline
+\#tilltheworldends & - & false & Britney Spears & 1 \\
+& & &  itunes & .75 \\
+& & &  Amazon.com & .5625 \\ 
+\hline
 \#nowplaying & What people on Twitter & false & iTunes & .5208 \\
              & are currently listening & & Michael Jackson & .333 \\
              & to. & & Lady Gaga & .333 \\
@@ -487,9 +491,9 @@ The corpus contains evaluation results solicited via Mechanical Turk. In contras
 \label{sect:conclusion}
 
 We have presented an approach for annotating Twitter hashtags with Wikipedia entities.
-We have described an implementation of two variants of the method and evaluated the approach.
+We have described an implementation of two variants of the method and evaluated the approach. In an evaluation we have shown that meaningful entities were found for many hashtags and that these entities remain stable over time.
 
-Our evaluation has shown that a direct mapping of hashtags to a single DBpedia concept is not always possible.
+However, our evaluation has shown that a direct mapping of hashtags to a single DBpedia concept is not always possible.
 One reason is that hashtags do not necessarily describe an entity, but are rather used to describe contexts.
 Another reason is the use of hashtags for different entities.
 For example, both the hashtags $\#ka$ and $\#karlsruhe$ are frequently used when talking about topics which are related to the city Karlsruhe.
