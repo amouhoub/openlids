@@ -1,4 +1,4 @@
-package analysis;
+package com.ontologycentral.analysis;
 
 import java.util.List;
 

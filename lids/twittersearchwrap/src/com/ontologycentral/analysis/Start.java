@@ -1,4 +1,4 @@
-package analysis;
+package com.ontologycentral.analysis;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
