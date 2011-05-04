@@ -2,6 +2,7 @@ package com.ontologycentral.twittersearchwrap;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,27 +43,15 @@ import org.cyberneko.html.filters.Writer;
 public class SearchServlet extends HttpServlet {
 	public static SimpleDateFormat RFC822 = new SimpleDateFormat("EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
 
-	private LanguageDetector langdetect;
-
-	public SearchServlet(){
-		super();
-		//initialize language detection
-		try {
-			langdetect = new LanguageDetector();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		resp.setContentType("application/rdf+xml");
 		ServletContext ctx = getServletContext();
 		OutputStream os = resp.getOutputStream();
+
+		File langResDir = (File)ctx.getAttribute(Listener.LANG_RESOURCES_FOLDER);
+		LanguageDetector langdetect = new LanguageDetector(langResDir);
+
 
 		StringBuilder searchResult;
 		Map<String,String> langTweets = new HashMap<String, String>();
@@ -75,7 +64,7 @@ public class SearchServlet extends HttpServlet {
 			if( language == null || language.equals("auto")){
 				guessLanguage = true;
 			}
-			
+
 			query = URLEncoder.encode(query, "utf-8");
 			System.out.println("SEARCH-QUERY:   " + query);
 
@@ -141,12 +130,30 @@ public class SearchServlet extends HttpServlet {
 
 				// Get HTTP-links
 				String[] contents = searchResult.toString().split("</content>");
+
 				Set<String> linkedURLs = new HashSet<String>();
+
+				StringBuilder tweetsHTML = new StringBuilder();
 
 				for(int i = 1; i<contents.length-1; i++){
 					String[] content = contents[i].split("<content type=\"html\">");
-					linkedURLs.add(content[1]);	
+					tweetsHTML.append(" " + content[1]);  
 				}
+
+				String[] tweetsHTMLSplit = tweetsHTML.toString().split("&lt;a href=&quot;");
+				String[] urlarray = new String[tweetsHTMLSplit.length-1];
+
+				for(int i = 1; i<tweetsHTMLSplit.length; i++){
+					urlarray[i-1] = tweetsHTMLSplit[i].toString().split("&quot;&gt;")[0];
+				}
+
+				Set<String> urls = new HashSet<String>();
+
+				for(int i=0; i<urlarray.length;i++){
+					urls.add(urlarray[i]);
+				}
+
+
 
 				Iterator<String> urliter = linkedURLs.iterator();
 				// Maximum of 25 links used
@@ -260,7 +267,7 @@ public class SearchServlet extends HttpServlet {
 			//			Calendar c = Calendar.getInstance();
 			//			c.add(Calendar.DATE, 1);
 			//			resp.setHeader("Expires", RFC822.format(c.getTime()));
-			
+
 			try {
 				StreamSource ssource = new StreamSource(new StringReader(searchResultString));
 				StreamResult sresult = new StreamResult(os);

@@ -13,10 +13,9 @@ public class LanguageDetector {
 
 	private LangDetector langDetector;
 
-	public LanguageDetector() throws FileNotFoundException, IOException{
+	public LanguageDetector(File dir) throws FileNotFoundException, IOException{
 
 			langDetector = new LangDetector();
-			File dir = new File("WEB-INF/europarl");
 			for( String filename : dir.list() ){
 				if( !filename.endsWith(".bin")){
 					continue;
