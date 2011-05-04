@@ -29,10 +29,16 @@ public class Wikify {
 	}
 
 	public static Set<String> startWikify (String input, String lang){
+		
+		
 		String uri = "http://km.aifb.kit.edu/services/wpmservlet-en/web/service";
 		
 		if(lang.equals("de")){
 			uri = "http://km.aifb.kit.edu/services/wpmservlet-de/web/service";
+		} else if (lang.equals("fr")){
+			uri = "http://km.aifb.kit.edu/services/wpmservlet-fr/web/service";
+		} else if (lang.equals("es")){
+			uri = "http://km.aifb.kit.edu/services/wpmservlet-es/web/service";
 		}
 		
 	    Wikifier w = new Wikifier(uri, "david's bot");

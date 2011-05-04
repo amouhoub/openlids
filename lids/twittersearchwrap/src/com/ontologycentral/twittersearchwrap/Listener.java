@@ -1,5 +1,6 @@
 package com.ontologycentral.twittersearchwrap;
 
+import java.io.File;
 import java.util.Collections;
 
 import javax.cache.Cache;
@@ -16,6 +17,7 @@ import javax.xml.transform.stream.StreamSource;
 public class Listener implements ServletContextListener {
 	public static String T = "tranformer";
 	public static String CACHE = "c";
+	public static String LANG_RESOURCES_FOLDER = "langResFolder";
 	
 	public void contextInitialized(ServletContextEvent event) {
 		ServletContext ctx = event.getServletContext();
@@ -42,6 +44,9 @@ public class Listener implements ServletContextListener {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
+		
+		File dir = new File(ctx.getRealPath("WEB-INF/europarl"));
+		ctx.setAttribute(LANG_RESOURCES_FOLDER, dir);
 	}
 		
 	public void contextDestroyed(ServletContextEvent event) {
