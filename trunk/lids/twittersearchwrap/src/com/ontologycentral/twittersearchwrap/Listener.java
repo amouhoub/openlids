@@ -19,6 +19,8 @@ public class Listener implements ServletContextListener {
 	public static String CACHE = "c";
 	public static String LANG_RESOURCES_FOLDER = "langResFolder";
 	
+	
+	
 	public void contextInitialized(ServletContextEvent event) {
 		ServletContext ctx = event.getServletContext();
 
@@ -45,8 +47,11 @@ public class Listener implements ServletContextListener {
 			throw new RuntimeException(e);
 		}
 		
-		File dir = new File(ctx.getRealPath("WEB-INF/europarl"));
-		ctx.setAttribute(LANG_RESOURCES_FOLDER, dir);
+		File[] langFiles = new File[LanguageDetector.langFileNames.length];
+		for( int i= 0 ; i < langFiles.length ; i++ ){
+			langFiles[i] = new File(ctx.getRealPath("WEB-INF/europarl/" + LanguageDetector.langFileNames[i]));
+		}
+		ctx.setAttribute(LANG_RESOURCES_FOLDER, langFiles);
 	}
 		
 	public void contextDestroyed(ServletContextEvent event) {
