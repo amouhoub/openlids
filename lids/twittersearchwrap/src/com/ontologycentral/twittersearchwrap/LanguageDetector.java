@@ -13,16 +13,16 @@ public class LanguageDetector {
 
 	private LangDetector langDetector;
 
-	public LanguageDetector(File dir) throws FileNotFoundException, IOException{
+	public static final String[] langFileNames = new String[]{"en_tree.bin","de_tree.bin","es_tree.bin","fr_tree.bin"};
+
+	public LanguageDetector(File[] langFiles) throws FileNotFoundException, IOException{
 
 			langDetector = new LangDetector();
-			for( String filename : dir.list() ){
-				if( !filename.endsWith(".bin")){
-					continue;
-				}
+			for( File langFile : langFiles ){
 				ObjectInputStream input = new ObjectInputStream(
 						new BufferedInputStream(
-								new FileInputStream(dir + File.separator + filename)));
+								new FileInputStream(langFile)));
+				String filename = langFile.getName();
 				String lang = filename.substring(0,filename.indexOf('_'));
 				langDetector.register(lang, input);
 			}

@@ -49,8 +49,8 @@ public class SearchServlet extends HttpServlet {
 		ServletContext ctx = getServletContext();
 		OutputStream os = resp.getOutputStream();
 
-		File langResDir = (File)ctx.getAttribute(Listener.LANG_RESOURCES_FOLDER);
-		LanguageDetector langdetect = new LanguageDetector(langResDir);
+		File[] langResFiles = (File[])ctx.getAttribute(Listener.LANG_RESOURCES_FOLDER);
+		LanguageDetector langdetect = new LanguageDetector(langResFiles);
 
 
 		StringBuilder searchResult;
