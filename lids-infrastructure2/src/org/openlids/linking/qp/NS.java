@@ -7,6 +7,7 @@ package org.openlids.linking.qp;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.semanticweb.yars.nx.Resource;
 
 /**
  *
@@ -48,6 +49,8 @@ public class NS {
         prefixes.put("ldin", LDIN);
         prefixes.put("v", V);
    }
+    public final static Resource OWL_SAMEAS = new Resource(OWL + "sameAs");
+    public final static Resource RDF_TYPE = new Resource(RDF + "type");
 
     public static String prefixToNS(String prefix) {
         return prefixes.get(prefix);

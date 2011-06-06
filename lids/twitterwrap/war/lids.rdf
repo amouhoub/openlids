@@ -4,13 +4,42 @@
     <rdfs:label>OpenLIDS Twitter Service Description</rdfs:label>
   </rdf:Description>
 
-  <rdf:Description rdf:about="#service">
-    <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+<rdf:Description rdf:about="#tweets">
+<lids:lids_description>
+<rdf:Description>
+        <lids:endpoint rdf:resource="http://km.aifb.kit.edu/services/twitterwrap/statuses/user_timeline" />
+	<lids:service_entity>id</lids:service_entity>
+	<lids:output_bgp>?tweet &lt;http://xmlns.com/foaf/0.1/maker&gt; ?id</lids:output_bgp>
+	<lids:input_bgp>?id a foaf:Agent .
+   ?id foaf:account ?acc .
+   ?acc a sioc:UserAccount .
+   ?acc foaf:accountName ?screen_name .
+   ?acc foaf:accountServiceHomepage &lt;http://twitter.com/&gt; </lids:input_bgp>
+	<lids:required_vars>screen_name</lids:required_vars>
+      </rdf:Description>
+</lids:lids_description>
+</rdf:Description>
 
+
+  <rdf:Description rdf:about="#usershow">
+<lids:lids_description>
+<rdf:Description>
+        <lids:endpoint rdf:resource="http://km.aifb.kit.edu/services/twitterwrap/users/show" />
+	<lids:service_entity>id</lids:service_entity>
+	<lids:output_bgp>?id &lt;http://openlids.org/twitterwrap/vocab#status&gt; ?status</lids:output_bgp>
+	<lids:input_bgp>?id a foaf:Agent .
+   ?id foaf:account ?acc .
+   ?acc a sioc:UserAccount .
+   ?acc foaf:accountName ?screen_name .
+   ?acc foaf:accountServiceHomepage &lt;http://twitter.com/&gt; </lids:input_bgp>
+	<lids:required_vars>screen_name</lids:required_vars>
+      </rdf:Description>
+</lids:lids_description>
+    <lids:description>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 CONSTRUCT {
-   ?id owl:sameAs ?tweet .
+   ?id &lt;http://openlids.org/twitterwrap/vocab#status&gt; ?status .
 }
-FROM &lt;http://twitterwrap.ontologycentral.com/statuses/user_timeline&gt;
+FROM &lt;http://km.aifb.kit.edu/services/twitterwrap/users/show&gt;
 WHERE {
    ?id a foaf:Agent .
    ?id foaf:account ?acc .

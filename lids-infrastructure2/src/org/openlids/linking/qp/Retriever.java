@@ -24,10 +24,10 @@ import org.semanticweb.yars.nx.Variable;
  */
 public class Retriever {
 
-    Logger _log = Logger.getLogger(this.getClass().getName());
+    static final Logger _log = Logger.getLogger(Retriever.class.getName());
 
     public final Rete _rete;
-    final Manager _manager;
+    public final Manager _manager;
 
     public Retriever() {
         _rete = new Rete();
@@ -51,6 +51,15 @@ public class Retriever {
                 }
             }
         });
+    }
+
+    public void start() {
+        _manager.start();
+        _rete.start();
+    }
+
+    public void shutdown() throws InterruptedException {
+        _rete.shutdown();
     }
 
     public void addURI(String start_uri) {
@@ -77,11 +86,10 @@ public class Retriever {
                 }
                 i++;
             }
-            System.err.println("ADDING: " + Nodes.toN3(nnx));
             _rete.addTriple(nnx);
         }
 
-        sq.setRete(_rete);
+       // sq.setRete(_rete);
     }
 
 }

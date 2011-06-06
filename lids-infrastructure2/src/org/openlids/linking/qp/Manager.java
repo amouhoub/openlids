@@ -7,14 +7,10 @@ package org.openlids.linking.qp;
 
 import com.ontologycentral.ldspider.Crawler;
 import com.ontologycentral.ldspider.frontier.Frontier;
-import com.ontologycentral.ldspider.hooks.content.ContentHandler;
 import com.ontologycentral.ldspider.hooks.error.ErrorHandler;
 import com.ontologycentral.ldspider.hooks.links.LinkFilter;
-import com.ontologycentral.ldspider.hooks.sink.Provenance;
 import com.ontologycentral.ldspider.hooks.sink.Sink;
 import com.ontologycentral.ldspider.hooks.sink.SinkCallback;
-import com.ontologycentral.ldspider.queue.SpiderQueue;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -95,7 +91,7 @@ class RankingFrontier extends Frontier {
         List<URI> li = new ArrayList<URI>();
         li.addAll(_data.keySet());
         Collections.sort(li, _comparator);
-        if (_data.size() > 0 && li.size() == 0) {
+        if (_data.size() > 0 && li.isEmpty()) {
             System.out.println("PRESIZE: " + _data.size());
         }
 
@@ -112,7 +108,15 @@ class RankingFrontier extends Frontier {
  * @author ssp
  */
 public class Manager {
-    Logger _log = Logger.getLogger(this.getClass().getName());
+    static final Logger _log = Logger.getLogger(Manager.class.getName());
+
+
+    public ManagerStatistics getStatistics() {
+        ManagerStatistics ms = new ManagerStatistics();
+        ms._retrieved_urls = retrieved_urls;
+        ms._uris = uris;
+        return ms;
+    }
 
     final Rete _rete;
     final Crawler _crawler;
@@ -121,15 +125,18 @@ public class Manager {
     Set<String> retrieved_urls = new HashSet<String>();
     final Queue<String> uris = new LinkedList<String>();
 
-    Set<Thread> _loaders = new HashSet<Thread>();
     Thread _loader;
-    final Boolean _loader_running = new Boolean(true);
+    Boolean _loader_running = true;
 
-    int successful_uris = 0;
+    
+    public void start() {
+        _loader.start();
+    }
 
-    synchronized int increase_successful_uris() {
-        successful_uris += 1;
-        return successful_uris;
+    public void shutdown() throws InterruptedException {
+        _loader_running = false;
+        _rete.shutdown();
+        _loader.join();
     }
 
     public Manager(Rete rete) {
@@ -209,7 +216,6 @@ public class Manager {
             }
         };
 
-        _loader.start();
 
 
 //        _loader = new Thread() {
@@ -287,7 +293,8 @@ public class Manager {
         if(uri.startsWith("http://km.aifb.kit.edu/services/facewrap/")) {
             String fb_token = "";
             try {
-                fb_token = URLEncoder.encode("2227470867|2.sDFJLIhmx0oTJMm_KM_m3w__.3600.1295200800-1424828568|QfvnH7TXGfNB7Z8Vm6ah2Blhnfk", "utf-8");
+                fb_token = URLEncoder.encode("2227470867|2.e1EoELFViwqx6rRqRbUP2Q__.3600.1295298000-1424828568|MdXzhcHqiAe_msIq4CPu_4bAMe4",
+                        "utf-8");
             } catch (UnsupportedEncodingException ex) {
                 Logger.getLogger(Manager.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -298,7 +305,9 @@ public class Manager {
             }
         }
         try {
-            _frontier.add(new URI(uri));
+            if(this.retrieved_urls.add(uri)) {
+                _frontier.add(new URI(uri));
+            }
         } catch (URISyntaxException ex) {
             _log.log(Level.SEVERE, null, ex);
         }
@@ -308,7 +317,9 @@ public class Manager {
         return uris.poll();
     }
 
-    public synchronized void addTriple(Node[] triple) {
-
+    public synchronized void addTriple(Node[] node) {
+        _rete.addTriple(node);
     }
+
+   
 }
