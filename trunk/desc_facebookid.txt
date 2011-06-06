@@ -1,0 +1,9 @@
+### Service: GeoNames findNearby
+# Endpoint
+<http://km.aifb.kit.edu/services/facewrap/thing>
+# Input Variables:
+?id
+# Input Pattern:
+?thing <http://ogp.me/ns#id> ?id
+# Output Pattern:
+?thing <http://xmlns.com/foaf/0.1/homepage> ?hp . ?thing <http://ogp.me/ns#type_str> ?type . ?thing <http://xmlns.com/foaf/0.1/depiction> ?pic . ?thing <http://ogp.me/ns#username> ?username . ?thing <http://xmlns.com/foaf/0.1/name> ?name . ?thing <http://ogp.me/ns#likes> ?likes . ?thing ?p ?o
