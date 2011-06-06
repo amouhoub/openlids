@@ -34,7 +34,7 @@ public class QueryDisplayingForm extends javax.swing.JFrame {
          _dataModel = new AbstractTableModel() {
           public int getColumnCount() { return _sq.getNHVs(); }
           public int getRowCount() { return _sq.getNResults() + 1;}
-          public Object getValueAt(int row, int col) { return _sq.getResult(row,col); }
+          public Object getValueAt(int row, int col) { return /* _sq.getResult(row,col); */ null; }
         };
         jTable1.setModel(_dataModel);
 

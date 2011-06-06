@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -13,6 +14,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -66,6 +68,7 @@ public class FacewrapServlet extends HttpServlet {
         propTranslation.put("latitude", "geo:lat");
         propTranslation.put("longitude", "geo:long");
         propTranslation.put("from", "foaf:maker");
+        propTranslation.put("type", "og:type_str");
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -85,24 +88,24 @@ public class FacewrapServlet extends HttpServlet {
         String access_token = null;
         if (authorization != null && authorization.startsWith("OAuth2")) {
             String key_vals[] = authorization.substring(7).split(",");
-            for(String key_val : key_vals) {
+            for (String key_val : key_vals) {
                 String kv[] = key_val.split("=");
-                if(kv.length == 2) {
-                    if(kv[0].equals("oauth2_access_token")) {
+                if (kv.length == 2) {
+                    if (kv[0].equals("oauth2_access_token")) {
                         access_token = URLEncoder.encode(kv[1].substring(1, kv[1].length() - 1), "utf-8");
                     }
                 }
             }
         }
-        if(access_token == null) {
+        if (access_token == null) {
             access_token = req.getParameter("access_token");
-            if(access_token != null && access_token.equals(""))
+            if (access_token != null && access_token.equals("")) {
                 access_token = null;
-            if(access_token != null) {
-                access_token = URLEncoder.encode(access_token, "utf-8");
             }
+//            if(access_token != null) {
+            //              access_token = URLEncoder.encode(access_token, "utf-8");
+            //}
         }
-
 
         String path = req.getServletPath();
 
@@ -120,7 +123,7 @@ public class FacewrapServlet extends HttpServlet {
                     search = true;
                 }
             }
-            if(!search) {
+            if (!search) {
                 _log.warning("Unknown path for facewrap Servlet: " + path);
                 resp.sendError(404);
                 return;
@@ -130,16 +133,33 @@ public class FacewrapServlet extends HttpServlet {
         String singleParameter = null;
         if (req.getParameterMap().size() == 0 || (req.getParameterMap().size() == 1 && req.getParameter("access_token") != null)) {
             String pathinfo = req.getPathInfo();
-            if(pathinfo == null) pathinfo = "";
+            if (pathinfo == null) {
+                pathinfo = "";
+            }
             String[] parts = pathinfo.split("/");
-            if(parts.length > 0) {
+            if (parts.length > 0) {
                 singleParameter = parts[parts.length - 1];
             }
 //            String restURI = req.getRequestURI().substring(path.length());
-  //          if (restURI.startsWith("/")) {
-    //            singleParameter = restURI.substring(1);
-      //      }
+            //          if (restURI.startsWith("/")) {
+            //            singleParameter = restURI.substring(1);
+            //      }
         }
+
+        String baseuri = "/services/facewrap" + req.getServletPath() + "?";
+        Enumeration parnames = req.getParameterNames();
+        while(parnames.hasMoreElements()) {
+            Object parname = parnames.nextElement();
+            if (parname.equals("access_token"))
+                continue;
+            if (parname instanceof String) {
+                String parnamestr = (String) parname;
+                baseuri += URLEncoder.encode(parnamestr,"utf-8") + "=" + URLEncoder.encode(req.getParameter(parnamestr),"utf-8") + "&";
+            }
+        }
+
+        baseuri = baseuri.substring(0, baseuri.length() - 1) + "#";
+
 
         String facebookid = null;
         String q = null;
@@ -182,11 +202,11 @@ public class FacewrapServlet extends HttpServlet {
                     facebookid = singleParameter;
                 }
             }
-            url_str = "https://graph.facebook.com/" + URLEncoder.encode(facebookid, "utf-8");
+            url_str = "https://graph.facebook.com/" + URLEncoder.encode(facebookid, "utf-8") + "?metadata=1";
         }
-        
-        if(access_token != null) {
-            if(url_str.contains("?")) {
+
+        if (access_token != null) {
+            if (url_str.contains("?")) {
                 url_str += "&";
             } else {
                 url_str += "?";
@@ -199,16 +219,16 @@ public class FacewrapServlet extends HttpServlet {
         _log.info("URL: " + url);
 
         ServletContext ctx = getServletContext();
-       // Cache cache = (Cache) ctx.getAttribute(Listener.CACHE);
+        // Cache cache = (Cache) ctx.getAttribute(Listener.CACHE);
 
         try {
 
             String result = null;
 
             /*if (cache != null) {
-                if (cache.containsKey(url)) {
-                    result = (String) cache.get(url);
-                }
+            if (cache.containsKey(url)) {
+            result = (String) cache.get(url);
+            }
             }*/
 
             if (result == null) {
@@ -230,7 +250,7 @@ public class FacewrapServlet extends HttpServlet {
                     _log.warning("Retrieved: " + page.toJSONString());
 
 //                      _log.severe("result: " + page.toJSONString());
-                          
+
 
                     if (page.containsKey("error")) {
                         JSONObject error = (JSONObject) page.get("error");
@@ -255,7 +275,8 @@ public class FacewrapServlet extends HttpServlet {
 
                     if (search) {
                         ch.writeStartElement("rdf:Description");
-                        ch.writeAttribute("rdf:ID", "list");
+//                        ch.writeAttribute("rdf:ID", "list");
+                        ch.writeAttribute("rdf:about" , baseuri + "list");
                         ch.writeStartElement("fw:search_term");
                         ch.writeCharacters(q);
                         ch.writeEndElement();
@@ -280,12 +301,13 @@ public class FacewrapServlet extends HttpServlet {
                             for (Object o : list) {
                                 jsonToRDF(factory, ch, "foaf:topic", o);
                             }
-                        } 
+                        }
                         ch.writeEndDocument();
                     } else {
 
                         ch.writeStartElement("rdf:Description");
-                        ch.writeAttribute("rdf:ID", "thing");
+                        ch.writeAttribute("rdf:about", baseuri + "thing");
+//                        ch.writeAttribute("rdf:ID", "thing");
 
 
                         if (page.containsKey("location")) {
@@ -318,6 +340,8 @@ public class FacewrapServlet extends HttpServlet {
 
                         for (Object key : page.keySet()) {
                             if (key instanceof String) {
+                                if (key.equals("metadata"))
+                                    continue;
                                 String prop = propTranslation.get((String) key);
                                 if (prop == null) {
                                     prop = "og:" + (String) key;
@@ -328,51 +352,59 @@ public class FacewrapServlet extends HttpServlet {
                             }
                         }
 
+                        if (page.containsKey("type")) {
+                            Object val = page.get("type");
+                            if (val instanceof String && val.equals("user")) {
+                                String url_friends_str = "https://graph.facebook.com/" + URLEncoder.encode(facebookid, "utf-8") + "/friends";
+                                if (access_token != null) {
+                                    url_friends_str += "?access_token=" + access_token;
+                                    try {
+                                        URL url_friends = new URL(url_friends_str);
+                                        HttpURLConnection friends_conn = (HttpURLConnection) url_friends.openConnection();
+                                        InputStream friends_is = friends_conn.getInputStream();
+                                        encoding = friends_conn.getContentEncoding();
+                                        if (encoding == null) {
+                                            encoding = "ISO_8859-1";
+                                        }
+                                        if (friends_conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                                            _log.info("Parsing JSON ... ");
 
-                        String url_friends_str = "https://graph.facebook.com/" + URLEncoder.encode(facebookid, "utf-8") + "/friends";
-                        if(access_token != null) {
-                            url_friends_str += "?access_token=" + access_token;
-                            URL url_friends = new URL(url_friends_str);
-                            HttpURLConnection friends_conn = (HttpURLConnection) url_friends.openConnection();
-                            InputStream friends_is = friends_conn.getInputStream();
-                            encoding = friends_conn.getContentEncoding();
-                            if (encoding == null) {
-                                encoding = "ISO_8859-1";
-                            }
-                            if (friends_conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                                _log.info("Parsing JSON ... ");
-                                JSONObject friends = (JSONObject) parser.parse(new InputStreamReader(friends_is));
-                                _log.info("[OK]");
-                                _log.warning("Retrieved: " + friends.toJSONString());
+                                            JSONObject friends = (JSONObject) parser.parse(new InputStreamReader(friends_is));
+                                            _log.info("[OK]");
+                                            _log.warning("Retrieved: " + friends.toJSONString());
 
-                                if (friends.containsKey("error")) {
-
-                                } else if (friends.containsKey("data")) {
-                                    Object flisto = friends.get("data");
-                                    if (flisto instanceof List) {
-                                        List flist = (List) flisto;
-                                        for (Object friendo : flist) {
-                                            if (friendo instanceof JSONObject) {
-                                                JSONObject friend = (JSONObject) friendo;
-                                                if (friend.containsKey("id") && friend.containsKey("id")) {
-                                                    ch.writeStartElement("foaf:knows");
-                                                    ch.writeStartElement("rdf:Description");
-                                                    ch.writeAttribute("about", "/services/facewrap/thing/" + friend.get("id") + "#thing");
-                                                    ch.writeStartElement("foaf:name");
-                                                    ch.writeCharacters(friend.get("name").toString());
-                                                    ch.writeEndElement();
-                                                    ch.writeEndElement();
-                                                    ch.writeEndElement();
+                                            if (friends.containsKey("error")) {
+                                            } else if (friends.containsKey("data")) {
+                                                Object flisto = friends.get("data");
+                                                if (flisto instanceof List) {
+                                                    List flist = (List) flisto;
+                                                    for (Object friendo : flist) {
+                                                        if (friendo instanceof JSONObject) {
+                                                            JSONObject friend = (JSONObject) friendo;
+                                                            if (friend.containsKey("id") && friend.containsKey("id")) {
+                                                                ch.writeStartElement("foaf:knows");
+                                                                ch.writeStartElement("rdf:Description");
+                                                                ch.writeAttribute("rdf:about", "/services/facewrap/thing/" + friend.get("id") + "#thing");
+                                                                ch.writeStartElement("foaf:name");
+                                                                ch.writeCharacters(friend.get("name").toString());
+                                                                ch.writeEndElement();
+                                                                ch.writeEndElement();
+                                                                ch.writeEndElement();
+                                                            }
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
+                                    } catch(Exception e) {
+
                                     }
                                 }
                             }
                         }
                         ch.writeEndElement();
 
-                        
+
                         String url_feed_str = "https://graph.facebook.com/" + URLEncoder.encode(facebookid, "utf-8") + "/feed";
                         if (access_token != null) {
                             url_feed_str += "?access_token=" + access_token;
@@ -390,7 +422,6 @@ public class FacewrapServlet extends HttpServlet {
                                 _log.warning("Retrieved: " + feed.toJSONString());
 
                                 if (feed.containsKey("error")) {
-
                                 } else if (feed.containsKey("data")) {
                                     Object flisto = feed.get("data");
                                     this.jsonToRDF(factory, ch, null, flisto);
@@ -404,9 +435,9 @@ public class FacewrapServlet extends HttpServlet {
 
                     result = new String(baos.toByteArray(), "utf-8");
 
-               //     if (cache != null) {
-                 //       cache.put(url, result);
-                   // }
+                    //     if (cache != null) {
+                    //       cache.put(url, result);
+                    // }
 
                 } else {
                     _log.info("Parsing JSON ... ");
@@ -426,26 +457,28 @@ public class FacewrapServlet extends HttpServlet {
             }
 
             resp.setContentType("application/rdf+xml");
-            PrintWriter out = resp.getWriter();
+            OutputStream out = resp.getOutputStream();
 
             resp.setHeader("Cache-Control", "public");
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.DATE, 1);
             resp.setHeader("Expires", RFC822.format(cal.getTime()));
 
-            out.print(result);
+            out.write(result.getBytes("utf-8"));
 
 
         } catch (MalformedURLException e) {
-            // ...
+            resp.sendError(500, e.getMessage());
+            return;
         } catch (IOException e) {
-            // ...
+            resp.sendError(500, e.getMessage());
+            return;
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            resp.sendError(500, e.getMessage());
+            return;
         } catch (XMLStreamException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            resp.sendError(500, e.getMessage());
+            return;
         }
 
         //		resp.setContentType("text/plain");
@@ -479,7 +512,7 @@ public class FacewrapServlet extends HttpServlet {
 
         if (json instanceof JSONObject) {
             JSONObject obj = (JSONObject) json;
-            if(prop != null) {
+            if (prop != null) {
                 ch.writeStartElement(prop);
             }
             ch.writeStartElement("rdf:Description");
@@ -496,7 +529,7 @@ public class FacewrapServlet extends HttpServlet {
                 }
             }
             ch.writeEndElement();
-            if(prop != null) {
+            if (prop != null) {
                 ch.writeEndElement();
             }
         } else if (json instanceof List) {
@@ -516,13 +549,13 @@ public class FacewrapServlet extends HttpServlet {
             }
         } else {
             if (!json.toString().equals("")) {
-                if(json.toString().startsWith("http://") || json.toString().startsWith("https://")) {
+                if (json.toString().startsWith("http://") || json.toString().startsWith("https://")) {
                     try {
                         URI isItURI = new URI(json.toString());
                         ch.writeStartElement(prop);
                         ch.writeAttribute("rdf:resource", json.toString());
                         ch.writeEndElement();
-                    } catch(URISyntaxException use) {
+                    } catch (URISyntaxException use) {
                         ch.writeStartElement(prop);
                         ch.writeCharacters(json.toString());
                         ch.writeEndElement();
@@ -536,4 +569,3 @@ public class FacewrapServlet extends HttpServlet {
         }
     }
 }
-

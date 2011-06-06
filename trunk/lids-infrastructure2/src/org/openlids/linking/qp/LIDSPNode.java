@@ -21,6 +21,7 @@ import org.openlids.model.parser.arq.LIDSParserARQ;
 import org.openlids.util.Utils;
 import org.semanticweb.yars.nx.BNode;
 import org.semanticweb.yars.nx.Node;
+import org.semanticweb.yars.nx.Resource;
 import org.semanticweb.yars.nx.Variable;
 import org.semanticweb.yars.nx.parser.Callback;
 import org.semanticweb.yars2.rdfxml.RDFXMLParser;
@@ -133,6 +134,9 @@ public class LIDSPNode extends PNode {
 
                 String service_call = lids.makeURI(varToNode);
                 System.out.println("Service Call: " + service_call);
+                if(varToNode.containsKey(lids.getInputEntity())) {
+                    _manager.addTriple(new Node[]{varToNode.get(lids.getInputEntity()), NS.OWL_SAMEAS, new Resource(service_call)});
+                }
                 _manager.addURI(service_call);
 
             }

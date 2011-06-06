@@ -17,11 +17,11 @@ import org.semanticweb.yars.nx.NodeComparator;
  *
  * @author ssp
  */
-public
-class AlphaMemory {
+public class AlphaMemory extends ReteNode {
 
     Set<Node[]> triples = new TreeSet<Node[]>(NodeComparator.NC);
     Set<ReteNode> successors = new HashSet<ReteNode>();
+
 
     public void add(Node[] triple) {
         if(triples.add(triple)) {
@@ -41,6 +41,7 @@ class AlphaMemory {
         return results;
     }
 
+    @Override
     void addChild(ReteNode aThis) {
         for(Node[] triple : triples) {
             ((JoinNode) aThis).rightActivation(triple);
@@ -50,6 +51,11 @@ class AlphaMemory {
 
     public Set<Node[]> getTriples() {
         return triples;
+    }
+
+    @Override
+    public void leftActivation(Node[] token) {
+        throw new UnsupportedOperationException("Alpha Memory should not be left activated.");
     }
 
 }

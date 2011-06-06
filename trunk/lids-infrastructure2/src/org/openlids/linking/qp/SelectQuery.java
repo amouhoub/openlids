@@ -5,11 +5,17 @@
 
 package org.openlids.linking.qp;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import org.openlids.util.Utils;
 import org.semanticweb.yars.nx.Node;
+import org.semanticweb.yars.nx.NodeComparator;
+import org.semanticweb.yars.nx.Nodes;
+import org.semanticweb.yars.nx.Resource;
 import org.semanticweb.yars.nx.Variable;
 import org.semanticweb.yars.nx.parser.ParseException;
 
@@ -21,13 +27,16 @@ public class SelectQuery {
     private List<Node> _hvs;
     private List<Node[]> _patterns;
 
+    private Set<Node> _constants;
+
     private int[] _hvs_pos;
 
-    private Rete _rete;
+    private org.openlids.qp.rete.Rete _rete;
 
-    private List<Node[]> _results = new ArrayList<Node[]>();
+//    public List<Node[]> _results = Collections.synchronizedList(new ArrayList<Node[]>());
+    public Set<Node[]> _results = Collections.synchronizedSet(new TreeSet<Node[]>(NodeComparator.NC));
 
-    QueryDisplayingForm _qdf;
+//    QueryDisplayingForm _qdf;
 
     public static SelectQuery parse(String line) throws ParseException {
         List<Node> hvs = new LinkedList<Node>();
@@ -90,13 +99,31 @@ public class SelectQuery {
         _hvs = hvs;
         _patterns = patterns;
 
-        _qdf = new QueryDisplayingForm(this);
-        _qdf.setVisible(true);
+        _constants = new HashSet<Node>();
+        for(Node[] p : patterns) {
+            if(p[0] instanceof Resource) {
+                _constants.add(p[0]);
+            }
+            if(!p[1].equals(NS.RDF_TYPE)) {
+                if(p[2] instanceof Resource) {
+                    _constants.add(p[2]);
+                }
+            }
+        }
+
+//        _qdf = new QueryDisplayingForm(this);
+//        _qdf.setVisible(true);
     }
 
-    public void setRete(Rete rete) {
+    public boolean containsConstant(Node n) {
+        return _constants.contains(n);
+    }
+
+    public void setRete(org.openlids.qp.rete.Rete rete) {
         _rete = rete;
-        _rete.addProduction(_patterns, new PNode() {
+        _rete._anet.addQuery(this);
+
+        _rete.addProduction(_patterns, new org.openlids.qp.rete.PNode() {
             @Override
             public void leftActivation(Node[] token) {
                 Node[] result = new Node[_hvs.size()];
@@ -124,14 +151,17 @@ public class SelectQuery {
                     }
                     fpos++;
                 }
-                _qdf.updateTableStructure();
+//                _qdf.updateTableStructure();
             }
-        });
+        }, this);
     }
 
     public void addResult(Node[] result) {
-        _results.add(result);
-        _qdf.updateTableResults();
+        synchronized (_results) {
+            _results.add(result);
+        }
+        System.out.println("QRes: " + Nodes.toN3(result));
+//        _qdf.updateTableResults();
 
     }
 
@@ -140,16 +170,24 @@ public class SelectQuery {
     }
 
     public int getNResults() {
-        return _results.size();
+        int nresults = 0;
+        synchronized(_results) {
+            nresults = _results.size();
+        }
+        return nresults;
     }
-
+/*
     public Object getResult(int row, int col) {
         if(row == 0) {
             return _hvs.get(col).toString();
         }
-        return _results.get(row-1)[col];
+        Object o = null;
+        synchronized(_results) {
+            o = _results.get(row - 1)[col];
+        }
+        return o;
     }
-
+*/
     public List<Node[]> getPatterns() {
         return _patterns;
     }
