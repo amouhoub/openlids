@@ -1,0 +1,9 @@
+### Service: GeoNames wikipediaSearch
+# Endpoint
+<http://km.aifb.kit.edu/services/geonameswrap/wikipediaSearch>
+# Input Variables:
+?name
+# Input Pattern:
+?point <http://xmlns.com/foaf/0.1/name> ?name 
+# Output Pattern:
+?point <http://xmlns.com/foaf/0.1/based_near> ?feat . ?feat <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?feat_lat . ?feat <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?feat_lng . 

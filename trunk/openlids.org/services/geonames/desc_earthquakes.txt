@@ -1,0 +1,9 @@
+### Service: GeoNames Earthquakes
+# Endpoint
+<http://km.aifb.kit.edu/services/geonameswrap/earthquakes>
+# Input Variables:
+?north ?south ?east ?west
+# Input Pattern:
+?region <http://openlids.org/geonameswrap/vocab#north> ?north . ?region <http://openlids.org/geonameswrap/vocab#south> ?south . ?region <http://openlids.org/geonameswrap/vocab#east> ?east . ?region <http://openlids.org/geonameswrap/vocab#west> ?west
+# Output Pattern:
+?earthquake <http://openlids.org/geonameswrap/vocab#located_in> ?region . ?earthquake <http://purl.org/dc/elements/1.1/date> ?date . ?earthquake <http://openlids.org/geonameswrap/vocab#depth> ?depth . ?earthquake <http://openlids.org/geonameswrap/vocab#eqid> ?eqid . ?earthquake <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?eq_lat . ?earthquake <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?eq_lng . ?earthquake <http://openlids.org/geonameswrap/vocab#magnitude> ?magnitude .
