@@ -1,0 +1,9 @@
+### Service: GeoNames findNearbyPostalCodes
+# Endpoint
+<http://km.aifb.kit.edu/services/geonameswrap/findNearbyPostalCodes>
+# Input Variables:
+?lat ?lng
+# Input Pattern:
+?point a <http://www.w3.org/2003/01/geo/wgs84_pos#Point> . ?point <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat . ?point <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?lng
+# Output Pattern:
+?point <http://xmlns.com/foaf/0.1/based_near> ?feat . ?feat <http://xmlns.com/foaf/0.1/name> ?name . ?feat <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?feat_lat . ?feat <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?feat_lng . ?feat <http://openlids.org/geonameswrap/vocab#countryCode> ?countrycode . ?feat <http://openlids.org/geonameswrap/vocab#distance> ?dist . ?feat <http://openlids.org/geonameswrap/vocab#postalcode> "76131" . ?feat <http://openlids.org/geonameswrap/vocab#adminCode1> ?adminCode1 . ?feat <http://openlids.org/geonameswrap/vocab#adminName1> ?adminName1 . ?feat <http://openlids.org/geonameswrap/vocab#adminCode2> adminCode2 . ?feat <http://openlids.org/geonameswrap/vocab#adminName2> ?adminName2 .

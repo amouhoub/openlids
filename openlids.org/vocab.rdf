@@ -22,9 +22,51 @@
     <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
   </rdfs:Class>
 
+  <rdfs:Class rdf:about="http://openlids.org/vocab#LIDSDescription">
+    <rdfs:label xml:lang="en">LInked Data Service (LIDS) Description</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Class>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#lids_description">
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDS" />
+    <rdfs:range rdf:resource="http://openlids.org/vocab#LIDSDescription" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#endpoint">
+    <rdfs:label xml:lang="en">endpoint</rdfs:label>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDSDescription" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#service_entity">
+    <rdfs:label xml:lang="en">service entity</rdfs:label>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDSDescription" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#inbput_bgp">
+    <rdfs:label xml:lang="en">input basic graph pattern (BGP)</rdfs:label>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDSDescription" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#output_bgp">
+    <rdfs:label xml:lang="en">output basic graph pattern (BGP)</rdfs:label>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDSDescription" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://openlids.org/vocab#required_vars">
+    <rdfs:label xml:lang="en">required input variables</rdfs:label>
+    <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDSDescription" />
+    <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
+  </rdfs:Property>
+
   <rdfs:Property rdf:about="http://openlids.org/vocab#description">
     <rdfs:label xml:lang="en">description</rdfs:label>
-    <rdfs:comment xml:lang="en">A description of a LIDS using a SPARQL CONSTRUCT query</rdfs:comment>
+    <rdfs:comment xml:lang="en">A description of a LIDS using a SPARQL CONSTRUCT query (deprecated)</rdfs:comment>
     <rdfs:domain rdf:resource="http://openlids.org/vocab#LIDS" />
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
     <rdfs:isDefinedBy rdf:resource="http://openlids.org/vocab#" />
