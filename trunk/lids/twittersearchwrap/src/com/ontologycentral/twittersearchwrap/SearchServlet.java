@@ -99,7 +99,7 @@ public class SearchServlet extends HttpServlet {
 			}
 
 
-			// WIKIFY Search feed data
+			//WIKIFY search feed data
 			//build strings containing text of tweets in each language
 			String[] split = searchResult.toString().split("</title>");
 
@@ -120,7 +120,7 @@ public class SearchServlet extends HttpServlet {
 				langTweets.put(language, tweets);
 			}
 
-			// If extern=true get content from referenced websites as string and use in wikifier
+			//if extern=true get content from referenced websites as string and use in wikifier
 			String extern = req.getParameter("extern");
 			if(extern==null){
 				extern = "false";
@@ -128,10 +128,8 @@ public class SearchServlet extends HttpServlet {
 
 			if(extern.equals("true")){
 
-				// Get HTTP-links
+				//get HTTP-links
 				String[] contents = searchResult.toString().split("</content>");
-
-				Set<String> linkedURLs = new HashSet<String>();
 
 				StringBuilder tweetsHTML = new StringBuilder();
 
@@ -140,11 +138,11 @@ public class SearchServlet extends HttpServlet {
 					tweetsHTML.append(" " + content[1]);  
 				}
 
-				String[] tweetsHTMLSplit = tweetsHTML.toString().split("&lt;a href=&quot;");
+				String[] tweetsHTMLSplit = tweetsHTML.toString().split("&lt;a href=\"");
 				String[] urlarray = new String[tweetsHTMLSplit.length-1];
 
 				for(int i = 1; i<tweetsHTMLSplit.length; i++){
-					urlarray[i-1] = tweetsHTMLSplit[i].toString().split("&quot;&gt;")[0];
+					urlarray[i-1] = tweetsHTMLSplit[i].toString().split("\"")[0];
 				}
 
 				Set<String> urls = new HashSet<String>();
@@ -153,75 +151,33 @@ public class SearchServlet extends HttpServlet {
 					urls.add(urlarray[i]);
 				}
 
-
-
-				Iterator<String> urliter = linkedURLs.iterator();
-				// Maximum of 25 links used
+				Iterator<String> urliter = urls.iterator();
+				//maximum of 30 links used
 				int count=0;
 
-				// Get content of linked sites
-				while (urliter.hasNext() && count<25) {
+				//get content of linked sites
+				while (urliter.hasNext() && count<30) {
 					String thisurl = urliter.next().toString();
-					// Don't use internal twitter links containing javascript which cannot be handled
+					//don't use internal twitter links containing javascript which cannot be handled
 					if(!thisurl.contains("twitter")){
-						BufferedReader extContent = null;
-						String extResponse = "";
-						String encoded = "UTF-8";
+					    String[] subjects = null;
 						try {
-							// Create the HttpURLConnection
-							URL url = new URL(thisurl);
-							HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-							extContent = null;
-							connection.setRequestMethod("GET");
-							connection.setReadTimeout(2000);
-							connection.connect();
-
-							// Read the output from the server
-							extContent = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-							extResponse = connection.getResponseMessage();
-							try {
-								if(connection.getContentEncoding()!=null){
-									encoded = connection.getContentEncoding();
-								};
-							} catch (Exception e) {
-								System.out.println("ERROR retrieving charset from " + thisurl);
-								System.out.println("Assuming UTF-8 Encoding...");
-							}
-
+							subjects = SubjectExtraction.extract(thisurl);
 						} catch (Exception e) {
-							System.out.println("ERROR connecting to " + thisurl);
-							e.printStackTrace();
 						}
-
-						// Create element remover filter
-						ElementRemover remover;
-						remover = new ElementRemover();
-						remover.removeElement("script");
-						remover.removeElement("link");
-						remover.removeElement("style");
-						remover.removeElement("CDATA");
-						remover.removeElement("<!--");
-						remover.removeElement("meta");
-
-
-						if (extResponse.equals("OK") && extContent != null) {
+						if (subjects!= null) {
 							count=count+1;
 							System.out.println("EXTERNAL URL No.: " + count + " : " + thisurl);
-							String extContentCleaned = new String(getHtmlFilteredString(extContent, encoded));
-							extContentCleaned = extContentCleaned.replaceAll("\\<.*?\\>", "");
-							extContentCleaned = extContentCleaned.replaceAll("\\(.*?\\)", "");
-							extContentCleaned = extContentCleaned.replaceAll("\\{.*?\\}", "");
-							extContentCleaned = extContentCleaned.replaceAll("\\s+", " ");
-
-							StringTokenizer st = new StringTokenizer(extContentCleaned);
-							int wordCount = 0;
 							StringBuilder externalWebsite = new StringBuilder();
-							while (st.hasMoreTokens() && wordCount < 100) {
-								String token = st.nextToken();
-								wordCount++;
-								externalWebsite.append(token + " ");
+							for(String subject:subjects){
+								externalWebsite.append(subject + " ");
+								System.out.println("WEBSITE SUBJECT : " + subject);
 							}
-							String externalLanguage = langdetect.detectLanguage(externalWebsite.toString());
+							String externalLanguage = language;
+							if(guessLanguage){
+							    externalLanguage = langdetect.detectLanguage(externalWebsite.toString());
+							}
+							System.out.println("WEBSITE LANGUAGE: " + externalLanguage);
 							if( langTweets.containsKey(externalLanguage) ){
 								tweets = langTweets.get(externalLanguage);
 							} else {
@@ -240,7 +196,7 @@ public class SearchServlet extends HttpServlet {
 			System.out.println("WIKIFY RESULTS:");
 			System.out.println(wikifyResult);
 
-			// Append DBPedia links to atom feed to include in transformation
+			//append DBPedia links to atom feed to include in transformation
 
 			Iterator<String> entityIter = wikifyResult.iterator();
 			StringBuffer seeAlso = new StringBuffer();
@@ -307,7 +263,7 @@ public class SearchServlet extends HttpServlet {
 	private String getHtmlFilteredString(Reader reader, String encoding)
 	{
 
-		// create element remover filter
+		//create element remover filter
 		ElementRemover remover;
 		remover = new ElementRemover();
 		remover.removeElement("script");

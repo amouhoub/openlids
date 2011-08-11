@@ -75,8 +75,8 @@ public class Wikifier {
 					+ URLEncoder.encode(payload, "utf-8");
 
 			URLConnection conn = u.openConnection();
-			// conn.setConnectTimeout(FetchFeed.CONNECT_TIMEOUT);
-			// conn.setReadTimeout(FetchFeed.READ_TIMEOUT*2);
+			conn.setConnectTimeout(60000);
+			conn.setReadTimeout(60000);
 			conn.setRequestProperty("User-agent", _uagent);
 
 			conn.setDoOutput(true);
