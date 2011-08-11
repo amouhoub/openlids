@@ -60,7 +60,6 @@ public class SubjectExtraction {
 			}
 		
 			if (extResponse.equals("OK") && extContent != null) {
-				System.out.println("EXTERNAL URL : " + website);
 				
 				String websiteString = "";
 				String line          = "";
@@ -107,7 +106,7 @@ public class SubjectExtraction {
 		String websiteSubjectsString = websiteSubjects.toString().replaceAll(";;\\s*;;", "");
 		String[] subjects = websiteSubjectsString.split(";;");
 		
-		System.out.println(websiteSubjectsString);
+		//System.out.println(websiteSubjectsString);
 		
 		return subjects;
 
