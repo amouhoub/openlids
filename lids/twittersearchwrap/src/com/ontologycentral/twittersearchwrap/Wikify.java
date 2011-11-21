@@ -1,5 +1,8 @@
 package com.ontologycentral.twittersearchwrap;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +47,8 @@ public class Wikify {
 	    Wikifier w = new Wikifier(uri, "david's bot");
 	    
 	    input = cleanTweets(input);
-
+	    
+	    
 //	    System.out.println("WIKIFY Input:");
 //		System.out.println(input);
 	    Node[] nx = new Node[] { DC.TITLE, new Literal(input) } ;

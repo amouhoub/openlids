@@ -5,11 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.StringTokenizer;
-
-import org.mozilla.intl.chardet.HtmlCharsetDetector;
 import org.mozilla.intl.chardet.nsDetector;
 import org.mozilla.intl.chardet.nsICharsetDetectionObserver;
 import org.mozilla.intl.chardet.nsPSMDetector;
@@ -56,7 +52,7 @@ public class SubjectExtraction {
 
 			} catch (Exception e) {
 				System.out.println("ERROR connecting to " + website);
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 		
 			if (extResponse.equals("OK") && extContent != null) {

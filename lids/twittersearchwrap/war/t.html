@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Twitter Search Wrapper</title>
+<style>
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,
+		Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+p,h1,form,button {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.spacer {
+	clear: both;
+	height: 1px;
+}
+/* ----------- My Form ----------- */
+.myform {
+	margin: 0 auto;
+	width: 600px;
+	padding: 14px;
+}
+
+/* ----------- stylized ----------- */
+#stylized {
+	border: solid 2px #b7ddf2;
+	background: #ebf4fb;
+}
+
+#stylized h1 {
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+#stylized p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #b7ddf2;
+	padding-bottom: 10px;
+}
+
+#stylized label {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 190px;
+	float: left;
+}
+
+#stylized .small {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	width: 190px;
+}
+
+#stylized input {
+	float: left;
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 300px;
+	margin: 2px 0 20px 10px;
+}
+
+#stylized select {
+	float: left;
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 300px;
+	margin: 2px 0 20px 10px;
+}
+
+#stylized button {
+	clear: both;
+	margin-left: 200px;
+	width: 170px;
+	height: 31px;
+	background: #666666 url(img/button.png) no-repeat;
+	text-align: center;
+	line-height: 31px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<div id="stylized" class="myform">
+		<form id="form" name="input" action="./searchwrap" method="get">
+			<h1>Twitter Search Wrapper</h1>
+			<p>The Twitter Search Wrapper converts Twitter search queries to
+				RDF and maps to DBpedia entities</p>
+
+			<label>Query <span class="small">Define search query</span>
+			</label> <input type="text" name="q" id="name" value="query"/> <label>#Tweets <span
+				class="small">Max. number of tweets</span>
+			</label> <select name="numtweets">
+				<option value="10">max. 10 tweets</option>
+				<option value="30">max. 30 tweets</option>
+				<option value="50" selected="selected">max. 50 tweets</option>
+				<option value="100">max. 100 tweets</option>
+			</select> <label>Links <span class="small">Follow external
+					links?</span>
+			</label> <select name="maxlinks">
+				<option value="no">don't follow external links</option>
+				<option value="max10">10 links maximum</option>
+				<option value="max30">30 links maximum</option>
+				<option value="max50">50 links maximum</option>
+			</select> <label>Language <span class="small">Select language
+					version</span>
+			</label> <select name="lang">
+				<option value="en">English</option>
+				<option value="de">German</option>
+				<option value="auto">Automatic</option>
+			</select> <label>Annotation <span class="small">Select
+					annotation method</span>
+			</label> <select name="annotationmethod">
+				<option value="sum">wikify(tweet_1 + ... + tweet_N)</option>
+				<option value="single">wikify(tweet_1) + ... + wikify(tweet_N)</option>
+			</select>
+			<button type="submit">Get RDF for query</button>
+			<div class="spacer"></div>
+
+		</form>
+	</div>
+</body>
+</html>
