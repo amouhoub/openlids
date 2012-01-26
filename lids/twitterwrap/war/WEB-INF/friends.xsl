@@ -16,7 +16,7 @@
   <xsl:template match="users">
     <rdf:RDF>
       <rdf:Description rdf:about="">
-	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap.</rdfs:comment>
+	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap (http://km.aifb.kit.edu/services/twitterwrap/).</rdfs:comment>
       </rdf:Description>
 
       <xsl:apply-templates/>
@@ -29,9 +29,11 @@
 
       <xsl:apply-templates/>
 
+<!--
       <foaf:made>
 	<xsl:apply-templates/>
       </foaf:made>
+-->
     </foaf:Agent>
   </xsl:template>
 
@@ -64,14 +66,16 @@
   </xsl:template>
 
   <xsl:template match="status">
-    <sioc:Item>
-      <xsl:attribute name="rdf:about">../../show/<xsl:value-of select="id"/>#id</xsl:attribute>
-      <foaf:page>
-	<xsl:attribute name="rdf:resource">http://twitter.com/<xsl:value-of select="user/screen_name"/>/status/<xsl:value-of select="id"/></xsl:attribute>
-      </foaf:page>
-      <dc:description><xsl:value-of select="text"/></dc:description>
-      <dc:date><xsl:value-of select="created_at"/></dc:date>
-    </sioc:Item>
+    <foaf:made>
+      <sioc:Item>
+	<xsl:attribute name="rdf:about">../../show/<xsl:value-of select="id"/>#id</xsl:attribute>
+	<foaf:page>
+	  <xsl:attribute name="rdf:resource">http://twitter.com/<xsl:value-of select="user/screen_name"/>/status/<xsl:value-of select="id"/></xsl:attribute>
+	</foaf:page>
+	<dc:description><xsl:value-of select="text"/></dc:description>
+	<dc:date><xsl:value-of select="created_at"/></dc:date>
+      </sioc:Item>
+    </foaf:made>
   </xsl:template>
 
   <xsl:template match="*">

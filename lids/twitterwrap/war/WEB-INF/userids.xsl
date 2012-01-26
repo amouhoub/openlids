@@ -14,7 +14,7 @@
 
   <xsl:strip-space elements="*"/>
 
-  <xsl:template match="o">
+  <xsl:template match="id_list">
     <rdf:RDF>
       <rdf:Description rdf:about="">
 	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap (http://km.aifb.kit.edu/services/twitterwrap/).</rdfs:comment>
@@ -24,35 +24,17 @@
     </rdf:RDF>
   </xsl:template>
 
-  <xsl:template match="result">
-    <xsl:apply-templates/>
-  </xsl:template>
-
-  <xsl:template match="places">
-    <xsl:apply-templates/>
-  </xsl:template>
-  
-  <xsl:template match="e">
-    <geo:Point>
-      <xsl:attribute name="rdf:about">./id/<xsl:value-of select="id"/>#id</xsl:attribute>
+  <xsl:template match="ids">
+    <rdf:Description rdf:about="#id">
       <xsl:apply-templates/>
-    </geo:Point>
+    </rdf:Description>
   </xsl:template>
 
-  <xsl:template match="name">
-    <foaf:name><xsl:value-of select="."/></foaf:name>
+  <xsl:template match="id">
+    <rdfs:seeAlso>
+      <xsl:attribute name="rdf:resource">../users/show?user_id=<xsl:value-of select="."/>#id</xsl:attribute>
+    </rdfs:seeAlso>
   </xsl:template>
 
-  <xsl:template match="*">
-    <xsl:element name="tw:{local-name()}">
-      <xsl:choose>
-	<xsl:when test="starts-with(., 'http://')">
-	  <xsl:attribute name="rdf:resource"><xsl:value-of select="."/></xsl:attribute>
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:value-of select="."/>
-	</xsl:otherwise>
-      </xsl:choose>
-    </xsl:element>
-  </xsl:template>
+  <xsl:template match="*"/>
 </xsl:stylesheet>

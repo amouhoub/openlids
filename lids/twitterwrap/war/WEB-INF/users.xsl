@@ -16,7 +16,7 @@
   <xsl:template match="user">
     <rdf:RDF>
       <rdf:Description rdf:about="">
-	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap.</rdfs:comment>
+	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap (http://km.aifb.kit.edu/services/twitterwrap/).</rdfs:comment>
       </rdf:Description>
 
       <foaf:Agent>
@@ -42,9 +42,11 @@
   </xsl:template>
 
   <xsl:template match="url">
-    <foaf:homepage>
-      <xsl:attribute name="rdf:resource"><xsl:value-of select="."/></xsl:attribute>
-    </foaf:homepage>
+    <xsl:if test=".">
+      <foaf:homepage>
+	<xsl:attribute name="rdf:resource"><xsl:value-of select="."/></xsl:attribute>
+      </foaf:homepage>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="name">

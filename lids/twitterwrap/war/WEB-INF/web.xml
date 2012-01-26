@@ -46,6 +46,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet>
 	
 	<servlet>
+		<servlet-name>userids</servlet-name>
+		<servlet-class>edu.kit.aifb.lids.twitterwrap.UserIdsServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
 		<servlet-name>search</servlet-name>
 		<servlet-class>edu.kit.aifb.lids.twitterwrap.SearchServlet</servlet-class>
 	</servlet>
@@ -98,6 +103,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet-mapping>
 		<servlet-name>geoid</servlet-name>
 		<url-pattern>/geo/id/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>userids</servlet-name>
+		<url-pattern>/followers/ids</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>userids</servlet-name>
+		<url-pattern>/friends/ids</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
