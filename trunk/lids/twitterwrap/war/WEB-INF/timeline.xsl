@@ -16,7 +16,7 @@
   <xsl:template match="statuses">
     <rdf:RDF>
       <rdf:Description rdf:about="">
-	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap.</rdfs:comment>
+	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap (http://km.aifb.kit.edu/services/twitterwrap/).</rdfs:comment>
       </rdf:Description>
 
       <xsl:apply-templates/>

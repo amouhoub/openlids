@@ -22,7 +22,7 @@
       <rdf:Description>
         <xsl:attribute name="rdf:about"/>
 	<dc:title><xsl:value-of select="a:title"/></dc:title>
-        <rdfs:comment>Source: Twitter Search API (http://search.twitter.com/) via twitterwrap.</rdfs:comment>
+	<rdfs:comment>Source: Twitter API (http://www.twitter.com/) via twitterwrap (http://km.aifb.kit.edu/services/twitterwrap/).</rdfs:comment>
         <xsl:for-each select="a:seeAlso">
           <rdfs:seeAlso>
             <xsl:attribute name="rdf:resource">
