@@ -23,7 +23,10 @@ xmlns:dbo="http://dbpedia.org/ontology/"
 	<rdfs:comment>Source: Google Maps API (http://code.google.com/apis/maps/documentation/webservices/) via googlemapsapiwrap.</rdfs:comment>
       </rdf:Description>
 
+    <geo:Point rdf:ID="point">
+      <dbo:address><xsl:value-of select="$address"/></dbo:address>
       <xsl:apply-templates/>
+    </geo:Point>
     </rdf:RDF>
   </xsl:template>
 
@@ -50,15 +53,12 @@ xmlns:dbo="http://dbpedia.org/ontology/"
   </xsl:template>
 
   <xsl:template match="result">
-    <geo:Point rdf:ID="point">
-      <dbo:address><xsl:value-of select="$address"/></dbo:address>
         <foaf:based_near>
                 <geo:Point>
                     <xsl:apply-templates/>
       <!--<xsl:value-of select="geometry/location/lat"/>,<xsl:value-of select="geometry/location/lng"/>-->
                 </geo:Point>
             </foaf:based_near>
-        </geo:Point>
   </xsl:template>
   
   <xsl:template match="*">
