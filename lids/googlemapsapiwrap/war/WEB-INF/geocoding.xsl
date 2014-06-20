@@ -9,10 +9,13 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:sioc="http://rdfs.org/sioc/ns#"
    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+xmlns:dbo="http://dbpedia.org/ontology/"
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    version='1.0'>
 
   <xsl:output method="xml" encoding="utf-8"/>
+
+  <xsl:param name="address"/>
 
   <xsl:template match="GeocodeResponse">
     <rdf:RDF>
@@ -47,14 +50,15 @@
   </xsl:template>
 
   <xsl:template match="result">
-    <rdf:Description rdf:ID="point">
+    <geo:Point rdf:ID="point">
+      <dbo:address><xsl:value-of select="$address"/></dbo:address>
         <foaf:based_near>
                 <geo:Point>
                     <xsl:apply-templates/>
       <!--<xsl:value-of select="geometry/location/lat"/>,<xsl:value-of select="geometry/location/lng"/>-->
                 </geo:Point>
             </foaf:based_near>
-        </rdf:Description>
+        </geo:Point>
   </xsl:template>
   
   <xsl:template match="*">
