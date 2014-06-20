@@ -14,6 +14,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<listener>
 		<listener-class>edu.kit.aifb.lids.geonameswrap.Listener</listener-class>
 	</listener>
+
+	<servlet>
+		<servlet-name>iso</servlet-name>
+		<servlet-class>com.ontologycentral.geowrap.ISOServlet</servlet-class>
+	</servlet>
 	
 	<servlet>
 		<servlet-name>geonames</servlet-name>
@@ -25,6 +30,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-class>edu.kit.aifb.lids.geonameswrap.EarthquakesServlet</servlet-class>
 	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>iso</servlet-name>
+		<url-pattern>/iso</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>geonames</servlet-name>
 		<url-pattern>/findNearby</url-pattern>
@@ -52,6 +61,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet-mapping>
 		<servlet-name>geonames</servlet-name>
 		<url-pattern>/wikipediaSearch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>geonames</servlet-name>
+		<url-pattern>/cities</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>earthquakes</servlet-name>

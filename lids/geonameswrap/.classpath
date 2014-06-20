@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine (1)"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="lib" path="lib/commons-beanutils-1.8.3.jar"/>
@@ -12,5 +11,8 @@
 	<classpathentry kind="lib" path="lib/ezmorph-1.0.6.jar"/>
 	<classpathentry kind="lib" path="lib/json-lib-2.4-jdk15.jar"/>
 	<classpathentry kind="lib" path="lib/xom-1.2.6.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jsoup-1.6.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/saxon-9.2.jar"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

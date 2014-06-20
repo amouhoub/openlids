@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -32,13 +32,18 @@ public class GeoNamesServlet extends HttpServlet {
 		OutputStream os = resp.getOutputStream();
 
 		try {
-			Map<String, String[]> params = req.getParameterMap();
+			Map<String, String[]> params = new HashMap<String, String[]>();
+			
+			params.putAll(req.getParameterMap());
+			params.put("username", new String[] { "aharth" });
 
 			String path = req.getServletPath();
 
 			_log.info("path: " + path);
+			
+			params.put("maxRows", new String[] { "100" });
 
-			String url = Listener.generateURL("http://ws.geonames.org" + path, params);
+			String url = Listener.generateURL("http://api.geonames.org" + path, params);
 
 			System.out.println(url);
 			
@@ -76,6 +81,9 @@ public class GeoNamesServlet extends HttpServlet {
 			
 			Transformer t = (Transformer)ctx.getAttribute(Listener.GEONAMES);
 
+			t.setParameter("lat", params.get("lat"));
+			t.setParameter("long", params.get("lng"));
+			
 			resp.setContentType("application/rdf+xml");
 			
 			resp.setHeader("Cache-Control", "public");

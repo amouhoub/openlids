@@ -10,9 +10,13 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:sioc="http://rdfs.org/sioc/ns#"
    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:gn="http://www.geonames.org/ontology#"
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:output method="xml"/>
+
+  <xsl:param name="lat"/>
+  <xsl:param name="long"/>
 
   <xsl:strip-space elements="*"/>
 
@@ -29,34 +33,41 @@
   <xsl:template match="totalResultsCount"/>
 
   <xsl:template match="geoname|entry|code">
-      <rdf:Description rdf:ID="point">
-          <foaf:based_near>
-    <rdf:Description>
-      <xsl:if test="geonameId">
-	<xsl:attribute name="rdf:about">http://sws.geonames.org/<xsl:value-of select="geonameId"/>/</xsl:attribute>
-      </xsl:if>
-      <xsl:if test="wikipediaUrl">
-	<!-- should be much easier with replace() but that's an xslt 2.0 function :( -->
+    <geo:Point rdf:about="#point">
+      <geo:lat><xsl:value-of select="$lat"/></geo:lat>
+      <geo:long><xsl:value-of select="$long"/></geo:long>
+      <gn:nearbyFeatures>
+	<geo:Point>
+	  <xsl:if test="geonameId">
+	    <xsl:attribute name="rdf:about">http://sws.geonames.org/<xsl:value-of select="geonameId"/>/</xsl:attribute>
+	  </xsl:if>
+	  <xsl:if test="wikipediaUrl">
+	    <!-- should be much easier with replace() but that's an xslt 2.0 function :( -->
+	    
+	    <xsl:variable name="str" select="wikipediaUrl"/>
+	    <xsl:variable name="newstr">
+	      <xsl:call-template name="replaceCharsInString">
+		<xsl:with-param name="stringIn" select="string($str)"/>
+		<xsl:with-param name="charsIn" select="'http://en.wikipedia.org/wiki/'"/>
+		<xsl:with-param name="charsOut" select="'http://dbpedia.org/resource/'"/>
+	      </xsl:call-template>
+	    </xsl:variable>
+	    
+	    <xsl:attribute name="rdf:about"><xsl:value-of select="$newstr"/></xsl:attribute>
+	    <!-- string-replace(wikipediaUrl, 'http://en.wikipedia.org/wiki/', 'http://dbpedia.org/resource')"-->
+	    <foaf:page>
+	      <xsl:attribute name="rdf:resource"><xsl:value-of select="wikipediaUrl"/></xsl:attribute>
+	    </foaf:page>
+	  </xsl:if>
+	  
+	  <foaf:based_near>
+	    <xsl:attribute name="rdf:resource">#point</xsl:attribute>
+	  </foaf:based_near>
 
-	<xsl:variable name="str" select="wikipediaUrl"/>
-	<xsl:variable name="newstr">
-	  <xsl:call-template name="replaceCharsInString">
-	    <xsl:with-param name="stringIn" select="string($str)"/>
-	    <xsl:with-param name="charsIn" select="'http://en.wikipedia.org/wiki/'"/>
-	    <xsl:with-param name="charsOut" select="'http://dbpedia.org/resource/'"/>
-	  </xsl:call-template>
-	</xsl:variable>
-
-	<xsl:attribute name="rdf:about"><xsl:value-of select="$newstr"/></xsl:attribute>
-	  <!-- string-replace(wikipediaUrl, 'http://en.wikipedia.org/wiki/', 'http://dbpedia.org/resource')"-->
-	<foaf:page>
-	  <xsl:attribute name="rdf:resource"><xsl:value-of select="wikipediaUrl"/></xsl:attribute>
-	</foaf:page>
-      </xsl:if>
-      <xsl:apply-templates/>
-    </rdf:Description>
-    </foaf:based_near>
-    </rdf:Description>
+	  <xsl:apply-templates/>
+	</geo:Point>
+      </gn:nearbyFeatures>
+    </geo:Point>
   </xsl:template>
 
   <xsl:template match="ptoponymName|name">
