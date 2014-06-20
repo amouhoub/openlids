@@ -36,6 +36,7 @@ public class EarthquakesServlet extends HttpServlet {
 
 		try {
 			Map<String, String[]> params = req.getParameterMap();
+			params.put("username", new String[] { "aharth" });
 
 			String path = req.getServletPath();
 
