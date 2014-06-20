@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.util.Calendar;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -86,6 +87,7 @@ public class GeocodingServlet extends HttpServlet {
 
 			Transformer t = (Transformer)ctx.getAttribute(Listener.GEOCODING);
 
+			t.setParameter("address", URLDecoder.decode(req.getParameter("address"), "utf-8"));
 			resp.setContentType("application/rdf+xml");
 
 			resp.setHeader("Cache-Control", "public");
